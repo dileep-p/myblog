@@ -1,7 +1,7 @@
 languageCode = "en-us"
 title = "My Tech Blog"
 baseurl = "https://www.vishnu-tech.com/"
-theme = "nix"
+theme = "dxb"
 disqusShortname = "vishnudxb"
 
 [params]
