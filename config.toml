@@ -1,0 +1,28 @@
+languageCode = "en-us"
+title = "My Tech Blog"
+baseurl = "https://www.vishnu-tech.com/"
+theme = "hugo-theme-nix"
+disqusShortname = "vishnudxb"
+
+[params]
+  GithubID = "vishnudxb"
+  TwitterID = "vishnudxb"
+  LinkedInID = "vishnudxb"
+  Name = "Vishnu Nair"
+  HeaderUsername = "vishnu"
+  HeaderHostname = "Vimpelcom"
+  Email = "me@vishnudxb.me"
+  About = "Vishnu Nair is Head of Devops – R&D BigData in Vimpelcom. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies."
+  ProfilePicture = "https://media.licdn.com/media/p/8/000/1aa/375/187e4a3.jpg"
+
+
+[menu]
+  [[menu.header]]
+    name = "blogs"
+    weight = 0
+    url = "/blog"
+
+  [[menu.header]]
+    name = "about me"
+    weight = 1
+    url = "/about"
