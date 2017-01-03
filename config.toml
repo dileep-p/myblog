@@ -26,3 +26,7 @@ disqusShortname = "vishnudxb"
     name = "about me"
     weight = 1
     url = "/about"
+
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
