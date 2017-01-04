@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/cloud/index.xml</link>
+    <description>Recent content in Cloud on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Install and Use Memcache on Ubuntu 12.04</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-install-and-use-memcache-on-ubuntu-12-04/</link>
+      <pubDate>Fri, 24 May 2013 11:51:14 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-install-and-use-memcache-on-ubuntu-12-04/</guid>
+      <description>
+
+&lt;h3 id=&#34;about-memcache&#34;&gt;About Memcache&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Memcache is a system that works to speed up virtual private servers by caching server information. The program allows you to allocate a specific amount of the server ram toward caching recently queried data for a certain amount of time. Once the data is requested again, memcache speeds up the process of retrieving it by displaying the cached information instead of generating the result from the database.&lt;/p&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;The steps in this tutorial require the user to have root privileges. You can see how to set that up in the &lt;a href=&#34;https://www.digitalocean.com/community/articles/how-to-add-and-delete-users-on-ubuntu-12-04-and-centos-6&#34;&gt;Basic Users Tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before starting off, it’s a good idea to update apt-get to make sure that all of the packages we download to the VPS are up to date.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get update&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you should have MySQL and PHP installed on the virtual server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install mysql-server php5-mysql php5 php5-memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;install-memcache&#34;&gt;Install Memcache&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Installing memcache takes several steps.&lt;/p&gt;
+
+&lt;p&gt;To start, install memcached via apt-get.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install memcached&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next step is to install php-pear, the repository that stores memcache.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install php-pear&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you do not have a compiler on your server, you can download build-essential in order to install memcache:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install build-essential&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally use PECL (PHP Extension Community Library) to install memcache:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo pecl install memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Say yes by pressing enter during the installation when you are asked if you would like to “Enable memcache session handler support? [yes] :”&lt;/p&gt;
+
+&lt;p&gt;Once you have completed the installation of memcache with PECL on the VPS, add memcached to memcache.ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo echo &amp;quot;extension=memcache.so&amp;quot; &amp;gt; sudo /etc/php5/conf.d/memcache.ini&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you are ready to start using Memcache.&lt;/p&gt;
+
+&lt;h2 id=&#34;confirm-memcache-and-see-stats&#34;&gt;Confirm Memcache and See Stats&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;After Memcache is downloaded, you can check that it has been installed by searching for it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;ps aux | grep memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you can see the memcache stats by typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt; echo &amp;quot;stats settings&amp;quot; | nc localhost 11211&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-three-how-memcache-works&#34;&gt;Step Three—How Memcache Works&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Memcache works by redirecting code to first attempt to retrieve data from the cache before querying the server’s database. The cache populates by saving recently retrieved server data for a certain amount of time. By caching recently requested information, future queries do not have to go through the longer process of retrieving the information from a database and can, instead, access it through the cache.&lt;/p&gt;
+
+&lt;p&gt;The memcache page shows this abbreviated code on its homepage to summarize the memcache process:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;function get_foo(foo_id)
+    foo = memcached_get(&amp;quot;foo:&amp;quot; . foo_id)
+    return foo if defined foo
+
+    foo = fetch_foo_from_database(foo_id)
+    memcached_set(&amp;quot;foo:&amp;quot; . foo_id, foo)
+    return foo
+end&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;a-simple-memcache-example&#34;&gt;A Simple Memcache Example&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This section will set up a simple php script to use memcache for retrieving a single value originally found in a mysql table.&lt;/p&gt;
+
+&lt;p&gt;The following steps set up a mysql user who can access the appropriate database, create a table to query, and insert the one value that we will test in the new mysql table.&lt;/p&gt;
+
+&lt;p&gt;Log into mysql: &lt;code&gt;mysql -u root -p&lt;/code&gt; and execute the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;use test;
+
+grant all on test.* to test@localhost identified by &#39;testing123&#39;;
+
+create table example (id int, name varchar(30));
+
+insert into example values (1, &amp;quot;new_data&amp;quot;);
+
+exit;
+&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you have exited MySQL, create the memcache script file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;nano memtest.php&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We are now going to build up the php script step by step (the entire script will be at the end of the section):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Start off by creating a new persistent connection with memcache, which runs on memcache’s default port, 11211.
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;?php
+$meminstance = new Memcache();
+$meminstance-&amp;gt;pconnect(&#39;localhost&#39;, 11211);&amp;lt;/span&amp;gt;
+
+
+
+
+
+
+
+
+
+
+* The next step is to connect to the new mysql database with the user that we created earlier:
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;mysql_connect(&amp;quot;localhost&amp;quot;, &amp;quot;test&amp;quot;, &amp;quot;testing123&amp;quot;) or die(mysql_error());
+mysql_select_db(&amp;quot;test&amp;quot;) or die(mysql_error());&amp;lt;/span&amp;gt;
+
+
+
+
+
+
+
+
+
+
+* After that, go ahead and create the query that we will pose to the server, as well as provide a key to identify that specific action:
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;$query = &amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;;
+$querykey = &amp;quot;KEY&amp;quot; . md5($query);&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The script first searches the cache for the answer to the query. If the result does not exist, the script reroutes the question to the original database. Once the query has been answered by the original database, the script stores the result in memcache, using the “set” command&amp;ndash; which both saves it and allows the user to designate the number of seconds that it should remain in the cache (600 would save it in the cache for 10 minutes).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we run the script for the first time, it will inform us that the data was collected from the mysql database. However, as it does so, it stores the information in the cache, so that a second run of the script retrieves it from the cache and lets the user know.&lt;/p&gt;
+
+&lt;p&gt;In 10 minutes the cache is emptied once more and running the script will make it access the database once again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;$result = $meminstance-&amp;gt;get($querykey);
+
+if (!$result) {
+       $result = mysql_fetch_array(mysql_query(&amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;)) or die(&#39;mysql error&#39;);
+       $meminstance-&amp;gt;set($querykey, $result, 0, 600);
+print &amp;quot;got result from mysqln&amp;quot;;
+return 0;
+}
+
+print &amp;quot;got result from memcachedn&amp;quot;;
+return 0;
+
+?&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Altogether the script looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;?php
+$meminstance = new Memcache();
+$meminstance-&amp;gt;pconnect(&#39;localhost&#39;, 11211);
+
+mysql_connect(&amp;quot;localhost&amp;quot;, &amp;quot;test&amp;quot;, &amp;quot;testing123&amp;quot;) or die(mysql_error());
+mysql_select_db(&amp;quot;test&amp;quot;) or die(mysql_error());
+
+$query = &amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;;
+$querykey = &amp;quot;KEY&amp;quot; . md5($query);
+
+$result = $meminstance-&amp;gt;get($querykey);
+
+if (!$result) {
+       $result = mysql_fetch_array(mysql_query(&amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;)) or die(&#39;mysql error&#39;);
+       $meminstance-&amp;gt;set($querykey, $result, 0, 600);
+print &amp;quot;got result from mysqln&amp;quot;;
+return 0;
+}
+
+print &amp;quot;got result from memcachedn&amp;quot;;
+return 0;
+
+?&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running the script on the command line produces the following results:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;# php memtest.php 
+got result from mysql
+
+# php memtest.php 
+got result from memcached
+
+# php memtest.php 
+got result from memcached&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This tutorial covers speeding up the retrieval of data from a database by connecting it to memcache. However, do keep in mind that memcache’s strengh originates from the fact that is a cache—it is not a datastore. When using memcache, do not expect it to replace a database. Because memcache only holds values for a set length of time for a given key, you may not always find the information you need cached, and in cases like these, having the original server database is imperative.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, memcache is a very useful program and can do a lot to increase the server efficiency.&lt;/p&gt;
+
+&lt;p&gt;If you have any other questions about Memcache, feel free to ask&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install ec2-api Tools on Linux</title>
+      <link>https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/</link>
+      <pubDate>Mon, 10 Dec 2012 10:40:06 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/</guid>
+      <description>&lt;p&gt;OS -&lt;strong&gt; Ubuntu Lucid&lt;/strong&gt;
+Processor &lt;strong&gt;- x64&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/351&#34;&gt;Download the ec2-api tools from the amazon site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/java/index.html&#34;&gt;Downloaded jre1.7.0_x64 from the java site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Steps to install JAVA JRE
+&lt;strong&gt;#add-apt-repository ppa:sun-java-community-team/sun-java6&lt;/strong&gt;
+&lt;strong&gt;#apt-get update&lt;/strong&gt;
+&lt;strong&gt;#apt-cache search java* [to know the latest jre/jdk]&lt;/strong&gt;
+&lt;strong&gt;#apt-get install sun-java6-jre&lt;/strong&gt;
+&lt;strong&gt;java is installed into /usr/lib/jvm/java-6-sun-1.6.0.21/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To check successful java installation
+&lt;strong&gt;#java -version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Setting up variables
+&lt;strong&gt;#export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.21&lt;/strong&gt;
+[put it in /etc/profiles]&lt;/p&gt;
+
+&lt;p&gt;Another Check
+&lt;strong&gt;$JAVA_HOME/bin/java -version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the prequisites are done . So comming back to the ec2-api tools
+&lt;strong&gt;#export EC2_HOME=/usr/local/ec2-api-tools-1.5.5.0&lt;/strong&gt;
+[path where i unzipped it , also mention this in /etc/profile]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export PATH=$PATH:$EC2_HOME/bin&lt;/strong&gt;
+[put it in /etc/profile too]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export EC2_PRIVATE_KEY=/EC2_API_Certs/pk-47O.pem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export EC2_CERT=/EC2_API_Certs/cert-4GV.pem&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>To Terminate an EC2 Instance, disabled via ec2-api</title>
+      <link>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</link>
+      <pubDate>Mon, 10 Dec 2012 10:38:44 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</guid>
+      <description>&lt;p&gt;#&lt;strong&gt;ec2minatt i-555555 –disable-api-termination false –region us-east-1 -K /EC2_API_Certs/pk-4GGV.pem -C /EC2_API_Certs/cert-GV.pem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Make a note of the ebs-id attached&lt;/p&gt;
+
+&lt;p&gt;Terminate the Instance from the AWS Console and then Delete the EBS, same could be done through command line&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quick MySQL Commands</title>
+      <link>https://www.vishnu-tech.com/blog/quick-mysql-commands/</link>
+      <pubDate>Mon, 10 Dec 2012 10:33:27 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/quick-mysql-commands/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;To Login into the MySQL&lt;/strong&gt;
+#mysql -u username -ppaswword
+&lt;strong&gt;and if its RDS :&lt;/strong&gt;
+#mysql -h rds.indexpoint/dnsname/ip -u username -ppassword&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List Databases&lt;/strong&gt;
+mysql&amp;gt;show databases;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View tables&lt;/strong&gt;
+mysql&amp;gt;use databasename;
+mysql&amp;gt;show tables;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View Contents Inside the Table&lt;/strong&gt;
+mysql&amp;gt;select * from tablename;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Delete Database&lt;/strong&gt;
+mysql&amp;gt;drop database dbname;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To create Database user (we also need to grant permission to a db to gain access for the new user.)&lt;/strong&gt;
+mysql&amp;gt;create user ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘passwd3@1′;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Grant Permission to a Database for a User and Create the User at the same Time&lt;/strong&gt;
+mysql&amp;gt;grant all on databasename.* to ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘password’;&lt;/p&gt;
+
+&lt;p&gt;[NOTE&amp;ndash; To provide access from all IP Address use ‘%’ instead of ipaddress.]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List out all Database Users&lt;/strong&gt;
+mysql&amp;gt;SELECT user,host FROM mysql.user;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Create a Database&lt;/strong&gt;
+mysql&amp;gt;create database UNNI;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To restore a specific Database in Mysql (database UNNI has to be created already)&lt;/strong&gt;
+#mysql -u username -ppassword UNNI &amp;lt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI had to be created before restore]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To dump/backup a specific Database in Mysql&lt;/strong&gt;
+#mysqldump -u username -ppassword UNNI &amp;gt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI is backed up into UNNI.sql]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To know the permission of Mysql User&lt;/strong&gt;
+#show grants for ‘unni’@&amp;lsquo;localhost’;&lt;/p&gt;
+
+&lt;h2 id=&#34;need-to-know-create-delete-user&#34;&gt;[NEED TO KNOW]- Create/Delete User :::&lt;/h2&gt;
+
+&lt;p&gt;It must be noted that CREATE USER command was added in the MySQL version 5.0.2. In earlier versions, users could be created automatically when assigning permissions using the GRANT command or by manually inserting records in the mysql database.&lt;/p&gt;
+
+&lt;p&gt;The mysql database contains three tables – &lt;strong&gt;user, host and db. &lt;/strong&gt;These tables contains the database permissions.&lt;/p&gt;
+
+&lt;p&gt;The user table contains the usernames and password combination of anyone who has access to any part of the MYSQL database. The password part is the encrypted string, which can be generated using the PASSWORD() function.&lt;/p&gt;
+
+&lt;p&gt;As an administrator, you can even directly insert the values into the user table of mysql database and get the desired results.
+&lt;strong&gt;&lt;code&gt;mysql&amp;gt;INSERT INTO user(Host,User,Password) VALUES(&#39;localhost&#39;, &#39;UNNI&#39;, PASSWORD(&#39;passwd1@3&#39;));
+&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;mysql&amp;gt;FLUSH PRIVILEGES;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The FLUSH PRIVILEGES command is required to inform MySQL to reload the privilege data after the change is made.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Deleting Users&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To delete users from the MySQL database use the DROP command.
+&lt;code&gt;**mysql&amp;gt;DROP USER user@host;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The command in turn removes the user record from the mysql.user table.&lt;/p&gt;
+
+&lt;p&gt;As the CREATE USER command, even the DROP USER command has been added since MySQL 5.0.2. In previous versions of MySQL you must revoke the user’s privileges first, delete the records from user manually and then issue the FLUSH PRIVILEGES command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;**mysql&amp;gt;DELETE FROM user WHERE User= &#39;technofriends&#39; AND Host= &#39;localhost&#39;;
+FLUSH PRIVILEGES;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;General Notes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is no concept in MySQL of “Owner” of database or its objects, as there is in MS Access and MS SQL Server. I surmise this from the lack of “owner” field anywhere in mysql system tables.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Reset Mysql ROOT Password</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</link>
+      <pubDate>Mon, 10 Dec 2012 10:29:59 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</guid>
+      <description>&lt;p&gt;1) &lt;strong&gt;Stop the mysql demon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop&lt;/p&gt;
+
+&lt;p&gt;2) &lt;strong&gt;Start the mysqld demon process using the –skip-grant-tables option with this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/usr/sbin/mysqld –skip-grant-tables –skip-networking &amp;amp;&lt;/p&gt;
+
+&lt;p&gt;3)&lt;strong&gt; start the mysql client process using this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;mysql -u root&lt;/p&gt;
+
+&lt;p&gt;4) &lt;strong&gt;from the mysql prompt execute this command to be able to change any password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;5)&lt;strong&gt; Then reset/update your password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;SET PASSWORD FOR root@’localhost’ = PASSWORD(‘password’);&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;6) &lt;strong&gt;Then stop the mysqld process and relaunch it with the classical way:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop
+/etc/init.d/mysql start&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mysql- Database Sharding</title>
+      <link>https://www.vishnu-tech.com/blog/mysql-database-sharding/</link>
+      <pubDate>Mon, 10 Dec 2012 10:26:20 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/mysql-database-sharding/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;“share nonthing” : Key Law on database sharding Architecture.&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;Small Databases are Fast, Big Databases are Slow !!!&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;DB Sharding – Breaking a Bigger DB into a Smaller DB.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Key Points on DB Sharding –&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Partition Data across master&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Writes and read are distributed&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Application needs modification&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Needs choice partitioning strategy for uniform data distribution.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Issues -&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Joins cannot be performed across shards&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Application modification can be expensive.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Example : Evernote uses database sharding – localized failures , no need for joins. Each shards handles all  data &amp;amp;  traffic for about 100,000 users.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sharding is another way to resolve MySQL scalability issues. It usually means splitting up the data by some logic derived from the application. This can be done by selecting a key in the data and splitting the data by hashing that key and having some distribution logic. It can also be done by identifying the application needs and setting different tables or different data sets in different databases (splitting the North-America sales data from the EMEA sales data, etc.)&lt;/p&gt;
+
+&lt;p&gt;This approach is simple from the database standpoint, but is very complex from the application standpoint since the application needs to be modified to deal with the data being scattered into the different shards. Moreover, combining data from different shards can be very complex and involves development in the application (you can’t just run a simple JOIN.)&lt;/p&gt;
+
+&lt;p&gt;Advantages of scaling out and in using sharding:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Scales beyond the limitations of a single machine&lt;/li&gt;
+&lt;li&gt;Scales both read and write operations (but makes some operations impossible to achieve in the database)&lt;/li&gt;
+&lt;li&gt;Scales both throughput and capacity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Disadvantages of scaling out and in using sharding:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complex and requires application changes&lt;/li&gt;
+&lt;li&gt;Scaling is usually offline and requires a re-partitioning event – and may require application changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Today, there are some solutions that introduce auto-sharding (Scalebase, Dbshards). This approach makes sharding more similar to shared-nothing partitioning, thus taking the sting out of some sharding complexities. However, it still requires application awareness and could prove to be a limiting factor if you needed to update your app or migrate to a different database solution.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install &amp; Use s3cmd for S3 Storage</title>
+      <link>https://www.vishnu-tech.com/blog/install-use-s3cmd-for-s3-storage/</link>
+      <pubDate>Mon, 10 Dec 2012 10:23:24 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/install-use-s3cmd-for-s3-storage/</guid>
+      <description>&lt;p&gt;Amazon S3 is a reasonably priced data storage service. Ideal for off-site backups, archiving and other data storage needs. It is generally more reliable than your regular web hosting for storing your files and images. Check out About Amazon S3 section to find out more.&lt;/p&gt;
+
+&lt;p&gt;S3cmd is a command line tool for uploading, retrieving and managing data in Amazon S3. It is best suited for power users who don’t fear command line. It is also ideal for scripts, automated backups triggered from cron, etc.&lt;/p&gt;
+
+&lt;p&gt;S3cmd is an open source project available under GNU Public License v2 (GPLv2) and is free for both commercial and private use. You will only have to pay Amazon for using their storage. None of these money go to S3cmd developers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#apt-get install s3cmd&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To configure s3cmd&lt;/strong&gt;
+#s3cmd –configure
+[Enter Access Key and Secret Key]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Configuration file is saved into&lt;/strong&gt;
+/root/.s3cfg&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To get Help&lt;/strong&gt;
+#s3cmd –help&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List Buckets&lt;/strong&gt;
+#s3cmd ls&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Delete Non-Empty Buckets&lt;/strong&gt;
+#s3cmd rb s3://buckt_name -fv&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Copy buckets to local machine&lt;/strong&gt;
+#s3cmd get s3://buckt_name -r&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create Buckets&lt;/strong&gt;
+#s3cmd mb s3://buckt_name&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Syncing local dir with s3 Buckets&lt;/strong&gt;
+#s3cmd sync local_dir/ s3://buckt_name&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AWS Products/Solutions – Admins Capsule</title>
+      <link>https://www.vishnu-tech.com/blog/aws-productssolutions-admins-capsule/</link>
+      <pubDate>Mon, 10 Dec 2012 10:21:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/aws-productssolutions-admins-capsule/</guid>
+      <description>
+
+&lt;h1 id=&#34;database&#34;&gt;Database&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/running_databases/#rds&#34;&gt;Amazon RDS&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You can think of a &lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Welcome.html&#34;&gt;RDS&lt;/a&gt; DB Instance as a database environment in the cloud with the compute and storage resources you specify.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can create and delete DB Instances, define/refine infrastructure attributes of your DB Instance(s), and control access and security via the &lt;a href=&#34;https://console.aws.amazon.com/&#34;&gt;AWS Management Console&lt;/a&gt;, Amazon RDS APIs, and Command Line Tools.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Multiple MySQL databases or SQL Server databases (up to 30) or Oracle database schemas can be created on a given DB Instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;For optional &lt;a href=&#34;http://aws.amazon.com/rds/faqs/#36&#34;&gt;Multi-AZ deployments&lt;/a&gt; (currently supported for MySQL and Oracle database engines), Amazon RDS also manages synchronous data replication across Availability Zones and automatic failover.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/rds/faqs/&#34;&gt;Amazon RDS FAQs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;By default, customers are allowed to have up to a total of 20 Amazon RDS DB instances.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/articles/2936?_encoding=UTF8&amp;amp;jiveRedirect=1&#34;&gt;RDS cannot remove storage once it has been allocated. The only way to reduce the amount of storage allocated to a DB Instance is to dump the data out of the DB Instance, create a new DB Instance with less storage space, and load the data into the new DB Instance.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Unlike Multi-AZ deployments, Read Replicas use MySQL’s built-in replication and are subject to its strengths and limitations.This means recent database updates made to a standard (non Multi-AZ) source DB Instance may not be present on associated Read Replicas in the event of an unplanned outage on the source DB Instance. As such, Read Replicas do not offer the same data durability benefits as Multi-AZ deployments. While Read Replicas can provide some read availability benefits, they and are not designed to improve write availability. Read Replicas are currently supported for Amazon RDS for MySQL. They can also be used for serving read traffic when the primary database is unavailable.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The read replica mechanism uses MySQL’s native, asynchronous replication. This means replicas might be lagging behind the master as they try to catch up with writes. The interesting thing about this is that multi-AZ RDS instances apparently use another,_ proprietary type_ of synchronous replication.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A Read Replica will stay active and continue accepting read traffic even after its corresponding source DB Instance has been deleted. If you desire to delete the Read Replica in addition to the source DB Instance, you must explicitly delete the Read Replica using the DeleteDBInstance API or AWS Management Console.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;By default and at no additional charge, Amazon RDS enables automated backups of your DB Instance with a 1 day retention period.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;During the backup window, storage I/O may be suspended while your data is being backed up. This I/O suspension typically lasts a few minutes at most. This I/O suspension is avoided with Multi-AZ DB deployments, since the backup is taken from the standby.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Amazon RDS DB snapshots and automated backups are stored in S3.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you desire to turn off automated backups altogether, you can do so by setting the retention period to 0 (not recommended).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When you delete a DB Instance, you have the ability to specify whether a final DB Snapshot is created upon deletion, which enables a DB Snapshot restore of the deleted database instance at a later date. All previously created DB Snapshots of your DB Instance will be retained and billed at $0.15 per GB-month, unless you choose to delete them.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Amazon RDS does not currently provide access to the binary logs for your Database Instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You are not charged for the data transfer incurred in replicating data between your source DB Instance and Read Replica. Billing for a Read Replica begins as soon as the Read Replica has been successfully created (i.e. when status is listed as “active”). The Read Replica will continue being billed at standard Amazon RDS DB Instance hour rates until you issue a command to delete it.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Amazon RDS primarily has 3 engines – &lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBEngine.MySQL51.html&#34;&gt;Mysql Database Engine&lt;/a&gt;, &lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBEngine.Oracle.html&#34;&gt;Oracle Database Engine&lt;/a&gt;,&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBEngine.SQLServer.html&#34;&gt;Microsoft SQL Server Database Engine&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/StartCLI.html&#34;&gt;Setup RDS CLI.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBInstance.html&#34;&gt;RDS Terminology and Concepts.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html&#34;&gt;How to Connect to RDS – MySQL.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/CommandLineReference/command-reference.html&#34;&gt;RDS CLI – References&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Scenarios.InstanceBasics.html&#34;&gt;Creating and Modifying  DB Instance.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Scenarios.Backups.html&#34;&gt;Backing UP and Restoring DB Instances.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_ListEvents.html&#34;&gt;Viewing RDS Instance events.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;working with  &lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html&#34;&gt;DB Parameter Groups&lt;/a&gt;, &lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_WorkingWithSecurityGroups.html&#34;&gt;security groups&lt;/a&gt;, &lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html&#34;&gt;option groups&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html&#34;&gt;viewing DB instance metrics&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?messageID=161973&amp;amp;#161973&#34;&gt;RDS Security Best Practices !!!&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?messageID=180752&amp;amp;#180752&#34;&gt;Tech Tips – Scaling Databases with Amazon RDS&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?messageID=160936&amp;amp;#160936&#34;&gt;Tech Tips – On Demand Test Databases&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?messageID=198765&amp;amp;#198765&#34;&gt;Tech Tips IV: Best Practices to Avoid an Inoperable RDS MySQL DB Instance&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://forums.aws.amazon.com/thread.jspa?threadID=56871&amp;amp;tstart=0&#34;&gt;Tech Tips V: Defining CloudWatch alarms for Amazon RDS metrics&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The default storage engine with RDS is InnoDB, but you are free to choose another, like the popular MyISAM. It is important to realize that read replicas on nontransactional storage engines (like MyISAM) require you to freeze your databases, as the consistency cannot be guaranteed when snapshotting. But if you use InnoDB, you are safe, and the only thing you have to do is fire up a new read replica.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;RDS storage is independent of RDS instance classes. Every class can have from 5 GB to 1 TB of storage associated. Scaling up the storage is easy, and you can do it using the Console. It does require a reboot. On the other hand, scaling down the storage is impossible.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/rds/reserved-instances/&#34;&gt;Reserved DB Instances page&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/rds/&#34;&gt;On-Demand DB Instances.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/2928/&#34;&gt;RDS CLI&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://blog.webyog.com/2009/11/16/top-10-things-to-know-about-amazon-rds/&#34;&gt;10 things you should know about RDS.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/running_databases/#dynamodb&#34;&gt;Amazon DynamoDB&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A fast, highly scalable NoSQL database service&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A fully managed service that offers extremely fast performance, seamless scalability and reliability, low cost and more.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=oz-7wJJ9HZ0&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/running_databases/#simpledb&#34;&gt;Amazon SimpleDB&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A NoSQL database service for smaller datasets.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A fully managed service that provides a schemaless database, reliability and more.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/running_databases/#relational_amis&#34;&gt;Your choice of relational AMIs&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A relational database you can manage on your own.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;On Amazon EC2 and EBS that provide scale compute &amp;amp; storage, complete control over instances, and more.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/elasticache/&#34;&gt;Amazon ElastiCache&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Amazon ElastiCache is a web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/2310261897259567&#34;&gt;Amazon ElasticCache CLI Tool.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;compute&#34;&gt;Compute&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/ec2/&#34;&gt;Amazon Elastic Cloud Compute (EC2)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Amazon Elastic Compute Cloud delivers scalable, pay-as-you-go compute capacity in the cloud.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/ec2/instance-types&#34;&gt;Amazon EC2 Instance Types&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;EBS-Optimized instances are for selected types only such as – Standard Instances(Large,Extra Large), High-Memory Instances(High-Memory Quadruple Extra Large).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Amazon EC2 instances are grouped into seven families: Standard, Micro, High-Memory, High-CPU, Cluster Compute, Cluster GPU, and High I/O.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/351&#34;&gt;Amazon EC2 API (CLI Tools)&lt;/a&gt; and &lt;a href=&#34;http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/SettingUp_CommandLine.html&#34;&gt;how to setup&lt;/a&gt; it.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/739&#34;&gt;Simple CLI Access to Amazon EC2 and S3&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/elasticmapreduce/&#34;&gt;Amazon Elastic MapReduce&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Amazon Elastic MapReduce is a web service that enables businesses, researchers, data analysts, and developers to easily and cost-effectively process vast amounts of data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://aws.amazon.com/autoscaling/&#34;&gt;Auto Scaling&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Auto Scaling allows you to automatically scale your Amazon EC2 capacity up or down according to conditions you define.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/2535&#34;&gt;Auto Scaling CLI Tool.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;networking&#34;&gt;Networking&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/elasticloadbalancing/&#34;&gt;&lt;strong&gt;Elastic Load Balancing&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/2536&#34;&gt;ELB API Tools&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Elastic Load Balancing automatically distributes incoming application traffic across multiple Amazon EC2 instances.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RDS CLI Tools Setup</title>
+      <link>https://www.vishnu-tech.com/blog/rds-cli-tools-setup/</link>
+      <pubDate>Mon, 10 Dec 2012 10:19:59 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/rds-cli-tools-setup/</guid>
+      <description>
+
+&lt;p&gt;#cd /usr/local/rds
+#chmod 744 bin/*&lt;/p&gt;
+
+&lt;p&gt;Setup Credentials into the file to use a default AWS Account —
+$ cd /usr/local/rds
+$ sudo cp credential-file-path.template credential-file
+$ sudo vi credential-file
+$ sudo chmod 600 /usr/local/aws/rds/credential-file&lt;/p&gt;
+
+&lt;p&gt;Now add to the ~/.bashrc&lt;/p&gt;
+
+&lt;h1 id=&#34;set-location-of-the-ec2-and-rds-command-line-tools&#34;&gt;Set location of the ec2 and rds command line tools&lt;/h1&gt;
+
+&lt;p&gt;export EC2_HOME=/usr
+export AWS_RDS_HOME=/usr/local/aws/rds&lt;/p&gt;
+
+&lt;h1 id=&#34;set-aws-path&#34;&gt;Set AWS path&lt;/h1&gt;
+
+&lt;p&gt;export PATH=$PATH:$EC2_HOME/bin:$AWS_RDS_HOME/bin&lt;/p&gt;
+
+&lt;p&gt;Source the .bashrc file —
+$ source .bashrc&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://domino.symetrikdesign.com/2011/04/28/installing-amazon-rds-command-line-toolkit-on-ubuntu-10-04/&#34;&gt;Reference Link 1&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RDS Sharding &amp; Quick Commands</title>
+      <link>https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/</link>
+      <pubDate>Mon, 10 Dec 2012 10:17:11 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/articles/0040302286264415#virtualshards&#34;&gt;Source article on RDS sharding by Amazon.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/articles/0040302286264415#virtualshards&#34;&gt;http://aws.amazon.com/articles/0040302286264415#virtualshards&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://searchcloudcomputing.techtarget.com/definition/sharding&#34;&gt;What is sharding?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here unlike ec2 instances there is no rds-db-instance-id instead we use the db-instance names (called as dbinstance_identifiers) in our rds commmands to identify among rds-db-instances.&lt;/p&gt;
+
+&lt;p&gt;Example-
+Database Name – news
+RDS DB Instances – shard1, shard2&lt;/p&gt;
+
+&lt;p&gt;Consider creating 2 db-shards ie we need 2 db-instance to map those db-shards to db-instances. To reduce the schema setup overhead we use the snapshot and restore capabilities of Amazon RDS to do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create a single “seed” DB Instance.&lt;/li&gt;
+&lt;li&gt;Set up the schema on that database.&lt;/li&gt;
+&lt;li&gt;Snapshot the database.&lt;/li&gt;
+&lt;li&gt;Create more databases from that snapshot using the RDS RestoreDBInstanceFromSnapshot API.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;1.Create SEED DATABASE INSTANCE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#rds-create-db-instance shard1 –engine mysql5.1 –master-username unni –master-user-password 123 –allocated-storage 5 –db-instance-class db.t1.micro –db-name news –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;$$output$$
+DBINSTANCE  shard1  db.t1.micro  mysql  5  unni  creating  1  ****  n  5.1.63  general-public-license
+SECGROUP  default  active
+PARAMGRP  default.mysql5.1  in-sync
+OPTIONGROUP  default:mysql-5-1  in-sync&lt;/p&gt;
+
+&lt;p&gt;Add IP address to DB Security Group to gain access
+1.Find IP from www.whatismyipaddress.com – say its – 122.174.199.204
+2.Add the CIDR – 122.174.199.&lt;sup&gt;204&lt;/sup&gt;&amp;frasl;&lt;sub&gt;32&lt;/sub&gt; in the DB-Security Group
+3.Try gaining access to rds by – #mysql -h shard1.covaztmm6tup.eu-west-1.rds.amazonaws.com -u unni -p123&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.SETUP SCHEMA ON THE DB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;mysql&amp;gt;show database;
+mysql&amp;gt;use news;
+mysql&amp;gt;CREATE TABLE articles (
+article_id numeric(64,0) NOT NULL PRIMARY KEY,
+category char(13),
+CHECK category IN (‘BUSINESS’, ‘ENTERTAINMENT’, ‘HEALTH’, ‘SCIENCE’, ‘SPORTS’, ‘TECHNOLOGY’, ‘WORLD’),
+title char(128),
+submit_time timestamp
+);&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.SNAPSHOT and CREATE OTHER DB INSTANCES&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#rds-create-db-snapshot shard1 –db-snapshot-identifier news-seed-database –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;$$output$$
+DBSNAPSHOT  news-seed-database  shard1  2012-09-04T12:02:30.129Z  mysql  5  creating  unni  5.1.63  general-public-license  manual&lt;/p&gt;
+
+&lt;p&gt;Once the snapshot is available it can be used to create any number of DB Instances. We’re only creating two DB Instances in this example, but it could easily be many more. Also, for our trivial setup, the only efficiency we gain is that we don’t need to create the schema on each. However, in a typical scenario there might be a lot more setup involved in creating the seed (e.g., application configuration data, user accounts, permissions, etc.).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.DB-INSTANCE FROM DB-SNAPSHOT&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The following command can be used to create new DB Instances from the seed snapshot:&lt;/p&gt;
+
+&lt;p&gt;_#rds-restore-db-instance-from-db-snapshot shard2 –db-snapshot-identifier news-seed-database –db-instance-class db.t1.micro –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;$$output$$
+DBINSTANCE  shard2  db.t1.micro  mysql  5  unni  creating  1  n  5.1.63  general-public-license
+SECGROUP  default  active
+PARAMGRP  default.mysql5.1  in-sync
+OPTIONGROUP  default:mysql-5-1  pending&lt;/p&gt;
+
+&lt;p&gt;—————–&lt;/p&gt;
+
+&lt;p&gt;To LIST RDS-INSTANCES
+_#rds-describe-db-instances –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TO DELETE RDS-INSTANCE with FINAL SNAPSHOT
+_#rds-delete-db-instance shard1 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem –final-db-snapshot-identifier shard-final-snapshot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TO DELETE RDS-INSTANCE without FINAL SNAPSHOT
+_#rds-delete-db-instance shard2 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem –skip-final-snapshot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TO LIST RDS-DB-SNAPSHOTS
+_#rds-describe-db-snapshots –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TO DELETE RDS-DB-SNAPSHOTS
+_#rds-delete-db-snapshot shard-final-snapshot –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;NOTE
+Creating a final snapshot (before dbinstance termination) incurs additional storage fees.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RDS Scaling</title>
+      <link>https://www.vishnu-tech.com/blog/rds-scaling/</link>
+      <pubDate>Mon, 10 Dec 2012 07:29:43 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/rds-scaling/</guid>
+      <description>&lt;p&gt;If your app gets to the point that you need to start scaling either up or out, it is a good idea to switch to multi-AZ if you don’t run it already. If you have a simple RDS instance, you will degrade your service significantly while scaling, as you can expect to lose the ability to write and/or read. With multi-AZ RDS instances, your service is almost uninterrupted.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scaling Up (or Down)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Scaling up is so easy it is almost ridiculous. The only drawback is that you have some downtime during the operation. If you don’t have multi-AZ enabled, the downtime of your RDS instance could be several minutes, as you have to wait until a new instance is launched and fully functional. For multi-AZ RDS instances, you will experience some downtime as a failover is initiated after the slave has been scaled up (or down). This failover doesn’t take more than a minute most of the time.&lt;/p&gt;
+
+&lt;p&gt;If you initiate a scaling activity via the Console, make sure you enable Apply Immediately if you are in a hurry. If you don’t, scaling will take place during the scheduled maintenance period&lt;/p&gt;
+
+&lt;p&gt;Scaling using the command-line tools is a two-step process. First scale, and then reboot:&lt;/p&gt;
+
+&lt;p&gt;$ rds-modify-db-instance production –db-instance-class db.m1.xlarge –apply-immediately
+$ rds-reboot-db-instance production&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scaling Out&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You can scale out a relational database in two different ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using read-only slaves (read replicas in AWS)&lt;/li&gt;
+&lt;li&gt;Sharding or partitioning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are still some hard problems to solve, as sharding/partitioning has not been addressed yet with RDS. Master-slave type scaling is available, though. A slave, or read replica, is easily created from the Console. The only requirement on the master RDS instance is that backups are not disabled by setting the backup retention period to 0. Currently, you can have up to five read replicas that you have to launch one by one. Amazon is working on the ability to launch multiple replicas at once, but that is not yet available.&lt;/p&gt;
+
+&lt;p&gt;On a multi-AZ RDS instance, launching a read replica goes unnoticed. A snapshot is taken from the standby, the replica is launched, and when it is ready, it starts to catch up with the master. For a normal RDS instance, there is a brief I/O suspension in the order of one minute. AWS advises to use the same instance classes, as differing classes may incur replica lag. With read replicas, you basically introduce eventual consistency in your database (cluster).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ELB and Autoscaling in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/</link>
+      <pubDate>Mon, 10 Dec 2012 07:27:56 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Installing ELB and Autoscale API tools&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;export AWS_ELB_HOME=/home/users/unni/bashrc/elbtool/ElasticLoadBalancing-1.0.12.0
+export PATH=$PATH:$AWS_ELB_HOME/bin
+export AWS_AUTO_SCALING_HOME=/home/users/unni/bashrc/auto/AutoScaling-1.0.33.1
+export PATH=$PATH:$AWS_AUTO_SCALING_HOME/bin&lt;/p&gt;
+
+&lt;h1 id=&#34;autoscaling&#34;&gt;AUTOSCALING&lt;/h1&gt;
+
+&lt;p&gt;Create AS, Create AS Group and Setup Scaleup Parameter.&lt;/p&gt;
+
+&lt;p&gt;#as-create-launch-config as-agile –region eu-west-1 –image-id ami-b123456 –instance-type t1.micro –key elbtest –group default -K ec2_certs/pk-K4.pem -C ec2_certs/cert-K4.pem&lt;/p&gt;
+
+&lt;p&gt;OK-Created launch config&lt;/p&gt;
+
+&lt;p&gt;_#as-create-auto-scaling-group as-agile-gp –launch-configuration as-agile –region eu-west-1 –availability-zones eu-west-1a,eu-west-1b –min-size 2 –max-size 3 –load-balancers elbtest-agile -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;OK-Created AutoScalingGroup&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;#as-create-or-update-trigger awsauto-nixontr –auto-scaling-group awsauto-nixongp –namespace “AWS/EC2″ –measure CPUUtilization –statistic Average –dimensions “AutoScalingGroupName=awsauto-nixongp” –period 60 –lower-threshold 40 –upper-threshold 80 –lower-breach-increment”=-1″ –upper-breach-increment 1 –breach-duration 1200 -K pk-XN.pem -C cert-XN.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;OK-Created/Updated trigger&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;elastic-load-balancer&#34;&gt;ELASTIC LOAD BALANCER&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Create n Configure ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-create-lb elbtest-agile –region eu-west-1 –availability-zones eu-west-1a,eu-west-1b –headers –listener “lb-port=80,instance-port=80,protocol=http” –listener “lb-port=443,instance-port=443,protocol=tcp” -K ec2_certs/pk-KO.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_DNS_NAME DNS&lt;em&gt;NAME&lt;/em&gt;
+_DNS&lt;em&gt;NAME elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-configure-healthcheck elbtest-agile –region eu-west-1 –headers –target “HTTP:80/index.html” –interval 5 –timeout 3 –unhealthy-threshold 2 –healthy-threshold 2 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_HEALTH_CHECK TARGET INTERVAL TIMEOUT HEALTHY_THRESHOLD UNHEALTHY&lt;em&gt;THRESHOLD&lt;/em&gt;
+_HEALTH&lt;em&gt;CHECK HTTP:80/index.html 5 3 2 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Add Instances to ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-register-instances-with-lb elbtest-agile –instances i-A123456 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To LIST ELBs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;#elb-describe-lbs –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2_certs/cert-K4.pem
+LOAD_BALANCER elbtest-agile elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com Z3NF1Z3NOM5OY2 2012-07-19T09:49:19.110Z&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;deletions&#34;&gt; DELETIONS&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;1.Delete Trigger&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;#as-delete-trigger awsauto-nixontrtest –auto-scaling-group awsauto-nixongptest –region eu-west-1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;DEPRECATED: This command is deprecated and included only to facilitate migration to the new trigger mechanism. You should use this command for migration purposes only.&lt;/p&gt;
+
+&lt;p&gt;Are you sure you want to delete this trigger? [Ny]y
+OK-Deleted trigger&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.Set Autoscale to 0&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#as-update-auto-scaling-group as-agile-gp –region eu-west-1 –launch-configuration as-agile –min-size 0 –max-size 0 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;OK-Updated AutoScalingGroup&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.Delete Autoscale Group&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#as-delete-auto-scaling-group as-agile-gp –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;OK-Deleted AutoScalingGroup&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.Delete Autoscale Config&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#as-delete-launch-config as-agile –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Are you sure you want to delete this launch configuration? [Ny]y
+OK-Deleted launch configuration&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5.Finally Delete ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-delete-lb elbtest-agile –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Warning: Deleting a LoadBalancer can lead to service disruption to any
+customers connected to the LoadBalancer. Are you sure you want to delete
+this LoadBalancer? [Ny]y
+OK-Deleting LoadBalancer&lt;/p&gt;
+
+&lt;p&gt;The Following commands will list out Autoscale Related Info —
+as-describe-auto-scaling-groups
+as-describe-auto-scaling-instances
+as-describe-launch-configs
+as-describe-triggers [AutoScalingGroupName]&lt;/p&gt;
+
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/ElasticLoadBalancing/latest/DeveloperGuide/UsingTheCommandLineTools.html&#34;&gt;AWS Link To Download &amp;amp; Install ELB Command Line&lt;/a&gt;
+&lt;a href=&#34;http://aws.amazon.com/elasticloadbalancing/&#34;&gt;ELB Quick Reference Link&lt;/a&gt;
+&lt;a href=&#34;http://www.linuxhelp.in/2012/05/amazon-elastic-load-balancing-with.html&#34;&gt;ELB external Reference&lt;/a&gt;
+&lt;a href=&#34;http://www.youtube.com/watch?v=8KQ8aLoxVi0&amp;amp;feature=related&#34;&gt;Check Amazon Youtube video on ELB&lt;/a&gt;
+&lt;a href=&#34;http://www.youtube.com/watch?v=ainDIPzVM84&#34;&gt;Check Youtube video on Autoscale&lt;/a&gt;
+&lt;a href=&#34;http://alestic.com/2012/09/aws-command-line-tools?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+alestic+%28Alestic.com+-+Ubuntu+on+EC2%29&#34;&gt;Alestic Lists out all AWS Tools download&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

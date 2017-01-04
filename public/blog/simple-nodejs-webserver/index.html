@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Simple Nodejs WebServer &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/simple-nodejs-webserver/">Simple Nodejs WebServer</a></h1>
+            <span class="post-date">May 2, 2014 </span>
+            <div class="post-content">
+                
+
+<p>Node.js is built on Chrome&rsquo;s <a href="http://code.google.com/p/V8">V8 JavaScript Engine</a>. It&rsquo;s useful for a range of applications and it brings JavaScript to the server. Applications written in Node.js are event-driven. For example, if you wanted to create a file, you would provide a callback function to be called upon the file&rsquo;s successful creation. In this sort of model, your app doesn&rsquo;t become stuck waiting for events to finish executing.</p>
+
+<p>I hope you have installed nodejs. Then you need to install &ldquo;forever&rdquo;</p>
+
+<h2 id="installing-forever">Installing forever</h2>
+
+<p>forever, developed by nodejitsu, has functions to create applications that are always running—&rdquo;forever&rdquo; running. If the application dies, forever brings it back. It has built-in functionality to monitor processes. It also offers an API you can use to incorporate its features into your own code.</p>
+
+<p>forever can be installed using npm. npm should have been installed as part of Node.js:</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2014/05/forever.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2014/05/forever.png" alt="forever" /></a></p>
+
+<h2 id="running-the-app">Running the app</h2>
+
+<p>Create the file index.js with the following contents:</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2014/05/index.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2014/05/index.png" alt="index" /></a></p>
+
+<p>Then run:</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2014/05/indexx1.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2014/05/indexx1.png" alt="indexx" /></a></p>
+
+<p>Point your browser to <a href="http://127.0.0.1:8124/">http://127.0.0.1</a> or <a href="http://localhost">http://localhost</a>. It should display the index.html&rdquo;</p>
+
+<p>Now we can use _**forever **_to manage our application:, instead of running the above command.</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2014/05/foreverr1.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2014/05/foreverr1.png" alt="foreverr" /></a></p>
+
+<p>To check, open the browser and point it to the <a href="http://127.0.0.1:8124/">http://127.0.0.1</a> or <a href="http://localhost">http://localhost</a>. It should display the index.html</p>
+
+<p>Stopping the app is similar:</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2014/05/stop.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2014/05/stop.png" alt="stop" /></a></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/simple-nodejs-webserver\/';
+    var disqus_title = 'Simple Nodejs WebServer';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/simple-nodejs-webserver\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

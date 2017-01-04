@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysqldump on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/mysqldump/index.xml</link>
+    <description>Recent content in Mysqldump on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/mysqldump/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ignore Mysql Tables using regex when using Mysqldump command</title>
+      <link>https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/</link>
+      <pubDate>Sat, 31 Aug 2013 07:00:33 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/</guid>
+      <description>&lt;p&gt;Hi guys,&lt;/p&gt;
+
+&lt;p&gt;We can ignore database tables while taking mysqldump using the below command&lt;/p&gt;
+
+&lt;p&gt;mysqldump -u username -p database &amp;ndash;ignore-table=database.table1 &amp;ndash;ignore-table=database.table2 &amp;gt; database.sql&lt;/p&gt;
+
+&lt;p&gt;However if we want to ignore more tables we need to add the tables manually and its a real pain in the A$$&lt;/p&gt;
+
+&lt;p&gt;Here I am showing how to take the mysqldump using regex to ignore mysql tables.&lt;/p&gt;
+
+&lt;p&gt;For example:- If I want to ignore the below tables starting from&lt;/p&gt;
+
+&lt;p&gt;1) alice_token,&lt;/p&gt;
+
+&lt;p&gt;2) import_&lt;/p&gt;
+
+&lt;p&gt;3)sales_order_item_shipment_tracking&lt;/p&gt;
+
+&lt;p&gt;4)sales_order_item_status_history&lt;/p&gt;
+
+&lt;p&gt;5)stock_import&lt;/p&gt;
+
+&lt;p&gt;6)ums&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine# cd /var/lib/mysql/&lt;database&gt;&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;# echo &amp;lsquo;[mysqldump]&amp;rsquo; &amp;gt; mydump.cnf&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;#  mysql -NBe &amp;ldquo;select concat(&amp;lsquo;ignore-table=&amp;rsquo;, table_schema, &amp;lsquo;.&amp;rsquo;, table_name) from information_schema.tables where table_name REGEXP &amp;lsquo;^(alice&lt;em&gt;token|import&lt;/em&gt;|sales_order_item_shipment_tracking|sales_order_item_status_history|stock_import|ums)&amp;lsquo;;&amp;rdquo; &amp;gt; mydump.cnf&lt;/p&gt;
+
+&lt;p&gt;And verify the file &amp;ldquo;mydump.cnf&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;# cat mydump.cnf&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.alice_token&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.import_token&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.import_sales&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.sales_order_item_shipment_tracking&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.sales_order_item_status_history&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.stock_import&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.ums&lt;/p&gt;
+
+&lt;p&gt;You can see the above entries in the file &amp;ldquo;mydump.cnf&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;# mysqldump &amp;ndash;defaults-file=mydump.cnf -u root -p &lt;database&gt; &amp;gt; vishnu.sql&lt;/p&gt;
+
+&lt;p&gt;And here it is new dump without tables as mentioned above.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> How to Set Up Master Slave Replication in MySQL &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/how-to-set-up-master-slave-replication-in-mysql/">How to Set Up Master Slave Replication in MySQL</a></h1>
+            <span class="post-date">May 24, 2013 </span>
+            <div class="post-content">
+                
+
+<h3 id="about-mysql-replication">About MySQL replication</h3>
+
+<hr />
+
+<p>MySQL replication is a process that allows you to easily maintain multiple copies of a MySQL data by having them copied automatically from a master to a slave database. This can helpful for many reasons including facilating a backup for the data,a way to analyze it without using the main database, or simply as a means to scale out.</p>
+
+<p>This tutorial will cover a very simple example of mysql replication—one master will send information to a single slave. For the process to work you will need two IP addresses: one of the master server and and one of the slave.</p>
+
+<p>This tutorial will use the following IP addresses:</p>
+
+<p>12.34.56.789- Master Database</p>
+
+<p>12.23.34.456- Slave Database</p>
+
+<h2 id="setup">Setup</h2>
+
+<hr />
+
+<p>This article assumes that you have user with sudo privileges and have MySQL installed. If you do not have mysql, you can install it with this command:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;sudo apt-get install mysql-server mysql-client&lt;/span&gt;
+</code></pre>
+
+<h2 id="step-one-configure-the-master-database">Step One—Configure the Master Database</h2>
+
+<hr />
+
+<p>Open up the mysql configuration file on the master server.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;sudo nano /etc/mysql/my.cnf&lt;/span&gt;
+</code></pre>
+
+<p>Once inside that file, we need to make a few changes.</p>
+
+<p>The first step is to find the section that looks like this, binding the server to the local host:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;bind-address            = 127.0.0.1&lt;/span&gt;
+</code></pre>
+
+<p>Replace the standard IP address with the IP address of server.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;bind-address            = 12.34.56.789&lt;/span&gt;
+</code></pre>
+
+<p>The next configuration change refers to the server-id, located in the [mysqld] section. You can choose any number for this spot (it may just be easier to start with 1), but the number must be unique and cannot match any other server-id in your replication group. I’m going to go ahead and call this one 1. Make sure this line is uncommented.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;server-id               = 1&lt;/span&gt;
+</code></pre>
+
+<p>Move on to the log_bin line. This is where the real details of the replication are kept. The slave is going to copy all of the changes that are registered in the log. For this step we simply need to uncomment the line that refers to log_bin:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;log_bin                 = /var/log/mysql/mysql-bin.log&lt;/span&gt;
+</code></pre>
+
+<p>Finally, we need to designate the database that will be replicated on the slave server. You can include more than one database by repeating this line for all of the databases you will need.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;binlog_do_db            = newdatabase&lt;/span&gt;
+</code></pre>
+
+<p>After you make all of the changes, go ahead and save and exit out of the configuration file.</p>
+
+<p>Refresh MySQL.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;sudo service mysql restart&lt;/span&gt;
+</code></pre>
+
+<p>The next steps will take place in the MySQL shell, itself.</p>
+
+<p>Open up the MySQL shell.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;mysql -u root -p&lt;/span&gt;
+</code></pre>
+
+<p>We need to grant privileges to the slave. You can use this line to name your slave and set up their password. The command should be in this format:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;GRANT REPLICATION SLAVE ON *.* TO 'slave_user'@'%' IDENTIFIED BY 'password';&lt;/span&gt;
+</code></pre>
+
+<p>Follow up with:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;FLUSH PRIVILEGES;&lt;/span&gt;
+</code></pre>
+
+<p>The next part is a bit finicky. To accomplish the task you will need to open a <em>new window or tab</em> in addition to the one that you are already using a few steps down the line.</p>
+
+<p>In <em>your current tab</em> switch to “newdatabase”.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;USE newdatabase;&lt;/span&gt;
+</code></pre>
+
+<p>Following that, lock the database to prevent any new changes:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;FLUSH TABLES WITH READ LOCK;&lt;/span&gt;
+</code></pre>
+
+<p>Then type in:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;SHOW MASTER STATUS;&lt;/span&gt;
+</code></pre>
+
+<p>You will see a table that should look something like this:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;mysql&gt; SHOW MASTER STATUS;
++------------------+----------+--------------+------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB |
++------------------+----------+--------------+------------------+
+| mysql-bin.000001 |      107 | newdatabase  |                  |
++------------------+----------+--------------+------------------+
+1 row in set (0.00 sec)&lt;/span&gt;
+</code></pre>
+
+<p>This is the position from which the slave database will start replicating. Record these numbers, they will come in useful later.</p>
+
+<p>If you make any new changes in the same window, the database will automatically unlock. For this reason, you should open the new tab or window and continue with the next steps there.</p>
+
+<p>Proceeding the with the database still locked, export your database using mysqldump in the new window (make sure you are typing this command in the bash shell, not in MySQL).</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;mysqldump -u root -p --opt newdatabase &gt; newdatabase.sql&lt;/span&gt;
+</code></pre>
+
+<p>Now, returning to your your original window, unlock the databases (making them writeable again). Finish up by exiting the shell.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;UNLOCK TABLES;&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;QUIT;&lt;/span&gt;
+</code></pre>
+
+<p>Now you are all done with the configuration of the the master database.</p>
+
+<h2 id="step-two-configure-the-slave-database">Step Two—Configure the Slave Database</h2>
+
+<hr />
+
+<p>Once you have configured the master database. You can put it aside for a while, and we will now begin to configure the slave database.</p>
+
+<p>Log into your slave server, open up the MySQL shell and create the new database that you will be replicating from the master (then exit):</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;CREATE DATABASE newdatabase;&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;EXIT;&lt;/span&gt;
+</code></pre>
+
+<p>Import the database that you previously exported from the master database.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;mysql -u root -p newdatabase &lt; /path/to/newdatabase.sql&lt;/span&gt;
+</code></pre>
+
+<p>Now we need to configure the slave configuration in the same way as we did the master:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;sudo nano /etc/mysql/my.cnf&lt;/span&gt;
+</code></pre>
+
+<p>We have to make sure that we have a few things set up in this configuration. The first is the server-id. This number, as mentioned before needs to be unique. Since it is set on the default (still 1), be sure to change it’s something different.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;server-id               = 2&lt;/span&gt;
+</code></pre>
+
+<p>Following that, make sure that your have the following three criteria appropriately filled out:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;relay-log               = /var/log/mysql/mysql-relay-bin.log&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;log_bin                 = /var/log/mysql/mysql-bin.log&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;binlog_do_db            = newdatabase&lt;/span&gt;
+</code></pre>
+
+<p>You will need to add in the relay-log line: it is not there by default.</p>
+
+<p>Once you have made all of the necessary changes, save and exit out of the slave configuration file.</p>
+
+<p>Restart MySQL once again:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;sudo service mysql restart&lt;/span&gt;
+</code></pre>
+
+<p>The next step is to enable the replication from within the MySQL shell.</p>
+
+<p>Open up the the MySQL shell once again and type in the following details, replacing the values to match your information:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;CHANGE MASTER TO MASTER_HOST='12.34.56.789',MASTER_USER='slave_user', MASTER_PASSWORD='password', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=  107;&lt;/span&gt;
+</code></pre>
+
+<p>This command accomplishes several things at the same time:</p>
+
+<pre><code>1. It designates the current server as the slave of our master server.
+
+
+
+
+
+
+
+1. It provides the server the correct login credentials
+</code></pre>
+
+<ol>
+<li>Last of all, it lets the slave server know where to start replicating from; the master log file and log position come from the numbers we wrote down previously.</li>
+</ol>
+
+<p>With that—you have configured a master and slave server. Activate the slave server:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;START SLAVE;&lt;/span&gt;
+</code></pre>
+
+<p>You be able to see the details of the slave replication by typing in this command. The G rearranges the text to make it more readable.</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;SHOW SLAVE STATUSG&lt;/span&gt;
+</code></pre>
+
+<p>If there is an issue in connecting, you can try starting slave with a command to skip over it:</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;SET GLOBAL SQL_SLAVE_SKIP_COUNTER = 1; SLAVE START;&lt;/span&gt;
+</code></pre>
+
+<p>All done.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/how-to-set-up-master-slave-replication-in-mysql\/';
+    var disqus_title = 'How to Set Up Master Slave Replication in MySQL';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/how-to-set-up-master-slave-replication-in-mysql\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

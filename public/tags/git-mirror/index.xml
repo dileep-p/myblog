@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Mirror on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/git-mirror/index.xml</link>
+    <description>Recent content in Git Mirror on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/git-mirror/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Git Mirror - If git hub goes down</title>
+      <link>https://www.vishnu-tech.com/blog/git-mirror-if-git-hub-goes-down/</link>
+      <pubDate>Sun, 19 Jan 2014 13:46:59 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/git-mirror-if-git-hub-goes-down/</guid>
+      <description>&lt;p&gt;Git has &lt;a href=&#34;https://www.kernel.org/pub/software/scm/git/docs/git-daemon.html&#34;&gt;a built-in server&lt;/a&gt; for sharing git repositories. If you have several repositories in your working directory:&lt;/p&gt;
+
+&lt;p&gt;for eg:&lt;/p&gt;
+
+&lt;p&gt;Step-1 :- We clone the repo from Github&lt;/p&gt;
+
+&lt;p&gt;git clone git@github.com:vishnu/vishnu.git &amp;mdash;&amp;gt; To our home directory for eg: /home/vishnu&lt;/p&gt;
+
+&lt;p&gt;step-2 :- git-deamon
+git daemon &amp;ndash;base-path=/home/vishnu &amp;ndash;export-all &amp;ndash;enable=receive-pack
+(I created a supervisor to run this)&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:~# vim /etc/supervisor/conf.d/git_mirror_update.conf
+[program:git_mirror_update]
+command=/usr/local/bin/git daemon &amp;ndash;base-path=/home/vishnu &amp;ndash;export-all &amp;ndash;enable=receive-pack
+process_name=%(program_name)s
+directory=/home/vishnu
+autostart=true
+autorestart=true
+stopsignal=QUIT
+redirect_stderr=true
+stdout_logfile=/var/log/supervisor/%(program_name)s.log
+stdout_logfile_maxbytes=1MB
+stdout_logfile_backups=5
+stdout_capture_maxbytes=1MB&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:~# supervisorctl status
+git_mirror_update RUNNING pid 3041, uptime 8:18:46&lt;/p&gt;
+
+&lt;p&gt;step-3 :- then we create a mirror from the repo which we cloned to another location in our system&lt;/p&gt;
+
+&lt;p&gt;git clone git://127.0.0.1/vishnu&lt;/p&gt;
+
+&lt;p&gt;Step-4 :-&lt;/p&gt;
+
+&lt;p&gt;git clone &amp;ndash;mirror git@github.com:vishnu/vishnu.git&lt;/p&gt;
+
+&lt;p&gt;Step-5 :-&lt;/p&gt;
+
+&lt;p&gt;cd vishnu.git&lt;/p&gt;
+
+&lt;p&gt;Step-6 :-&lt;/p&gt;
+
+&lt;p&gt;git push &amp;ndash;mirror git://127.0.0.1/vishnu &amp;mdash;&amp;mdash;&amp;gt; This will update all the remote branches&lt;/p&gt;
+
+&lt;p&gt;In the deploy.rb, use&lt;/p&gt;
+
+&lt;p&gt;set :repository, &amp;ldquo;git://127.0.0.1/vishnu&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;For refferel :- &lt;a href=&#34;https://help.github.com/articles/working-when-github-goes-down&#34;&gt;https://help.github.com/articles/working-when-github-goes-down&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

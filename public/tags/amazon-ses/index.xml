@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon Ses on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/amazon-ses/index.xml</link>
+    <description>Recent content in Amazon Ses on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/amazon-ses/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Recovering your AMAZON SES SMTP credentials!!</title>
+      <link>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</link>
+      <pubDate>Mon, 29 Dec 2014 07:55:50 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;How to recover your Amazon SES smtp credentials:-&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Your SMTP password is not the same as your AWS secret access key. Do not attempt to use your AWS credentials to authenticate yourself against the SMTP endpoint. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two ways to generate your SMTP credentials. You can either use the Amazon SES console or you can generate your SMTP credentials from your AWS credentials.&lt;/p&gt;
+
+&lt;p&gt;Use the Amazon SES console to generate your SMTP credentials if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You want to get your SMTP credentials using the simplest method.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You do not need to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Generate your SMTP credentials from your AWS credentials if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You have an existing  IAM  user and you want that user to be able to send emails using the Amazon SES SMTP interface.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You want to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt; A user&amp;rsquo;s SMTP username is the same as their AWS Access Key ID, so you just need to generate the SMTP password. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am doing a Java implementation  that converts an AWS SECRET ACCESS KEY to an Amazon SES SMTP password.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:  I am creating a file called &amp;ldquo;smtp.java&amp;rdquo;  and in this file I create a class named &amp;ldquo;smtp&amp;rdquo; and inside you need to give your AWS SECRET ACCESS KEY &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34; alt=&#34;smtp&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can download this file from &lt;a href=&#34;https://gist.github.com/vishnunamshi/c650aad1510c0123f8be&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You  Need to execute this file as:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34; alt=&#34;ex&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;This will create a file called &amp;ldquo;smtp&amp;rdquo; and you need to execute again as :&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34; alt=&#34;sm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;And this will prompt your AMAZON SES SMTP PASSWORD :)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

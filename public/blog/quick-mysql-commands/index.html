@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Quick MySQL Commands &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/quick-mysql-commands/">Quick MySQL Commands</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                
+
+<p><strong>To Login into the MySQL</strong>
+#mysql -u username -ppaswword
+<strong>and if its RDS :</strong>
+#mysql -h rds.indexpoint/dnsname/ip -u username -ppassword</p>
+
+<p><strong>To List Databases</strong>
+mysql&gt;show databases;</p>
+
+<p><strong>To View tables</strong>
+mysql&gt;use databasename;
+mysql&gt;show tables;</p>
+
+<p><strong>To View Contents Inside the Table</strong>
+mysql&gt;select * from tablename;</p>
+
+<p><strong>To Delete Database</strong>
+mysql&gt;drop database dbname;</p>
+
+<p><strong>To create Database user (we also need to grant permission to a db to gain access for the new user.)</strong>
+mysql&gt;create user ‘UNNI’@&lsquo;ipaddress/%/localhost’ identified by ‘passwd3@1′;</p>
+
+<p><strong>To Grant Permission to a Database for a User and Create the User at the same Time</strong>
+mysql&gt;grant all on databasename.* to ‘UNNI’@&lsquo;ipaddress/%/localhost’ identified by ‘password’;</p>
+
+<p>[NOTE&ndash; To provide access from all IP Address use ‘%’ instead of ipaddress.]</p>
+
+<p><strong>To List out all Database Users</strong>
+mysql&gt;SELECT user,host FROM mysql.user;</p>
+
+<p><strong>To Create a Database</strong>
+mysql&gt;create database UNNI;</p>
+
+<p><strong>To restore a specific Database in Mysql (database UNNI has to be created already)</strong>
+#mysql -u username -ppassword UNNI &lt; UNNI.sql</p>
+
+<p>[NOTE: Database UNNI had to be created before restore]</p>
+
+<p><strong>To dump/backup a specific Database in Mysql</strong>
+#mysqldump -u username -ppassword UNNI &gt; UNNI.sql</p>
+
+<p>[NOTE: Database UNNI is backed up into UNNI.sql]</p>
+
+<p><strong>To know the permission of Mysql User</strong>
+#show grants for ‘unni’@&lsquo;localhost’;</p>
+
+<h2 id="need-to-know-create-delete-user">[NEED TO KNOW]- Create/Delete User :::</h2>
+
+<p>It must be noted that CREATE USER command was added in the MySQL version 5.0.2. In earlier versions, users could be created automatically when assigning permissions using the GRANT command or by manually inserting records in the mysql database.</p>
+
+<p>The mysql database contains three tables – <strong>user, host and db. </strong>These tables contains the database permissions.</p>
+
+<p>The user table contains the usernames and password combination of anyone who has access to any part of the MYSQL database. The password part is the encrypted string, which can be generated using the PASSWORD() function.</p>
+
+<p>As an administrator, you can even directly insert the values into the user table of mysql database and get the desired results.
+<strong><code>mysql&gt;INSERT INTO user(Host,User,Password) VALUES('localhost', 'UNNI', PASSWORD('passwd1@3'));
+</code></strong></p>
+
+<p><strong><code>mysql&gt;FLUSH PRIVILEGES;</code></strong></p>
+
+<p>The FLUSH PRIVILEGES command is required to inform MySQL to reload the privilege data after the change is made.</p>
+
+<p><strong>Deleting Users</strong></p>
+
+<p>To delete users from the MySQL database use the DROP command.
+<code>**mysql&gt;DROP USER user@host;**</code></p>
+
+<p>The command in turn removes the user record from the mysql.user table.</p>
+
+<p>As the CREATE USER command, even the DROP USER command has been added since MySQL 5.0.2. In previous versions of MySQL you must revoke the user’s privileges first, delete the records from user manually and then issue the FLUSH PRIVILEGES command.</p>
+
+<p><code>**mysql&gt;DELETE FROM user WHERE User= 'technofriends' AND Host= 'localhost';
+FLUSH PRIVILEGES;**</code></p>
+
+<p><strong>General Notes</strong></p>
+
+<ul>
+<li>There is no concept in MySQL of “Owner” of database or its objects, as there is in MS Access and MS SQL Server. I surmise this from the lack of “owner” field anywhere in mysql system tables.</li>
+</ul>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/quick-mysql-commands\/';
+    var disqus_title = 'Quick MySQL Commands';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/quick-mysql-commands\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newsletter on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/newsletter/index.xml</link>
+    <description>Recent content in Newsletter on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:10</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol10/</link>
+      <pubDate>Sat, 25 Jul 2015 16:06:05 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol10/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy this weekend :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=rSQNi5sAwuc&#34;&gt;How to control someone else&amp;rsquo;s arm with your brain.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kilimchoi/engineering-blogs&#34;&gt;A curated list of engineering blogs.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.shopify.com/technology/34281221-introducing-shipit&#34;&gt;Shopify deployment tool Shipit.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2015/07/23/libuser-vulnerabilities/&#34;&gt;Vulnerability in libuser leads to potential for local user to gain root access CVE-2015-3245 &amp;amp; CVE-2015-3246.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.emccode.com/2015/06/22/deploy-ecs-with-5-ways-of-docker/&#34;&gt;Deploy ECS with 5 Ways of Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/&#34;&gt;Handling 1 Million Requests per Minute with Go.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/alexanderGugel/wsd&#34;&gt;CURL for WebSocket Servers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.sematext.com/2015/07/21/coreos-clusters-centralized-log-management-and-monitoring/&#34;&gt;Centralized Log Management and Monitoring for CoreOS Clusters.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://abdelrahmanhosny.com/2015/07/11/how-to-merge-two-docker-images/&#34;&gt;How to Merge Two Docker Images.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://opensource.com/business/15/7/running-ceph-inside-docker&#34;&gt;Running Ceph inside Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/agermanidis/autosub&#34;&gt;Command-line utility for auto-generating subtitles for any video file.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/bryanl/doit&#34;&gt;Unofficial DigitalOcean Interactive Tool.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://trackography.org/&#34;&gt;Find out who is tracking you when you are reading your favourite news online.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://stories.expost-news.com/i-worked-at-hackingteam-my-emails-were-leaked-to-wikileaks-and-i-m-ok-with-that-f8f28b0584fe&#34;&gt;I worked at #HackingTeam, my emails were leaked to WikiLeaks and I’m ok with that.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nylas/make-deb&#34;&gt;Tool for building debian packages from your python projects.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sindresorhus/amas&#34;&gt;Awesome &amp;amp; Marvelous Amas.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jhiesey/stream-http&#34;&gt;Streaming node http in the browser.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/wooey/Wooey&#34;&gt;Automated Web UIs for Python scripts.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/GoUsers&#34;&gt;Golang Users.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://redhatstackblog.redhat.com/2015/07/16/containerize-openstack-with-docker/&#34;&gt;Containerize OpenStack with Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://serenitydb.org/&#34;&gt;Disk storage and real transactions under Redis compatible protocol.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://odino.org/how-to-test-3rd-party-hooks-and-webservices-locally/&#34;&gt;How to test 3rd party hooks and webservices locally.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ircmaxell/Tuli&#34;&gt;A static analysis engine.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/notwaldorf/emoji-translate&#34;&gt;Translate text to emoji.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gilliam.github.io/&#34;&gt;Gilliam - A platform for micro services.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thau.me/2015/06/building-an-application-with-ember-js-in-2015/#/&#34;&gt;BUILDING AN APPLICATION WITH EMBER.JS IN 2015.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/emre/storm&#34;&gt;Manage your SSH like a boss.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.netgate.com/doc/AWS-VPN-appliance/AWS_VPC_Wizard_user_guide.html&#34;&gt;Netgate pfSense certified firewall and VPN Appliance - AWS VPC Wizard User Guide.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://labs.ctl.io/monitoring-docker-services-with-prometheus/&#34;&gt;Monitoring Docker services with Prometheus.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://imagelayers.io/&#34;&gt;Visualize docker images and the layers that compose them.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@freeformz/go-1-5-s-vendor-experiment-fd3e830f52c3&#34;&gt;Go 1.5&amp;rsquo;s vendor/ experiment.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.evanmiller.org/four-days-of-go.html&#34;&gt;Four Days of Go.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.tutum.co/2015/07/21/cicd-the-docker-way/&#34;&gt;CI/CD the Docker Way.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.hypriot.com/post/run-your-own-github-like-service-with-docker/&#34;&gt;Run your own GitHub-like service with the help of Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/harshasrinivas/cli-github&#34;&gt;Github within the CLI.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.allthingsdistributed.com/2015/07/under-the-hood-of-the-amazon-ec2-container-service.html&#34;&gt;Under the Hood of Amazon EC2 Container Service.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/git-tips/tips&#34;&gt;Most commonly used git tips and tricks.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/github/scripts-to-rule-them-all&#34;&gt;Scripts to Rule Them All.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://carlosbecker.com/posts/cross-compile-go/&#34;&gt;Cross-compiling Go.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:8</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol8/</link>
+      <pubDate>Sat, 28 Feb 2015 11:34:13 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol8/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy for this weekend :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yG-UaBJXZ80&#34;&gt;Hacking with Andrew and Brad: Writing an HTTP/2 Client in Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nginx.com/blog/microservices-at-netflix-architectural-best-practices/&#34;&gt;Adopting Microservices at Netflix: Lessons for Architectural Design.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://engineering.sharethis.com/post/110139007424/docker-at-sharethis&#34;&gt;Welcome to Engineering @ShareThis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mesosphere.com/2015/02/26/deploying-with-docker-swarm/&#34;&gt;Docker Containers at Scale.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d&#34;&gt;How we built the new BBC Homepage.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.serverdensity.com/18-must-browser-plugins-extensions-sysadmins/&#34;&gt;18 Must have browser plugins / extensions for SysAdmins&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/KosyanMedia/burlesque&#34;&gt;Message queue server with HTTP interface&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.devco.net/archives/2015/02/24/moving-a-service-from-puppet-to-docker-2.php&#34;&gt;Moving a service from Puppet to Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://clusterhq.com/blog/powerstrip-flocker-portable-volumes-using-just-docker-cli/&#34;&gt;Powerstrip-flocker: Portable volumes using just the Docker CLI.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.elasticsearch.org/blog/elasticsearch-1-4-3-and-1-3-8-released/&#34;&gt;Latest Upgrade of Elasticsearch fix the groovy scripting vulnerability&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://t37.net/nginx-optimization-understanding-sendfile-tcp_nodelay-and-tcp_nopush.html&#34;&gt;NGINX OPTIMIZATION: UNDERSTANDING SENDFILE, TCP_NODELAY AND TCP_NOPUSH&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://rogerignazio.com/blog/managing-mesos-with-puppet/&#34;&gt;Managing Mesos Clusters with Puppet.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://peter.bourgon.org/go-in-production/&#34;&gt;Go: Best Practices for Production Environments&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.parsehub.com/&#34;&gt;Turn dynamic websites into APIs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gaearon.github.io/react-hot-loader/&#34;&gt;Tweak reactjs components in real time &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/ec2-container-service-ecs-update-access-private-docker-repos-mount-volumes-in-containers&#34;&gt;EC2 Container Service (ECS) Update – Access Private Docker Repos &amp;amp; Mount Volumes in Containers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.inspectlet.com/&#34;&gt;Record and playback everything visitors do on your site.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://facebook.github.io/stetho/&#34;&gt;Stetho:- A new debugging platform for Android, built by Facebook &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.nkode.io/2014/08/24/valuable-docker-links.html&#34;&gt;VALUABLE DOCKER LINKS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/joewalnes/websocketd&#34;&gt;Turn any program that uses STDIN/STDOUT into a WebSocket server. Like inetd, but for WebSockets &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/wlanslovenija/netcfg&#34;&gt;Network configuration of Docker containers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2015/02/whatsapp-web-desktop-messenger.html&#34;&gt;WhatsApp Web Client Now Available on Firefox and Opera Browsers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2015/02/lenovo-hacked.html&#34;&gt;Lenovo Website has been Hacked&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/crosbymichael/slex&#34;&gt;SSH multiplex &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/aluzzardi/wssh&#34;&gt;SSH to WebSockets Bridge &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.infoworld.com/article/2886381/internet/seven-no-bull-facts-about-the-new-http-2-protocol.html&#34;&gt;Seven no-bull facts about the new HTTP/2 protocol&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/aws-activate-startup-blog/managing-resources-across-multiple-environments-in-aws-7e139351f9c7?adbsc=startups_20150206_40075486&amp;amp;adbid=UPDATE-c2382910-5969549230166003712&amp;amp;adbpl=li&amp;amp;adbpr=2382910&#34;&gt;Managing Resources across Multiple Environments in AWS.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter: Vol2</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol2/</link>
+      <pubDate>Sun, 27 Jul 2014 16:57:45 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.loggly.com/blog/nine-tips-configuring-elasticsearch-for-high-performance/&#34;&gt;Nine Tips on Configuring Elasticsearch for High Performance &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tech.dropbox.com/2014/07/streaming-file-synchronization/&#34;&gt;Streaming File Synchronization &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.npmjs.org/package/clusterjs&#34;&gt;ClusterJS, clusterify your NodeJS applications and achieve zero-downtime deployments&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.indecorous.com/fallible_humans/&#34;&gt;A good talk (slides, video and a transcript) all about the inevitability of failure and why and how you should design your organisations and teams to deal with it.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://arxiv.org/abs/1407.2168&#34;&gt;TLS hardening&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://goldfirestudios.com/blog/136/Horizontally-Scaling-Node.js-and-WebSockets-with-Redis&#34;&gt;Horizontally Scaling Node.js and WebSockets with Redis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sensu/uchiwa&#34;&gt;Uchiwa is a simple dashboard for the Sensu monitoring framework, built with node.js.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ctdk/goiardi&#34;&gt;A Chef server written in Go, able to run entirely in memory, with optional persistence with saving the in-memory data to disk or using MySQL or Postgres as the data storage backend.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fgrehm/devstep&#34;&gt;Development environment builder powered by Docker and buildpacks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/cakper/2014-0407-php-spec-the-only-design-tool-you-need-4developers&#34;&gt;PHPSpec – the only Design Tool you need&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://infrataster.net/&#34;&gt;Infrataster is another tool for writing unit tests for infrastructure. It’s designed to complement serverspec, by focusing on running tests from outside the virtual machine to test external interfaces like HTTP or SSH.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://crunchtools.com/software/petit/&#34;&gt;Petit is an open source log analysis tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bravenewgeek.com/dissecting-message-queues/?utm_source=Server+Density+Updates&amp;amp;utm_campaign=e674ade4f6-Sysunday_182&amp;amp;utm_medium=email&amp;amp;utm_term=0_7d8792a1ef-e674ade4f6-77640545&#34;&gt;Dissecting Message Queues&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://reviewsignal.com/blog/2014/06/25/40-million-hits-a-day-on-wordpress-using-a-10-vps/?utm_source=Server+Density+Updates&amp;amp;utm_campaign=e674ade4f6-Sysunday_182&amp;amp;utm_medium=email&amp;amp;utm_term=0_7d8792a1ef-e674ade4f6-77640545&#34;&gt;40 Million hits a day on WordPress using a $10 VPS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;//engineering.linkedin.com/performance/how-linkedin-used-pops-and-rum-make-dynamic-content-download-25-faster?utm_source=Server+Density+Updates&amp;amp;utm_campaign=e674ade4f6-Sysunday_182&amp;amp;utm_medium=email&amp;amp;utm_term=0_7d8792a1ef-e674ade4f6-77640545&#34;&gt;How LinkedIn used PoPs and RUM to make dynamic content download 25% faster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://highscalability.com/blog/2014/7/14/bitly-lessons-learned-building-a-distributed-system-that-han.html?utm_source=Server+Density+Updates&amp;amp;utm_campaign=e674ade4f6-Sysunday_182&amp;amp;utm_medium=email&amp;amp;utm_term=0_7d8792a1ef-e674ade4f6-77640545&#34;&gt;Bitly: Lessons Learned Building A Distributed System That Handles 6 Billion Clicks A Month&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://serversforhackers.com/editions/2014/07/15/haproxy/?utm_source=Server+Density+Updates&amp;amp;utm_campaign=e674ade4f6-Sysunday_182&amp;amp;utm_medium=email&amp;amp;utm_term=0_7d8792a1ef-e674ade4f6-77640545&#34;&gt;Load Balancing with HAProxy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/jamesgolick/how-to-debug-anything&#34;&gt;A great presentation entitled “how to debug anything”. Lots of examples stepping through issues mainly using strace.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/signalfuse/maestro-ng&#34;&gt;MaestroNG is an orchestration tool for multi-host docker environments. The examples in the README give the best idea, showing YAML files describing the entire environment.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mattrco/anode.exp&#34;&gt;Anode is a utility for analyzing graphite metrics. It’s currently quite experimental, containing a single three sigma analyzer that takes a time series from graphite and creates new metrics alongside.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lnav.org/&#34;&gt;Log File Navigator is an advanced log file viewer for the small-scale. It’s only really useful for a single host but provides some impressive command line visualisation tools as well as a powerful SQL query engine.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/dadoonet/elasticsearch-in-15-minutes?utm_content=bufferc537f&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&#34;&gt;Elasticsearch in 15 minutes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.npmjs.org/package/gulp-inject?utm_content=bufferc2741&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&#34;&gt;gulp-inject:- A javascript, stylesheet and webcomponent injection plugin for Gulp, i.e. inject file references into your index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://riemann.io/?utm_content=buffere6677&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&#34;&gt;Riemann – A network monitoring system&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fgrehm/vagrant-notify&#34;&gt;Vagrant plugin that redirects &lt;code&gt;notify-send&lt;/code&gt; from guest to host machine and notifies provisioning status.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://xmpp.org/about-xmpp/technology-overview/&#34;&gt;XMPP Technologies&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://code.tutsplus.com/tutorials/more-responsive-single-page-applications-with-angularjs-socketio-creating-the-library--cms-21738&#34;&gt;More Responsive Single-Page Applications With AngularJS &amp;amp; Socket.IO: Creating the Library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://vexxhost.com/blog/small-dive-into-meteor-js/&#34;&gt;Meteor.JS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://visualping.io/&#34;&gt;Visual Website Monitoring.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gawker.com/i-do-not-know-one-person-who-is-happy-at-amazon-1572478351?utm_content=buffer4e518&amp;amp;utm_medium=social&amp;amp;utm_source=twitter.com&amp;amp;utm_campaign=buffer&#34;&gt;I Do Not Know One Person Who Is Happy at Amazon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sysadmincasts.com/&#34;&gt;Lots of short hands-on screencasts aiming to teach lots of systems administration basics. Everything from man pages, command line tools, LXC containers and running postmortems.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.mujtabahussain.net/2014/05/27/unilateral-direction-devops/&#34;&gt;The unilateral direction of DevOPS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://haka-security.org/&#34;&gt;Haka is an open source security oriented language which allows to apply security policies on (live) captured traffic.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/SnabbCo/snabbswitch&#34;&gt;Snabb Switch: Fast open source packet processing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davidpelaez/gh-keys&#34;&gt;Get SSH authorized keys from Github API&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ng-inspector.org/&#34;&gt;ng-inspector:-The AngularJS inspector pane for your browser&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.embed.ly/post/89265229166/what-twitter-isnt-telling-you-about-gifs&#34;&gt;What Twitter Isn’t Telling You About GIFs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://serversforhackers.com/editions/2014/07/01/ssh-tricks/&#34;&gt;SSH Tricks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://shields.io/&#34;&gt;GitHub badges as a service&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

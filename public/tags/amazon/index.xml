@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/amazon/index.xml</link>
+    <description>Recent content in Amazon on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/amazon/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker swarm production setup</title>
+      <link>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</link>
+      <pubDate>Wed, 30 Nov 2016 19:08:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm is a cluster of docker engines.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Swarm mode is native in Docker 1.12 RC&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;You can orchestrate service when it&amp;rsquo;s in Swarm mode.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;We are creating 3 swarm manager and 3 worker nodes for high availability in AWS.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_You can view the full video from_ &lt;strong&gt;&lt;a href=&#34;https://asciinema.org/a/94625&#34;&gt;here&lt;/a&gt; &lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbook for WhereHows (A Data Discovery and Lineage Portal)</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</link>
+      <pubDate>Tue, 18 Oct 2016 14:17:34 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/WhereHows&#34;&gt;WhereHows&lt;/a&gt;, a data discovery and lineage portal. At LinkedIn, WhereHows integrates with all of their data processing environments and extracts coarse and fine grain metadata from them. Then, it surfaces this information through two interfaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A web application that enables navigation, search, lineage visualization, annotation, discussion, and community participation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;An &lt;a href=&#34;https://github.com/linkedin/wherehows/wiki/Backend-API&#34;&gt;API&lt;/a&gt; endpoint that empowers automation of other data processes and applications.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am creating an Ansible playbook to play around with WhereHows.&lt;/p&gt;
+
+&lt;p&gt;You can find the playbook from &lt;a href=&#34;https://github.com/vishnudxb/ansible-wherehows&#34;&gt;here.&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbooks to create private docker registry in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</link>
+      <pubDate>Fri, 19 Aug 2016 09:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</guid>
+      <description>
+
+&lt;p&gt;Creating a private docker registry in AWS using Ansible playbooks. You can find the playbooks from &lt;a href=&#34;https://github.com/vishnudxb/ansible-docker-registry&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;variables-in-playbooks&#34;&gt;Variables in playbooks&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;_server_name: &amp;ldquo;docker-registry.vishnudxb.me&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_bundle_crt: &amp;ldquo;/etc/nginx/ssl/ssl-bundle.crt&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_crt&lt;em&gt;key: &amp;ldquo;/etc/nginx/ssl/ssl-cert.key&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;aws-instance-tag-name&#34;&gt;AWS instance tag name&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;The playbook will identified the instance using the tag name ie docker-registry&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;to-do&#34;&gt;To-Do&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Authorization for users inside the registry.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:14</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol14/</link>
+      <pubDate>Tue, 19 Jul 2016 20:57:48 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol14/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/serverless.html&#34;&gt;Serverless Architectures&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://code.facebook.com/posts/290023971344425/what-s-new-in-facebook-open-source/&#34;&gt;What&amp;rsquo;s new in Facebook open source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cloudonaut.io/serverless-big-data-pipeline-on-aws/&#34;&gt;Serverless Big Data pipeline on AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gocardless.com/blog/from-idea-to-reality-containers-in-production-at-gocardless/&#34;&gt;From idea to reality: containers in production at GoCardless&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.drud.com/sanctuary-a-turn-key-vault-in-the-cloud/&#34;&gt;Sanctuary is a handy tool for launching a Vault instance in AWS. It provides a simple tool which configures AWS services like S3 (for logs), DynamoDB (for secrets) and a VPC network, along with certs from letsencrypt.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/leveros/leveros&#34;&gt;Serverless + Microservices&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mheffner/awsam&#34;&gt;AWSAM (Amazon Web Services Account Manager) allows you to easily manage multiple sets of AWS credentials.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/swipely/iam-docker&#34;&gt;Use different IAM roles for each Docker container on an EC2 instance&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/chalice&#34;&gt;Python Serverless Microframework for AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kristovatlas/osx-config-check&#34;&gt;Verify the configuration of your OS X machine.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jakobovski/aws-spot-bot&#34;&gt;A simple script to automate the creation of the cheapest AWS spot instances given your requirements.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sohelamin/chatbot&#34;&gt;An AI Based Chatbot&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amadeusitgroup.github.io/GraphDash/&#34;&gt;GraphDash: A web-based dashboard built on graphs and their metadata&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/reconquest/orgalorg&#34;&gt;Parallel SSH commands executioner and file synchronization tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Requilence/integram&#34;&gt;Integrate Telegram into your workflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLECEw2eFfW7iTsIrldRO2b6NLEuRQYD2L&#34;&gt;PyConSG 2016 videos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vE1iDPx6-Ok&amp;amp;list=PLkA60AVN3hh9gnrYwNO6zTb9U3i1Y9FMY&#34;&gt;DockerCon 2016 videos&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lucjuggery.com/blog/?p=604&#34;&gt;Deploy a multi services application with swarm mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.exoscale.ch/syslog/2016/07/11/elk-docker/&#34;&gt;Deploy ELK with Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/9-jChl9PmA8&#34;&gt;Docker Swarm on DigitalOcean&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/introducing-confluent-control-center&#34;&gt;Build and monitor Kafka pipelines with Confluent Control Center&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://philippedecuzey.wordpress.com/2016/06/05/fromapachepigtospark/&#34;&gt;From Pig to Spark : an easy journey to Spark for Apache Pig developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wecode.wepay.com/posts/wepays-data-warehouse-bigquery-airflow&#34;&gt;Building WePay&amp;rsquo;s data warehouse using BigQuery and Airflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLKnYDs_-dq16K1NH83Bke2dGGUO3YKZ5b&#34;&gt;Hadoop Summit San Jose 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/kafka-tools&#34;&gt;A collection of tools for working with Apache Kafka.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pierrevillard.com/2016/07/09/apache-nifi-minifi-is-almost-out/&#34;&gt;Apache NiFi – MiNiFi is (almost) out!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/elastic-scaling-in-kafka-streams&#34;&gt;Elastic Scaling in Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://syslog.ravelin.com/powering-real-time-fraud-detection-with-bigquery-4f85b999a4e9#.uxh8g3gfc&#34;&gt;Powering real time fraud detection with BigQuery&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.feedly.com/what-goes-down-better-come-up-a-k-a-adventures-in-hbase-diagnostics/&#34;&gt;What Goes Down Better Come Up a.k.a. Adventures in Hbase Diagnostics&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://yahoohadoop.tumblr.com/post/147399828686/moving-the-utilization-needle-with-hadoop&#34;&gt;Moving the Utilization Needle with Hadoop Overcommit&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.svds.com/brain-monitoring-kafka-opentsdb-grafana/&#34;&gt;Brain Monitoring with Kafka, OpenTSDB, and Grafana&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fhussonnois/kafkastreams-cep&#34;&gt;Complex Event Processing on top of Kafka Streams&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbook for creating a public subnet and private subnet with NAT gateway in AWS.</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</link>
+      <pubDate>Mon, 15 Feb 2016 13:46:50 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</guid>
+      <description>&lt;p&gt;An Ansible playbook for creating a Public subnet and Private subnet with NAT gateway. Currently Ansible is working on the module &amp;lsquo;ec2_vpc_nat_gateway&amp;rsquo;  and it is not production ready. So I used a bash script along with the Ansible play to create the private subnet with NAT gateway. You can find the github repo from &lt;a href=&#34;https://github.com/vishnudxb/ansible-vpc-nat&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:10</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol10/</link>
+      <pubDate>Sat, 25 Jul 2015 16:06:05 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol10/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy this weekend :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=rSQNi5sAwuc&#34;&gt;How to control someone else&amp;rsquo;s arm with your brain.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kilimchoi/engineering-blogs&#34;&gt;A curated list of engineering blogs.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.shopify.com/technology/34281221-introducing-shipit&#34;&gt;Shopify deployment tool Shipit.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2015/07/23/libuser-vulnerabilities/&#34;&gt;Vulnerability in libuser leads to potential for local user to gain root access CVE-2015-3245 &amp;amp; CVE-2015-3246.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.emccode.com/2015/06/22/deploy-ecs-with-5-ways-of-docker/&#34;&gt;Deploy ECS with 5 Ways of Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/&#34;&gt;Handling 1 Million Requests per Minute with Go.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/alexanderGugel/wsd&#34;&gt;CURL for WebSocket Servers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.sematext.com/2015/07/21/coreos-clusters-centralized-log-management-and-monitoring/&#34;&gt;Centralized Log Management and Monitoring for CoreOS Clusters.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://abdelrahmanhosny.com/2015/07/11/how-to-merge-two-docker-images/&#34;&gt;How to Merge Two Docker Images.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://opensource.com/business/15/7/running-ceph-inside-docker&#34;&gt;Running Ceph inside Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/agermanidis/autosub&#34;&gt;Command-line utility for auto-generating subtitles for any video file.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/bryanl/doit&#34;&gt;Unofficial DigitalOcean Interactive Tool.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://trackography.org/&#34;&gt;Find out who is tracking you when you are reading your favourite news online.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://stories.expost-news.com/i-worked-at-hackingteam-my-emails-were-leaked-to-wikileaks-and-i-m-ok-with-that-f8f28b0584fe&#34;&gt;I worked at #HackingTeam, my emails were leaked to WikiLeaks and I’m ok with that.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nylas/make-deb&#34;&gt;Tool for building debian packages from your python projects.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sindresorhus/amas&#34;&gt;Awesome &amp;amp; Marvelous Amas.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jhiesey/stream-http&#34;&gt;Streaming node http in the browser.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/wooey/Wooey&#34;&gt;Automated Web UIs for Python scripts.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/GoUsers&#34;&gt;Golang Users.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://redhatstackblog.redhat.com/2015/07/16/containerize-openstack-with-docker/&#34;&gt;Containerize OpenStack with Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://serenitydb.org/&#34;&gt;Disk storage and real transactions under Redis compatible protocol.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://odino.org/how-to-test-3rd-party-hooks-and-webservices-locally/&#34;&gt;How to test 3rd party hooks and webservices locally.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ircmaxell/Tuli&#34;&gt;A static analysis engine.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/notwaldorf/emoji-translate&#34;&gt;Translate text to emoji.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gilliam.github.io/&#34;&gt;Gilliam - A platform for micro services.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thau.me/2015/06/building-an-application-with-ember-js-in-2015/#/&#34;&gt;BUILDING AN APPLICATION WITH EMBER.JS IN 2015.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/emre/storm&#34;&gt;Manage your SSH like a boss.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.netgate.com/doc/AWS-VPN-appliance/AWS_VPC_Wizard_user_guide.html&#34;&gt;Netgate pfSense certified firewall and VPN Appliance - AWS VPC Wizard User Guide.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://labs.ctl.io/monitoring-docker-services-with-prometheus/&#34;&gt;Monitoring Docker services with Prometheus.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://imagelayers.io/&#34;&gt;Visualize docker images and the layers that compose them.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@freeformz/go-1-5-s-vendor-experiment-fd3e830f52c3&#34;&gt;Go 1.5&amp;rsquo;s vendor/ experiment.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.evanmiller.org/four-days-of-go.html&#34;&gt;Four Days of Go.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.tutum.co/2015/07/21/cicd-the-docker-way/&#34;&gt;CI/CD the Docker Way.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.hypriot.com/post/run-your-own-github-like-service-with-docker/&#34;&gt;Run your own GitHub-like service with the help of Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/harshasrinivas/cli-github&#34;&gt;Github within the CLI.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.allthingsdistributed.com/2015/07/under-the-hood-of-the-amazon-ec2-container-service.html&#34;&gt;Under the Hood of Amazon EC2 Container Service.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/git-tips/tips&#34;&gt;Most commonly used git tips and tricks.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/github/scripts-to-rule-them-all&#34;&gt;Scripts to Rule Them All.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://carlosbecker.com/posts/cross-compile-go/&#34;&gt;Cross-compiling Go.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recovering your AMAZON SES SMTP credentials!!</title>
+      <link>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</link>
+      <pubDate>Mon, 29 Dec 2014 07:55:50 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;How to recover your Amazon SES smtp credentials:-&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Your SMTP password is not the same as your AWS secret access key. Do not attempt to use your AWS credentials to authenticate yourself against the SMTP endpoint. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two ways to generate your SMTP credentials. You can either use the Amazon SES console or you can generate your SMTP credentials from your AWS credentials.&lt;/p&gt;
+
+&lt;p&gt;Use the Amazon SES console to generate your SMTP credentials if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You want to get your SMTP credentials using the simplest method.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You do not need to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Generate your SMTP credentials from your AWS credentials if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You have an existing  IAM  user and you want that user to be able to send emails using the Amazon SES SMTP interface.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You want to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt; A user&amp;rsquo;s SMTP username is the same as their AWS Access Key ID, so you just need to generate the SMTP password. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am doing a Java implementation  that converts an AWS SECRET ACCESS KEY to an Amazon SES SMTP password.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:  I am creating a file called &amp;ldquo;smtp.java&amp;rdquo;  and in this file I create a class named &amp;ldquo;smtp&amp;rdquo; and inside you need to give your AWS SECRET ACCESS KEY &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34; alt=&#34;smtp&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can download this file from &lt;a href=&#34;https://gist.github.com/vishnunamshi/c650aad1510c0123f8be&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You  Need to execute this file as:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34; alt=&#34;ex&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;This will create a file called &amp;ldquo;smtp&amp;rdquo; and you need to execute again as :&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34; alt=&#34;sm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;And this will prompt your AMAZON SES SMTP PASSWORD :)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>High Availability @ Load Balancing Layer-HAProxy / ELB</title>
+      <link>https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/</link>
+      <pubDate>Mon, 01 Apr 2013 07:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/</guid>
+      <description>
+
+&lt;p&gt;Architecting High Availability at the Load Balancing layer is one of the important aspects in the web scale systems in AWS. We can follow multiple strategies for achieving the same. I am listing some of the designs for achieving the same.&lt;/p&gt;
+
+&lt;h1 id=&#34;pattern-1-route-53-dns-rr-haproxy&#34;&gt;&lt;em&gt;Pattern 1: Route 53 DNS RR + HAProxy&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;Route53 is a Managed DNS service provided by Amazon Web Services. Route 53 supports Round robin and weighted algorithms. If the Route53 DNS server has several entries for a given hostname, it will return all of them in a rotating order. This way, various users will see different addresses for the same name and will be able to reach different EC2 instances in LB Tier.&lt;/p&gt;
+
+&lt;p&gt;$ host -t a HAProxyTestXYZ.com&lt;/p&gt;
+
+&lt;p&gt;HAProxyTestXYZ.com. has address &lt;strong&gt;50.19.82.183 (Primary EIP)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;HAProxyTestXYZ.com. has address &lt;strong&gt;23.23.174.254 (Secondary EIP)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/1.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/1.jpg&#34; alt=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Example, if we attach the Elastic IP’s of 2 HAProxy EC2 instances under the Route 53, both the IP’s are sent to the user browsers by the Route 53 DNS. In case, the algorithm configured is Round Robin at the Route 53 level, then browser- 1 will get &lt;strong&gt;EIP-1(50.19.82.183&lt;/strong&gt;) of HAProxy-1 as the primary IP and browser -2 will get &lt;strong&gt;EIP-2&lt;/strong&gt; &lt;strong&gt;(23.23.174.254)&lt;/strong&gt; of HAProxy-2 as the primary IP in rotation basis.  The browser- 1 will contact the HAProxy-1 and in case HAProxy-1 is not reachable it will contact the secondary EIP which is HAproxy-2 and so forth. This is an age old technique generally used by search engines, content servers (or) web scale systems for achieving scalability in LB layer. But this method does not provide any means of High availability @ LB layer. It requires additional measures to permanently check the HAProxy EC2 LB instances status and switch a failed EC2 instance EIP to another HAProxy EC2 LB. For this reason, this pattern is generally used as a complementary solution in High Availability, not as a primary one.  For achieving better stability at this layer in AWS, I usually recommend having 2 or more HAProxies distributed on multiple AZ’s inside the Amazon EC2 region. This way if one of the HAProxy is down, the website still functions with the help of other HAProxies and even if the entire Amazon EC2 AZ is down still the HAProxies in the other AZ can handle the requests and keep the website active. Some load tests have proven that HAProxy on m1.large EC2 instance can handle close to ~4500+ HTTP requests/second. So depending upon the number of concurrent requests/sec needed on your application you can go ahead and attach multiple HAProxy EC2 instances to the Route 53. Now that we achieved availability horizontally using the Route53 DNS Round Robin in HAProxy layer let us try to understand the intricacies behind this architecture.  Since we now have 2 or more HAProxies what will happen to the contextual web sessions data that resides in the application servers. HAProxies need to know in which application server the session data of the user resides else the requests will have authorization failures.&lt;/p&gt;
+
+&lt;p&gt;There are 2 architecture designs we can follow for solving this contextual problem they are:&lt;/p&gt;
+
+&lt;p&gt;**Stateless Application design: ** This is the recommended and widely used design. The web session data is separated out from the Web/App server memory and they are kept in common cache stores like MemCacheD, TerraCotta etc.Since the session data is now kept in a common store like MemCacheD, HAProxies can direct their requests to any of the web/app servers attached under it without knowing where the session state is mapped. Whenever any web/app server receives the request from any of the HAProxies, it will validate and authorize the session data from the common store.  In event of any HAProxy or Web/App EC2 failure still the website functions without problems because other HAProxies and Web/App servers are still able to handle the subsequent requests. Thus we achieve availability and scalability on the HAProxy/Load Balancing layer following this model.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sticky Application design:&lt;/strong&gt; Things are usually not ideal and the way we assume to be in real world. Some applications are still designed with stateful nature and they store the session data, cache data etc. in their web/app server memory.  We can always recommend the application teams to re-architect this model to stateless, but not always this suggestion works for short term migrations, inter dependencies etc.  So as architects we need to find way to live and cope up with this design and still try to achieve availability on the load balancing layer. HAProxy follows a technique called as “&lt;strong&gt;Cookie Learning”&lt;/strong&gt; and &lt;strong&gt;“Cookie Insertion”&lt;/strong&gt; to help state full applications. HAProxy can be configured to learn the application cookie (&amp;ldquo;JSESSIONID&amp;rdquo;), when HAProxy receives the user&amp;rsquo;s request, it checks if it contains this particular cookie and a known value. If this is not the case, it will direct the request to any Web/App EC2 server, according to the load balancing algorithm configured. HAProxy will then extract the cookie value from the response and add it along with the server&amp;rsquo;s identifier to a local table. When the user request comes back again, the load balancer sees the cookie, lookups the table and finds the Web/App EC2 server to which it forwards the request. Let me detail this important flow a little bit;&lt;/p&gt;
+
+&lt;p&gt;HAProxy-1 EC2 instance will receive client’s requests from the browser. If a request does not contain a cookie, it will be forwarded to a valid Web/App EC2 Instance Apache-A. In return, if a JESSIONID cookie is seen, the Web/App EC2 Instance name (Example “A”)will be prefixed into it, followed by a delimiter (&amp;rsquo;~&amp;lsquo;) like &amp;ldquo;JSESSIONID=A~xxx&amp;rdquo;.When the browser client requests again with the cookie  JSESSIONID=A~xxx&amp;rdquo;, HAProxy-1 will know that it must be forwarded to Web/App Instance Apache-A. The EC2 Instance name ”A” will then be extracted from cookie before it is sent to the Web/App EC2 Instance Apache-A.&lt;/p&gt;
+
+&lt;p&gt;If Web/App EC2 Instance Apache-A dies, then requests will be sent to another valid server Web/App EC2 Instance Apache-B by LB and the cookie will be reassigned.&lt;/p&gt;
+
+&lt;p&gt;If HAProxy-1 itself dies, then requests will be sent to HAProxy-2 which will identify the Web/App EC2 instance to forward the request. This way even if the subsequent requests moves from HAProxy-1 to HAProxy-2 in event of HAProxy-1 failure, still the requests are sent to the same Web/App instance Apache-A by the cookie learning/insertion mechanism of HAProxy.&lt;/p&gt;
+
+&lt;p&gt;Sample HAProxy Settings to achieve this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;listen webfarm 192.168.1.1:80&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       mode http&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       balance roundrobin&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       cookie JSESSIONID prefix&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       option httpclose&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       option forwardfor&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       option httpchk HEAD /index.html HTTP/1.0&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       server Apache-A 192.168.1.11:80 cookie A check&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       server Apache-B 192.168.1.12:80 cookie B check&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: You can use more sophisticated DNS services like UltraDNS , DNSMadeEasy etc also in this architecture to better control the Load balancing and traffic direction at the DNS level.&lt;/p&gt;
+
+&lt;p&gt;Pattern 2: Route 53 DNS RR + HAProxy in Active-Passive mode&lt;/p&gt;
+
+&lt;p&gt;This is an extension of the Route53 DNS RR pattern and everything discussed in the previous pattern still applies to this context. In addition to associating HAProxies horizontally under Route53, we will build availability for every HAProxy vertically as well in this pattern. High Availability is built taking into consideration HAProxy process failure and HAProxy EC2 instance failure.&lt;/p&gt;
+
+&lt;p&gt;2 or more HAProxies from multiple AZ’s are taken and they are attached with Amazon Elastic IP’s. These Elastic IP’s are then associated in Route 53 with DNS RR. These HAProxies are now “Active” and are ready to handle the user requests. For HA, another equivalent set of HAProxies are launched in the respective AZ’s as “Standby”. In event of the “Active” HAProxy failure, the Standby HAProxy remaps to the same Amazon Elastic IP takes over the subsequent requests from the client.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/2.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/2.jpg&#34; alt=&#34;2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above diagram, there are 2 HAProxies in “Active” state with Elastic IP’s &lt;strong&gt;50.19.82.183&lt;/strong&gt; &lt;strong&gt;&amp;amp;&lt;/strong&gt; &lt;strong&gt;23.23.174.254&lt;/strong&gt;. They are deployed across Multiple Availability Zones inside an Amazon EC2 region. Another 2 HAProxies are launched in respective AZ’s, but they are kept idle in “Standby” state. In event of &lt;strong&gt;HAProxy-1 (EIP: 50.19.82.183)&lt;/strong&gt; failure the Elastic IP is remapped to Standby HAProxy-3 in the same AZ. The remapping takes ~60 seconds and the HAPorxy-3 will be handling the subsequent requests directed by the browsers to the &lt;strong&gt;50.19.82.183&lt;/strong&gt;** IP.**&lt;/p&gt;
+
+&lt;p&gt;Broadly there are 2 levels of failure in this pattern;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Failure @ HAProxy Process level&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Failure @ HAProxy EC2 instance level&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/3.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/3.jpg&#34; alt=&#34;3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;strong&gt;Failure @HAProxy Process level:&lt;/strong&gt;  When HAProxy Process at the “Active” server fails; we can detect this using **KeepAliveD **and switch the Elastic IP from Active -&amp;gt; Standby. We have observed it takes ~60-120 seconds for the standby to takeover. During this time the &lt;strong&gt;particular HAProxy alone&lt;/strong&gt; will be unreachable. KeepAliveD script is configured in both the Active and standby HAProxy EC2 instance. KeepAliveD implements a set of checkers to dynamically and adaptively maintain and manage load balanced server pool according to their health. High availability is achieved by Virtual Router Redundancy Protocol &lt;a href=&#34;http://datatracker.ietf.org/wg/vrrp/&#34;&gt;VRRP&lt;/a&gt; protocol of the KeepAliveD. Since Amazon EC2 currently does not support Multicast protocol we need to configure KeepAliveD with Unicast TCP in this scenario.  For more details refer &lt;a href=&#34;http://www.keepalived.org/&#34;&gt;http://www.keepalived.org/&lt;/a&gt;. Mean time manually we can bring the failed HAProxy Process up and make this as the new standby.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: “/etc/keepalived/keepalived.conf”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;vrrp_script chk_haproxy {           # Requires keepalived-1.1.13&lt;/p&gt;
+
+&lt;p&gt;script &amp;ldquo;killall -0 haproxy&amp;rdquo;     # cheaper than pidof&lt;/p&gt;
+
+&lt;p&gt;interval 20                      # check every 2 seconds&lt;/p&gt;
+
+&lt;p&gt;weight 20                        # add 2 points of prio if OK&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;vrrp_instance VI_1 {&lt;/p&gt;
+
+&lt;p&gt;interface eth0&lt;/p&gt;
+
+&lt;p&gt;state MASTER&lt;/p&gt;
+
+&lt;p&gt;virtual_router_id 51&lt;/p&gt;
+
+&lt;p&gt;ipriority 101                    # 101 on master, 100 on backup&lt;/p&gt;
+
+&lt;p&gt;vrrp_unicast_bind 10.215.31.4&lt;/p&gt;
+
+&lt;p&gt;      #internal IP address of EC2 instance 01&lt;/p&gt;
+
+&lt;p&gt;vrrp_unicast_peer 10.85.110.252&lt;/p&gt;
+
+&lt;p&gt;  #internal IP address of EC2 instance 02&lt;/p&gt;
+
+&lt;p&gt;notify_master &amp;ldquo;/etc/keepalived/vrrp.sh&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;track_script {&lt;/p&gt;
+
+&lt;p&gt;chk_haproxy weight 20&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: /etc/keepalived/vrrp.sh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;#vrrp.sh&lt;/p&gt;
+
+&lt;p&gt;#!/bin/bash&lt;/p&gt;
+
+&lt;p&gt;cd /opt/aws/apitools/ec2/bin&lt;/p&gt;
+
+&lt;p&gt;#DisAssociate EIP from this instance.&lt;/p&gt;
+
+&lt;p&gt;./ec2-disassociate-address &amp;ndash;aws-access-key XXXXXXX –aws-secret-key XXXXXXX  [EIP]&lt;/p&gt;
+
+&lt;p&gt;#Mapping EIP to secondary server&lt;/p&gt;
+
+&lt;p&gt;./ec2-associate-address &amp;ndash;aws-access-key XXXXXXX  –aws-secret-key XXXXXXX  [EIP] -i [ec2_instance_id_of_primary_or_secondary]&lt;/p&gt;
+
+&lt;p&gt;**Failure @ HAProxy EC2 instance level: **When the Active HAProxy EC2 instance itself fails; we can detect this using **Heartbeat **and switch the Elastic IP from Active -&amp;gt; Standby. &lt;strong&gt;&amp;ldquo;&lt;a href=&#34;http://en.wikipedia.org/wiki/Heartbeat_%28program%29&#34;&gt;Heartbeat&lt;/a&gt;&amp;ldquo;&lt;/strong&gt; tool connects two servers and checks the regular &amp;ldquo;pulse&amp;rdquo; or &amp;ldquo;heartbeat&amp;rdquo; between them. The standby server takes over the work of the “Active” as soon as it detects an alteration in the &amp;ldquo;heartbeat&amp;rdquo; of the former. We have observed it takes ~120+ seconds for the standby to takeover. During this time the &lt;strong&gt;particular HAProxy alone&lt;/strong&gt; will be unreachable. Heartbeat has to be configured in both the Active and standby HAProxy EC2 instance. Since Amazon EC2 currently does not support Multicast protocol we need to configure Heartbeat with Unicast UDP in this scenario. Mean time manually we can bring the failed HAProxy EC2 instance up and make this as the new standby.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: /etc/ha.d/ha.cf&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;logfile /var/log/ha-log&lt;/p&gt;
+
+&lt;p&gt;logfacility local0&lt;/p&gt;
+
+&lt;p&gt;keepalive 2&lt;/p&gt;
+
+&lt;p&gt;deadtime 30&lt;/p&gt;
+
+&lt;p&gt;initdead 120&lt;/p&gt;
+
+&lt;p&gt;udpport 694&lt;/p&gt;
+
+&lt;p&gt;ucast eth0 xx.xxx.xxx.xxa #Internal IP of EC2 instance 01&lt;/p&gt;
+
+&lt;p&gt;ucast eth0 xx.xxx.xxx.xxb #Internal IP of EC2 instance 02&lt;/p&gt;
+
+&lt;p&gt;auto_failback off&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: Create a script named “elastic_ip” in both the servers.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;#!/bin/bash&lt;/p&gt;
+
+&lt;p&gt;I_ID=&amp;rdquo;[ec2_instance_id&amp;rdquo; # different for each EC2 servers.&lt;/p&gt;
+
+&lt;p&gt;ELASTIC_IP=&amp;ldquo;X.X.X.X&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;case $1 in&lt;/p&gt;
+
+&lt;p&gt;    start)&lt;/p&gt;
+
+&lt;p&gt;ec2-associate-address &amp;ndash;aws-access-key XXXXX &amp;ndash;aws-secret-key XXXXX &amp;ldquo;$ELASTIC_IP&amp;rdquo; -i &amp;ldquo;$I_ID&amp;rdquo; &amp;gt; /dev/null&lt;/p&gt;
+
+&lt;p&gt;       echo $0 started&lt;/p&gt;
+
+&lt;p&gt;       ;;&lt;/p&gt;
+
+&lt;p&gt;    stop)&lt;/p&gt;
+
+&lt;p&gt;ec2-disassociate-address &amp;ndash;aws-access-key XXXXX &amp;ndash;aws-secret-key XXXXX &amp;ldquo;$ELASTIC_IP&amp;rdquo; &amp;gt; /dev/null&lt;/p&gt;
+
+&lt;p&gt;    echo $0 stopped&lt;/p&gt;
+
+&lt;p&gt;       ;;&lt;/p&gt;
+
+&lt;p&gt;    status)&lt;/p&gt;
+
+&lt;p&gt;ec2-describe-addresses &amp;ndash;aws-access-key XXXXX &amp;ndash;aws-secret-key XXXXX | grep &amp;ldquo;$ELASTIC_IP&amp;rdquo; | grep &amp;ldquo;$I_ID&amp;rdquo; &amp;gt; /dev/null&lt;/p&gt;
+
+&lt;p&gt;    # grep will return true if this ip is mapped to this instance&lt;/p&gt;
+
+&lt;p&gt;    [ $? -eq 0 ] &amp;amp;&amp;amp; echo $0 OK || echo $0 FAIL&lt;/p&gt;
+
+&lt;p&gt;    ;;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;esac&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why do we need this redundancy in the HAProxy layer?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Not all the times the DNS RR with LB Cookie Insertion alone is enough for ensuring availability;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Case 1:&lt;/strong&gt; Imagine you have not automated the scalability @ Load Balancing Layer and one of your Load balancer is down. You do not want to be waked up in the middle of the night rather it is better to have a standby Load Balancer automatically replacing the failed one. Manually you can replace the faulty LB next day.&lt;/p&gt;
+
+&lt;p&gt;**Case 2: **You have a gaming site where long running TCP sockets are established from flash gaming clients to the LB layer. You have planned the capacity of Front end Load Balancers with concurrent connections/sec. Now couple of your Load balancers are down, the new connections will be established to other running LB, but overall your site will now start performing poorly and chances are new connections are exhausted after few hours of heavy traffic. It is better to automatically detect and replace the faulty LB EC2 instance with the standby.&lt;/p&gt;
+
+&lt;p&gt;**Case 3: **Some clients cache the IP address of the Load Balancer, Some of them have long running sticky sessions with web/app, Some hardware devices can take only IP address to push data into the Server infrastructure. Though it is suggested to resolve the IP using DNS, still in reality some use cases does not work the same way.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pattern 3: Use ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Do not worry about all the above patterns, just go and configure Amazon Elastic Load Balancing (ELB). For most of the use cases ELB is more than sufficient.&lt;/p&gt;
+
+&lt;p&gt;Amazon Elastic Load Balancer can distribute incoming traffic across your Amazon EC2 instances in a single Availability Zone or multiple Availability Zones. Amazon Elastic Load Balancing automatically scales its request handling capacity in response to incoming application traffic. It can handle 20k+ concurrent requests/sec with ease. It enables you to achieve even greater fault tolerance in your applications, seamlessly providing the amount of load balancing capacity needed in response to incoming application traffic. Elastic Load Balancing detects unhealthy instances within a pool and automatically reroutes traffic to healthy instances until the unhealthy instances have been restored. Any faulty Load balancers in the ELB tier are automatically replaced.&lt;/p&gt;
+
+&lt;p&gt;Though for most of the common use cases ELB is more than sufficient in AWS. There are some unique cases which demand the use of Load balancers like HAProxy, Nginx and NetScaler in our architecture in the AWS infrastructure.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install ec2-api Tools on Linux</title>
+      <link>https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/</link>
+      <pubDate>Mon, 10 Dec 2012 10:40:06 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/</guid>
+      <description>&lt;p&gt;OS -&lt;strong&gt; Ubuntu Lucid&lt;/strong&gt;
+Processor &lt;strong&gt;- x64&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/351&#34;&gt;Download the ec2-api tools from the amazon site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/java/index.html&#34;&gt;Downloaded jre1.7.0_x64 from the java site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Steps to install JAVA JRE
+&lt;strong&gt;#add-apt-repository ppa:sun-java-community-team/sun-java6&lt;/strong&gt;
+&lt;strong&gt;#apt-get update&lt;/strong&gt;
+&lt;strong&gt;#apt-cache search java* [to know the latest jre/jdk]&lt;/strong&gt;
+&lt;strong&gt;#apt-get install sun-java6-jre&lt;/strong&gt;
+&lt;strong&gt;java is installed into /usr/lib/jvm/java-6-sun-1.6.0.21/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To check successful java installation
+&lt;strong&gt;#java -version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Setting up variables
+&lt;strong&gt;#export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.21&lt;/strong&gt;
+[put it in /etc/profiles]&lt;/p&gt;
+
+&lt;p&gt;Another Check
+&lt;strong&gt;$JAVA_HOME/bin/java -version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the prequisites are done . So comming back to the ec2-api tools
+&lt;strong&gt;#export EC2_HOME=/usr/local/ec2-api-tools-1.5.5.0&lt;/strong&gt;
+[path where i unzipped it , also mention this in /etc/profile]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export PATH=$PATH:$EC2_HOME/bin&lt;/strong&gt;
+[put it in /etc/profile too]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export EC2_PRIVATE_KEY=/EC2_API_Certs/pk-47O.pem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export EC2_CERT=/EC2_API_Certs/cert-4GV.pem&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>To Terminate an EC2 Instance, disabled via ec2-api</title>
+      <link>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</link>
+      <pubDate>Mon, 10 Dec 2012 10:38:44 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</guid>
+      <description>&lt;p&gt;#&lt;strong&gt;ec2minatt i-555555 –disable-api-termination false –region us-east-1 -K /EC2_API_Certs/pk-4GGV.pem -C /EC2_API_Certs/cert-GV.pem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Make a note of the ebs-id attached&lt;/p&gt;
+
+&lt;p&gt;Terminate the Instance from the AWS Console and then Delete the EBS, same could be done through command line&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quick MySQL Commands</title>
+      <link>https://www.vishnu-tech.com/blog/quick-mysql-commands/</link>
+      <pubDate>Mon, 10 Dec 2012 10:33:27 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/quick-mysql-commands/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;To Login into the MySQL&lt;/strong&gt;
+#mysql -u username -ppaswword
+&lt;strong&gt;and if its RDS :&lt;/strong&gt;
+#mysql -h rds.indexpoint/dnsname/ip -u username -ppassword&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List Databases&lt;/strong&gt;
+mysql&amp;gt;show databases;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View tables&lt;/strong&gt;
+mysql&amp;gt;use databasename;
+mysql&amp;gt;show tables;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View Contents Inside the Table&lt;/strong&gt;
+mysql&amp;gt;select * from tablename;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Delete Database&lt;/strong&gt;
+mysql&amp;gt;drop database dbname;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To create Database user (we also need to grant permission to a db to gain access for the new user.)&lt;/strong&gt;
+mysql&amp;gt;create user ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘passwd3@1′;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Grant Permission to a Database for a User and Create the User at the same Time&lt;/strong&gt;
+mysql&amp;gt;grant all on databasename.* to ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘password’;&lt;/p&gt;
+
+&lt;p&gt;[NOTE&amp;ndash; To provide access from all IP Address use ‘%’ instead of ipaddress.]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List out all Database Users&lt;/strong&gt;
+mysql&amp;gt;SELECT user,host FROM mysql.user;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Create a Database&lt;/strong&gt;
+mysql&amp;gt;create database UNNI;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To restore a specific Database in Mysql (database UNNI has to be created already)&lt;/strong&gt;
+#mysql -u username -ppassword UNNI &amp;lt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI had to be created before restore]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To dump/backup a specific Database in Mysql&lt;/strong&gt;
+#mysqldump -u username -ppassword UNNI &amp;gt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI is backed up into UNNI.sql]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To know the permission of Mysql User&lt;/strong&gt;
+#show grants for ‘unni’@&amp;lsquo;localhost’;&lt;/p&gt;
+
+&lt;h2 id=&#34;need-to-know-create-delete-user&#34;&gt;[NEED TO KNOW]- Create/Delete User :::&lt;/h2&gt;
+
+&lt;p&gt;It must be noted that CREATE USER command was added in the MySQL version 5.0.2. In earlier versions, users could be created automatically when assigning permissions using the GRANT command or by manually inserting records in the mysql database.&lt;/p&gt;
+
+&lt;p&gt;The mysql database contains three tables – &lt;strong&gt;user, host and db. &lt;/strong&gt;These tables contains the database permissions.&lt;/p&gt;
+
+&lt;p&gt;The user table contains the usernames and password combination of anyone who has access to any part of the MYSQL database. The password part is the encrypted string, which can be generated using the PASSWORD() function.&lt;/p&gt;
+
+&lt;p&gt;As an administrator, you can even directly insert the values into the user table of mysql database and get the desired results.
+&lt;strong&gt;&lt;code&gt;mysql&amp;gt;INSERT INTO user(Host,User,Password) VALUES(&#39;localhost&#39;, &#39;UNNI&#39;, PASSWORD(&#39;passwd1@3&#39;));
+&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;mysql&amp;gt;FLUSH PRIVILEGES;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The FLUSH PRIVILEGES command is required to inform MySQL to reload the privilege data after the change is made.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Deleting Users&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To delete users from the MySQL database use the DROP command.
+&lt;code&gt;**mysql&amp;gt;DROP USER user@host;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The command in turn removes the user record from the mysql.user table.&lt;/p&gt;
+
+&lt;p&gt;As the CREATE USER command, even the DROP USER command has been added since MySQL 5.0.2. In previous versions of MySQL you must revoke the user’s privileges first, delete the records from user manually and then issue the FLUSH PRIVILEGES command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;**mysql&amp;gt;DELETE FROM user WHERE User= &#39;technofriends&#39; AND Host= &#39;localhost&#39;;
+FLUSH PRIVILEGES;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;General Notes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is no concept in MySQL of “Owner” of database or its objects, as there is in MS Access and MS SQL Server. I surmise this from the lack of “owner” field anywhere in mysql system tables.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Reset Mysql ROOT Password</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</link>
+      <pubDate>Mon, 10 Dec 2012 10:29:59 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</guid>
+      <description>&lt;p&gt;1) &lt;strong&gt;Stop the mysql demon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop&lt;/p&gt;
+
+&lt;p&gt;2) &lt;strong&gt;Start the mysqld demon process using the –skip-grant-tables option with this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/usr/sbin/mysqld –skip-grant-tables –skip-networking &amp;amp;&lt;/p&gt;
+
+&lt;p&gt;3)&lt;strong&gt; start the mysql client process using this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;mysql -u root&lt;/p&gt;
+
+&lt;p&gt;4) &lt;strong&gt;from the mysql prompt execute this command to be able to change any password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;5)&lt;strong&gt; Then reset/update your password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;SET PASSWORD FOR root@’localhost’ = PASSWORD(‘password’);&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;6) &lt;strong&gt;Then stop the mysqld process and relaunch it with the classical way:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop
+/etc/init.d/mysql start&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mysql- Database Sharding</title>
+      <link>https://www.vishnu-tech.com/blog/mysql-database-sharding/</link>
+      <pubDate>Mon, 10 Dec 2012 10:26:20 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/mysql-database-sharding/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;“share nonthing” : Key Law on database sharding Architecture.&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;Small Databases are Fast, Big Databases are Slow !!!&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;DB Sharding – Breaking a Bigger DB into a Smaller DB.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Key Points on DB Sharding –&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Partition Data across master&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Writes and read are distributed&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Application needs modification&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Needs choice partitioning strategy for uniform data distribution.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Issues -&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Joins cannot be performed across shards&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Application modification can be expensive.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Example : Evernote uses database sharding – localized failures , no need for joins. Each shards handles all  data &amp;amp;  traffic for about 100,000 users.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sharding is another way to resolve MySQL scalability issues. It usually means splitting up the data by some logic derived from the application. This can be done by selecting a key in the data and splitting the data by hashing that key and having some distribution logic. It can also be done by identifying the application needs and setting different tables or different data sets in different databases (splitting the North-America sales data from the EMEA sales data, etc.)&lt;/p&gt;
+
+&lt;p&gt;This approach is simple from the database standpoint, but is very complex from the application standpoint since the application needs to be modified to deal with the data being scattered into the different shards. Moreover, combining data from different shards can be very complex and involves development in the application (you can’t just run a simple JOIN.)&lt;/p&gt;
+
+&lt;p&gt;Advantages of scaling out and in using sharding:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Scales beyond the limitations of a single machine&lt;/li&gt;
+&lt;li&gt;Scales both read and write operations (but makes some operations impossible to achieve in the database)&lt;/li&gt;
+&lt;li&gt;Scales both throughput and capacity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Disadvantages of scaling out and in using sharding:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complex and requires application changes&lt;/li&gt;
+&lt;li&gt;Scaling is usually offline and requires a re-partitioning event – and may require application changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Today, there are some solutions that introduce auto-sharding (Scalebase, Dbshards). This approach makes sharding more similar to shared-nothing partitioning, thus taking the sting out of some sharding complexities. However, it still requires application awareness and could prove to be a limiting factor if you needed to update your app or migrate to a different database solution.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install &amp; Use s3cmd for S3 Storage</title>
+      <link>https://www.vishnu-tech.com/blog/install-use-s3cmd-for-s3-storage/</link>
+      <pubDate>Mon, 10 Dec 2012 10:23:24 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/install-use-s3cmd-for-s3-storage/</guid>
+      <description>&lt;p&gt;Amazon S3 is a reasonably priced data storage service. Ideal for off-site backups, archiving and other data storage needs. It is generally more reliable than your regular web hosting for storing your files and images. Check out About Amazon S3 section to find out more.&lt;/p&gt;
+
+&lt;p&gt;S3cmd is a command line tool for uploading, retrieving and managing data in Amazon S3. It is best suited for power users who don’t fear command line. It is also ideal for scripts, automated backups triggered from cron, etc.&lt;/p&gt;
+
+&lt;p&gt;S3cmd is an open source project available under GNU Public License v2 (GPLv2) and is free for both commercial and private use. You will only have to pay Amazon for using their storage. None of these money go to S3cmd developers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#apt-get install s3cmd&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To configure s3cmd&lt;/strong&gt;
+#s3cmd –configure
+[Enter Access Key and Secret Key]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Configuration file is saved into&lt;/strong&gt;
+/root/.s3cfg&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To get Help&lt;/strong&gt;
+#s3cmd –help&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List Buckets&lt;/strong&gt;
+#s3cmd ls&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Delete Non-Empty Buckets&lt;/strong&gt;
+#s3cmd rb s3://buckt_name -fv&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Copy buckets to local machine&lt;/strong&gt;
+#s3cmd get s3://buckt_name -r&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create Buckets&lt;/strong&gt;
+#s3cmd mb s3://buckt_name&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Syncing local dir with s3 Buckets&lt;/strong&gt;
+#s3cmd sync local_dir/ s3://buckt_name&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

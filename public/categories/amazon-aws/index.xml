@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon Aws on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/categories/amazon-aws/index.xml</link>
+    <description>Recent content in Amazon Aws on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/categories/amazon-aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker swarm production setup</title>
+      <link>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</link>
+      <pubDate>Wed, 30 Nov 2016 19:08:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm is a cluster of docker engines.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Swarm mode is native in Docker 1.12 RC&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;You can orchestrate service when it&amp;rsquo;s in Swarm mode.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;We are creating 3 swarm manager and 3 worker nodes for high availability in AWS.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_You can view the full video from_ &lt;strong&gt;&lt;a href=&#34;https://asciinema.org/a/94625&#34;&gt;here&lt;/a&gt; &lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbook for WhereHows (A Data Discovery and Lineage Portal)</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</link>
+      <pubDate>Tue, 18 Oct 2016 14:17:34 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/WhereHows&#34;&gt;WhereHows&lt;/a&gt;, a data discovery and lineage portal. At LinkedIn, WhereHows integrates with all of their data processing environments and extracts coarse and fine grain metadata from them. Then, it surfaces this information through two interfaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A web application that enables navigation, search, lineage visualization, annotation, discussion, and community participation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;An &lt;a href=&#34;https://github.com/linkedin/wherehows/wiki/Backend-API&#34;&gt;API&lt;/a&gt; endpoint that empowers automation of other data processes and applications.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am creating an Ansible playbook to play around with WhereHows.&lt;/p&gt;
+
+&lt;p&gt;You can find the playbook from &lt;a href=&#34;https://github.com/vishnudxb/ansible-wherehows&#34;&gt;here.&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:15</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol15/</link>
+      <pubDate>Wed, 31 Aug 2016 15:17:19 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol15/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2016/08/dropbox-data-breach.html&#34;&gt;Dropbox Hacked — More Than 68 Million Account Details Leaked Online&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://techcrunch.com/2016/08/30/dropbox-employees-password-reuse-led-to-theft-of-60m-user-credentials/amp/&#34;&gt;Dropbox employee’s password reuse led to theft of 60M+ user credentials&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://engineeringblog.yelp.com/2016/08/undebt-how-we-refactored-3-million-lines-of-code.html&#34;&gt;Undebt: How We Refactored 3 Million Lines of Code&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.zorinaq.com/nginx-resolver-vulns/&#34;&gt;Nginx resolver vulnerabilities allow cache poisoning attack&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://use-the-index-luke.com/blog/2016-07-29/on-ubers-choice-of-databases&#34;&gt;On Uber’s Choice of Databases&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kennethreitz.org/essays/on-cybersecurity-and-being-targeted&#34;&gt;On Cybersecurity and Being Targeted&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dschep/ntfy&#34;&gt;A utility for sending notifications, on demand and when commands finish&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=12376596&#34;&gt;How do you handle DDoS attacks?&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/results?search_query=%22Big+Data+Day+LA+2016%22&#34;&gt;Videos from Big Data Day LA 2016&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://techblog.netflix.com/2016/08/building-fastcom.html&#34;&gt;Building fast.com&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/eon01/NodeSS&#34;&gt;nodeSS : Node.js Security Scanner&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/forking-docker-daniel-riek?trk=hp-feed-article-title-like&#34;&gt;Forking Docker Not&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/mozilla-tech/promoting-security-best-practices-with-observatory-7b164a190425#.neshhjqht&#34;&gt;Promoting Security Best Practices with Observatory&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/4-use-cases-insights-regarding-kubernetes-namespaces-van-velzen?trk=hp-feed-article-title-like&#34;&gt;4 use cases and insights regarding Kubernetes namespaces&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://thehackerblog.com/floating-domains-taking-over-20k-digitalocean-domains-via-a-lax-domain-import-system/index.html&#34;&gt;Floating Domains – Taking Over 20K DigitalOcean Domains via a Lax Domain Import System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://polynome.co/infosec/inversoft/elasticsearch/linode/penetration-testing/2016/08/16/hack-that-inversoft.html&#34;&gt;HackedThat: Breaking in to a hardened server via the back door&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ilikebigbits.com/blog/2016/8/28/designing-a-fast-hash-table&#34;&gt;Designing a fast Hash Table&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/blog/ansible-openshift-enterprise-container-platform&#34;&gt;Automating the provisioning and configuration of Redhat Mobile Application platform&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/geshan/embrace-chatops-stop-installing-deployment-software-larcon-eu-2016&#34;&gt;Embrace chatops, stop installing deployment software&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/powerful-aws-platform-features-now-for-containers/&#34;&gt;Powerful AWS Platform Features, Now for Containers&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-aws-application-load-balancer/&#34;&gt;AWS Application Load Balancer&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-week-in-review&#34;&gt;The files in this GitHub Repo are used to produce the AWS Week in Review&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/bbc/chaos-lambda&#34;&gt;Randomly terminate ASG instances during business hours&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/stevenharradine/checkall&#34;&gt;Runs commands against every box within aws&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/DevOpsDave/ssh-everywhere&#34;&gt;Integrates ssh and tmux with aws cli to create tmux sessions that open a pane for each aws instance.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/08/create-couchbase-cluster-using-kubernetes.html&#34;&gt;Create a Couchbase cluster using Kubernetes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Yelp/git-code-debt&#34;&gt;A dashboard for monitoring code debt in a git repository.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/EntilZha/spot-price-reporter&#34;&gt;Fetch and plot AWS spot pricing history&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cosiner/socker&#34;&gt;Socker is a library for Go to simplify the use of SSH&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/Olivia&#34;&gt;Go: A distributed, in-memory key-value storage.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iamduo/workq&#34;&gt;Job server in Go&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.docker.com/2016/08/securing-enterprise-software-supply-chain-using-docker/&#34;&gt;Securing The Enterprise Software Supply Chain Using Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/08/14/containers-clean-up-your-house/&#34;&gt;Containers – Clean up your House&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://channel9.msdn.com/Shows/msftazure/Run-PowerShell-Natively-on-Linux-with-Docker&#34;&gt;Run PowerShell Natively on Linux with Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kendrickcoleman.com/index.php/Tech-Blog/how-to-use-volume-drivers-and-storage-with-new-docker-service-command.html&#34;&gt;How to Use Volume Drivers and Storage with New Docker Service Command&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.com/news/2016/08/docker-service-load-balancing&#34;&gt;Improved Options for Service Load Balancing in Docker 1.12.0&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.sqreen.io/one-easy-way-to-inject-malicious-code-in-any-node-js-application/&#34;&gt;One easy way to inject malicious code in any Node.js application&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.pivotal.io/pivotal/products/new-single-multi-node-sandboxes-for-pivotal-hdb-apache-hawq&#34;&gt;Docker-based sandbox (both single and multi-node) for Apache HAWQ &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@allingeek/we-do-rest-is-not-enough-7fa2a683e2f4#.7eiyaabb6&#34;&gt;“We do REST” is not Enough&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/building-a-remote-caching-system&#34;&gt;Building a Remote Caching System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kelseyhightower/kubernetes-the-hard-way&#34;&gt;Bootstrap Kubernetes the hard way. &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://githubengineering.com/context-aware-mysql-pools-via-haproxy/&#34;&gt;Context aware MySQL pools via HAProxy&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.codeship.com/autoscaling-purpose-strategies/&#34;&gt;Autoscaling: Its Purpose and Strategies&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/fetching-and-running-docker-container-images-with-rkt.html&#34;&gt;Fetching and running docker container images with rkt&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.madewithtea.com/processing-tweets-with-kafka-streams.html&#34;&gt;Processing Tweets with Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://inventous.com/database-scaling-mongodb/&#34;&gt;Database Scaling (Sharding) with MongoDB&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbooks to create private docker registry in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</link>
+      <pubDate>Fri, 19 Aug 2016 09:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</guid>
+      <description>
+
+&lt;p&gt;Creating a private docker registry in AWS using Ansible playbooks. You can find the playbooks from &lt;a href=&#34;https://github.com/vishnudxb/ansible-docker-registry&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;variables-in-playbooks&#34;&gt;Variables in playbooks&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;_server_name: &amp;ldquo;docker-registry.vishnudxb.me&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_bundle_crt: &amp;ldquo;/etc/nginx/ssl/ssl-bundle.crt&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_crt&lt;em&gt;key: &amp;ldquo;/etc/nginx/ssl/ssl-cert.key&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;aws-instance-tag-name&#34;&gt;AWS instance tag name&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;The playbook will identified the instance using the tag name ie docker-registry&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;to-do&#34;&gt;To-Do&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Authorization for users inside the registry.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:14</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol14/</link>
+      <pubDate>Tue, 19 Jul 2016 20:57:48 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol14/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/serverless.html&#34;&gt;Serverless Architectures&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://code.facebook.com/posts/290023971344425/what-s-new-in-facebook-open-source/&#34;&gt;What&amp;rsquo;s new in Facebook open source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cloudonaut.io/serverless-big-data-pipeline-on-aws/&#34;&gt;Serverless Big Data pipeline on AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gocardless.com/blog/from-idea-to-reality-containers-in-production-at-gocardless/&#34;&gt;From idea to reality: containers in production at GoCardless&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.drud.com/sanctuary-a-turn-key-vault-in-the-cloud/&#34;&gt;Sanctuary is a handy tool for launching a Vault instance in AWS. It provides a simple tool which configures AWS services like S3 (for logs), DynamoDB (for secrets) and a VPC network, along with certs from letsencrypt.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/leveros/leveros&#34;&gt;Serverless + Microservices&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mheffner/awsam&#34;&gt;AWSAM (Amazon Web Services Account Manager) allows you to easily manage multiple sets of AWS credentials.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/swipely/iam-docker&#34;&gt;Use different IAM roles for each Docker container on an EC2 instance&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/chalice&#34;&gt;Python Serverless Microframework for AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kristovatlas/osx-config-check&#34;&gt;Verify the configuration of your OS X machine.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jakobovski/aws-spot-bot&#34;&gt;A simple script to automate the creation of the cheapest AWS spot instances given your requirements.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sohelamin/chatbot&#34;&gt;An AI Based Chatbot&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amadeusitgroup.github.io/GraphDash/&#34;&gt;GraphDash: A web-based dashboard built on graphs and their metadata&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/reconquest/orgalorg&#34;&gt;Parallel SSH commands executioner and file synchronization tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Requilence/integram&#34;&gt;Integrate Telegram into your workflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLECEw2eFfW7iTsIrldRO2b6NLEuRQYD2L&#34;&gt;PyConSG 2016 videos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vE1iDPx6-Ok&amp;amp;list=PLkA60AVN3hh9gnrYwNO6zTb9U3i1Y9FMY&#34;&gt;DockerCon 2016 videos&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lucjuggery.com/blog/?p=604&#34;&gt;Deploy a multi services application with swarm mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.exoscale.ch/syslog/2016/07/11/elk-docker/&#34;&gt;Deploy ELK with Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/9-jChl9PmA8&#34;&gt;Docker Swarm on DigitalOcean&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/introducing-confluent-control-center&#34;&gt;Build and monitor Kafka pipelines with Confluent Control Center&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://philippedecuzey.wordpress.com/2016/06/05/fromapachepigtospark/&#34;&gt;From Pig to Spark : an easy journey to Spark for Apache Pig developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wecode.wepay.com/posts/wepays-data-warehouse-bigquery-airflow&#34;&gt;Building WePay&amp;rsquo;s data warehouse using BigQuery and Airflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLKnYDs_-dq16K1NH83Bke2dGGUO3YKZ5b&#34;&gt;Hadoop Summit San Jose 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/kafka-tools&#34;&gt;A collection of tools for working with Apache Kafka.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pierrevillard.com/2016/07/09/apache-nifi-minifi-is-almost-out/&#34;&gt;Apache NiFi – MiNiFi is (almost) out!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/elastic-scaling-in-kafka-streams&#34;&gt;Elastic Scaling in Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://syslog.ravelin.com/powering-real-time-fraud-detection-with-bigquery-4f85b999a4e9#.uxh8g3gfc&#34;&gt;Powering real time fraud detection with BigQuery&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.feedly.com/what-goes-down-better-come-up-a-k-a-adventures-in-hbase-diagnostics/&#34;&gt;What Goes Down Better Come Up a.k.a. Adventures in Hbase Diagnostics&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://yahoohadoop.tumblr.com/post/147399828686/moving-the-utilization-needle-with-hadoop&#34;&gt;Moving the Utilization Needle with Hadoop Overcommit&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.svds.com/brain-monitoring-kafka-opentsdb-grafana/&#34;&gt;Brain Monitoring with Kafka, OpenTSDB, and Grafana&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fhussonnois/kafkastreams-cep&#34;&gt;Complex Event Processing on top of Kafka Streams&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Running Openstack with LXC as hypervisor using Terraform</title>
+      <link>https://www.vishnu-tech.com/blog/running-openstack-with-lxc-as-hypervisor-using-terraform/</link>
+      <pubDate>Tue, 24 May 2016 18:35:19 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/running-openstack-with-lxc-as-hypervisor-using-terraform/</guid>
+      <description>&lt;p&gt;Hi Guys,&lt;/p&gt;
+
+&lt;p&gt;Today I got some time to play around with Terraform &amp;amp; Openstack. If you want a test Openstack environment with LXC in AWS, you can use this &lt;a href=&#34;https://github.com/vishnudxb/terraform-openstack-lxc&#34;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It creates a new VPC environment in AWS in us-east-1 region and boot up an Ubuntu instance in the newly created VPC environment and install Openstack with LXC as hypervisor.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbook for creating a public subnet and private subnet with NAT gateway in AWS.</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</link>
+      <pubDate>Mon, 15 Feb 2016 13:46:50 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</guid>
+      <description>&lt;p&gt;An Ansible playbook for creating a Public subnet and Private subnet with NAT gateway. Currently Ansible is working on the module &amp;lsquo;ec2_vpc_nat_gateway&amp;rsquo;  and it is not production ready. So I used a bash script along with the Ansible play to create the private subnet with NAT gateway. You can find the github repo from &lt;a href=&#34;https://github.com/vishnudxb/ansible-vpc-nat&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to copy redis dump from AWS Elasticache to AWS S3</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</link>
+      <pubDate>Tue, 09 Jun 2015 15:22:13 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</guid>
+      <description>&lt;p&gt;For Amazon Elasticache, we can&amp;rsquo;t copy the snapshot to AWS S3.  So inorder to do that you need to do the below steps:-&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Spin up new EC2 instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Install Redis on that Instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Setup the instance as a read replica of the AWS Elasticache Primary (redis)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Wait for the Master Slave data sync&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Issue a redis &lt;strong&gt;SAVE &lt;/strong&gt;command to generate a local dump&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Copy local dump.rdb on AWS S3&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can do the whole setup by simply checkout this _&lt;strong&gt;&lt;a href=&#34;https://github.com/vishnudxb/redisbackup-to-s3&#34;&gt;REPO&lt;/a&gt;&lt;/strong&gt;_  and run the below command&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;vishnudxb@server:~# ./terraform apply -var &amp;lsquo;access_key=PUTMYACCESSKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;secret_key=PUTMYSECRETKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_file=/home/redis.pem&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_name=redis&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*&lt;em&gt;                                                              -var &amp;lsquo;region=us-east-1&amp;rsquo; *&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;instance_type=m3.large&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_**                                                              -var &amp;lsquo;availability&lt;em&gt;zone=us-east-1a&amp;rsquo; \ **&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;subnet_id=subnet-e94xxxx&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;security_id=sg-7xxxx1d&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                             -var &amp;lsquo;redis_endpoint=aws redis endpoint&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;redis_port=6379&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;                                                              -var &amp;lsquo;aws_bucket=redis-db-backup&amp;rsquo;&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;p&gt;[/color-box]
+Once you execute the above command and you can see the output like the below:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to get your Client IPaddress with Nginx if you are using TCP on AWS ELB</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</link>
+      <pubDate>Sat, 09 May 2015 19:53:55 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</guid>
+      <description>&lt;p&gt;If your Application is running behind an AWS Load Balancer (&lt;a href=&#34;http://aws.amazon.com/elasticloadbalancing/&#34;&gt;ELB&lt;/a&gt;) and you are using TCP ( for both 80 and 443).&lt;/p&gt;
+
+&lt;p&gt;You can run AWS ELB in different modes.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;1) You can do Load balance with HTTP/HTTPS traffic and if you use this one, the AWS ELB injects an X-Forwarded-For  header  that has the original client ipaddress. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;2)  You can do Load balance straight with TCP traffic. If you use this mode, your application can use Websockets. But it won&amp;rsquo;t provide the X-Forwarded-For  header because the load balancer doesn’t know anything about HTTP headers in this case. So it&amp;rsquo;s hard to track the Client IP address. However we can do this with an AWS ELB feature called &amp;ldquo;&lt;a href=&#34;http://aws.amazon.com/about-aws/whats-new/2013/07/30/elastic-load-balancing-now-supports-proxy-protocol/&#34;&gt;Proxy Protocol&lt;/a&gt;&amp;ldquo; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Here I am using Ubuntu distro with Nginx version 1.9.0 &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo add-apt-repository ppa:chris-lea/nginx-devel&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get update&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get -y install nginx-full&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Your AWS ELB Listeners Looks like the below one&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now you need to enable Proxy Protocol on the AWS ELB&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;First create a load balancer policy using the below command&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb create-load-balancer-policy &amp;ndash;load-balancer-name vishnudxb  &amp;ndash;policy-name vishnudxb-ProxyProtocol-policy &amp;ndash;policy-type-name ProxyProtocolPolicyType &amp;ndash;policy-attributes AttributeName=ProxyProtocol,AttributeValue=true&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now we need to enable the Newly created policy on the specified ports. (ie 80 &amp;amp; 443)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 80 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 443 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now we need to configure Nginx for Proxy Protocol&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Add the below entries on your &lt;strong&gt;/etc/nginx/nginx.conf&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_log_format elb_log &amp;lsquo;$proxy_protocol_addr - $remote_user [$time_local] &amp;lsquo; &amp;lsquo;&amp;ldquo;$request&amp;rdquo; $status $body_bytes_sent &amp;ldquo;$http_referer&amp;rdquo; &amp;lsquo; &amp;lsquo;&amp;ldquo;$http_user&lt;em&gt;agent&amp;rdquo;&amp;lsquo;;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;Now you need to do some changes on your &lt;em&gt;&lt;strong&gt;sites-enabled like below:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx1.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx2.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;And finally you can see the Client IP address on your Nginx logs  when you use AWS ELB TCP traffic straight. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recovering your AMAZON SES SMTP credentials!!</title>
+      <link>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</link>
+      <pubDate>Mon, 29 Dec 2014 07:55:50 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;How to recover your Amazon SES smtp credentials:-&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Your SMTP password is not the same as your AWS secret access key. Do not attempt to use your AWS credentials to authenticate yourself against the SMTP endpoint. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two ways to generate your SMTP credentials. You can either use the Amazon SES console or you can generate your SMTP credentials from your AWS credentials.&lt;/p&gt;
+
+&lt;p&gt;Use the Amazon SES console to generate your SMTP credentials if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You want to get your SMTP credentials using the simplest method.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You do not need to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Generate your SMTP credentials from your AWS credentials if:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You have an existing  IAM  user and you want that user to be able to send emails using the Amazon SES SMTP interface.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You want to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt; A user&amp;rsquo;s SMTP username is the same as their AWS Access Key ID, so you just need to generate the SMTP password. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am doing a Java implementation  that converts an AWS SECRET ACCESS KEY to an Amazon SES SMTP password.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For example:  I am creating a file called &amp;ldquo;smtp.java&amp;rdquo;  and in this file I create a class named &amp;ldquo;smtp&amp;rdquo; and inside you need to give your AWS SECRET ACCESS KEY &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34; alt=&#34;smtp&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can download this file from &lt;a href=&#34;https://gist.github.com/vishnunamshi/c650aad1510c0123f8be&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You  Need to execute this file as:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34; alt=&#34;ex&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;This will create a file called &amp;ldquo;smtp&amp;rdquo; and you need to execute again as :&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34; alt=&#34;sm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;And this will prompt your AMAZON SES SMTP PASSWORD :)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AWS-ElasticIP-Swapping</title>
+      <link>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</link>
+      <pubDate>Fri, 02 May 2014 19:06:30 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</guid>
+      <description>
+
+&lt;h1 id=&#34;attach-and-detach-public-ip-in-aws&#34;&gt;Attach and Detach Public IP in AWS&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This script is used for detach elastic ip from one server and attach it to the secondary private ip of the other server.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For example:-&lt;/p&gt;
+
+&lt;p&gt;We have two servers with same content named &amp;ldquo;server01&amp;rdquo; and &amp;ldquo;server02&amp;rdquo; with primary and secondary private IP in AWS and each instance have a public IP  (ie. Elastic IP). This two public IP&amp;rsquo;s are pointed to the DNS.&lt;/p&gt;
+
+&lt;p&gt;If &amp;ldquo;server01&amp;rdquo; goes down, only you need to detach the elastic IP and attached it to the &amp;ldquo;server02&amp;rdquo; to the secondary private IP.&lt;/p&gt;
+
+&lt;p&gt;You can find the script in the below link:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vishnunamshi/ElasticIP-Swap&#34;&gt;Elastic-IP-Swap&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automated VM Generation with veewee, Vagrant, Jenkins and Amazon S3</title>
+      <link>https://www.vishnu-tech.com/blog/automated-vm-generation-with-veewee-vagrant-jenkins-and-amazon-s3/</link>
+      <pubDate>Sat, 20 Jul 2013 05:43:18 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/automated-vm-generation-with-veewee-vagrant-jenkins-and-amazon-s3/</guid>
+      <description>
+
+&lt;p&gt;Recently at my job there has been an increasing amount of LAMP development going on. One part of the learning curve is getting developers set up with an LAMP environment to develop on. Currently this is done by developers using a shared environment. I wanted to explore the idea of developers being able to easily spin up a local LAMP environment using Vagrant and Puppet.&lt;/p&gt;
+
+&lt;p&gt;There are a large number of &lt;a href=&#34;http://www.vagrantbox.es/&#34;&gt;Vagrant base boxes&lt;/a&gt; available but people (like your boss) probably shy away from the idea of using a base box built by somebody else. Who knows what could be on it without doing some kind of audit? Luckily there is a tool called &lt;a href=&#34;https://github.com/jedi4ever/veewee&#34;&gt;veewee&lt;/a&gt; that helps automate the process of building your own base boxes.&lt;/p&gt;
+
+&lt;p&gt;I thought it would be fun to try and automate the whole process using &lt;a href=&#34;http://jenkins-ci.org/&#34;&gt;Jenkins&lt;/a&gt; and publish the box to Amazon S3. Later I’ll create a Vagrant project and reference the base box I created using vewee and work towards turning it into a LAMP box.&lt;/p&gt;
+
+&lt;p&gt;I’ll be using the following tools:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://rvm.io/&#34;&gt;RVM&lt;/a&gt; - Used to install and manage our Ruby environment.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.ruby-lang.org/&#34;&gt;Ruby&lt;/a&gt; - veewee and Vagrant are Ruby projects.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://rubygems.org/&#34;&gt;RubyGems&lt;/a&gt; - veewee and Vagrant are provided as Ruby Gems.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://gembundler.com/&#34;&gt;Bundler&lt;/a&gt; - Used to define and resolve the Ruby Gems used by our project.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt; - veewee and Vagrant use VirtualBox to build and run Virtual Machines.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/jedi4ever/veewee&#34;&gt;veewee&lt;/a&gt; - The tool we use to build our own custom box.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; - The tool we use to configure and run our Virtual Machines.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.centos.org/&#34;&gt;CentOS&lt;/a&gt; - A free Linux distribution equivalent to RedHat.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://puppetlabs.com/&#34;&gt;Puppet&lt;/a&gt; - The tool will be using to automatically provision the VM - install packages and setup service.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; - Where we’ll store out project code.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://jenkins-ci.org/&#34;&gt;Jenkins&lt;/a&gt; - A Continuous Integration server we’ll use to automate the building of our box.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/s3/&#34;&gt;Amazon S3&lt;/a&gt; - Used as a public place to host our base box.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;assumptions&#34;&gt;Assumptions&lt;/h3&gt;
+
+&lt;p&gt;I’m assuming the following about you:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;you’re familiar with Ruby&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;you’re familiar with Unix/Linux&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;you know how to use Git fairly well&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;you know how to set up an Amazon S3 Bucket&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you don’t know any of those things then Google is your best friend.&lt;/p&gt;
+
+&lt;h2 id=&#34;prepare-host-machine&#34;&gt;Prepare Host Machine&lt;/h2&gt;
+
+&lt;p&gt;I’m doing this on my Mac so there were a few things I needed to set up before getting started.&lt;/p&gt;
+
+&lt;h3 id=&#34;virtualbox&#34;&gt;VirtualBox&lt;/h3&gt;
+
+&lt;p&gt;Vagrant uses VirtualBox so I installed that first. You can download it from &lt;a href=&#34;https://www.virtualbox.org/wiki/Downloads&#34;&gt;https://www.virtualbox.org/wiki/Downloads&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;ruby&#34;&gt;Ruby&lt;/h3&gt;
+
+&lt;p&gt;veewee and Vagrant are both Ruby Gems so you’ll need to have Ruby and RubyGems installed. My recommended way of doing this is to use &lt;a href=&#34;https://rvm.io/&#34;&gt;RVM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;install-ruby-1-9-3&#34;&gt;Install Ruby 1.9.3&lt;/h4&gt;
+
+&lt;p&gt;Once you have RVM installed you can install Ruby 1.9.3.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ rvm install 1.9.3
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then switch to Ruby 1.9.3&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ rvm use 1.9.3
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;veewee-project&#34;&gt;veewee Project&lt;/h2&gt;
+
+&lt;p&gt;We’re going to make a veewee project that defines and builds the CentOS base box we want to use in Vagrant. Let’s start by making a directory for our veewee project:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ mkdir veewee-centos63
+$ cd veewee-centos63
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;define-gem-dependencies&#34;&gt;Define Gem Dependencies&lt;/h3&gt;
+
+&lt;p&gt;Since we’re using veewee and Vagrant, we need to install those Gems for our project to work. The best way to do this is using a &lt;a href=&#34;http://gembundler.com/gemfile.html&#34;&gt;Gemfile&lt;/a&gt; which lists the version of each Gem we want to use. So create a &lt;code&gt;Gemfile&lt;/code&gt; in your project’s directory with the following contents:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;source :rubygems
+
+gem &#39;vagrant&#39;, &#39;1.0.5&#39;
+gem &#39;veewee&#39;, &#39;0.3.7&#39;
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then to install the gems simple run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ bundle
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;create-base-box-definition&#34;&gt;Create Base Box Definition&lt;/h3&gt;
+
+&lt;p&gt;Now we create the definition files required for making a base box using veewee:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ bundle exec veewee vbox define &#39;centos63&#39; &#39;CentOS-6.3-x86_64-minimal&#39;
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will create a number of files in a &lt;code&gt;definitions&lt;/code&gt; folder. You can tweak these to your liking but I’m leaving them as is for now.&lt;/p&gt;
+
+&lt;p&gt;FYI: The &lt;code&gt;bundle exec&lt;/code&gt; makes sure we’re using the version of veewee defined in our Gemfile.&lt;/p&gt;
+
+&lt;p&gt;If you’re curious, you can see a full list of available templates by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ bundle exec veewee vbox templates
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;build-base-box&#34;&gt;Build Base Box&lt;/h3&gt;
+
+&lt;p&gt;Now it’s time to actually build, validate and export the base box:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ bundle exec veewee vbox build &#39;centos63&#39;
+$ bundle exec veewee vbox validate &#39;centos63&#39;
+$ bundle exec vagrant basebox export &#39;centos63&#39;
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will create a file named &lt;code&gt;centos63.box&lt;/code&gt; in your &lt;code&gt;veewee-centos63&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;To immediately add the box to the host machine’s Vagrant boxes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ vagrant box add &#39;centos63&#39; &#39;centos63.box&#39;
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If the box already exists you’ll need to first run the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ bundle exec vagrant box remove &#39;centos63&#39;
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Later on we’ll be pushing this box to Amazon S3 and referencing it from a Vagrant project to get it installed.&lt;/p&gt;
+
+&lt;h3 id=&#34;automating-the-build&#34;&gt;Automating the Build&lt;/h3&gt;
+
+&lt;p&gt;Since we’ll be building this box using a CI server, we want to automate the process as much as possible, so let’s write a little script called &lt;code&gt;build.sh&lt;/code&gt; to run the above for us:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;#!/bin/bash
+
+bundle install
+
+bundle exec veewee vbox build &#39;centos63&#39; --force --auto --nogui
+bundle exec veewee vbox validate &#39;centos63&#39;
+
+bundle exec vagrant basebox export &#39;centos63&#39; --force
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure you allow executable permissions on that script so you can run it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ chmod u+x build.sh
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then run the script to make sure it works:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ ./build.sh
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;version-control&#34;&gt;Version Control&lt;/h3&gt;
+
+&lt;p&gt;Finally it’s time to get this little project into version control. We’ll put it on GitHub so there’s a public place for our Jenkins server to access the code.&lt;/p&gt;
+
+&lt;p&gt;First let’s create a &lt;code&gt;.gitignore&lt;/code&gt; file so we prevent the resulting box from getting checked into version control accidentally. Add the following at a minimum:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;centos63.box
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now set up a local Git repo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;code&amp;gt;$ git init
+$ git add definitions Gemfile Gemfile.lock build.sh
+$ git commit -m &amp;quot;Initial project&amp;quot;
+&amp;lt;/code&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Set up &lt;a href=&#34;https://github.com/new&#34;&gt;a new GitHub repository&lt;/a&gt; and push you local repo to your GitHub one:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;$ git remote add origin https://github.com/spilth/veewee-centos63.git
+$ git push -u origin master&amp;lt;/span&amp;gt; 
+&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;automatic-box-building-with-jenkins&#34;&gt;Automatic Box Building with Jenkins&lt;/h2&gt;
+
+&lt;p&gt;Now it’s time to set up Jenkins to build your base box for you whenever there’s a change to it’s definition.&lt;/p&gt;
+
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+
+&lt;p&gt;There’s a Jenkins native package for most operating systems, so I suggest you download it from &lt;a href=&#34;http://jenkins-ci.org/&#34;&gt;http://jenkins-ci.org/&lt;/a&gt;. The install package should automatically start Jenkins and you’ll be able to get to it from your browser using: &lt;a href=&#34;http://localhost:8080/&#34;&gt;http://localhost:8080/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;jenkins-plugins&#34;&gt;Jenkins Plugins&lt;/h3&gt;
+
+&lt;p&gt;You’ll need a few plugins to help build the project. From the main Jenkins screen choose &lt;em&gt;Manage Jenkins&lt;/em&gt;, then click &lt;em&gt;Manage Plugins&lt;/em&gt;. Click on the &lt;em&gt;Available&lt;/em&gt; tab and in the &lt;em&gt;Filter&lt;/em&gt; box search for the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;“github” or &lt;a href=&#34;https://wiki.jenkins-ci.org/display/JENKINS/Github+Plugin&#34;&gt;https://wiki.jenkins-ci.org/display/JENKINS/Github+Plugin&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;“rvm” or &lt;a href=&#34;https://wiki.jenkins-ci.org/display/JENKINS/RVM+Plugin&#34;&gt;https://wiki.jenkins-ci.org/display/JENKINS/RVM+Plugin&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;“s3” or &lt;a href=&#34;https://wiki.jenkins-ci.org/display/JENKINS/S3+Plugin&#34;&gt;https://wiki.jenkins-ci.org/display/JENKINS/S3+Plugin&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;configure-git-plugin&#34;&gt;Configure Git Plugin&lt;/h4&gt;
+
+&lt;p&gt;From the main screen of Jenkins choose &lt;em&gt;Manage Jenkins&lt;/em&gt;, then &lt;em&gt;Configure System&lt;/em&gt;. Find the section titled &lt;em&gt;Git plugin&lt;/em&gt; and enter values for &lt;em&gt;Global Config user.name&lt;/em&gt; and &lt;em&gt;Global Config user.email&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;configure-amazon-s3-plugin&#34;&gt;Configure Amazon S3 Plugin&lt;/h4&gt;
+
+&lt;p&gt;On the &lt;em&gt;Configure System&lt;/em&gt; screen also look for the section titled &lt;em&gt;Amazon S3&lt;/em&gt;. Click on the &lt;em&gt;Add&lt;/em&gt; button and set up a new profile with you access key and secret key.&lt;/p&gt;
+
+&lt;h3 id=&#34;creating-a-jenkins-job&#34;&gt;Creating a Jenkins Job&lt;/h3&gt;
+
+&lt;p&gt;Now we need to create a job in Jekins that will check out your code from GitHub, run the build script we made, store the &lt;code&gt;centos63.box&lt;/code&gt; it generates and push that box to our Amazon S3 Bucket.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;From the main screen click on &lt;em&gt;New Job&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Give the job a name&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Choose &lt;em&gt;Build a free-style project&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click &lt;em&gt;OK&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Under &lt;em&gt;Source Code Management&lt;/em&gt; choose &lt;em&gt;Git&lt;/em&gt; and enter the Read-Only URL for your GitHub repository.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Under &lt;em&gt;Build Environment&lt;/em&gt; choose &lt;em&gt;Run the build in a RVM-managed environment&lt;/em&gt; and enter &lt;code&gt;1.9.3&lt;/code&gt; in the &lt;em&gt;Implementation&lt;/em&gt; field.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Under &lt;em&gt;Build&lt;/em&gt; click &lt;em&gt;Add build step&lt;/em&gt; and choose &lt;em&gt;Execute shell&lt;/em&gt;. Enter &lt;code&gt;./build.sh&lt;/code&gt; in the &lt;em&gt;Command&lt;/em&gt; text area.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Under &lt;em&gt;Post-build Actions&lt;/em&gt; click &lt;em&gt;Add post-build action&lt;/em&gt; and choose &lt;em&gt;Publish artifacts to S3 Bucket&lt;/em&gt;. Choose the profile you created above, then click &lt;em&gt;Add&lt;/em&gt;. In the &lt;em&gt;Source&lt;/em&gt; field put &lt;code&gt;centos63.box&lt;/code&gt; and put the name of your S3 bucket in the &lt;em&gt;Destination bucket&lt;/em&gt; field.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click &lt;em&gt;Save&lt;/em&gt; at the bottom of the page.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Finally, click the &lt;em&gt;Build Now&lt;/em&gt; link in the left-side nav to kick off your job. Once the job starts you can click the datestamp, then &lt;em&gt;Console Output&lt;/em&gt; to see the log of the build script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that it will take some time to download the CentOS ISO and Virtual Box extensions during the first build. It will download them to an &lt;code&gt;iso&lt;/code&gt; directory in the job’s workspace so future builds won’t take as long.&lt;/p&gt;
+
+&lt;p&gt;Additionally, depending on the speed of your connection, uploading to Amazon S3 might take a while.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AWS Storage Gateway</title>
+      <link>https://www.vishnu-tech.com/blog/aws-storage-gateway/</link>
+      <pubDate>Sat, 25 May 2013 04:26:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/aws-storage-gateway/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/intro.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/intro.png&#34; alt=&#34;intro&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Using Amazon AWS Storage Gateway :&lt;/strong&gt;
+AWS Storage Gateway is a service that connects an on-premises software appliance with cloud-based storage in the form of an iSCSI devices.
+Storage Gateways Documentation – assume a scenario of Data Centre VM where we use S3 for storage solution.&lt;/p&gt;
+
+&lt;p&gt;There are 2 type of iSCSI devices:
+&lt;strong&gt;1. Gateway-Cached Volume Solution :&lt;/strong&gt;  create your storage volumes and mount them as iSCSI devices from your on-premises application servers – Data is stored on Amazon S3 and frequently accessed data is stored on the on-premises storage hardware.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Gateway-Stored Volume Solution :&lt;/strong&gt; store all your data locally in storage volumes on your on-premises storage hardware. The gateway periodically takes snapshots as incremental backups and stores them in Amazon S3.&lt;/p&gt;
+
+&lt;p&gt;[&lt;a href=&#34;http://www.youtube.com/watch?feature=player_embedded&amp;amp;v=Bb8nk0oWJbU#%21&#34;&gt;Youtube Video on StorageGateway walkthrough on Windows&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;AWS Storage Gateway uses two different hosting environments: VMware virtualization environment and an Amazon Elastic Compute Cloud (Amazon EC2) environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.aws.amazon.com/storagegateway/latest/userguide/VMwareGateway.html&#34;&gt;VMware virtualization environment&lt;/a&gt;
+&lt;a href=&#34;http://docs.aws.amazon.com/storagegateway/latest/userguide/EC2Gateway.html&#34;&gt;Amazon Elastic Compute Cloud (Amazon EC2) environment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/working.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/working.png&#34; alt=&#34;working&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Setting Up AWS Storage Gateway&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.aws.amazon.com/storagegateway/latest/userguide/LaunchingGatewayAMI.html&#34;&gt;Steps :&lt;/a&gt;
+Click Storage Gateway from the AWS Consol
+Click – Deploy a New Gateway on Amazon EC2
+Click – Lauch Gateway AMI
+Click – Select
+Select – Lauch with EC2 Console
+Click Accept Terms
+One of the following AMI can be choosen&lt;/p&gt;
+
+&lt;p&gt;Region    ID
+US East (Virginia)                               ami-29f27a40
+US West (Oregon)                               ami-4847cc78
+US West (Northern California)          ami-36b39373
+EU West (Ireland)                               ami-04393670
+Asia Pacific (Singapore)                     ami-4a94d618
+Asia Pacific (Tokyo)                            ami-d941fbd8
+South America (Sao Paulo)                ami-6526fe78&lt;/p&gt;
+
+&lt;p&gt;The instance type must be at least a Standard XL (m1.large) or the instance will not launch.&lt;/p&gt;
+
+&lt;p&gt;With default setup – 2 more EBS also needs to be added,  one for cache storage and one for upload buffer.&lt;/p&gt;
+
+&lt;p&gt;NOTE: For a gateway-cached setup, you can add up to 18 TB of storage comprised of up to 2 TB allocated to upload buffer and up to 16 TB allocated to cache storage.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Equip with Elasticache</title>
+      <link>https://www.vishnu-tech.com/blog/equip-with-elasticache/</link>
+      <pubDate>Sat, 25 May 2013 04:21:00 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/equip-with-elasticache/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Memcache ? and Its Facts !!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Fotolog, as they themselves point out, is probably the largest site nobody has ever heard of, pulling in more page views than even Flickr.
+Fotolog has 51 instances of memcached on 21 servers with 175G in use and 254G available.&lt;/p&gt;
+
+&lt;p&gt;Memached is: A high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.The magic is that none of the memcached servers need know about each other. To scale up you just add more servers and the key hashing algorithm makes it all work out right. Memcached is not redundant, has no failover, and has no authentication. It’s simple server for storing and getting data, the complex bits must be implemented by applications.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://highscalability.com/bunch-great-strategies-using-memcached-and-mysql-better-together&#34;&gt;Case Study&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon ElastiCache supports nodes with cache sizes ranging from 6 to 67 GB. A DNS name is assigned to each Cache Node when it is created.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://amix.dk/blog/post/19356&#34;&gt;Memcache Hasing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.typepad.com/aws/2011/08/amazon-elasticache-distributed-in-memory-caching.html&#34;&gt;AWS Blog on Elasticache&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://harish11g.blogspot.in/2012/12/elasticache-memcached-connection-buffer.html&#34;&gt;Understanding Elasticache Internals&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why is memcached not recommended for sessions? Everyone does it!&lt;/strong&gt;
+If a session disappears, often the user is logged out. If a portion of a cache disappears, either due to a hardware crash or a simple software upgrade, it should not cause your users noticable pain. This overly wordy post explains alternatives. Memcached can often be used to reduce IO requirements to very very little, which means you may continue to use your existing relational database for the things it’s good at.&lt;/p&gt;
+
+&lt;p&gt;Like keeping your users from being knocked off your site.
+In detail why we dont use memcache for sessions – &lt;a href=&#34;http://dormando.livejournal.com/495593.html&#34;&gt;http://dormando.livejournal.com/495593.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What about the MySQL query cache?&lt;/strong&gt;
+The MySQL query cache can be a useful start for small sites. Unfortunately it uses many global locks on the mysql database, so enabling it can throttle you down. It also caches queries per table, and has to expire the entire cache related to a table when it changes, at all. If your site is fairly static this can work out fine, but when your tables start changing with any frequency this immediately falls over.&lt;/p&gt;
+
+&lt;p&gt;Memory is also limited, as it requires using a chunk of what’s directly on your database.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Can using memcached make my application slower?&lt;/strong&gt;
+Yes, absolutely. If your DB queries are all fast, your website is fast, adding memcached might not make it faster.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://code.google.com/p/memcached/wiki/NewProgrammingFAQ&#34;&gt;Memcache FAQ on Google Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Elasticache Setup&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/launch-amazon-elasticache-cluster-1.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/launch-amazon-elasticache-cluster-1.jpg&#34; alt=&#34;launch-amazon-elasticache-cluster-1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Name: This is the Cache Identifier name and should be unique for an Amazon EC2 region(per account).&lt;/p&gt;
+
+&lt;p&gt;Node Type: Cache Capacity type with Memory and CPU. If you want 20 GB of distributed Cache you can choose either 3 Cache.M1.Large or 2 Cache.M1.Xlarge Node types. Usually users prefer Node types with more memory rather than High CPU node types (Not sure what kind of workload needs cache.c1.Xlarge capacity on memory hungry applications). Recently AWS has introduced Cache.M3.Class Node type which fits Memcached kind of use cases very well. The Node type cannot be modified after creating an Amazon ElastiCache Cluster, so please plan your base capacity in advance with some thought. To know more about ElastiCache deployment strategies refer URL: &lt;a href=&#34;http://harish11g.blogspot.in/2012/11/amazon-elasticache-memcached-ec2.html&#34;&gt;http://harish11g.blogspot.in/2012/11/amazon-elasticache-memcached-ec2.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Number of Nodes: Number of Node types you want the Amazon ElastiCache Cluster to launch. There is a limit to Cache nodes you can launch per account. Please increase this limit using ElastiCache Limit Increase Request form.&lt;/p&gt;
+
+&lt;p&gt;Version: Memcached 1.4.5&lt;/p&gt;
+
+&lt;p&gt;Cache Port: The default port 11211 in which the Amazon ElastiCache node accepts connections.&lt;/p&gt;
+
+&lt;p&gt;Preferred Zone: It is the Preferred Amazon EC2 Availability Zone in which you want to launch the Amazon ElastiCache Cluster. It is recommended to keep the Web/App EC2 instances and Amazon ElastiCache nodes on same Availability zone for low latency processing. In case multi-AZ is applicable your architecture, standard Amazon EC2 Regional Data Transfer charges of $0.01 per GB in/out apply when transferring data between an Amazon EC2 instance and an Amazon ElastiCache Node in different Availability Zones of the same Region, you are only charged for the Data Transfer in or out of the Amazon EC2 instance.&lt;/p&gt;
+
+&lt;p&gt;The Cache security group will allow request access between your EC2 instances and ElastiCache Nodes. The Security group of your EC2 instances should be added in this ElastiCache Security group for opening the access. This setting applies to all the existing and new cache nodes inside the Amazon ElastiCache cluster. You can either create a new Amazon ElastiCache Security group or make changes in the default security group as well. In case you have Multitude of cache clusters with variety of EC2 tiers accessing them on various workflows I would strongly recommend creating your own cache security groups as best practice. Currently Amazon ElastiCache cannot be accessed outside Amazon EC2 (It does not make sense unless you have Gigabit NW to make productive use of Cache with low latency). Also in future, we can expect Amazon ElastiCache to work inside Amazon Virtual Private Cloud (VPC) network as well.
+Cache Parameter Group: You can either create a new parameter group or use the default memcached parameter group. AWS provided default will suffice for most use cases. The parameters will be applied to all the cache nodes in the Amazon ElastiCache cluster.&lt;/p&gt;
+
+&lt;p&gt;what is an elasticache cluster node?
+A cache node is the smallest building block of an Amazon ElastiCache deployment. It is a fixed-size chunk of secure, network-attached RAM. Each cache node runs an instance of the Memcached service, and has its own DNS name and port. Multiple types of cache nodes are supported, each with varying amounts of associated memory.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://harish11g.blogspot.in/2012/11/configuring-amazon-elasticache-launch.html&#34;&gt;source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is Configuration Endpoint ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/configurations_endpoint.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/configurations_endpoint.png&#34; alt=&#34;configurations_endpoint&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To use Amazon ElastiCache you have to set up a cache cluster. A cache cluster is a collection of cache nodes. You choose the number and the type of nodes to match the performance needs of your application. In the past, if you changed the nodes in your cache cluster (for example, by adding a new node), you would have to update the list of node endpoints manually. Typically, updating the list of node endpoints involves reinitializing the client by shutting down and restarting the application, which can result in downtime (depending on how the client application is architected). With the launch of Auto Discovery, this complexity has been eliminated.&lt;/p&gt;
+
+&lt;p&gt;All ElastiCache clusters (new and existing!) now include a unique Configuration Endpoint, which is a DNS Record that is valid for the lifetime of the cluster. This DNS Record contains the DNS names of each of the nodes that belong to the cluster. Amazon ElastiCache will ensure that the Configuration Endpoint always points to at least one such “target” node. A query to the target node then returns endpoints for all the nodes in the cluster. To be a bit more specific, running a query means sending the config command to the target node. We implemented this command as an extension to the Memcached ASCII protocol (read about Adding Auto-Discovery to Your Client Library for more information).&lt;/p&gt;
+
+&lt;p&gt;You can then connect to the cluster nodes just as before and use the Memcached protocol commands such as get, set, incr, and decr. The Configuration Endpoint is accessible programmatically through the ElastiCache API, via the command line tools, and from the ElastiCache Console.&lt;/p&gt;
+
+&lt;p&gt;To take advantage of Auto Discovery, you will need to use a Memcached client library that is able to use this new feature. To get started, you can use the ElastiCache Cluster Client, which takes the popular SpyMemcached client and adds Auto Discovery functionality. We have a Java client available now (view source), which can be downloaded from the ElastiCache Console:&lt;/p&gt;
+
+&lt;p&gt;We plan to add Auto Discovery support to other popular Memcached client libraries over time; a PHP client is already in the works.&lt;/p&gt;
+
+&lt;p&gt;ElastiCache remains 100% Memcached-compatible so you can keep using your existing Memcached client libraries with new and existing clusters, but to take advantage of Auto Discovery you must use an Auto Discovery-capable client.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Do we need to install memcached on server?&lt;/strong&gt;
+You don’t need to have memcache installed, only the memcache pecl module in your php installation. Elasticache is a memcached server, nothing more nothing less. As long as you have the memcache pecl module installed in your php, the memcache option will be available on the W3TC dropdowns.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Installing memcache on PHP&lt;/strong&gt;
+You can install the pecl module with:
+#pecl install memcache
+OR on an apt based system like debian or ubuntu
+#apt-get install php5-memcached&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Installing Elasticache Cluster Client Module&lt;/strong&gt;
+&lt;a href=&#34;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Appendix.PHPAutoDiscoverySetup.html&#34;&gt;source&lt;/a&gt;
+#apt-get update
+#apt-get install gcc g++ php5 php-pear&lt;/p&gt;
+
+&lt;p&gt;Download Amazon_Elasticache_cluster_client for PHP version from the Elasticache Management Console.&lt;/p&gt;
+
+&lt;p&gt;With root/sudo permission, add a new file memcached.ini under the directory /etc/php5/conf.d, and insert “extension=&lt;absolute path to amazon-elasticache-cluster-client.so&gt;” in it.
+#echo “extension=&lt;absolute path to amazon-elasticache-cluster-client.so&gt;” &amp;gt; /etc/php5/conf.d/memcached.ini&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Test it by running the below contents inside a .php file&lt;/strong&gt;
+&amp;lt;?php
+error_reporting(E_ALL &amp;amp; ~E_NOTICE);&lt;/p&gt;
+
+&lt;p&gt;$mc = new Memcached();
+$mc-&amp;gt;addServer(“localhost”, 11211);&lt;/p&gt;
+
+&lt;p&gt;$mc-&amp;gt;set(“foo”, “Hello!”);
+$mc-&amp;gt;set(“bar”, “Memcached…”);&lt;/p&gt;
+
+&lt;p&gt;$arr = array(
+$mc-&amp;gt;get(“foo”),
+$mc-&amp;gt;get(“bar”)
+);
+#uncomment below line if detailed results are necessary
+#var_dump($arr);
+echo “&lt;br&gt; foo = “.$mc-&amp;gt;get(“foo”);
+echo “&lt;br&gt; bar = “.$mc-&amp;gt;get(“bar”);
+?&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt;
+Here $mc is an object of the class Memcached() which is defined inside the php module “php5-memcached”.Hence the function addServer() also worked well where we add the endpoint of our Elasticache Cluster Nodes Endpoint/Configuration Endpoint and port number.
+&lt;strong&gt;Output should be&lt;/strong&gt;
+foo = Hello!
+bar = Memcached…
+Which means that the memcache module is online.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/AutoDiscovery.html#AutoDiscovery.ModifyAppPHP&#34;&gt;Developer’s Part in Elasticache Implementation&lt;/a&gt;
+&lt;a href=&#34;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/AutoDiscovery.HowAutoDiscoveryWorks.html&#34;&gt;Internal Working of the Elasticache and Application&lt;/a&gt;
+&lt;a href=&#34;http://harish11g.blogspot.in/2012/11/amazon-elasticache-memcached-ec2.html&#34;&gt;Different Elasticache Scenarios&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Convey this to the PHP Guy and Provide him with the Configuration Endpoint :&lt;/strong&gt;
+ElastiCache supports Auto Discovery—the ability for client programs to automatically identify all of the nodes in a cache cluster, and to initiate and maintain connections to all of these nodes. With Auto Discovery, your application does not need to manually connect to individual cache nodes; instead, your application connects to a configuration endpoint. The configuration endpoint DNS entry contains the CNAME entries for each of the cache node endpoints; thus, by connecting to the configuration endpoint, you application immediately “knows” about all of the nodes in the cluster and can connect to all of them. You do not need to hardcode the individual cache node endpoints in your application.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Choosing a Cache Node Type and the Number of Cache Nodes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The total memory capacity of your cache cluster is calculated by multiplying the number of cache nodes in the cluster by the capacity of each Node. The capacity of each cache node is based on the cache node type.
+The number of cache nodes in the cache cluster is a key factor in the availability of your cache cluster. The failure of a single cache node can have an impact on the availability of your application and the load on your backend database while ElastiCache provisions a replacement for the failed cache node. The scale of this availability impact can be reduced by spreading your memory and compute capacity over a larger number of cache nodes, each with smaller capacity, rather than a fewer number of high capacity nodes.&lt;/p&gt;
+
+&lt;p&gt;In a scenario where you want to have 20GB of cache memory, you can set it up in one of the following ways:&lt;/p&gt;
+
+&lt;p&gt;Use 15 cache.m1.small cache nodes with 1.3 GB of memory each = 19.5 GB&lt;/p&gt;
+
+&lt;p&gt;Use 3 cache.m1.large cache nodes with 7.1 GB of memory each = 21.3 GB&lt;/p&gt;
+
+&lt;p&gt;Use 3 cache.c1.xlarge cache nodes with 6.6 GB of memory each = 19.8 GB&lt;/p&gt;
+
+&lt;p&gt;These options provide you with similar memory capacity, but different computational capacity for your cache cluster.&lt;/p&gt;
+
+&lt;p&gt;If you’re unsure about how much capacity you need, we recommend starting with one cache.m1.small cache node type and monitoring the memory usage, CPU utilization and Cache Hit Rate with the ElastiCache metrics that are published to Amazon CloudWatch.&lt;/p&gt;
+
+&lt;p&gt;If your cache cluster does not have the desired hit rate, you can easily add more nodes, thereby increasing the total available memory in your cache cluster. You will need to obtain an updated endpoint list from the ElastiCache CLI, API or AWS Management Console, and configure your clients to use the additional node(s).&lt;/p&gt;
+
+&lt;p&gt;If your cache cluster turns out to be bound by CPU but has sufficient hit rate, then try setting up a new cluster with a different cache node type.&lt;/p&gt;
+
+&lt;p&gt;ElastiCache supports adding or removing cache nodes from an existing cache cluster using the AWS Management Console, the API, and the command line tools, allowing you to increase both memory and compute capacity of the cluster at any time.&lt;/p&gt;
+
+&lt;p&gt;_Note:_ElastiCache does not currently support dynamically changing the cache node type for a cache cluster after it has been created. If you wish to change the Node Type of a cache cluster, you will need to set up a new cache cluster with the desired Node Type, and migrate your application to that cache cluster.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Configure PHP to use Elasticache for Sesssions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;#vim /etc/php5/conf.d/memcached.ini
+extension=/root/ecache/amazon-elasticache-cluster-client.so
+Editing php.ini file
+#vim /etc/php5/apache2/php.ini
+session.save_handler = memcached
+#We mention the configuration endpoint of the elasticache
+session.save_path = “test.nugnqi.cfg.use1.cache.amazonaws.com:11211″
+#extension is already inside the conf.d/memcache.ini file hence this file may not be necessary
+extension=/root/ecache/amazon-elasticache-cluster-client.so
+#The ecache dir is the Elasticache Client software that is downloaded for appropriate PHP version to be in used in place of Memcache extension of PHP.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Install phpMemcachedAdmin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;wget “&lt;a href=&#34;http://phpmemcacheadmin.googlecode.com/files/phpMemcachedAdmin-1.2.2-r262.tar.gz&amp;amp;#8221&#34;&gt;http://phpmemcacheadmin.googlecode.com/files/phpMemcachedAdmin-1.2.2-r262.tar.gz&amp;amp;#8221&lt;/a&gt;;
+tar xvzf phpMemcachedAdmin-1.2.2-r262.tar.gz   (inside apache documentroot)
+chmod +r *
+chmod 0777 Config/Memcache.php&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

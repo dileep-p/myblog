@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Saltstack on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/saltstack/index.xml</link>
+    <description>Recent content in Saltstack on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/saltstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:12</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol12/</link>
+      <pubDate>Wed, 02 Mar 2016 10:10:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol12/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://drownattack.com/&#34;&gt;The DROWN Attack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2016/03/01/go-home-sslv2-youre-drowning/&#34;&gt;Go home SSLv2, you’re DROWNing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/aws-services&#34;&gt;Micro-services to provide various conveniences in managing AWS services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/videos-ansiblefest-london-2016?platform=hootsuite&#34;&gt;Videos ANSIBLEFEST LONDON 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://eng.uber.com/go-geofence/&#34;&gt;How we built Uber Engineering&amp;rsquo;s highest query per second service using go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.netresec.com/?page=Blog&amp;amp;month=2016-03&amp;amp;post=Packet-Injection-Attacks-in-the-Wild&#34;&gt;Packet Injection Attacks in the Wild&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/condensation&#34;&gt;Package, reuse and share particles for CloudFormation projects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/casidiablo/tako&#34;&gt;Github notifications on Slack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/uber/ringpop-go&#34;&gt;Scalable, fault-tolerant application-layer sharding for Go applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/msoap/go-carpet&#34;&gt;go-carpet - show test coverage for Go source files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramnes/awesome-mongodb&#34;&gt;A curated list of awesome MongoDB resources, libraries, tools and applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/pygemony&#34;&gt;A tool written in Python to parse files for &amp;ldquo;TODO&amp;rdquo; and to raise an issue in the github repository with the todo message.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/microsoft/kafkanet&#34;&gt;.Net implementation of the Apache Kafka Protocol that provides basic functionality through Producer/Consumer classes. The project also offers balanced consumer implementation.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.dasblinkenlichten.com/kubernetes-with-saltstack-revisited/&#34;&gt;Kubernetes with SaltStack revisited&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cossacklabs.com/Introducing-WebThemis.html&#34;&gt;WEBTHEMIS: Stronger Cryptography for Modern web&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fulldecent/system-bus-radio&#34;&gt;This program transmits radio on computers without radio transmitting hardware.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ssrg.nicta.com.au/projects/TS/cachebleed//&#34;&gt;CacheBleed: A Timing Attack on OpenSSL Constant Time RSA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker/dockercloud-cli&#34;&gt;CLI for Docker Cloud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.blockbridge.com/improving-docker-security-with-authenticated-volumes/&#34;&gt;Improving Docker Security with Authenticated Volumes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/aws-config-rules&#34;&gt;Repository of sample Custom Rules for AWS Config&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/fresco&#34;&gt;Fresco is a powerful system for displaying images in Android applications.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/EVCache&#34;&gt;EVCache is a memcached &amp;amp; spymemcached based caching solution that is mainly used for AWS EC2 infrastructure for caching frequently used data.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubespray/setup-kubernetes&#34;&gt;Setup a kubernetes cluster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/&#34;&gt;Using Scikit-Learn In AWS Lambda&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/pGeSxIB3KzY&#34;&gt;Building A Private Cloud With OpenStack Charms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/gRPC-protobufs-swagger.html&#34;&gt;Take a REST with HTTP/2, Protobufs, and Swagger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://machinezone.github.io/research/networking-solutions-for-kubernetes/&#34;&gt;Comparison of Networking Solutions for Kubernetes&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> PhantomJS and Load Speed test for websites &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/phantomjs-and-load-speed-test-for-websites/">PhantomJS and Load Speed test for websites</a></h1>
+            <span class="post-date">Aug 31, 2013 </span>
+            <div class="post-content">
+                
+
+<h2 id="phantomjs-is-an-optimal-solution-for"><em><strong>PhantomJS is an optimal solution for</strong></em></h2>
+
+<p>1) Headless Website Testing</p>
+
+<p>2) Screen Capture</p>
+
+<p>3) Page Automation</p>
+
+<p>4) Network Monitoring</p>
+
+<p>Please check this link  <a href="http://phantomjs.org/">http://phantomjs.org/</a></p>
+
+<p><em><strong>TO INSTALL PHANTOMJS</strong></em></p>
+
+<p>cd /usr/local/share
+wget <a href="https://phantomjs.googlecode.com/files/phantomjs-1.9.1-linux-x86_64.tar.bz2">https://phantomjs.googlecode.com/files/phantomjs-1.9.1-linux-x86_64.tar.bz2</a>
+tar xjvf phantomjs-1.9.1-linux-x86_64.tar.bz2
+ln -s /usr/local/share/phantomjs-1.9.1-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
+ln -s /usr/local/share/phantomjs-1.9.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+ln -s /usr/local/share/phantomjs-1.9.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs</p>
+
+<h1 id="additional-package">Additional package</h1>
+
+<p>apt-get install fontconfig</p>
+
+<p>Then go to the location</p>
+
+<p>root@machine# cd /usr/local/share/phantomjs-1.9.1-linux-x86_64/examples</p>
+
+<p>root@machine# vim loadspeed.js</p>
+
+<p>ADD OUR EDITED FILE TO GET THE LOAD PAGE SPEED</p>
+
+<p>var args = require(&lsquo;system&rsquo;).args;
+    if(args[1] === undefined){
+        console.log(&lsquo;you should provide an url&rsquo;);
+        phantom.exit();
+    }</p>
+
+<p>var namshiUrl = args[1];</p>
+
+<p>var page = require(&lsquo;webpage&rsquo;).create(),
+    system = require(&lsquo;system&rsquo;),
+    t,address;</p>
+
+<p>if (system.args.length === 1) {
+    console.log(&lsquo;Usage: loadspeed.js &lsquo;+ namshiUrl);
+    phantom.exit(1);
+} else {
+    t = Date.now();
+    address = system.args[1];
+    page.open(address, function (status) {
+      if (status !== &lsquo;success&rsquo;) {
+            console.log(&lsquo;FAIL to load the address&rsquo;);
+        } else {
+            t = Date.now() - t;
+            console.log(&lsquo;Page title is &rsquo; + page.evaluate(function () {
+                return document.title;
+            }));
+            console.log(&lsquo;Loading time &rsquo; + t + &lsquo; msec&rsquo;);
+        }
+        phantom.exit();
+    });
+}</p>
+
+<p>THEN TEST IT</p>
+
+<p>root@vishnu-machine:~# for weburl in <a href="http://google.com">http://google.com</a> <a href="http://yahoo.com">http://yahoo.com</a> ; do phantomjs /usr/local/share/phantomjs-1.9.1-linux-x86_64/examples/loadspeed.js ${weburl}; done</p>
+
+<p>THEN INORDER TO DOING THIS WRITE A SCRIPT</p>
+
+<p>#!/bin/bash
+true=0
+for weburl in <a href="http://google.com">http://google.com</a> <a href="http://yahoo.com">http://yahoo.com</a> <a href="http://hotmail.com">http://hotmail.com</a> ; do /usr/local/bin/phantomjs /usr/local/share/phantomjs-1.9.1-linux-x86_64/examples/loadspeed.js ${weburl}; done  &gt; abc.txt
+cat abc.txt | awk &lsquo;{print $3}&rsquo; | sed -n &ldquo;2~2 p&rdquo; &gt; abc2.txt
+for i in <code>cat abc2.txt</code>
+do
+if [ $i -gt 12000 ]
+then
+    true=1
+fi
+done
+if [ $true -eq 1 ]
+then
+   mail -s loadtime mailadddress@domain.com &lt; abc.txt
+fi</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/phantomjs-and-load-speed-test-for-websites\/';
+    var disqus_title = 'PhantomJS and Load Speed test for websites';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/phantomjs-and-load-speed-test-for-websites\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

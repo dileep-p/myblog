@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/linux/index.xml</link>
+    <description>Recent content in Linux on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible playbooks to create private docker registry in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</link>
+      <pubDate>Fri, 19 Aug 2016 09:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</guid>
+      <description>
+
+&lt;p&gt;Creating a private docker registry in AWS using Ansible playbooks. You can find the playbooks from &lt;a href=&#34;https://github.com/vishnudxb/ansible-docker-registry&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;variables-in-playbooks&#34;&gt;Variables in playbooks&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;_server_name: &amp;ldquo;docker-registry.vishnudxb.me&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_bundle_crt: &amp;ldquo;/etc/nginx/ssl/ssl-bundle.crt&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_crt&lt;em&gt;key: &amp;ldquo;/etc/nginx/ssl/ssl-cert.key&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;aws-instance-tag-name&#34;&gt;AWS instance tag name&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;The playbook will identified the instance using the tag name ie docker-registry&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;to-do&#34;&gt;To-Do&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Authorization for users inside the registry.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:13</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol13/</link>
+      <pubDate>Tue, 12 Apr 2016 10:09:54 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol13/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Sharing some interesting links&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/brendangregg/srecon-2016-performance-checklists-for-sres&#34;&gt;SREcon 2016 Performance Checklists for SREs&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tech.zalando.com/blog/apache-showdown-flink-vs.-spark/&#34;&gt;Apache Showdown: Flink vs. Spark&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://csc.fi/web/blog/post/-/blogs/the-largest-unplanned-outage-in-years-and-how-we-survived-it&#34;&gt;The largest unplanned outage in years and how we survived it.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://scene-si.org/2016/04/01/how-to-live-inside-a-docker-container/&#34;&gt;How to live inside a docker container?&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jascha.me/2016/03/29/running-a-tor-hidden-service-using-docker/&#34;&gt;Running a TOR hidden service using docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.freecodecamp.com/d-oh-my-zsh-af99ca54212c#.lbqec6faz&#34;&gt;d’Oh My Zsh: How I unexpectedly built a monster of an open source project&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.simonmetzger.de/2016/04/event-driven-network-automation/&#34;&gt;Event-driven network automation using Slack, hubot, StackStorm and Ansible&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://githubengineering.com/introducing-dgit/&#34;&gt;Introducing DGit&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vmware/harbor&#34;&gt;An Enterprise-class Container Registry Server based on Docker Distribution&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://codeblog.shank.in/go-hn-command-line-client-for-hacker-news-written-in-golang/&#34;&gt;go-hn: command line client for hacker news, written in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.cloud66.com/9-crtitical-decisions-needed-to-run-docker-in-production/&#34;&gt;9 Critical Decisions for Running Docker in Production&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://iovisor.github.io/bcc/&#34;&gt;Dynamic Tracing Tools for Linux&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lucamezzalira.com/2016/04/03/how-to-dockerize-your-node-application/&#34;&gt;How to Dockerize your Node application&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/coreroller/coreroller&#34;&gt;CoreRoller is a set of tools to control and monitor the rollout of your updates.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://raygun.com/blog/2016/03/golang-auto-scaling/&#34;&gt;Auto-scaling and self-defensive services in Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://crondev.com/running-docker-behind-proxy/&#34;&gt;Running Docker behind a proxy&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.cloudera.com/blog/2016/04/inside-wargamings-data-driven-real-time-rules-engine/&#34;&gt;Inside Wargaming.net’s Data-driven, Real-time Rules Engine&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://neovintage.org/2016/04/07/data-modeling-in-cassandra-from-a-postgres-perspective/&#34;&gt;Data Modeling in Cassandra from a Postgres Perspective&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudflare/cfssl&#34;&gt;CFSSL: CloudFlare&amp;rsquo;s PKI and TLS toolkit &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/lloiser/go-debug&#34;&gt;A go debugger for atom using delve&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/on-docker/federated-clusters-with-docker-swarm-dce5516ecc8d&#34;&gt;Federated Clusters with Docker Swarm.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/pLdpxoT6v8A&#34;&gt;Beyond the Distributed System&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rakyll/gom&#34;&gt;A visual interface to work with runtime profiling data for Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/get-put-post/from-side-project-to-250-million-daily-requests-909b9e373d94#.mtsc4cbqs&#34;&gt;From side project to 250 million daily requests&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://webkay.robinlinus.com/&#34;&gt;What every Browser knows about you&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions&#34;&gt;Optimize Performance Under Varying Network Conditions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pbpython.com/xlwings-pandas-excel.html&#34;&gt;Interactive Data Analysis with Python and Excel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/z7MgtxugWHQ&#34;&gt;Using AlexaPi on Raspberry Pi Zero&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/airbnb/caravel&#34;&gt;Caravel is a data exploration platform designed to be visual, intuitive, and interactive&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/fbtftp&#34;&gt;Fbtftp is Facebook&amp;rsquo;s implementation of a dynamic TFTP server framework.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://engineering.riotgames.com/news/building-jenkins-inside-ephemeral-docker-container&#34;&gt;Building with Jenkins inside an ephemeral docker container&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://puppet.com/blog/deploying-docker-swarm-puppet&#34;&gt;Deploying Docker Swarm with Puppet&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/03/building-highly-available-applications-using-Kubernetes-new-multi-zone-clusters-a.k.a-Ubernetes-Lite.html&#34;&gt;Building highly available applications using Kubernetes new multi-zone clusters (a.k.a. &amp;ldquo;Ubernetes Lite&amp;rdquo;)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/03/using-Spark-and-Zeppelin-to-process-Big-Data-on-Kubernetes.html&#34;&gt;Using Spark and Zeppelin to process big data on Kubernetes 1.2&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/BUp_6Yp3Bvw&#34;&gt;Containers - Scaling with Kubernetes, Automatically!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://alexfernandez.github.io/2016/nginx-balancer.html&#34;&gt;Creating a Heavy-Duty Balancer With Nginx and Lua&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.hboeck.de/archives/880-Pwncloud-bad-crypto-in-the-Owncloud-encryption-module.html&#34;&gt;Pwncloud – bad crypto in the Owncloud encryption module&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.terranillius.com/post/pumba_docker_chaos_testing/&#34;&gt;Pumba - Chaos Testing for Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sobolevn/git-secret&#34;&gt;A bash-tool to store your private data inside a git repository.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/nginx-certwatch&#34;&gt;Certwatch cron implementation for nginx vhosts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fgeller/kt&#34;&gt;Kafka command line tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/matryer/bitbar&#34;&gt;Put the output from any script or program in your Mac OS X Menu Bar&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/shaunvxc/ripe&#34;&gt;Micro optimization for local re-installations from source&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.packagecloud.io/eng/2016/04/05/the-definitive-guide-to-linux-system-calls/&#34;&gt;The Definitive Guide to Linux System Calls&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/future-architect/vuls&#34;&gt;Vulnerability scanner for Linux, agentless, written in golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/CISOfy/lynis&#34;&gt;Lynis - Security auditing tool &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/firehol/netdata&#34;&gt;Real-time performance monitoring,&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securitychecklist.org/&#34;&gt;Security Checklist&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mlamina/Kubernetes-Manager&#34;&gt;Kubernetes Manager&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dylang/npm-check&#34;&gt;Check for outdated, incorrect, and unused dependencies&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://serverfault.com/questions/769357/recovering-from-a-rm-rf&#34;&gt;Recovering from a rm -rf /&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://capgemini.github.io/devops/apollo/&#34;&gt;Apollo: An open source platform for running your apps&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:10</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol10/</link>
+      <pubDate>Sat, 25 Jul 2015 16:06:05 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol10/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy this weekend :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=rSQNi5sAwuc&#34;&gt;How to control someone else&amp;rsquo;s arm with your brain.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kilimchoi/engineering-blogs&#34;&gt;A curated list of engineering blogs.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.shopify.com/technology/34281221-introducing-shipit&#34;&gt;Shopify deployment tool Shipit.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2015/07/23/libuser-vulnerabilities/&#34;&gt;Vulnerability in libuser leads to potential for local user to gain root access CVE-2015-3245 &amp;amp; CVE-2015-3246.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.emccode.com/2015/06/22/deploy-ecs-with-5-ways-of-docker/&#34;&gt;Deploy ECS with 5 Ways of Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/&#34;&gt;Handling 1 Million Requests per Minute with Go.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/alexanderGugel/wsd&#34;&gt;CURL for WebSocket Servers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.sematext.com/2015/07/21/coreos-clusters-centralized-log-management-and-monitoring/&#34;&gt;Centralized Log Management and Monitoring for CoreOS Clusters.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://abdelrahmanhosny.com/2015/07/11/how-to-merge-two-docker-images/&#34;&gt;How to Merge Two Docker Images.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://opensource.com/business/15/7/running-ceph-inside-docker&#34;&gt;Running Ceph inside Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/agermanidis/autosub&#34;&gt;Command-line utility for auto-generating subtitles for any video file.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/bryanl/doit&#34;&gt;Unofficial DigitalOcean Interactive Tool.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://trackography.org/&#34;&gt;Find out who is tracking you when you are reading your favourite news online.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://stories.expost-news.com/i-worked-at-hackingteam-my-emails-were-leaked-to-wikileaks-and-i-m-ok-with-that-f8f28b0584fe&#34;&gt;I worked at #HackingTeam, my emails were leaked to WikiLeaks and I’m ok with that.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nylas/make-deb&#34;&gt;Tool for building debian packages from your python projects.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sindresorhus/amas&#34;&gt;Awesome &amp;amp; Marvelous Amas.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jhiesey/stream-http&#34;&gt;Streaming node http in the browser.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/wooey/Wooey&#34;&gt;Automated Web UIs for Python scripts.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/GoUsers&#34;&gt;Golang Users.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://redhatstackblog.redhat.com/2015/07/16/containerize-openstack-with-docker/&#34;&gt;Containerize OpenStack with Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://serenitydb.org/&#34;&gt;Disk storage and real transactions under Redis compatible protocol.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://odino.org/how-to-test-3rd-party-hooks-and-webservices-locally/&#34;&gt;How to test 3rd party hooks and webservices locally.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ircmaxell/Tuli&#34;&gt;A static analysis engine.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/notwaldorf/emoji-translate&#34;&gt;Translate text to emoji.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gilliam.github.io/&#34;&gt;Gilliam - A platform for micro services.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thau.me/2015/06/building-an-application-with-ember-js-in-2015/#/&#34;&gt;BUILDING AN APPLICATION WITH EMBER.JS IN 2015.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/emre/storm&#34;&gt;Manage your SSH like a boss.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.netgate.com/doc/AWS-VPN-appliance/AWS_VPC_Wizard_user_guide.html&#34;&gt;Netgate pfSense certified firewall and VPN Appliance - AWS VPC Wizard User Guide.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://labs.ctl.io/monitoring-docker-services-with-prometheus/&#34;&gt;Monitoring Docker services with Prometheus.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://imagelayers.io/&#34;&gt;Visualize docker images and the layers that compose them.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@freeformz/go-1-5-s-vendor-experiment-fd3e830f52c3&#34;&gt;Go 1.5&amp;rsquo;s vendor/ experiment.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.evanmiller.org/four-days-of-go.html&#34;&gt;Four Days of Go.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.tutum.co/2015/07/21/cicd-the-docker-way/&#34;&gt;CI/CD the Docker Way.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.hypriot.com/post/run-your-own-github-like-service-with-docker/&#34;&gt;Run your own GitHub-like service with the help of Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/harshasrinivas/cli-github&#34;&gt;Github within the CLI.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.allthingsdistributed.com/2015/07/under-the-hood-of-the-amazon-ec2-container-service.html&#34;&gt;Under the Hood of Amazon EC2 Container Service.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/git-tips/tips&#34;&gt;Most commonly used git tips and tricks.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/github/scripts-to-rule-them-all&#34;&gt;Scripts to Rule Them All.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://carlosbecker.com/posts/cross-compile-go/&#34;&gt;Cross-compiling Go.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrate Mysql database to Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/</link>
+      <pubDate>Sat, 05 Jan 2013 10:31:37 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/</guid>
+      <description>&lt;p&gt;I recently had a chance to try out one of the new NoSQL databases called MongoDB &lt;a href=&#34;http://www.mongodb.org&#34;&gt;http://www.mongodb.org&lt;/a&gt;. This new class of databases seems to solve many of the bottlenecks in MySql and other relational databases. It will give you shear performance, self replication and scalability at not cost because it open source. MongoDB has plenty of drivers for other scripting and high-level languages I use PHP so I download the PHP driver. You can see the supported list here: &lt;a href=&#34;http://www.mongodb.org/display/DOCS/Drivers&#34;&gt;http://www.mongodb.org/display/DOCS/Drivers&lt;/a&gt;. In this blog I convert  a MySQL database using PHP to MongoDB.&lt;/p&gt;
+
+&lt;p&gt;First you install MongoDB, you can do it by checking my previous blog.&lt;/p&gt;
+
+&lt;p&gt;Then we run the script to convert a Mysql DB to Mongodb.&lt;/p&gt;
+
+&lt;p&gt;create a new file called MySqltoMongodb&lt;strong&gt;.php, In that file please copy paste the below contants (please give your Mysql DB details as well as your Mongodb details)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;lt;?php&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;// mysql settings&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mydb = &amp;ldquo;database&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$myconn = &lt;a href=&#34;http://www.php.net/mysql_connect&#34;&gt;mysql_connect&lt;/a&gt;(&amp;lsquo;localhost&amp;rsquo;,&amp;lsquo;user&amp;rsquo;,&amp;lsquo;password&amp;rsquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$setmydb = &lt;a href=&#34;http://www.php.net/mysql_select_db&#34;&gt;mysql_select_db&lt;/a&gt;( $mydb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mytables = getMyTables( $mydb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; //mongo db settings&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$modb = &amp;ldquo;database&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$moConnect=&amp;ldquo;mongodb://user:password@localhost&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function getMyTables( $dbname ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$tables = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;SHOW TABLES FROM $dbname &amp;ldquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;(&amp;ldquo;Error getting tables from $dbname&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; if( &lt;a href=&#34;http://www.php.net/mysql_num_rows&#34;&gt;mysql_num_rows&lt;/a&gt;( $sql ) &amp;gt; 0 ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;while( $table = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql ) ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$explain = explainMyTable( $table[0] );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$tables[$table[0]] = $explain;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $tables;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function explainMyTable( $tbname ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$explain = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;EXPLAIN $tbname&amp;rdquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;(&amp;ldquo;Error getting table structure&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$i = 0;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; while( $get = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql ) ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.php.net/array_push&#34;&gt;array_push&lt;/a&gt;( $explain, $get[0] );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$i++;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $explain;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function checkEncode($string) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if( !mb_check_encoding($string,&amp;lsquo;UTF-8&amp;rsquo;)) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return &lt;a href=&#34;http://www.php.net/mb_convert_encoding&#34;&gt;mb_convert_encoding&lt;/a&gt;($string,&amp;lsquo;UTF-8&amp;rsquo;,&amp;lsquo;ISO-8859-1&amp;rsquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} else {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $string;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; }&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;try {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$moconn = new Mongo($moConnect);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$modb = $moconn-&amp;gt;selectDB( $modb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} catch(MongoConnectionException $e) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;($e.&amp;ldquo;Problem during mongodb initialization. Please start mongodb server.&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; foreach( $mytables as $table =&amp;gt; $struct ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;SELECT * FROM $table LIMIT 0 , 500000&amp;rdquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;( &lt;a href=&#34;http://www.php.net/mysql_error&#34;&gt;mysql_error&lt;/a&gt;() );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$count = &lt;a href=&#34;http://www.php.net/mysql_num_rows&#34;&gt;mysql_num_rows&lt;/a&gt;( $sql );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; // Starts new collection on mongodb&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$collection = $modb-&amp;gt;$table;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; // If it has content insert all content&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if( $count &amp;gt; 0 ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;while( $info = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql, MYSQL_NUM )) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$infosize = &lt;a href=&#34;http://www.php.net/count&#34;&gt;count&lt;/a&gt;( $info );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; for( $i=0; $i &amp;lt; $infosize; $i++ ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if(&lt;img src=&#34;http://www.php.net/empty&#34; alt=&#34;empty&#34; /&gt;($struct[$i]))&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql[$struct[$i]] = checkEncode($info[$i]);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; $collection-&amp;gt;insert($mosql);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;// Only create a new entry empty&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} else {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; for( $i=0; $i &amp;lt; $infosize; $i++ ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if(&lt;img src=&#34;http://www.php.net/empty&#34; alt=&#34;empty&#34; /&gt;($struct[$i]))&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql[$struct[$i]] = &amp;ldquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; }&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$collection-&amp;gt;insert($mosql);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; &lt;a href=&#34;http://www.php.net/echo&#34;&gt;echo&lt;/a&gt; &amp;ldquo;Done! Please, check your MongoDB collection!&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Now fire up your browser and launch the page. If all all goes well you should see
+&lt;strong&gt;&amp;ldquo;Done! Please, check your MongoDB collection!&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;After running this script check your Mongo db collection, in that you can see your Mysql Table.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png?w=300&#34; alt=&#34;Screenshot-6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/mongodb/</link>
+      <pubDate>Sat, 05 Jan 2013 09:39:03 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/mongodb/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-mongodb&#34;&gt;Why MongoDB?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Document-oriented&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Documents (objects) map nicely to programming language data types&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Embedded documents and arrays reduce need for joins&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Dynamically-typed (schemaless) for easy schema evolution&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;No joins and no multi-document transactions for high performance and easy scalability&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;High performance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;No joins and embedding makes reads and writes fast&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Indexes including indexing of keys from embedded documents and arrays&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Optional streaming writes (no acknowledgements)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;High availability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replicated servers with automatic master failover
+
+
+
+
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Easy scalability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Automatic sharding (auto-partitioning of data across servers)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Reads and writes are distributed over shards&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;No joins or multi-document transactions make distributed queries easy and fast&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Eventually-consistent reads can be distributed over replicated servers&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Rich query language&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mongo-data-model&#34;&gt;Mongo data model&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A Mongo system (see deployment above) holds a set of databases&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;database&lt;/strong&gt; holds a set of collections&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;collection&lt;/strong&gt; holds a set of documents&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;document&lt;/strong&gt; is a set of fields&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;field&lt;/strong&gt; is a key-value pair&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;key&lt;/strong&gt; is a name (string)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;value&lt;/strong&gt; is a&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;basic type like string, integer, float, timestamp, binary, etc.,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;a document, or&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;an array of value&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mongo query language&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;To retrieve certain documents from a db collection, you supply a query document containing the fields the desired documents should match. For example, {name: {first: &amp;lsquo;John&amp;rsquo;, last: &amp;lsquo;Doe&amp;rsquo;}} will match all documents in the collection with name of John Doe. Likewise, {name.last: &amp;lsquo;Doe&amp;rsquo;} will match all documents with last name of Doe. Also, {name.last: /^D/} will match all documents with last name starting with &amp;rsquo;D&amp;rsquo; (regular expression match).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Queries will also match inside embedded arrays. For example, {keywords: &amp;lsquo;storage&amp;rsquo;} will match all documents with &amp;lsquo;storage&amp;rsquo; in its keywords array. Likewise, {keywords: {$in: [&amp;lsquo;storage&amp;rsquo;, &amp;lsquo;DBMS&amp;rsquo;]}} will match all documents with &amp;lsquo;storage&amp;rsquo; or &amp;lsquo;DBMS&amp;rsquo; in its keywords array.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you have lots of documents in a collection and you want to make a query fast then build an index for that query. For example, ensureIndex({name.last: 1}) or ensureIndex({keywords: 1}). Note, indexes occupy space and slow down updates a bit, so use them only when the tradeoff is worth it.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;install-mongodb-on-ubuntu-10-04&#34;&gt;Install MongoDB on Ubuntu 10.04&lt;/h1&gt;
+
+&lt;h3 id=&#34;configure-package-management-system-apt&#34;&gt;Configure Package Management System (APT)&lt;/h3&gt;
+
+&lt;p&gt;The Ubuntu package management tool (i.e. dpkg and apt) ensure package consistency and authenticity by requiring that distributors sign packages with GPG keys. Issue the following command to import the &lt;a href=&#34;http://docs.mongodb.org/10gen-gpg-key.asc&#34;&gt;10gen public GPG Key&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a /etc/apt/sources.list.d/10gen.list file and include the following line for the 10gen repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now issue the following command to reload your repository:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h3&gt;
+
+&lt;p&gt;Issue the following command to install the latest stable version of MongoDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install mongodb-10gen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When this command completes, you have successfully installed MongoDB! Continue for configuration and start-up suggestions.&lt;/p&gt;
+
+&lt;h2 id=&#34;configure-mongodb&#34;&gt;Configure MongoDB&lt;/h2&gt;
+
+&lt;p&gt;These packages configure MongoDB using the /etc/mongodb.conf file in conjunction with the &lt;a href=&#34;http://docs.mongodb.org/manual/reference/glossary/#term-101&#34;&gt;&lt;em&gt;control script&lt;/em&gt;&lt;/a&gt;. You will find the control script is at /etc/init.d/mongodb.&lt;/p&gt;
+
+&lt;p&gt;This MongoDB instance will store its data files in the /var/lib/mongodb and its log files in /var/log/mongodb, and run using the mongodb user account.&lt;/p&gt;
+
+&lt;p&gt;Note&lt;/p&gt;
+
+&lt;p&gt;If you change the user that runs the MongoDB process, you will need to modify the access control rights to the /var/lib/mongodb and /var/log/mongodb directories.&lt;/p&gt;
+
+&lt;h2 id=&#34;controlling-mongodb&#34;&gt;Controlling MongoDB&lt;/h2&gt;
+
+&lt;h3 id=&#34;starting-mongodb&#34;&gt;Starting MongoDB&lt;/h3&gt;
+
+&lt;p&gt;You can start the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can verify that mongod has started successfully by checking the contents of the log file at /var/log/mongodb/mongodb.log.&lt;/p&gt;
+
+&lt;h3 id=&#34;stopping-mongodb&#34;&gt;Stopping MongoDB&lt;/h3&gt;
+
+&lt;p&gt;As needed, you may stop the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;restarting-mongodb&#34;&gt;Restarting MongoDB&lt;/h3&gt;
+
+&lt;p&gt;You may restart the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;controlling-mongos-http-docs-mongodb-org-manual-reference-config-database-mongos&#34;&gt;Controlling &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;As of the current release, there are no &lt;a href=&#34;http://docs.mongodb.org/manual/reference/glossary/#term-101&#34;&gt;&lt;em&gt;control scripts&lt;/em&gt;&lt;/a&gt; for &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt;. &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt; is only used in sharding deployments and typically do not run on the same systems where mongod runs. You can use the mongodb script referenced above to derive your own &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt; control script.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Using MongoDB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Among the tools included with the MongoDB package, is the mongo shell. You can connect to your MongoDB instance by issuing the following command at the system prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mongo
+&amp;gt; show dbs (); ---&amp;gt; to show your databases 
+&amp;gt; use &amp;lt;databasename&amp;gt; ----&amp;gt; To switch database 
+&amp;gt; db.createCollection(&amp;quot;collectionname&amp;quot;) ---&amp;gt; to create collection 
+&amp;gt; db.collectionname.find(); ---&amp;gt; To see the contents in the collection
+&amp;lt;code&amp;gt;&amp;gt; db.addUser(&amp;quot;theadmin&amp;quot;, &amp;quot;anadminpassword&amp;quot;) &amp;lt;/code&amp;gt;---&amp;gt; To create user and password
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Cool Tips and Tricks Log 7</title>
+      <link>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-7/</link>
+      <pubDate>Mon, 10 Dec 2012 11:39:49 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-7/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Linux Tips and Tricks continued….&lt;/p&gt;
+
+&lt;h2 id=&#34;convert-unix-timestamp-to-something-readable&#34;&gt;Convert unix timestamp to something readable&lt;/h2&gt;
+
+&lt;p&gt;If you are a system administrator just like me, I bet you have a bitter sweet relationship with log files. They are the first thing we peek into when something goes wrong. One thing that you will find is the unix time stamp used by most of these. To convert these to human readable date and time format you can use the date command just like this&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+% date -d @1347213569
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;find-your-favorite-command&#34;&gt;Find your favorite command&lt;/h2&gt;
+
+&lt;p&gt;If you ever wish to find your most used command, try look through your history just like this&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+% history | awk &#39;{a[$2]++}END{for(i in a){print a[i] &amp;quot; &amp;quot; i}}&#39; | sort -rn | head&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Cool Tips and Tricks Log 6</title>
+      <link>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-6/</link>
+      <pubDate>Mon, 10 Dec 2012 11:38:03 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-6/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Linux Tips and Tricks continued…&lt;/p&gt;
+
+&lt;h2 id=&#34;the-destroyer-command&#34;&gt;The destroyer command&lt;/h2&gt;
+
+&lt;p&gt;If you are planning to throw or dump your old hard disk (Since you are big rich lad and can buy super cool SSDs) it is always advisable to wipe and erase data on your old one. You would like to make it as hard as possible for anyone to pull out any data out of your old thrown hard disk. Data can still be restored after you delete everything and perform a format. Shred is a popular utility that comes pre installed with almost every linux distribution. Lets use shred to remove anything from my second attached disk.&lt;/p&gt;
+
+&lt;p&gt;A word of caution, never try this on a disk you love, this would result in complete data loss.&lt;/p&gt;
+
+&lt;p&gt;shred -v -n 1 -z /dev/sdb-v : show progress
+-n 2 : overwrite hard disk with two pass of random data (Advisable is to perform more than one pass of randaom data, the down side it is that the process takes bit long to complete)
+-z : finish cleaning with one pass of zeros&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&#34;which-process-uses-which-files&#34;&gt;Which process uses which files?&lt;/h2&gt;
+
+&lt;p&gt;How many times have you tried unmounting a drive and faced with an error. The fuser command can tell you which user is still accessing the drive making it unmountable. You can easily kill the process then and unmount the drive.&lt;/p&gt;
+
+&lt;p&gt;List processes using the cdrom drive (usefull for a clean unmount):
+/sbin/fuser -v /mnt/cdrom
+List processes using the sound card:
+/sbin/fuser -v /dev/dsp0&lt;/p&gt;
+
+&lt;p&gt;Cheers…&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Cool Tips and Tricks Log 5</title>
+      <link>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-5/</link>
+      <pubDate>Mon, 10 Dec 2012 11:36:14 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-5/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Linux Tips and Tricks continued…&lt;/p&gt;
+
+&lt;h2 id=&#34;find-if-your-system-is-32-or-64-bits&#34;&gt;Find if your system is 32 or 64 bits&lt;/h2&gt;
+
+&lt;p&gt;uname -a&lt;/p&gt;
+
+&lt;h2 id=&#34;find-if-a-binary-is-compiled-for-32-or-64-bits&#34;&gt;Find if a binary is compiled for 32 or 64 bits&lt;/h2&gt;
+
+&lt;p&gt;file -be elf &lt;em&gt;binary-path&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Example
+file -be elf /usr/bin/sudo&lt;/p&gt;
+
+&lt;p&gt;setuid &lt;strong&gt;ELF 64-bit&lt;/strong&gt; LSB executable, x86-64, version 1 (SYSV)&lt;/p&gt;
+
+&lt;p&gt;Cheers…&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Cool Tips and Tricks Log 4</title>
+      <link>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-4/</link>
+      <pubDate>Mon, 10 Dec 2012 11:32:31 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-4/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Linux Tips and Tricks continued…&lt;/p&gt;
+
+&lt;h2 id=&#34;find-which-operating-system-you-are-running&#34;&gt;Find which operating system you are running&lt;/h2&gt;
+
+&lt;p&gt;Finding the OS information is easy in Linux, I have seen most people jump to /etc/issue file to find it. This is absolutely correct however this file can be easily modified and changed by the sysadmin, to give you false information. A sure shot method of finding OS name and details is to fire this command on your terminal.&lt;/p&gt;
+
+&lt;p&gt;lsb_release -a&lt;/p&gt;
+
+&lt;p&gt;Example: when ran on my system
+Distributor ID: Ubuntu
+Description: Ubuntu 12.04 LTS
+Release: 12.04
+Codename: precise&lt;/p&gt;
+
+&lt;h2 id=&#34;find-all-files-larger-than-some-value-and-less-than-some-value&#34;&gt;Find all files larger than some value and less than some value&lt;/h2&gt;
+
+&lt;p&gt;If you want to free up some disk space quickly and find all big files use the command below&lt;/p&gt;
+
+&lt;p&gt;find / -type f -size +100M -size -1G&lt;/p&gt;
+
+&lt;p&gt;Cheers…&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Cool Tips and Tricks Log 3</title>
+      <link>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-3/</link>
+      <pubDate>Mon, 10 Dec 2012 11:28:49 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-3/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Linux tips and tricks continued..&lt;/p&gt;
+
+&lt;h2 id=&#34;public-ip-address-finder&#34;&gt;Public IP Address Finder&lt;/h2&gt;
+
+&lt;p&gt;If you wish to find the public address associated with your machine curl utility can help you. I used to go to some popular website like whatismyip.com to find my public ip address however now I use curl just like this.&lt;/p&gt;
+
+&lt;p&gt;curl ifconfig.me&lt;/p&gt;
+
+&lt;h2 id=&#34;combine-the-goods-of-ping-and-traceroute&#34;&gt;Combine the goods of ping and traceroute&lt;/h2&gt;
+
+&lt;p&gt;My TraceRoute or mtr as it is called is a sweet little utility that combines trace route and ping together to form a powerful interface that can help you find packet drop rates at each hop. Use mtr to find how it can enhance your normal ping or traceroute commands&lt;/p&gt;
+
+&lt;p&gt;mtr linuxdrops.com&lt;/p&gt;
+
+&lt;p&gt;Cheers!!!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Cool Tips and Tricks Log 2</title>
+      <link>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-2/</link>
+      <pubDate>Mon, 10 Dec 2012 11:26:07 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-2/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Continuing the tips and tricks series here are the some more tips that you can use to save some time.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-copy-cat-command&#34;&gt;The Copy Cat command&lt;/h2&gt;
+
+&lt;p&gt;So you have a package installed on a system and you have another system require the same package, can’t u just copy it. Yes you surely can. Login to the server which has the package installed and run the following command&lt;/p&gt;
+
+&lt;p&gt;ssh root@servername “rpm -qa” -grep -i vsftp | xargs yum -y install&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-readability-super-man-pages&#34;&gt;Adding readability Super”MAN” pages&lt;/h2&gt;
+
+&lt;p&gt;So you wish to convert manuals to pdf on the fly. Lets use ps2pdf to perform it. You can convert long html pages, man pages to pdf files for easy access and readability. Lets convert the man manual to pdf.&lt;/p&gt;
+
+&lt;p&gt;man -t man | ps2pdf – manpage.pdf&lt;/p&gt;
+
+&lt;p&gt;Cheers till next time…&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Cool Tips and Tricks Log 1</title>
+      <link>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-1/</link>
+      <pubDate>Mon, 10 Dec 2012 11:19:06 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-1/</guid>
+      <description>
+
+&lt;p&gt;Laziness is a natural human quality. Also, we human beings are getting busy each passing day, so we are always short on time. You combine these two and we see big hindrance in our learning curve. This beautiful Sunday morning I thought why not start a small informative series highlighting some of the greatest tricks that Linux has up its sleeves. Here are some of the commands, tips and tricks that you may not know. I have purposely kept these articles small with couple of tricks so that you learn them, remember them and try them.&lt;/p&gt;
+
+&lt;p&gt;Lets Start&lt;/p&gt;
+
+&lt;h2 id=&#34;the-bond-and-bourne-of-linux-commands&#34;&gt;The bond and bourne of linux commands.&lt;/h2&gt;
+
+&lt;p&gt;What if you need to fire of a command without leaving a tarce. So to execute a command without saving it in the history, just put a blank space before it.&lt;/p&gt;
+
+&lt;p&gt;#[space] command&lt;/p&gt;
+
+&lt;p&gt;Example&lt;/p&gt;
+
+&lt;h1 id=&#34;pwd&#34;&gt;  pwd&lt;/h1&gt;
+
+&lt;h2 id=&#34;for-the-forgetful&#34;&gt;For the forgetful.&lt;/h2&gt;
+
+&lt;p&gt;You just opened a file to edit in your favorite vi/vim editor and just when you tried saving it you were greeted with a warning “Can’t open file for writing”. Ouch you forget to open it using root. So to save it use the trick below.&lt;/p&gt;
+
+&lt;p&gt;:w !sudo tee %&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>To Terminate an EC2 Instance, disabled via ec2-api</title>
+      <link>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</link>
+      <pubDate>Mon, 10 Dec 2012 10:38:44 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</guid>
+      <description>&lt;p&gt;#&lt;strong&gt;ec2minatt i-555555 –disable-api-termination false –region us-east-1 -K /EC2_API_Certs/pk-4GGV.pem -C /EC2_API_Certs/cert-GV.pem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Make a note of the ebs-id attached&lt;/p&gt;
+
+&lt;p&gt;Terminate the Instance from the AWS Console and then Delete the EBS, same could be done through command line&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quick MySQL Commands</title>
+      <link>https://www.vishnu-tech.com/blog/quick-mysql-commands/</link>
+      <pubDate>Mon, 10 Dec 2012 10:33:27 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/quick-mysql-commands/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;To Login into the MySQL&lt;/strong&gt;
+#mysql -u username -ppaswword
+&lt;strong&gt;and if its RDS :&lt;/strong&gt;
+#mysql -h rds.indexpoint/dnsname/ip -u username -ppassword&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List Databases&lt;/strong&gt;
+mysql&amp;gt;show databases;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View tables&lt;/strong&gt;
+mysql&amp;gt;use databasename;
+mysql&amp;gt;show tables;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View Contents Inside the Table&lt;/strong&gt;
+mysql&amp;gt;select * from tablename;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Delete Database&lt;/strong&gt;
+mysql&amp;gt;drop database dbname;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To create Database user (we also need to grant permission to a db to gain access for the new user.)&lt;/strong&gt;
+mysql&amp;gt;create user ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘passwd3@1′;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Grant Permission to a Database for a User and Create the User at the same Time&lt;/strong&gt;
+mysql&amp;gt;grant all on databasename.* to ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘password’;&lt;/p&gt;
+
+&lt;p&gt;[NOTE&amp;ndash; To provide access from all IP Address use ‘%’ instead of ipaddress.]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List out all Database Users&lt;/strong&gt;
+mysql&amp;gt;SELECT user,host FROM mysql.user;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Create a Database&lt;/strong&gt;
+mysql&amp;gt;create database UNNI;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To restore a specific Database in Mysql (database UNNI has to be created already)&lt;/strong&gt;
+#mysql -u username -ppassword UNNI &amp;lt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI had to be created before restore]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To dump/backup a specific Database in Mysql&lt;/strong&gt;
+#mysqldump -u username -ppassword UNNI &amp;gt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI is backed up into UNNI.sql]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To know the permission of Mysql User&lt;/strong&gt;
+#show grants for ‘unni’@&amp;lsquo;localhost’;&lt;/p&gt;
+
+&lt;h2 id=&#34;need-to-know-create-delete-user&#34;&gt;[NEED TO KNOW]- Create/Delete User :::&lt;/h2&gt;
+
+&lt;p&gt;It must be noted that CREATE USER command was added in the MySQL version 5.0.2. In earlier versions, users could be created automatically when assigning permissions using the GRANT command or by manually inserting records in the mysql database.&lt;/p&gt;
+
+&lt;p&gt;The mysql database contains three tables – &lt;strong&gt;user, host and db. &lt;/strong&gt;These tables contains the database permissions.&lt;/p&gt;
+
+&lt;p&gt;The user table contains the usernames and password combination of anyone who has access to any part of the MYSQL database. The password part is the encrypted string, which can be generated using the PASSWORD() function.&lt;/p&gt;
+
+&lt;p&gt;As an administrator, you can even directly insert the values into the user table of mysql database and get the desired results.
+&lt;strong&gt;&lt;code&gt;mysql&amp;gt;INSERT INTO user(Host,User,Password) VALUES(&#39;localhost&#39;, &#39;UNNI&#39;, PASSWORD(&#39;passwd1@3&#39;));
+&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;mysql&amp;gt;FLUSH PRIVILEGES;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The FLUSH PRIVILEGES command is required to inform MySQL to reload the privilege data after the change is made.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Deleting Users&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To delete users from the MySQL database use the DROP command.
+&lt;code&gt;**mysql&amp;gt;DROP USER user@host;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The command in turn removes the user record from the mysql.user table.&lt;/p&gt;
+
+&lt;p&gt;As the CREATE USER command, even the DROP USER command has been added since MySQL 5.0.2. In previous versions of MySQL you must revoke the user’s privileges first, delete the records from user manually and then issue the FLUSH PRIVILEGES command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;**mysql&amp;gt;DELETE FROM user WHERE User= &#39;technofriends&#39; AND Host= &#39;localhost&#39;;
+FLUSH PRIVILEGES;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;General Notes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is no concept in MySQL of “Owner” of database or its objects, as there is in MS Access and MS SQL Server. I surmise this from the lack of “owner” field anywhere in mysql system tables.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Reset Mysql ROOT Password</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</link>
+      <pubDate>Mon, 10 Dec 2012 10:29:59 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</guid>
+      <description>&lt;p&gt;1) &lt;strong&gt;Stop the mysql demon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop&lt;/p&gt;
+
+&lt;p&gt;2) &lt;strong&gt;Start the mysqld demon process using the –skip-grant-tables option with this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/usr/sbin/mysqld –skip-grant-tables –skip-networking &amp;amp;&lt;/p&gt;
+
+&lt;p&gt;3)&lt;strong&gt; start the mysql client process using this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;mysql -u root&lt;/p&gt;
+
+&lt;p&gt;4) &lt;strong&gt;from the mysql prompt execute this command to be able to change any password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;5)&lt;strong&gt; Then reset/update your password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;SET PASSWORD FOR root@’localhost’ = PASSWORD(‘password’);&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;6) &lt;strong&gt;Then stop the mysqld process and relaunch it with the classical way:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop
+/etc/init.d/mysql start&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

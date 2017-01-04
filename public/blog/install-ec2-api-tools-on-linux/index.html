@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Install ec2-api Tools on Linux &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/">Install ec2-api Tools on Linux</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                <p>OS -<strong> Ubuntu Lucid</strong>
+Processor <strong>- x64</strong></p>
+
+<p><a href="http://aws.amazon.com/developertools/351">Download the ec2-api tools from the amazon site</a></p>
+
+<p><a href="http://www.oracle.com/technetwork/java/index.html">Downloaded jre1.7.0_x64 from the java site</a></p>
+
+<p>Steps to install JAVA JRE
+<strong>#add-apt-repository ppa:sun-java-community-team/sun-java6</strong>
+<strong>#apt-get update</strong>
+<strong>#apt-cache search java* [to know the latest jre/jdk]</strong>
+<strong>#apt-get install sun-java6-jre</strong>
+<strong>java is installed into /usr/lib/jvm/java-6-sun-1.6.0.21/</strong></p>
+
+<p>To check successful java installation
+<strong>#java -version</strong></p>
+
+<p>Setting up variables
+<strong>#export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.21</strong>
+[put it in /etc/profiles]</p>
+
+<p>Another Check
+<strong>$JAVA_HOME/bin/java -version</strong></p>
+
+<p>Now the prequisites are done . So comming back to the ec2-api tools
+<strong>#export EC2_HOME=/usr/local/ec2-api-tools-1.5.5.0</strong>
+[path where i unzipped it , also mention this in /etc/profile]</p>
+
+<p><strong>#export PATH=$PATH:$EC2_HOME/bin</strong>
+[put it in /etc/profile too]</p>
+
+<p><strong>#export EC2_PRIVATE_KEY=/EC2_API_Certs/pk-47O.pem</strong></p>
+
+<p><strong>#export EC2_CERT=/EC2_API_Certs/cert-4GV.pem</strong></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/install-ec2-api-tools-on-linux\/';
+    var disqus_title = 'Install ec2-api Tools on Linux';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/install-ec2-api-tools-on-linux\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Discovery on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/data-discovery/index.xml</link>
+    <description>Recent content in Data Discovery on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/data-discovery/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible playbook for WhereHows (A Data Discovery and Lineage Portal)</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</link>
+      <pubDate>Tue, 18 Oct 2016 14:17:34 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/WhereHows&#34;&gt;WhereHows&lt;/a&gt;, a data discovery and lineage portal. At LinkedIn, WhereHows integrates with all of their data processing environments and extracts coarse and fine grain metadata from them. Then, it surfaces this information through two interfaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A web application that enables navigation, search, lineage visualization, annotation, discussion, and community participation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;An &lt;a href=&#34;https://github.com/linkedin/wherehows/wiki/Backend-API&#34;&gt;API&lt;/a&gt; endpoint that empowers automation of other data processes and applications.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am creating an Ansible playbook to play around with WhereHows.&lt;/p&gt;
+
+&lt;p&gt;You can find the playbook from &lt;a href=&#34;https://github.com/vishnudxb/ansible-wherehows&#34;&gt;here.&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

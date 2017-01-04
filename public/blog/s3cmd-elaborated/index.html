@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> s3cmd Elaborated… &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/s3cmd-elaborated/">s3cmd Elaborated…</a></h1>
+            <span class="post-date">May 25, 2013 </span>
+            <div class="post-content">
+                <p><strong>Use –rr option (reduced redundancy) for every put and sync commands !!!. </strong>
+<strong>Use –bucket-location option to mention nearest geographical location to avoid latency.</strong></p>
+
+<p><strong>To view contents inside a bucket</strong>
+#s3cmd ls s3://bucketname</p>
+
+<p><strong>To copy/sync a directory into a bucket</strong>
+#s3cmd sync Desktop/check s3://bucket_name</p>
+
+<p><strong>To view all contents of all buckets one level down (only non empty buckets)</strong>
+#s3cmd la -H</p>
+
+<p><strong>To sync contents of a local dir in a buckter under an existing directory (s3 object)</strong>
+#s3cmd sync Desktop/checkunni/ s3://writingz/check/</p>
+
+<p><strong>To sync remote s3 contents to a local directory</strong>
+#s3cmd sync s3://writingz/check/ Desktop/checkunni/</p>
+
+<p><strong>To sync contents of a local dir in a bucket under a new directory name</strong>
+#s3cmd sync Desktop/checkunni/ s3://homie/newname/
+Here newname directory is created on the fly and files of checkunni are copied inside s3://homie/newname</p>
+
+<p><strong>Copy a non-empty directory (on s3) from one bucket to another bucket</strong>
+#s3cmd -r cp s3://homie/newname s3://writingz/</p>
+
+<p><strong>Copy a non-empty directory (on s3) from one bucket to another bucket under a new name</strong>
+#s3cmd -r cp s3://homie/newname s3://writingz/newname2/</p>
+
+<p><strong>To find the size of a bucket/directory</strong>
+#s3cmd du -H s3://writingz</p>
+
+<p><strong>To download only a single file</strong>
+#s3cmd get s3://homie/dirname/filename .</p>
+
+<p><strong>To download a remote directory locally</strong>.
+#s3cmd get -rf s3://writingz/checkunni .
+use a / (forward slash) after checkunni to download only the files in it.</p>
+
+<p><strong>To upload a single file</strong>
+#s3cmd put PSY.mp3 s3://homie/newname/</p>
+
+<p><strong>To upload a local dir to bucket</strong>
+#s3cmd put -rf s3test s3://homie/newname/</p>
+
+<p><strong>Delete a file</strong>
+#s3cmd del s3://writingz/abc.jpg</p>
+
+<p><strong>Delete a directory</strong>
+#s3cmd del -rf s3://writingz/check/</p>
+
+<p><strong>Move a file </strong>(can also be used for rename with files only)****
+#s3cmd mv s3://writingz/abc.png s3://haye/</p>
+
+<p><strong>Move a directory to another bucket </strong>
+#s3cmd mv -rf s3://writingz/newname2 s3://haye/</p>
+
+<p><strong>Know the s3cmd version</strong>
+#s3cmd –version</p>
+
+<p><strong>Make a file public using</strong>
+#s3cmd put –acl-public hangover3.jpg s3://viewzz/abc.jpg</p>
+
+<p><strong>Make a file private using</strong>
+#s3cmd setacl –acl-private s3://viewzz/hangover3.jpg</p>
+
+<p><strong>Set all files in a bucket to public/private</strong>
+#s3cmd setacl –acl-public -r s3://writingz/</p>
+
+<p><strong>If an md5 checksum is need to verify files integrity use</strong>
+#sudo s3cmd info s3://viewzz/hangover3.jpg (an amazon s3 object)
+#md5sum hangover3.jpg (locally downloaded file from s3)
+and compare the checksum value.</p>
+
+<p><strong>To delete a bucket (bucket has to be empty use s3cmd del – to delete all files)</strong>
+#s3cmd rb s3://logix.cz-test (use -f option if bucket is non-empty)</p>
+
+<p><strong>Get various information about Buckets or Files</strong>
+#s3cmd info s3://BUCKET[/OBJECT]</p>
+
+<p><strong>Other useful options</strong>
+<strong>–delete-removed</strong> Delete remote objects with no corresponding local file
+[sync]</p>
+
+<p><strong>–no-delete-removed</strong> Don’t delete remote objects.
+<strong>–skip-existing</strong> Skip over files that exist at the destination (only
+for [get] and [sync] commands).</p>
+
+<p><strong>–continue</strong> Continue getting a partially downloaded file (only for
+[get] command).</p>
+
+<p><strong>–reduced-redundancy, –rr</strong>
+Store object with ‘Reduced redundancy’. Lower per-GB
+price. [put, cp, mv, sync]</p>
+
+<p><strong>–acl-public</strong> Store objects with ACL allowing read for anyone.</p>
+
+<p><strong>–acl-private</strong> Store objects with default ACL allowing access for you</p>
+
+<p>only.</p>
+
+<p><strong>–bucket-location=BUCKET_LOCATION </strong>Datacentre to create bucket in. Eg :  ap-northeast-1  (Tokyo)</p>
+
+<p>The ACL (Access Control List) of a file can be set at the time of upload using –acl-public or –acl-private options with ‘s3cmd put’ or s3cmd sync’ commands (see below).</p>
+
+<p>Alternatively the ACL can be altered for existing remote files with ‘s3cmd setacl –acl-public’ (or –acl-private) command.</p>
+
+<p><strong>Additional Links on </strong></p>
+
+<ul>
+<li><p><a href="http://www.raghuramanb.com/2013/01/aws-log-archive-amazon-s3-glacier-part-4.html">Store S3 objects to Glacier.</a></p></li>
+
+<li><p><a href="http://alestic.com/2012/12/s3-glacier-costs">Consider the costs Glacier could incur during the Transition from S3.</a></p></li>
+</ul>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/s3cmd-elaborated\/';
+    var disqus_title = 's3cmd Elaborated…';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/s3cmd-elaborated\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title> S3cmd &middot; My Tech Blog </title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+	</head>
+
+	<body>
+		<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+		<div class="container wrapper">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>S3cmd</h1>
+				</div>
+			</div>
+			<ul id="post-list">
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/s3cmd-elaborated/">s3cmd Elaborated…</a></h4>
+							<h4 class="post-date">May 25, 2013</h4>
+						</div>
+						<div class="post-summary"><p>Use –rr option (reduced redundancy) for every put and sync commands !!!.  Use –bucket-location option to mention nearest geographical location to avoid latency.
+To view contents inside a bucket #s3cmd ls s3://bucketname
+To copy/sync a directory into a bucket #s3cmd sync Desktop/check s3://bucket_name
+To view all contents of all buckets one level down (only non empty buckets) #s3cmd la -H
+To sync contents of a local dir in a buckter under an existing directory (s3 object) #s3cmd sync Desktop/checkunni/ s3://writingz/check/...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/s3cmd-elaborated/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/install-use-s3cmd-for-s3-storage/">Install &amp; Use s3cmd for S3 Storage</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>Amazon S3 is a reasonably priced data storage service. Ideal for off-site backups, archiving and other data storage needs. It is generally more reliable than your regular web hosting for storing your files and images. Check out About Amazon S3 section to find out more.
+S3cmd is a command line tool for uploading, retrieving and managing data in Amazon S3. It is best suited for power users who don’t fear command line....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/install-use-s3cmd-for-s3-storage/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/aws-productssolutions-admins-capsule/">AWS Products/Solutions – Admins Capsule</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>Database Amazon RDS
+ You can think of a RDS DB Instance as a database environment in the cloud with the compute and storage resources you specify.
+ You can create and delete DB Instances, define/refine infrastructure attributes of your DB Instance(s), and control access and security via the AWS Management Console, Amazon RDS APIs, and Command Line Tools.
+ Multiple MySQL databases or SQL Server databases (up to 30) or Oracle database schemas can be created on a given DB Instance....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/aws-productssolutions-admins-capsule/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/rds-cli-tools-setup/">RDS CLI Tools Setup</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>#cd /usr/local/rds #chmod 744 bin/*
+Setup Credentials into the file to use a default AWS Account — $ cd /usr/local/rds $ sudo cp credential-file-path.template credential-file $ sudo vi credential-file $ sudo chmod 600 /usr/local/aws/rds/credential-file
+Now add to the ~/.bashrc
+Set location of the ec2 and rds command line tools export EC2_HOME=/usr export AWS_RDS_HOME=/usr/local/aws/rds
+Set AWS path export PATH=$PATH:$EC2_HOME/bin:$AWS_RDS_HOME/bin
+Source the .bashrc file — $ source .bashrc
+Reference Link 1...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/rds-cli-tools-setup/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/">RDS Sharding &amp; Quick Commands</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>Source article on RDS sharding by Amazon.
+http://aws.amazon.com/articles/0040302286264415#virtualshards
+What is sharding?
+Here unlike ec2 instances there is no rds-db-instance-id instead we use the db-instance names (called as dbinstance_identifiers) in our rds commmands to identify among rds-db-instances.
+Example- Database Name – news RDS DB Instances – shard1, shard2
+Consider creating 2 db-shards ie we need 2 db-instance to map those db-shards to db-instances. To reduce the schema setup overhead we use the snapshot and restore capabilities of Amazon RDS to do the following:...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/rds-scaling/">RDS Scaling</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>If your app gets to the point that you need to start scaling either up or out, it is a good idea to switch to multi-AZ if you don’t run it already. If you have a simple RDS instance, you will degrade your service significantly while scaling, as you can expect to lose the ability to write and/or read. With multi-AZ RDS instances, your service is almost uninterrupted.
+Scaling Up (or Down)...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/rds-scaling/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/">ELB and Autoscaling in AWS</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>Installing ELB and Autoscale API tools
+export AWS_ELB_HOME=/home/users/unni/bashrc/elbtool/ElasticLoadBalancing-1.0.12.0 export PATH=$PATH:$AWS_ELB_HOME/bin export AWS_AUTO_SCALING_HOME=/home/users/unni/bashrc/auto/AutoScaling-1.0.33.1 export PATH=$PATH:$AWS_AUTO_SCALING_HOME/bin
+AUTOSCALING Create AS, Create AS Group and Setup Scaleup Parameter.
+#as-create-launch-config as-agile –region eu-west-1 –image-id ami-b123456 –instance-type t1.micro –key elbtest –group default -K ec2_certs/pk-K4.pem -C ec2_certs/cert-K4.pem
+OK-Created launch config
+_#as-create-auto-scaling-group as-agile-gp –launch-configuration as-agile –region eu-west-1 –availability-zones eu-west-1a,eu-west-1b –min-size 2 –max-size 3 –load-balancers elbtest-agile -K ec2_certs/pk-K4.pem -C ec2certs/cert-K4.pem
+OK-Created AutoScalingGroup
+#as-create-or-update-trigger awsauto-nixontr –auto-scaling-group awsauto-nixongp –namespace “AWS/EC2″ –measure CPUUtilization –statistic Average –dimensions “AutoScalingGroupName=awsauto-nixongp” –period 60 –lower-threshold 40 –upper-threshold 80 –lower-breach-increment”=-1″ –upper-breach-increment 1 –breach-duration 1200 -K pk-XN....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+
+			</ul>
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+	</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> ELB and Autoscaling in AWS &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/">ELB and Autoscaling in AWS</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                
+
+<p><strong>Installing ELB and Autoscale API tools</strong></p>
+
+<p>export AWS_ELB_HOME=/home/users/unni/bashrc/elbtool/ElasticLoadBalancing-1.0.12.0
+export PATH=$PATH:$AWS_ELB_HOME/bin
+export AWS_AUTO_SCALING_HOME=/home/users/unni/bashrc/auto/AutoScaling-1.0.33.1
+export PATH=$PATH:$AWS_AUTO_SCALING_HOME/bin</p>
+
+<h1 id="autoscaling">AUTOSCALING</h1>
+
+<p>Create AS, Create AS Group and Setup Scaleup Parameter.</p>
+
+<p>#as-create-launch-config as-agile –region eu-west-1 –image-id ami-b123456 –instance-type t1.micro –key elbtest –group default -K ec2_certs/pk-K4.pem -C ec2_certs/cert-K4.pem</p>
+
+<p>OK-Created launch config</p>
+
+<p>_#as-create-auto-scaling-group as-agile-gp –launch-configuration as-agile –region eu-west-1 –availability-zones eu-west-1a,eu-west-1b –min-size 2 –max-size 3 –load-balancers elbtest-agile -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p><em>OK-Created AutoScalingGroup</em></p>
+
+<p><em>#as-create-or-update-trigger awsauto-nixontr –auto-scaling-group awsauto-nixongp –namespace “AWS/EC2″ –measure CPUUtilization –statistic Average –dimensions “AutoScalingGroupName=awsauto-nixongp” –period 60 –lower-threshold 40 –upper-threshold 80 –lower-breach-increment”=-1″ –upper-breach-increment 1 –breach-duration 1200 -K pk-XN.pem -C cert-XN.pem</em></p>
+
+<p><em>OK-Created/Updated trigger</em></p>
+
+<h1 id="elastic-load-balancer">ELASTIC LOAD BALANCER</h1>
+
+<p><strong>Create n Configure ELB</strong></p>
+
+<p>_#elb-create-lb elbtest-agile –region eu-west-1 –availability-zones eu-west-1a,eu-west-1b –headers –listener “lb-port=80,instance-port=80,protocol=http” –listener “lb-port=443,instance-port=443,protocol=tcp” -K ec2_certs/pk-KO.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>_DNS_NAME DNS<em>NAME</em>
+_DNS<em>NAME elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com</em></p>
+
+<p>_#elb-configure-healthcheck elbtest-agile –region eu-west-1 –headers –target “HTTP:80/index.html” –interval 5 –timeout 3 –unhealthy-threshold 2 –healthy-threshold 2 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>_HEALTH_CHECK TARGET INTERVAL TIMEOUT HEALTHY_THRESHOLD UNHEALTHY<em>THRESHOLD</em>
+_HEALTH<em>CHECK HTTP:80/index.html 5 3 2 2</em></p>
+
+<p><strong>Add Instances to ELB</strong></p>
+
+<p>_#elb-register-instances-with-lb elbtest-agile –instances i-A123456 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p><strong>To LIST ELBs</strong></p>
+
+<p>#elb-describe-lbs –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2_certs/cert-K4.pem
+LOAD_BALANCER elbtest-agile elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com Z3NF1Z3NOM5OY2 2012-07-19T09:49:19.110Z</p>
+
+<hr />
+
+<h3 id="deletions"> DELETIONS</h3>
+
+<hr />
+
+<p><strong>1.Delete Trigger</strong></p>
+
+<p><em>#as-delete-trigger awsauto-nixontrtest –auto-scaling-group awsauto-nixongptest –region eu-west-1</em></p>
+
+<p>DEPRECATED: This command is deprecated and included only to facilitate migration to the new trigger mechanism. You should use this command for migration purposes only.</p>
+
+<p>Are you sure you want to delete this trigger? [Ny]y
+OK-Deleted trigger</p>
+
+<p><strong>2.Set Autoscale to 0</strong></p>
+
+<p>_#as-update-auto-scaling-group as-agile-gp –region eu-west-1 –launch-configuration as-agile –min-size 0 –max-size 0 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>OK-Updated AutoScalingGroup</p>
+
+<p><strong>3.Delete Autoscale Group</strong></p>
+
+<p>_#as-delete-auto-scaling-group as-agile-gp –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>OK-Deleted AutoScalingGroup</p>
+
+<p><strong>4.Delete Autoscale Config</strong></p>
+
+<p>_#as-delete-launch-config as-agile –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>Are you sure you want to delete this launch configuration? [Ny]y
+OK-Deleted launch configuration</p>
+
+<p><strong>5.Finally Delete ELB</strong></p>
+
+<p>_#elb-delete-lb elbtest-agile –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>Warning: Deleting a LoadBalancer can lead to service disruption to any
+customers connected to the LoadBalancer. Are you sure you want to delete
+this LoadBalancer? [Ny]y
+OK-Deleting LoadBalancer</p>
+
+<p>The Following commands will list out Autoscale Related Info —
+as-describe-auto-scaling-groups
+as-describe-auto-scaling-instances
+as-describe-launch-configs
+as-describe-triggers [AutoScalingGroupName]</p>
+
+<h4 id="references">References</h4>
+
+<p><a href="http://docs.amazonwebservices.com/ElasticLoadBalancing/latest/DeveloperGuide/UsingTheCommandLineTools.html">AWS Link To Download &amp; Install ELB Command Line</a>
+<a href="http://aws.amazon.com/elasticloadbalancing/">ELB Quick Reference Link</a>
+<a href="http://www.linuxhelp.in/2012/05/amazon-elastic-load-balancing-with.html">ELB external Reference</a>
+<a href="http://www.youtube.com/watch?v=8KQ8aLoxVi0&amp;feature=related">Check Amazon Youtube video on ELB</a>
+<a href="http://www.youtube.com/watch?v=ainDIPzVM84">Check Youtube video on Autoscale</a>
+<a href="http://alestic.com/2012/09/aws-command-line-tools?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+alestic+%28Alestic.com+-+Ubuntu+on+EC2%29">Alestic Lists out all AWS Tools download</a></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/elb-and-autoscaling-in-aws\/';
+    var disqus_title = 'ELB and Autoscaling in AWS';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/elb-and-autoscaling-in-aws\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

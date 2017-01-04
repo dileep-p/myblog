@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Migrate Mysql database to Mongodb &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/">Migrate Mysql database to Mongodb</a></h1>
+            <span class="post-date">Jan 5, 2013 </span>
+            <div class="post-content">
+                <p>I recently had a chance to try out one of the new NoSQL databases called MongoDB <a href="http://www.mongodb.org">http://www.mongodb.org</a>. This new class of databases seems to solve many of the bottlenecks in MySql and other relational databases. It will give you shear performance, self replication and scalability at not cost because it open source. MongoDB has plenty of drivers for other scripting and high-level languages I use PHP so I download the PHP driver. You can see the supported list here: <a href="http://www.mongodb.org/display/DOCS/Drivers">http://www.mongodb.org/display/DOCS/Drivers</a>. In this blog I convert  a MySQL database using PHP to MongoDB.</p>
+
+<p>First you install MongoDB, you can do it by checking my previous blog.</p>
+
+<p>Then we run the script to convert a Mysql DB to Mongodb.</p>
+
+<p>create a new file called MySqltoMongodb<strong>.php, In that file please copy paste the below contants (please give your Mysql DB details as well as your Mongodb details)</strong></p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>&lt;?php</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>// mysql settings</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$mydb = &ldquo;database&rdquo;;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$myconn = <a href="http://www.php.net/mysql_connect">mysql_connect</a>(&lsquo;localhost&rsquo;,&lsquo;user&rsquo;,&lsquo;password&rsquo;);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$setmydb = <a href="http://www.php.net/mysql_select_db">mysql_select_db</a>( $mydb );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$mytables = getMyTables( $mydb );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> //mongo db settings</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$modb = &ldquo;database&rdquo;;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$moConnect=&ldquo;mongodb://user:password@localhost&rdquo;;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> function getMyTables( $dbname ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$tables = <a href="http://www.php.net/array">array</a>();</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$sql = <a href="http://www.php.net/mysql_query">mysql_query</a>(&ldquo;SHOW TABLES FROM $dbname &ldquo;) or <a href="http://www.php.net/die">die</a>(&ldquo;Error getting tables from $dbname&rdquo;);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> if( <a href="http://www.php.net/mysql_num_rows">mysql_num_rows</a>( $sql ) &gt; 0 ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>while( $table = <a href="http://www.php.net/mysql_fetch_array">mysql_fetch_array</a>( $sql ) ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$explain = explainMyTable( $table[0] );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$tables[$table[0]] = $explain;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>return $tables;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> function explainMyTable( $tbname ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$explain = <a href="http://www.php.net/array">array</a>();</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$sql = <a href="http://www.php.net/mysql_query">mysql_query</a>(&ldquo;EXPLAIN $tbname&rdquo;) or <a href="http://www.php.net/die">die</a>(&ldquo;Error getting table structure&rdquo;);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$i = 0;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> while( $get = <a href="http://www.php.net/mysql_fetch_array">mysql_fetch_array</a>( $sql ) ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p><a href="http://www.php.net/array_push">array_push</a>( $explain, $get[0] );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$i++;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>return $explain;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> function checkEncode($string) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>if( !mb_check_encoding($string,&lsquo;UTF-8&rsquo;)) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>return <a href="http://www.php.net/mb_convert_encoding">mb_convert_encoding</a>($string,&lsquo;UTF-8&rsquo;,&lsquo;ISO-8859-1&rsquo;);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>} else {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>return $string;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> }</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>try {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$moconn = new Mongo($moConnect);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$modb = $moconn-&gt;selectDB( $modb );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>} catch(MongoConnectionException $e) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p><a href="http://www.php.net/die">die</a>($e.&ldquo;Problem during mongodb initialization. Please start mongodb server.&rdquo;);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> foreach( $mytables as $table =&gt; $struct ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$sql = <a href="http://www.php.net/mysql_query">mysql_query</a>(&ldquo;SELECT * FROM $table LIMIT 0 , 500000&rdquo;) or <a href="http://www.php.net/die">die</a>( <a href="http://www.php.net/mysql_error">mysql_error</a>() );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$count = <a href="http://www.php.net/mysql_num_rows">mysql_num_rows</a>( $sql );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> // Starts new collection on mongodb</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$collection = $modb-&gt;$table;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> // If it has content insert all content</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>if( $count &gt; 0 ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>while( $info = <a href="http://www.php.net/mysql_fetch_array">mysql_fetch_array</a>( $sql, MYSQL_NUM )) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$infosize = <a href="http://www.php.net/count">count</a>( $info );</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$mosql = <a href="http://www.php.net/array">array</a>();</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> for( $i=0; $i &lt; $infosize; $i++ ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>if(<img src="http://www.php.net/empty" alt="empty" />($struct[$i]))</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$mosql[$struct[$i]] = checkEncode($info[$i]);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> $collection-&gt;insert($mosql);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>// Only create a new entry empty</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>} else {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> for( $i=0; $i &lt; $infosize; $i++ ) {</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>if(<img src="http://www.php.net/empty" alt="empty" />($struct[$i]))</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$mosql[$struct[$i]] = &ldquo;;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> }</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>$collection-&gt;insert($mosql);</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>}</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p> <a href="http://www.php.net/echo">echo</a> &ldquo;Done! Please, check your MongoDB collection!&rdquo;;</p>
+
+<ol>
+<li></li>
+</ol>
+
+<p>?&gt;</p>
+
+<p>Now fire up your browser and launch the page. If all all goes well you should see
+<strong>&ldquo;Done! Please, check your MongoDB collection!&rdquo;</strong></p>
+
+<p>After running this script check your Mongo db collection, in that you can see your Mysql Table.</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png?w=300" alt="Screenshot-6" /></a></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/migrate-mysql-database-to-mongodb\/';
+    var disqus_title = 'Migrate Mysql database to Mongodb';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/migrate-mysql-database-to-mongodb\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

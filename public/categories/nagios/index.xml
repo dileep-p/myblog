@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nagios on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/categories/nagios/index.xml</link>
+    <description>Recent content in Nagios on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/categories/nagios/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Add NRPE host to Nagios</title>
+      <link>https://www.vishnu-tech.com/blog/add-nrpe-host-to-nagios/</link>
+      <pubDate>Sat, 15 Dec 2012 10:40:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/add-nrpe-host-to-nagios/</guid>
+      <description>&lt;p&gt;NRPE &lt;em&gt;(Nagios Remote Plugin Executor)&lt;/em&gt; is a Nagios agent witch allows for remote  system monitoring by executing scripts on a remote system allowing monitoring of disk usage, system’s load or number of users currently logged in and much more. Normally Nagios can only monitor public services such as HTTP &amp;amp; FTP. This is great if you only want to monitor public servers, however I bet that most people want to monitor their own servers and have access to private information, that’s were NRPE comes in. It works on a client server basis, you install a daemon on the machine you  want to monitor, then setup your Nagios server to connect to the remote daemon to gather information&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/nrpe_diag/&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2012/12/nrpe_diag.png?w=300&#34; alt=&#34;nrpe_diag&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/nagios-config/&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2012/12/nagios-config.png?w=300&#34; alt=&#34;nagios-config&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So how do we set this up, well first we need to be running a Nagios server.Once you have a Nagios server setup you’ll need to download and install the NRPE daemon on the remote machine.&lt;/p&gt;
+
+&lt;p&gt;So lets get started first SSH into your remote machine and enter:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/sbin/useradd nagios
+passwd nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this will setup a new Nagios user, now we need to install some plugins:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.14.tar.gz
+tar -xzf nagios-plugins-1.4.14.tar.gz
+cd nagios-plugins-1.4.14
+sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+sudo make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will download and install the Nagios plugins required for NRPE to run, now we need to give the plugins access via the new Nagios user:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chown nagios.nagios /usr/local/nagios
+chown -R nagios.nagios /usr/local/nagios/libexec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NRPE require you install xinetd and libssl-dev so we’ll do that now&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get install xinetd
+sudo apt-get install libssl-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that done its time to install the NRPE daemon itself:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/
+wget http://prdownloads.sourceforge.net/sourceforge/nagios/nrpe-2.12.tar.gz
+tar xzf nrpe-2.12.tar.gz
+cd nrpe-2.12
+./configure
+make all
+make install-plugin
+make install-daemon
+make install-daemon-config
+make install-xinetd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now we need to configure the daemon so it will talk to our Nagios server, well do this buy editing /etc/xinetd.d/nrpe and adding our monitoring servers address:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /etc/xinetd.d/nrpe
+&amp;lt;em&amp;gt;Should Look Like:&amp;lt;/em&amp;gt;
+# default: on
+# description: NRPE (Nagios Remote Plugin Executor)
+service nrpe
+{
+        flags           = REUSE
+        socket_type     = stream
+        port            = 5666
+        wait            = no
+        user            = nagios
+        group           = nagios
+        server          = /usr/local/nagios/bin/nrpe
+        server_args     = -c /usr/local/nagios/etc/nrpe.cfg --inetd
+        log_on_failure  += USERID
+        disable         = no
+        only_from       = 127.0.0.1 &amp;lt;strong&amp;gt;[NAGIOS SERVER ADDRESS]&amp;lt;/strong&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then add “nrpe 5666/tcp # NRPE” to /etc/services:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /etc/services
+&amp;lt;em&amp;gt;add:&amp;lt;/em&amp;gt;
+nrpe 5666/tcp # NRPE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can check this all been configured probably by typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;netstat -at | grep nrpe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this should show something like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(tcp        0      0 *:nrpe                  *:*                     LISTEN)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If that worked correctly its time to setup your Nagios server to monitor your remote host, so ssh into your Nagios server. Now we are going to add separate host file for the new host so we need to edit the nano “nagios.cfg” file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /usr/local/nagios/etc/nagios.cfg
+&amp;lt;em&amp;gt;add lines:&amp;lt;/em&amp;gt;
+cfg_file=/usr/local/nagios/etc/objects/host1.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we need to create the Host1.cfg:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /usr/local/nagios/etc/objects/host1.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and enter the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;define host{
+        use linux-server ; Inherit default values from a template
+        host_name remotehost ; The name we&#39;re giving to this server
+        alias Fedora Core 6 ; A longer name for the server
+        address the-tech-tutorial.com; IP address of the server
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description CPU Load
+        check_command check_nrpe!check_load
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Current Users
+        check_command check_nrpe!check_users
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description /dev/hda1 Free Space
+        check_command check_nrpe!check_sda1
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Total Processes
+        check_command check_nrpe!check_total_procs
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Zombie Processes
+        check_command check_nrpe!check_zombie_procs
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run the nagios config check then restart nagios:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+/etc/init.d/nagios restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And hay presto you Nagios should now be monitoring your remote host, don’t worry if it says pending it can take up to 5 minutes for the information to come through.&lt;/p&gt;
+
+&lt;p&gt;If you want to add more hosts repeat the above steps and use host2.cfg instead of host1.cfg.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/finished/&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2012/12/finished.jpg?w=300&#34; alt=&#34;Finished&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;the critical in the above screen dump is because I had disabled ICMP on the remote server.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installing Nagios on Ubuntu</title>
+      <link>https://www.vishnu-tech.com/blog/installing-nagios-on-ubuntu/</link>
+      <pubDate>Sat, 15 Dec 2012 10:22:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/installing-nagios-on-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.nagios.org/&#34;&gt;Nagios&lt;/a&gt; is the Industry Standard Network Monitoring Engine. OK great so whats that mean, well nagios is a server that monitors your hosts and services and will inform you if something goes wrong and when it is fixed again. It can monitor network services, host resources and even network probes such as temperature and moisture.&lt;/p&gt;
+
+&lt;p&gt;These features as well as many more make nagios, by far, the most complete Network Monitoring tool on the market, however with all these features comes complexity and nagios has obviously been designed with the experienced Network Administrator in mind. But don’t worry too much, its not that difficult to learn as long as you take it one step at a time, and in today’s tutorial we’re going to look at the first step, actually getting it installed&lt;/p&gt;
+
+&lt;p&gt;First of all you will need a server running the LAMP Stack. Then you will need to setup a special user account and group for nagios, this allows nagios to have some rights over the server without giving it full root access, to do this first type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo useradd -m -s /bin/bash nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to add the new user and group, then you’ll need to set the password, use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo passwd nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now create the ‘nagcmd’ group to allow external commands to be run, then add the nagios user and the apache user to the group:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /usr/sbin/groupadd nagcmd
+sudo /usr/sbin/usermod -a -G nagcmd nagios
+sudo /usr/sbin/usermod -a -G nagcmd www-data
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that’s all out of the way you’ll need to download Nagios (I recommend downloading it to its own directory, eg. ~/nagios-install):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.4.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then extract the source code form the tar file and navigate into the new folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzf nagios-3.4.3.tar.gz
+cd nagios-3.2.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now we just need to download gcc, the c++ compiler,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install gcc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now its time to install nagios, we are going to do this buy compiling the source code, this can seem a little confusing the first time you do it, but don’t worry you don’t relay have to understand it yet (that comes when you start to make your own programs) just follow the lines and you will be ok:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./configure --with-command-group=nagcmd
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-config
+sudo make install-commandmode
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we just need to configure the contacts .cfg file so nagious can email us the report:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo vim /usr/local/nagios/etc/objects/contacts.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and change the email field to your email address.&lt;/p&gt;
+
+&lt;p&gt;Because the installer thinks Apache is installed in /etc/httpd/ witch it isn’t, we need to make a symlink to /etc/apache2/. A symlink is a file or folder that contains reference to another folder/file, so when the installer thinks its installing into /etc/httpd its actually installing into apache2, to do this type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mkdir /etc/httpd
+sudo ln -s /etc/apache2/* /etc/httpd/
+sudo make install-webconf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now we need to add the password to login to our nagios site, remember this password you will need it later:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;restart apache&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /etc/init.d/apache2 reload
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You don’t need to do the next step, however its extremely useful to install the base plug in pack to provide some extra functionality for nagios, to do this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/
+wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.14.tar.gz
+tar -xzf nagios-plugins-1.4.14.tar.gz
+cd nagios-plugins-1.4.14
+sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+sudo make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Configure Nagios to automatically start when the system boots.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Verify the sample Nagios configuration files.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If there are no errors, start Nagios.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /etc/init.d/nagios start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now you can login to Nagios buy going to &lt;a href=&#34;http://your_ip/nagios/&#34;&gt;http://your_ip/nagios/&lt;/a&gt; in your web browser and using the details:&lt;/p&gt;
+
+&lt;p&gt;username:nagiosadmin
+password:&lt;em&gt;[the password you set earler]&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And that’s about it you should now have a nagios server set-up that is monitoring the local host&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You may need to update nagios to its latest version, to do this type:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/local/src
+sudo wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.2.tar.gz
+sudo tar xvzf nagios-3.2.2.tar.gz
+cd nagios-3.2.2
+sudo ./configure --prefix=/usr/local/nagios --with-nagios-user=nagios --with-nagios-group=nagios --with-command-group=nagcmd --enable-nanosleep --enable-event-broker
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-commandmode
+sudo make install-config
+sudo update-rc.d -f nagios defaults
+cd ..
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

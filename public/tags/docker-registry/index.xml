@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker Registry on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/docker-registry/index.xml</link>
+    <description>Recent content in Docker Registry on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/docker-registry/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible playbooks to create private docker registry in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</link>
+      <pubDate>Fri, 19 Aug 2016 09:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</guid>
+      <description>
+
+&lt;p&gt;Creating a private docker registry in AWS using Ansible playbooks. You can find the playbooks from &lt;a href=&#34;https://github.com/vishnudxb/ansible-docker-registry&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;variables-in-playbooks&#34;&gt;Variables in playbooks&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;_server_name: &amp;ldquo;docker-registry.vishnudxb.me&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_bundle_crt: &amp;ldquo;/etc/nginx/ssl/ssl-bundle.crt&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_crt&lt;em&gt;key: &amp;ldquo;/etc/nginx/ssl/ssl-cert.key&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;aws-instance-tag-name&#34;&gt;AWS instance tag name&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;The playbook will identified the instance using the tag name ie docker-registry&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;to-do&#34;&gt;To-Do&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Authorization for users inside the registry.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

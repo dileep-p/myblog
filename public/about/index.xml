@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/about/index.xml</link>
+    <description>Recent content in Abouts on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Dec 2012 17:52:41 -0500</lastBuildDate>
+    <atom:link href="https://www.vishnu-tech.com/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>https://www.vishnu-tech.com/about/about/</link>
+      <pubDate>Mon, 10 Dec 2012 17:52:41 -0500</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/about/about/</guid>
+      <description>
+
+&lt;p&gt;Vishnu Nair is Head of Devops – R&amp;amp;D BigData in Vimpelcom. His Job responsibilities include in setting up a high available, scalable &amp;amp; reliable architecture for the DMP. He is responsible for finding the right &amp;amp; latest tools which can improve the performance &amp;amp; stability of the DMP components. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies.&lt;/p&gt;
+
+&lt;p&gt;Before joining Vimpelcom, he lead a DevOps team at Getsocial – A Game development company. He was responsible for designing, configuring, documenting, maintaining and optimizing the infrastructure that supports their products including API’s, Websites, BI and other internal services on multiple environments. His main task was migrating the architecture from non-structured environment to a structured one in AWS. During that period, he worked with variety of tools like Docker, Kubernetes, Ansible, Jenkins, Tableau and used many features in AWS like ECS, RDS, RedShift, Elasticache and so on.&lt;/p&gt;
+
+&lt;p&gt;He also lead many teams when he was working in Dubai &amp;amp; India. He was a Solution Architect for setting up an architecture with high availability, scalability &amp;amp; reliability for BigData Projects. He had worked with different Hadoop vendors like Cloudera, Hortonworks and MapR for providing best solutions for data handling &amp;amp; mining for business use cases.&lt;/p&gt;
+
+&lt;p&gt;He holds a Bachelor’s Degree in B.TECH from the Pondicherry University in India. When he is not working, you can find him attending and speaking at conference and meetups. He loves to write blogs &amp;amp; play with the latest tools. You can see some of his blogs &amp;amp; code from the below websites.&lt;/p&gt;
+
+&lt;h2 id=&#34;click-here-to-see-my-work-history-https-www-vishnudxb-me-my-work-history&#34;&gt;&lt;a href=&#34;https://www.vishnudxb.me&#34; title=&#34;My Work history&#34;&gt;Click here to see my work history&lt;/a&gt;.&lt;/h2&gt;
+
+&lt;h2 id=&#34;my-weapon-of-choice&#34;&gt;My Weapon of choice:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Big data technologies&lt;/strong&gt; :- &lt;em&gt;Hortonworks/Cloudera/MapR Hadoop, Apache Storm, Apache Kafka, Hive, HBase, Spark, Oozi, Samza, Zeppelin, Apache Airflow, Airbnb Superset and so on.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Configuration Management&lt;/strong&gt; :-  &lt;em&gt;Saltstack, Puppet, Chef &amp;amp; Ansible.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Deployment tools&lt;/strong&gt; :- &lt;em&gt;Capistrano and Fabric.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Caching Technologies&lt;/strong&gt; :- &lt;em&gt;Varnish, Redis, Memcached, Tarantool &amp;amp; Apache Ignite&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Database&lt;/strong&gt; :- &lt;em&gt;Mysql, Postgresql, Greenplum, HP Vertica, Oracle Exadata, Mongo db &amp;amp; Couchbase db.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Continuous Integration&lt;/strong&gt; :-  &lt;em&gt;Jenkins, Roger, Circle CI and Travis CI&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Version Control Systems&lt;/strong&gt; :-  &lt;em&gt;Git &amp;amp; SVN&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cloud Providers&lt;/strong&gt; :- &lt;em&gt;AWS, GCE, Azure, Digital Ocean &amp;amp; Rackspace.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CDN&lt;/strong&gt; :-  &lt;em&gt;Aws cloudfront, Rackspace Cloud files, Akamai &amp;amp; CDNetworks.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; :- &lt;em&gt;Prometheus, Sensu, Newrelic, Nagios, Graylog2, ELK &amp;amp; Icinga.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Other tools which I used are Docker, Kubernetes, Lxd, Systemd, Deis, Sysdig, Serverspec, HAProxy, Supervisor, Virtualenv and so on.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

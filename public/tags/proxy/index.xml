@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/proxy/index.xml</link>
+    <description>Recent content in Proxy on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to get your Client IPaddress with Nginx if you are using TCP on AWS ELB</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</link>
+      <pubDate>Sat, 09 May 2015 19:53:55 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</guid>
+      <description>&lt;p&gt;If your Application is running behind an AWS Load Balancer (&lt;a href=&#34;http://aws.amazon.com/elasticloadbalancing/&#34;&gt;ELB&lt;/a&gt;) and you are using TCP ( for both 80 and 443).&lt;/p&gt;
+
+&lt;p&gt;You can run AWS ELB in different modes.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;1) You can do Load balance with HTTP/HTTPS traffic and if you use this one, the AWS ELB injects an X-Forwarded-For  header  that has the original client ipaddress. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;2)  You can do Load balance straight with TCP traffic. If you use this mode, your application can use Websockets. But it won&amp;rsquo;t provide the X-Forwarded-For  header because the load balancer doesn’t know anything about HTTP headers in this case. So it&amp;rsquo;s hard to track the Client IP address. However we can do this with an AWS ELB feature called &amp;ldquo;&lt;a href=&#34;http://aws.amazon.com/about-aws/whats-new/2013/07/30/elastic-load-balancing-now-supports-proxy-protocol/&#34;&gt;Proxy Protocol&lt;/a&gt;&amp;ldquo; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Here I am using Ubuntu distro with Nginx version 1.9.0 &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo add-apt-repository ppa:chris-lea/nginx-devel&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get update&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get -y install nginx-full&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Your AWS ELB Listeners Looks like the below one&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now you need to enable Proxy Protocol on the AWS ELB&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;First create a load balancer policy using the below command&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb create-load-balancer-policy &amp;ndash;load-balancer-name vishnudxb  &amp;ndash;policy-name vishnudxb-ProxyProtocol-policy &amp;ndash;policy-type-name ProxyProtocolPolicyType &amp;ndash;policy-attributes AttributeName=ProxyProtocol,AttributeValue=true&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now we need to enable the Newly created policy on the specified ports. (ie 80 &amp;amp; 443)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 80 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 443 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now we need to configure Nginx for Proxy Protocol&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Add the below entries on your &lt;strong&gt;/etc/nginx/nginx.conf&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_log_format elb_log &amp;lsquo;$proxy_protocol_addr - $remote_user [$time_local] &amp;lsquo; &amp;lsquo;&amp;ldquo;$request&amp;rdquo; $status $body_bytes_sent &amp;ldquo;$http_referer&amp;rdquo; &amp;lsquo; &amp;lsquo;&amp;ldquo;$http_user&lt;em&gt;agent&amp;rdquo;&amp;lsquo;;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;Now you need to do some changes on your &lt;em&gt;&lt;strong&gt;sites-enabled like below:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx1.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx2.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;And finally you can see the Client IP address on your Nginx logs  when you use AWS ELB TCP traffic straight. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

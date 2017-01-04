@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> How to copy redis dump from AWS Elasticache to AWS S3 &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/">How to copy redis dump from AWS Elasticache to AWS S3</a></h1>
+            <span class="post-date">Jun 9, 2015 </span>
+            <div class="post-content">
+                <p>For Amazon Elasticache, we can&rsquo;t copy the snapshot to AWS S3.  So inorder to do that you need to do the below steps:-</p>
+
+<ul>
+<li><p>Spin up new EC2 instance.</p></li>
+
+<li><p> Install Redis on that Instance.</p></li>
+
+<li><p> Setup the instance as a read replica of the AWS Elasticache Primary (redis)</p></li>
+
+<li><p> Wait for the Master Slave data sync</p></li>
+
+<li><p> Issue a redis <strong>SAVE </strong>command to generate a local dump</p></li>
+
+<li><p> Copy local dump.rdb on AWS S3</p></li>
+</ul>
+
+<p>You can do the whole setup by simply checkout this _<strong><a href="https://github.com/vishnudxb/redisbackup-to-s3">REPO</a></strong>_  and run the below command</p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>_*<em>vishnudxb@server:~# ./terraform apply -var &lsquo;access_key=PUTMYACCESSKEY&rsquo;  *</em>_</p>
+
+<p>_*<em>                                                              -var &lsquo;secret_key=PUTMYSECRETKEY&rsquo;  *</em>_</p>
+
+<p>_*<em>                                                              -var &lsquo;key_file=/home/redis.pem&rsquo;  *</em>_</p>
+
+<p>_*<em>                                                              -var &lsquo;key_name=redis&rsquo; *</em>_</p>
+
+<p><em>*<em>                                                              -var &lsquo;region=us-east-1&rsquo; *</em></em></p>
+
+<p>_*<em>                                                              -var &lsquo;instance_type=m3.large&rsquo; *</em>_</p>
+
+<p>_**                                                              -var &lsquo;availability<em>zone=us-east-1a&rsquo; \ **</em></p>
+
+<p>_*<em>                                                              -var &lsquo;subnet_id=subnet-e94xxxx&rsquo;  *</em>_</p>
+
+<p>_*<em>                                                              -var &lsquo;security_id=sg-7xxxx1d&rsquo; *</em>_</p>
+
+<p>_*<em>                                                             -var &lsquo;redis_endpoint=aws redis endpoint&rsquo;  *</em>_</p>
+
+<p>_*<em>                                                              -var &lsquo;redis_port=6379&rsquo; *</em>_</p>
+
+<p>_<strong>                                                              -var &lsquo;aws_bucket=redis-db-backup&rsquo;</strong>_</p>
+
+<p>[/color-box]
+Once you execute the above command and you can see the output like the below:-</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png" alt="vu" /></a></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3\/';
+    var disqus_title = 'How to copy redis dump from AWS Elasticache to AWS S3';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elb on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/elb/index.xml</link>
+    <description>Recent content in Elb on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/elb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to get your Client IPaddress with Nginx if you are using TCP on AWS ELB</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</link>
+      <pubDate>Sat, 09 May 2015 19:53:55 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</guid>
+      <description>&lt;p&gt;If your Application is running behind an AWS Load Balancer (&lt;a href=&#34;http://aws.amazon.com/elasticloadbalancing/&#34;&gt;ELB&lt;/a&gt;) and you are using TCP ( for both 80 and 443).&lt;/p&gt;
+
+&lt;p&gt;You can run AWS ELB in different modes.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;1) You can do Load balance with HTTP/HTTPS traffic and if you use this one, the AWS ELB injects an X-Forwarded-For  header  that has the original client ipaddress. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;2)  You can do Load balance straight with TCP traffic. If you use this mode, your application can use Websockets. But it won&amp;rsquo;t provide the X-Forwarded-For  header because the load balancer doesn’t know anything about HTTP headers in this case. So it&amp;rsquo;s hard to track the Client IP address. However we can do this with an AWS ELB feature called &amp;ldquo;&lt;a href=&#34;http://aws.amazon.com/about-aws/whats-new/2013/07/30/elastic-load-balancing-now-supports-proxy-protocol/&#34;&gt;Proxy Protocol&lt;/a&gt;&amp;ldquo; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Here I am using Ubuntu distro with Nginx version 1.9.0 &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo add-apt-repository ppa:chris-lea/nginx-devel&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get update&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get -y install nginx-full&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Your AWS ELB Listeners Looks like the below one&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now you need to enable Proxy Protocol on the AWS ELB&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;First create a load balancer policy using the below command&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb create-load-balancer-policy &amp;ndash;load-balancer-name vishnudxb  &amp;ndash;policy-name vishnudxb-ProxyProtocol-policy &amp;ndash;policy-type-name ProxyProtocolPolicyType &amp;ndash;policy-attributes AttributeName=ProxyProtocol,AttributeValue=true&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now we need to enable the Newly created policy on the specified ports. (ie 80 &amp;amp; 443)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 80 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 443 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now we need to configure Nginx for Proxy Protocol&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Add the below entries on your &lt;strong&gt;/etc/nginx/nginx.conf&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_log_format elb_log &amp;lsquo;$proxy_protocol_addr - $remote_user [$time_local] &amp;lsquo; &amp;lsquo;&amp;ldquo;$request&amp;rdquo; $status $body_bytes_sent &amp;ldquo;$http_referer&amp;rdquo; &amp;lsquo; &amp;lsquo;&amp;ldquo;$http_user&lt;em&gt;agent&amp;rdquo;&amp;lsquo;;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;Now you need to do some changes on your &lt;em&gt;&lt;strong&gt;sites-enabled like below:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx1.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx2.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;And finally you can see the Client IP address on your Nginx logs  when you use AWS ELB TCP traffic straight. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>High Availability @ Load Balancing Layer-HAProxy / ELB</title>
+      <link>https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/</link>
+      <pubDate>Mon, 01 Apr 2013 07:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/</guid>
+      <description>
+
+&lt;p&gt;Architecting High Availability at the Load Balancing layer is one of the important aspects in the web scale systems in AWS. We can follow multiple strategies for achieving the same. I am listing some of the designs for achieving the same.&lt;/p&gt;
+
+&lt;h1 id=&#34;pattern-1-route-53-dns-rr-haproxy&#34;&gt;&lt;em&gt;Pattern 1: Route 53 DNS RR + HAProxy&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;Route53 is a Managed DNS service provided by Amazon Web Services. Route 53 supports Round robin and weighted algorithms. If the Route53 DNS server has several entries for a given hostname, it will return all of them in a rotating order. This way, various users will see different addresses for the same name and will be able to reach different EC2 instances in LB Tier.&lt;/p&gt;
+
+&lt;p&gt;$ host -t a HAProxyTestXYZ.com&lt;/p&gt;
+
+&lt;p&gt;HAProxyTestXYZ.com. has address &lt;strong&gt;50.19.82.183 (Primary EIP)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;HAProxyTestXYZ.com. has address &lt;strong&gt;23.23.174.254 (Secondary EIP)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/1.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/1.jpg&#34; alt=&#34;1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Example, if we attach the Elastic IP’s of 2 HAProxy EC2 instances under the Route 53, both the IP’s are sent to the user browsers by the Route 53 DNS. In case, the algorithm configured is Round Robin at the Route 53 level, then browser- 1 will get &lt;strong&gt;EIP-1(50.19.82.183&lt;/strong&gt;) of HAProxy-1 as the primary IP and browser -2 will get &lt;strong&gt;EIP-2&lt;/strong&gt; &lt;strong&gt;(23.23.174.254)&lt;/strong&gt; of HAProxy-2 as the primary IP in rotation basis.  The browser- 1 will contact the HAProxy-1 and in case HAProxy-1 is not reachable it will contact the secondary EIP which is HAproxy-2 and so forth. This is an age old technique generally used by search engines, content servers (or) web scale systems for achieving scalability in LB layer. But this method does not provide any means of High availability @ LB layer. It requires additional measures to permanently check the HAProxy EC2 LB instances status and switch a failed EC2 instance EIP to another HAProxy EC2 LB. For this reason, this pattern is generally used as a complementary solution in High Availability, not as a primary one.  For achieving better stability at this layer in AWS, I usually recommend having 2 or more HAProxies distributed on multiple AZ’s inside the Amazon EC2 region. This way if one of the HAProxy is down, the website still functions with the help of other HAProxies and even if the entire Amazon EC2 AZ is down still the HAProxies in the other AZ can handle the requests and keep the website active. Some load tests have proven that HAProxy on m1.large EC2 instance can handle close to ~4500+ HTTP requests/second. So depending upon the number of concurrent requests/sec needed on your application you can go ahead and attach multiple HAProxy EC2 instances to the Route 53. Now that we achieved availability horizontally using the Route53 DNS Round Robin in HAProxy layer let us try to understand the intricacies behind this architecture.  Since we now have 2 or more HAProxies what will happen to the contextual web sessions data that resides in the application servers. HAProxies need to know in which application server the session data of the user resides else the requests will have authorization failures.&lt;/p&gt;
+
+&lt;p&gt;There are 2 architecture designs we can follow for solving this contextual problem they are:&lt;/p&gt;
+
+&lt;p&gt;**Stateless Application design: ** This is the recommended and widely used design. The web session data is separated out from the Web/App server memory and they are kept in common cache stores like MemCacheD, TerraCotta etc.Since the session data is now kept in a common store like MemCacheD, HAProxies can direct their requests to any of the web/app servers attached under it without knowing where the session state is mapped. Whenever any web/app server receives the request from any of the HAProxies, it will validate and authorize the session data from the common store.  In event of any HAProxy or Web/App EC2 failure still the website functions without problems because other HAProxies and Web/App servers are still able to handle the subsequent requests. Thus we achieve availability and scalability on the HAProxy/Load Balancing layer following this model.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sticky Application design:&lt;/strong&gt; Things are usually not ideal and the way we assume to be in real world. Some applications are still designed with stateful nature and they store the session data, cache data etc. in their web/app server memory.  We can always recommend the application teams to re-architect this model to stateless, but not always this suggestion works for short term migrations, inter dependencies etc.  So as architects we need to find way to live and cope up with this design and still try to achieve availability on the load balancing layer. HAProxy follows a technique called as “&lt;strong&gt;Cookie Learning”&lt;/strong&gt; and &lt;strong&gt;“Cookie Insertion”&lt;/strong&gt; to help state full applications. HAProxy can be configured to learn the application cookie (&amp;ldquo;JSESSIONID&amp;rdquo;), when HAProxy receives the user&amp;rsquo;s request, it checks if it contains this particular cookie and a known value. If this is not the case, it will direct the request to any Web/App EC2 server, according to the load balancing algorithm configured. HAProxy will then extract the cookie value from the response and add it along with the server&amp;rsquo;s identifier to a local table. When the user request comes back again, the load balancer sees the cookie, lookups the table and finds the Web/App EC2 server to which it forwards the request. Let me detail this important flow a little bit;&lt;/p&gt;
+
+&lt;p&gt;HAProxy-1 EC2 instance will receive client’s requests from the browser. If a request does not contain a cookie, it will be forwarded to a valid Web/App EC2 Instance Apache-A. In return, if a JESSIONID cookie is seen, the Web/App EC2 Instance name (Example “A”)will be prefixed into it, followed by a delimiter (&amp;rsquo;~&amp;lsquo;) like &amp;ldquo;JSESSIONID=A~xxx&amp;rdquo;.When the browser client requests again with the cookie  JSESSIONID=A~xxx&amp;rdquo;, HAProxy-1 will know that it must be forwarded to Web/App Instance Apache-A. The EC2 Instance name ”A” will then be extracted from cookie before it is sent to the Web/App EC2 Instance Apache-A.&lt;/p&gt;
+
+&lt;p&gt;If Web/App EC2 Instance Apache-A dies, then requests will be sent to another valid server Web/App EC2 Instance Apache-B by LB and the cookie will be reassigned.&lt;/p&gt;
+
+&lt;p&gt;If HAProxy-1 itself dies, then requests will be sent to HAProxy-2 which will identify the Web/App EC2 instance to forward the request. This way even if the subsequent requests moves from HAProxy-1 to HAProxy-2 in event of HAProxy-1 failure, still the requests are sent to the same Web/App instance Apache-A by the cookie learning/insertion mechanism of HAProxy.&lt;/p&gt;
+
+&lt;p&gt;Sample HAProxy Settings to achieve this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;listen webfarm 192.168.1.1:80&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       mode http&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       balance roundrobin&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       cookie JSESSIONID prefix&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       option httpclose&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       option forwardfor&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       option httpchk HEAD /index.html HTTP/1.0&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       server Apache-A 192.168.1.11:80 cookie A check&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;       server Apache-B 192.168.1.12:80 cookie B check&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: You can use more sophisticated DNS services like UltraDNS , DNSMadeEasy etc also in this architecture to better control the Load balancing and traffic direction at the DNS level.&lt;/p&gt;
+
+&lt;p&gt;Pattern 2: Route 53 DNS RR + HAProxy in Active-Passive mode&lt;/p&gt;
+
+&lt;p&gt;This is an extension of the Route53 DNS RR pattern and everything discussed in the previous pattern still applies to this context. In addition to associating HAProxies horizontally under Route53, we will build availability for every HAProxy vertically as well in this pattern. High Availability is built taking into consideration HAProxy process failure and HAProxy EC2 instance failure.&lt;/p&gt;
+
+&lt;p&gt;2 or more HAProxies from multiple AZ’s are taken and they are attached with Amazon Elastic IP’s. These Elastic IP’s are then associated in Route 53 with DNS RR. These HAProxies are now “Active” and are ready to handle the user requests. For HA, another equivalent set of HAProxies are launched in the respective AZ’s as “Standby”. In event of the “Active” HAProxy failure, the Standby HAProxy remaps to the same Amazon Elastic IP takes over the subsequent requests from the client.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/2.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/2.jpg&#34; alt=&#34;2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above diagram, there are 2 HAProxies in “Active” state with Elastic IP’s &lt;strong&gt;50.19.82.183&lt;/strong&gt; &lt;strong&gt;&amp;amp;&lt;/strong&gt; &lt;strong&gt;23.23.174.254&lt;/strong&gt;. They are deployed across Multiple Availability Zones inside an Amazon EC2 region. Another 2 HAProxies are launched in respective AZ’s, but they are kept idle in “Standby” state. In event of &lt;strong&gt;HAProxy-1 (EIP: 50.19.82.183)&lt;/strong&gt; failure the Elastic IP is remapped to Standby HAProxy-3 in the same AZ. The remapping takes ~60 seconds and the HAPorxy-3 will be handling the subsequent requests directed by the browsers to the &lt;strong&gt;50.19.82.183&lt;/strong&gt;** IP.**&lt;/p&gt;
+
+&lt;p&gt;Broadly there are 2 levels of failure in this pattern;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Failure @ HAProxy Process level&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Failure @ HAProxy EC2 instance level&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/3.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/3.jpg&#34; alt=&#34;3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;strong&gt;Failure @HAProxy Process level:&lt;/strong&gt;  When HAProxy Process at the “Active” server fails; we can detect this using **KeepAliveD **and switch the Elastic IP from Active -&amp;gt; Standby. We have observed it takes ~60-120 seconds for the standby to takeover. During this time the &lt;strong&gt;particular HAProxy alone&lt;/strong&gt; will be unreachable. KeepAliveD script is configured in both the Active and standby HAProxy EC2 instance. KeepAliveD implements a set of checkers to dynamically and adaptively maintain and manage load balanced server pool according to their health. High availability is achieved by Virtual Router Redundancy Protocol &lt;a href=&#34;http://datatracker.ietf.org/wg/vrrp/&#34;&gt;VRRP&lt;/a&gt; protocol of the KeepAliveD. Since Amazon EC2 currently does not support Multicast protocol we need to configure KeepAliveD with Unicast TCP in this scenario.  For more details refer &lt;a href=&#34;http://www.keepalived.org/&#34;&gt;http://www.keepalived.org/&lt;/a&gt;. Mean time manually we can bring the failed HAProxy Process up and make this as the new standby.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: “/etc/keepalived/keepalived.conf”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;vrrp_script chk_haproxy {           # Requires keepalived-1.1.13&lt;/p&gt;
+
+&lt;p&gt;script &amp;ldquo;killall -0 haproxy&amp;rdquo;     # cheaper than pidof&lt;/p&gt;
+
+&lt;p&gt;interval 20                      # check every 2 seconds&lt;/p&gt;
+
+&lt;p&gt;weight 20                        # add 2 points of prio if OK&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;vrrp_instance VI_1 {&lt;/p&gt;
+
+&lt;p&gt;interface eth0&lt;/p&gt;
+
+&lt;p&gt;state MASTER&lt;/p&gt;
+
+&lt;p&gt;virtual_router_id 51&lt;/p&gt;
+
+&lt;p&gt;ipriority 101                    # 101 on master, 100 on backup&lt;/p&gt;
+
+&lt;p&gt;vrrp_unicast_bind 10.215.31.4&lt;/p&gt;
+
+&lt;p&gt;      #internal IP address of EC2 instance 01&lt;/p&gt;
+
+&lt;p&gt;vrrp_unicast_peer 10.85.110.252&lt;/p&gt;
+
+&lt;p&gt;  #internal IP address of EC2 instance 02&lt;/p&gt;
+
+&lt;p&gt;notify_master &amp;ldquo;/etc/keepalived/vrrp.sh&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;track_script {&lt;/p&gt;
+
+&lt;p&gt;chk_haproxy weight 20&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: /etc/keepalived/vrrp.sh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;#vrrp.sh&lt;/p&gt;
+
+&lt;p&gt;#!/bin/bash&lt;/p&gt;
+
+&lt;p&gt;cd /opt/aws/apitools/ec2/bin&lt;/p&gt;
+
+&lt;p&gt;#DisAssociate EIP from this instance.&lt;/p&gt;
+
+&lt;p&gt;./ec2-disassociate-address &amp;ndash;aws-access-key XXXXXXX –aws-secret-key XXXXXXX  [EIP]&lt;/p&gt;
+
+&lt;p&gt;#Mapping EIP to secondary server&lt;/p&gt;
+
+&lt;p&gt;./ec2-associate-address &amp;ndash;aws-access-key XXXXXXX  –aws-secret-key XXXXXXX  [EIP] -i [ec2_instance_id_of_primary_or_secondary]&lt;/p&gt;
+
+&lt;p&gt;**Failure @ HAProxy EC2 instance level: **When the Active HAProxy EC2 instance itself fails; we can detect this using **Heartbeat **and switch the Elastic IP from Active -&amp;gt; Standby. &lt;strong&gt;&amp;ldquo;&lt;a href=&#34;http://en.wikipedia.org/wiki/Heartbeat_%28program%29&#34;&gt;Heartbeat&lt;/a&gt;&amp;ldquo;&lt;/strong&gt; tool connects two servers and checks the regular &amp;ldquo;pulse&amp;rdquo; or &amp;ldquo;heartbeat&amp;rdquo; between them. The standby server takes over the work of the “Active” as soon as it detects an alteration in the &amp;ldquo;heartbeat&amp;rdquo; of the former. We have observed it takes ~120+ seconds for the standby to takeover. During this time the &lt;strong&gt;particular HAProxy alone&lt;/strong&gt; will be unreachable. Heartbeat has to be configured in both the Active and standby HAProxy EC2 instance. Since Amazon EC2 currently does not support Multicast protocol we need to configure Heartbeat with Unicast UDP in this scenario. Mean time manually we can bring the failed HAProxy EC2 instance up and make this as the new standby.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: /etc/ha.d/ha.cf&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;logfile /var/log/ha-log&lt;/p&gt;
+
+&lt;p&gt;logfacility local0&lt;/p&gt;
+
+&lt;p&gt;keepalive 2&lt;/p&gt;
+
+&lt;p&gt;deadtime 30&lt;/p&gt;
+
+&lt;p&gt;initdead 120&lt;/p&gt;
+
+&lt;p&gt;udpport 694&lt;/p&gt;
+
+&lt;p&gt;ucast eth0 xx.xxx.xxx.xxa #Internal IP of EC2 instance 01&lt;/p&gt;
+
+&lt;p&gt;ucast eth0 xx.xxx.xxx.xxb #Internal IP of EC2 instance 02&lt;/p&gt;
+
+&lt;p&gt;auto_failback off&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script Name: Create a script named “elastic_ip” in both the servers.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;#!/bin/bash&lt;/p&gt;
+
+&lt;p&gt;I_ID=&amp;rdquo;[ec2_instance_id&amp;rdquo; # different for each EC2 servers.&lt;/p&gt;
+
+&lt;p&gt;ELASTIC_IP=&amp;ldquo;X.X.X.X&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;case $1 in&lt;/p&gt;
+
+&lt;p&gt;    start)&lt;/p&gt;
+
+&lt;p&gt;ec2-associate-address &amp;ndash;aws-access-key XXXXX &amp;ndash;aws-secret-key XXXXX &amp;ldquo;$ELASTIC_IP&amp;rdquo; -i &amp;ldquo;$I_ID&amp;rdquo; &amp;gt; /dev/null&lt;/p&gt;
+
+&lt;p&gt;       echo $0 started&lt;/p&gt;
+
+&lt;p&gt;       ;;&lt;/p&gt;
+
+&lt;p&gt;    stop)&lt;/p&gt;
+
+&lt;p&gt;ec2-disassociate-address &amp;ndash;aws-access-key XXXXX &amp;ndash;aws-secret-key XXXXX &amp;ldquo;$ELASTIC_IP&amp;rdquo; &amp;gt; /dev/null&lt;/p&gt;
+
+&lt;p&gt;    echo $0 stopped&lt;/p&gt;
+
+&lt;p&gt;       ;;&lt;/p&gt;
+
+&lt;p&gt;    status)&lt;/p&gt;
+
+&lt;p&gt;ec2-describe-addresses &amp;ndash;aws-access-key XXXXX &amp;ndash;aws-secret-key XXXXX | grep &amp;ldquo;$ELASTIC_IP&amp;rdquo; | grep &amp;ldquo;$I_ID&amp;rdquo; &amp;gt; /dev/null&lt;/p&gt;
+
+&lt;p&gt;    # grep will return true if this ip is mapped to this instance&lt;/p&gt;
+
+&lt;p&gt;    [ $? -eq 0 ] &amp;amp;&amp;amp; echo $0 OK || echo $0 FAIL&lt;/p&gt;
+
+&lt;p&gt;    ;;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;esac&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why do we need this redundancy in the HAProxy layer?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Not all the times the DNS RR with LB Cookie Insertion alone is enough for ensuring availability;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Case 1:&lt;/strong&gt; Imagine you have not automated the scalability @ Load Balancing Layer and one of your Load balancer is down. You do not want to be waked up in the middle of the night rather it is better to have a standby Load Balancer automatically replacing the failed one. Manually you can replace the faulty LB next day.&lt;/p&gt;
+
+&lt;p&gt;**Case 2: **You have a gaming site where long running TCP sockets are established from flash gaming clients to the LB layer. You have planned the capacity of Front end Load Balancers with concurrent connections/sec. Now couple of your Load balancers are down, the new connections will be established to other running LB, but overall your site will now start performing poorly and chances are new connections are exhausted after few hours of heavy traffic. It is better to automatically detect and replace the faulty LB EC2 instance with the standby.&lt;/p&gt;
+
+&lt;p&gt;**Case 3: **Some clients cache the IP address of the Load Balancer, Some of them have long running sticky sessions with web/app, Some hardware devices can take only IP address to push data into the Server infrastructure. Though it is suggested to resolve the IP using DNS, still in reality some use cases does not work the same way.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pattern 3: Use ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Do not worry about all the above patterns, just go and configure Amazon Elastic Load Balancing (ELB). For most of the use cases ELB is more than sufficient.&lt;/p&gt;
+
+&lt;p&gt;Amazon Elastic Load Balancer can distribute incoming traffic across your Amazon EC2 instances in a single Availability Zone or multiple Availability Zones. Amazon Elastic Load Balancing automatically scales its request handling capacity in response to incoming application traffic. It can handle 20k+ concurrent requests/sec with ease. It enables you to achieve even greater fault tolerance in your applications, seamlessly providing the amount of load balancing capacity needed in response to incoming application traffic. Elastic Load Balancing detects unhealthy instances within a pool and automatically reroutes traffic to healthy instances until the unhealthy instances have been restored. Any faulty Load balancers in the ELB tier are automatically replaced.&lt;/p&gt;
+
+&lt;p&gt;Though for most of the common use cases ELB is more than sufficient in AWS. There are some unique cases which demand the use of Load balancers like HAProxy, Nginx and NetScaler in our architecture in the AWS infrastructure.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ELB and Autoscaling in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/</link>
+      <pubDate>Mon, 10 Dec 2012 07:27:56 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Installing ELB and Autoscale API tools&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;export AWS_ELB_HOME=/home/users/unni/bashrc/elbtool/ElasticLoadBalancing-1.0.12.0
+export PATH=$PATH:$AWS_ELB_HOME/bin
+export AWS_AUTO_SCALING_HOME=/home/users/unni/bashrc/auto/AutoScaling-1.0.33.1
+export PATH=$PATH:$AWS_AUTO_SCALING_HOME/bin&lt;/p&gt;
+
+&lt;h1 id=&#34;autoscaling&#34;&gt;AUTOSCALING&lt;/h1&gt;
+
+&lt;p&gt;Create AS, Create AS Group and Setup Scaleup Parameter.&lt;/p&gt;
+
+&lt;p&gt;#as-create-launch-config as-agile –region eu-west-1 –image-id ami-b123456 –instance-type t1.micro –key elbtest –group default -K ec2_certs/pk-K4.pem -C ec2_certs/cert-K4.pem&lt;/p&gt;
+
+&lt;p&gt;OK-Created launch config&lt;/p&gt;
+
+&lt;p&gt;_#as-create-auto-scaling-group as-agile-gp –launch-configuration as-agile –region eu-west-1 –availability-zones eu-west-1a,eu-west-1b –min-size 2 –max-size 3 –load-balancers elbtest-agile -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;OK-Created AutoScalingGroup&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;#as-create-or-update-trigger awsauto-nixontr –auto-scaling-group awsauto-nixongp –namespace “AWS/EC2″ –measure CPUUtilization –statistic Average –dimensions “AutoScalingGroupName=awsauto-nixongp” –period 60 –lower-threshold 40 –upper-threshold 80 –lower-breach-increment”=-1″ –upper-breach-increment 1 –breach-duration 1200 -K pk-XN.pem -C cert-XN.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;OK-Created/Updated trigger&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;elastic-load-balancer&#34;&gt;ELASTIC LOAD BALANCER&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Create n Configure ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-create-lb elbtest-agile –region eu-west-1 –availability-zones eu-west-1a,eu-west-1b –headers –listener “lb-port=80,instance-port=80,protocol=http” –listener “lb-port=443,instance-port=443,protocol=tcp” -K ec2_certs/pk-KO.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_DNS_NAME DNS&lt;em&gt;NAME&lt;/em&gt;
+_DNS&lt;em&gt;NAME elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-configure-healthcheck elbtest-agile –region eu-west-1 –headers –target “HTTP:80/index.html” –interval 5 –timeout 3 –unhealthy-threshold 2 –healthy-threshold 2 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_HEALTH_CHECK TARGET INTERVAL TIMEOUT HEALTHY_THRESHOLD UNHEALTHY&lt;em&gt;THRESHOLD&lt;/em&gt;
+_HEALTH&lt;em&gt;CHECK HTTP:80/index.html 5 3 2 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Add Instances to ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-register-instances-with-lb elbtest-agile –instances i-A123456 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To LIST ELBs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;#elb-describe-lbs –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2_certs/cert-K4.pem
+LOAD_BALANCER elbtest-agile elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com elbtest-agile-1809496912.eu-west-1.elb.amazonaws.com Z3NF1Z3NOM5OY2 2012-07-19T09:49:19.110Z&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;deletions&#34;&gt; DELETIONS&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;1.Delete Trigger&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;#as-delete-trigger awsauto-nixontrtest –auto-scaling-group awsauto-nixongptest –region eu-west-1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;DEPRECATED: This command is deprecated and included only to facilitate migration to the new trigger mechanism. You should use this command for migration purposes only.&lt;/p&gt;
+
+&lt;p&gt;Are you sure you want to delete this trigger? [Ny]y
+OK-Deleted trigger&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.Set Autoscale to 0&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#as-update-auto-scaling-group as-agile-gp –region eu-west-1 –launch-configuration as-agile –min-size 0 –max-size 0 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;OK-Updated AutoScalingGroup&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.Delete Autoscale Group&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#as-delete-auto-scaling-group as-agile-gp –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;OK-Deleted AutoScalingGroup&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.Delete Autoscale Config&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#as-delete-launch-config as-agile –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Are you sure you want to delete this launch configuration? [Ny]y
+OK-Deleted launch configuration&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5.Finally Delete ELB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_#elb-delete-lb elbtest-agile –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Warning: Deleting a LoadBalancer can lead to service disruption to any
+customers connected to the LoadBalancer. Are you sure you want to delete
+this LoadBalancer? [Ny]y
+OK-Deleting LoadBalancer&lt;/p&gt;
+
+&lt;p&gt;The Following commands will list out Autoscale Related Info —
+as-describe-auto-scaling-groups
+as-describe-auto-scaling-instances
+as-describe-launch-configs
+as-describe-triggers [AutoScalingGroupName]&lt;/p&gt;
+
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.amazonwebservices.com/ElasticLoadBalancing/latest/DeveloperGuide/UsingTheCommandLineTools.html&#34;&gt;AWS Link To Download &amp;amp; Install ELB Command Line&lt;/a&gt;
+&lt;a href=&#34;http://aws.amazon.com/elasticloadbalancing/&#34;&gt;ELB Quick Reference Link&lt;/a&gt;
+&lt;a href=&#34;http://www.linuxhelp.in/2012/05/amazon-elastic-load-balancing-with.html&#34;&gt;ELB external Reference&lt;/a&gt;
+&lt;a href=&#34;http://www.youtube.com/watch?v=8KQ8aLoxVi0&amp;amp;feature=related&#34;&gt;Check Amazon Youtube video on ELB&lt;/a&gt;
+&lt;a href=&#34;http://www.youtube.com/watch?v=ainDIPzVM84&#34;&gt;Check Youtube video on Autoscale&lt;/a&gt;
+&lt;a href=&#34;http://alestic.com/2012/09/aws-command-line-tools?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+alestic+%28Alestic.com+-+Ubuntu+on+EC2%29&#34;&gt;Alestic Lists out all AWS Tools download&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

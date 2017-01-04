@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker Swarm on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/docker-swarm/index.xml</link>
+    <description>Recent content in Docker Swarm on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/docker-swarm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker swarm production setup</title>
+      <link>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</link>
+      <pubDate>Wed, 30 Nov 2016 19:08:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm is a cluster of docker engines.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Swarm mode is native in Docker 1.12 RC&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;You can orchestrate service when it&amp;rsquo;s in Swarm mode.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;We are creating 3 swarm manager and 3 worker nodes for high availability in AWS.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_You can view the full video from_ &lt;strong&gt;&lt;a href=&#34;https://asciinema.org/a/94625&#34;&gt;here&lt;/a&gt; &lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

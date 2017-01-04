@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Moving github repo to Bitbucket due to DDOS &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/moving-github-repo-to-bitbucket-due-to-ddos/">Moving github repo to Bitbucket due to DDOS</a></h1>
+            <span class="post-date">Mar 30, 2015 </span>
+            <div class="post-content">
+                
+
+<h3 id="github-under-js-based-greatfire-ddos-attack-allegedly-from-chinese-government"><strong>Github Under JS-Based &ldquo;Greatfire&rdquo; DDoS Attack, Allegedly From Chinese Government.</strong></h3>
+
+<h4 id="during-the-past-two-days-popular-code-hosting-site-github-has-been-under-a-ddos-attack-which-has-led-to-intermittent-service-interruptions-as-blogger-anthr-x-http-insight-labs-org-p-1682-reports-from-traceroute-lists-the-attack-originated-from-mitm-modified-javascript-files-for-the-chinese-company-baidu-s-user-tracking-code-changing-the-unencrypted-content-as-it-passed-through-the-great-firewall-of-china-to-request-the-urls-github-com-greatfire-and-github-com-cn-nytimes-the-chinese-government-s-dislike-of-widespread-vpn-usage-may-have-caused-it-to-arrange-the-attack-where-only-people-accessing-baidu-s-services-from-outside-the-firewall-would-contribute-to-the-ddos-this-wouldn-t-have-been-the-first-time-china-arranged-this-kind-of-protest">During the past two days, popular code hosting site GitHub has been under a DDoS attack, which has led to intermittent service interruptions. As blogger <a href="http://insight-labs.org/?p=1682">Anthr@X</a> reports from traceroute lists, the attack originated from MITM-modified JavaScript files for the Chinese company Baidu&rsquo;s user tracking code, changing the unencrypted content as it passed through the great firewall of China to request the URLs github.com/greatfire/ and github.com/cn-nytimes/. The Chinese government&rsquo;s dislike of widespread VPN usage may have caused it to arrange the attack, where only people accessing Baidu&rsquo;s services from outside the firewall would contribute to the DDoS. This wouldn&rsquo;t have been the first time China arranged this kind of &ldquo;protest.&rdquo;</h4>
+
+<p>_**Because of this DDOS attack, it affects our depolyment process. So we planned to move some of the critical repos to <strong>__</strong>bitbucket (for temp).**_</p>
+
+<p><em>STEP1:-</em></p>
+
+<p><em>Create your private repo in the bitbucket.</em></p>
+
+<p><em>STEP2:-</em></p>
+
+<p><em>Let&rsquo;s suppose in your local machine you already have a clone repo of your code from github.com</em></p>
+
+<p><em>From your local machine, you need to change the origin, you need to push all tags, branches and refs to the bitbucket.</em></p>
+
+<p><em>So you need to do the below commands</em></p>
+
+<p><em> </em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>git remote -v     #It will show the origin (fetch and push) like below:</p>
+
+<p>origin git@github.com:username/yourproject.git (fetch)</p>
+
+<p>origin git@github.com:username/yourproject.git (push)</p>
+
+<p>[/color-box]</p>
+
+<p><em>Now your origin is github.com. Before changing it to bitbucket, you need to do checkout all your remote branches to your local machine, then only you can push your branches to bitbucket, otherwise you can only push the tags, there won&rsquo;t be any branches apart from &ldquo;master&rdquo;.</em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>git branch     #will list the branch in your local machine</p>
+
+<p>git branch -r     #will list the remote branch from github</p>
+
+<p>[/color-box]</p>
+
+<p><em> Now, you can use the below commands to checkout all your remote branches to your localmachine.</em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>for remote in <code>git branch -r</code>; do git branch &ndash;track $remote; done</p>
+
+<p>for remote in <code>git branch -r</code>; do git checkout $remote ; git pull; done</p>
+
+<p>[/color-box]</p>
+
+<p><em> Then again checkout to master</em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>git status</p>
+
+<p>git checkout master</p>
+
+<p>[/color-box]</p>
+
+<p><em>Now, we need to move the origin from github to bitbucket</em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>git remote -v</p>
+
+<p>git remote rm origin</p>
+
+<p>git remote -v</p>
+
+<p>git remote add origin git@bitbucket.org:username/your-repo-in-bitbucket.git</p>
+
+<p>git push -u origin &ndash;all</p>
+
+<p>git push -u origin &ndash;tags</p>
+
+<p>[/color-box]</p>
+
+<p><em>This will move all from github to bitbucket.</em></p>
+
+<p><em>We use Capistrano for deployment, so update your deploy.rb file.</em></p>
+
+<p><em>Change the git repo to bitbucket repo.</em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>set :repository, &ldquo;git@github.com:username/githubrepo.git&rdquo;</p>
+
+<p>[/color-box]</p>
+
+<p> Change the above line and update it with your bitbucket repo.</p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>set :repository, &ldquo;git@bitbucket.org:username/your-repo-in-bitbucket.git&rdquo;</p>
+
+<p>[/color-box]</p>
+
+<p><em>**Now you are good to deploy. **</em></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/moving-github-repo-to-bitbucket-due-to-ddos\/';
+    var disqus_title = 'Moving github repo to Bitbucket due to DDOS';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/moving-github-repo-to-bitbucket-due-to-ddos\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

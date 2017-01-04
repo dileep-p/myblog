@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Npm on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/npm/index.xml</link>
+    <description>Recent content in Npm on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simple Nodejs WebServer</title>
+      <link>https://www.vishnu-tech.com/blog/simple-nodejs-webserver/</link>
+      <pubDate>Fri, 02 May 2014 18:49:56 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/simple-nodejs-webserver/</guid>
+      <description>
+
+&lt;p&gt;Node.js is built on Chrome&amp;rsquo;s &lt;a href=&#34;http://code.google.com/p/V8&#34;&gt;V8 JavaScript Engine&lt;/a&gt;. It&amp;rsquo;s useful for a range of applications and it brings JavaScript to the server. Applications written in Node.js are event-driven. For example, if you wanted to create a file, you would provide a callback function to be called upon the file&amp;rsquo;s successful creation. In this sort of model, your app doesn&amp;rsquo;t become stuck waiting for events to finish executing.&lt;/p&gt;
+
+&lt;p&gt;I hope you have installed nodejs. Then you need to install &amp;ldquo;forever&amp;rdquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-forever&#34;&gt;Installing forever&lt;/h2&gt;
+
+&lt;p&gt;forever, developed by nodejitsu, has functions to create applications that are always running—&amp;rdquo;forever&amp;rdquo; running. If the application dies, forever brings it back. It has built-in functionality to monitor processes. It also offers an API you can use to incorporate its features into your own code.&lt;/p&gt;
+
+&lt;p&gt;forever can be installed using npm. npm should have been installed as part of Node.js:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/forever.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/forever.png&#34; alt=&#34;forever&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;running-the-app&#34;&gt;Running the app&lt;/h2&gt;
+
+&lt;p&gt;Create the file index.js with the following contents:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/index.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/index.png&#34; alt=&#34;index&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then run:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/indexx1.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/indexx1.png&#34; alt=&#34;indexx&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Point your browser to &lt;a href=&#34;http://127.0.0.1:8124/&#34;&gt;http://127.0.0.1&lt;/a&gt; or &lt;a href=&#34;http://localhost&#34;&gt;http://localhost&lt;/a&gt;. It should display the index.html&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Now we can use _**forever **_to manage our application:, instead of running the above command.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/foreverr1.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/foreverr1.png&#34; alt=&#34;foreverr&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To check, open the browser and point it to the &lt;a href=&#34;http://127.0.0.1:8124/&#34;&gt;http://127.0.0.1&lt;/a&gt; or &lt;a href=&#34;http://localhost&#34;&gt;http://localhost&lt;/a&gt;. It should display the index.html&lt;/p&gt;
+
+&lt;p&gt;Stopping the app is similar:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/stop.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/stop.png&#34; alt=&#34;stop&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to create a private npm.js repository</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-create-a-private-npm-js-repository/</link>
+      <pubDate>Sat, 22 Feb 2014 14:46:38 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-create-a-private-npm-js-repository/</guid>
+      <description>
+
+&lt;p&gt;I want to create a mirror of the npm repository to mitigate periods of npm outages and to speed things up a little bit, so here’s how I did it!&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-couchdb&#34;&gt;&lt;em&gt;&lt;strong&gt;Installing CouchDB&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt; Install the required packages:&lt;/p&gt;
+
+&lt;p&gt; &lt;code&gt;sudo apt-get install build-essential autoconf automake libtool erlang libicu-dev libmozjs-dev libcurl4-openssl-dev &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Download CouchDB 1.5:-&lt;/p&gt;
+
+&lt;p&gt;wget &lt;a href=&#34;http://mirror.cc.columbia.edu/pub/software/apache/couchdb/source/1.5.0/apache-couchdb-1.5.0.tar.gz&#34;&gt;http://mirror.cc.columbia.edu/pub/software/apache/couchdb/source/1.5.0/apache-couchdb-1.5.0.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Extracting :-&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tar xfv apache-couchdb-1.5.0.tar.gz &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Compile:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;  &lt;/code&gt;&lt;code&gt;cd apache-couchdb-1.2.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;``&lt;code&gt; ./configure&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;``&lt;code&gt;  make&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;``&lt;code&gt;  make install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To check:-&lt;/p&gt;
+
+&lt;p&gt;   $ couchdb&lt;br /&gt;
+  Apache CouchDB 1.5.0 (LogLevel=info) is starting.&lt;br /&gt;
+  Apache CouchDB has started. Time to relax.&lt;br /&gt;
+  [info] [&lt;0.32.0&gt;] Apache CouchDB has started on &lt;a href=&#34;http://127.0.0.1:5984/&#34;&gt;http://127.0.0.1:5984/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;   $ curl -X GET &lt;a href=&#34;http://localhost:5984&#34;&gt;http://localhost:5984&lt;/a&gt;&lt;br /&gt;
+   [info] [&lt;0.361.0&gt;] 127.0.0.1 - - GET / 200&lt;/p&gt;
+
+&lt;p&gt;Adding CouchDB to the init.d scripts&lt;/p&gt;
+
+&lt;p&gt;     $ sudo adduser &amp;ndash;disabled-login &amp;ndash;disabled-password &amp;ndash;no-create-home couchdb&lt;/p&gt;
+
+&lt;p&gt;     Adding user &lt;code&gt;couchdb&#39; ...  
+     Adding new group&lt;/code&gt;couchdb&amp;rsquo; (1001) &amp;hellip;&lt;br /&gt;
+     Adding new user &lt;code&gt;couchdb&#39; (1001) with group&lt;/code&gt;couchdb&amp;rsquo; &amp;hellip;&lt;br /&gt;
+     Not creating home directory `/home/couchdb&amp;rsquo;.&lt;br /&gt;
+     Changing the user information for couchdb Enter the new value, or press ENTER for the default&lt;br /&gt;
+     Full Name []: CouchDB Admin&lt;br /&gt;
+     Room Number []:  &lt;br /&gt;
+     Work Phone []:&lt;br /&gt;
+     Home Phone []:&lt;br /&gt;
+    Other []:&lt;br /&gt;
+    Is the information correct? [Y/n] Y&lt;/p&gt;
+
+&lt;p&gt;User added, now permissions:&lt;/p&gt;
+
+&lt;p&gt;    sudo chown -R couchdb:couchdb /usr/local/var/{log,lib,run}/couchdb&lt;/p&gt;
+
+&lt;p&gt;    sudo chown -R couchdb:couchdb /usr/local/etc/couchdb/local.ini&lt;/p&gt;
+
+&lt;p&gt;    $ sudo vim /usr/local/etc/couchdb/default.ini&lt;br /&gt;
+    [httpd]&lt;br /&gt;
+    secure_rewrites = false&lt;/p&gt;
+
+&lt;p&gt;    sudo ln -s /usr/local/etc/init.d/couchdb /etc/init.d&lt;br /&gt;
+    sudo update-rc.d couchdb defaults&lt;br /&gt;
+    sudo /etc/init.d/couchdb start&lt;/p&gt;
+
+&lt;p&gt;    &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Replicating npmjs.org&lt;/strong&gt;&lt;br /&gt;
+Now to replicate the npm registry.&lt;/p&gt;
+
+&lt;p&gt;curl -X POST &lt;a href=&#34;http://127.0.0.1:5984/_replicate&#34;&gt;http://127.0.0.1:5984/_replicate&lt;/a&gt; -d &amp;lsquo;{&amp;ldquo;source&amp;rdquo;:&amp;ldquo;&lt;a href=&#34;http://isaacs.iriscouch.com/registry/&amp;quot;&#34;&gt;http://isaacs.iriscouch.com/registry/&amp;quot;&lt;/a&gt;, &amp;ldquo;target&amp;rdquo;:&amp;ldquo;registry&amp;rdquo;, &amp;ldquo;create_target&amp;rdquo;:true}&amp;rsquo; -H &amp;ldquo;Content-Type: application/json&amp;rdquo;&lt;br /&gt;
+What this means is that once this is completed your local replication will be an exact copy of the npm registry. However, to ensure we do indeed receive all updates we will add a &amp;ldquo;continuous&amp;rdquo;:true parameter to the JSON string in our POST request, this utilises CouchDB’s _changes API and will pull any new changes when this API is notified.&lt;/p&gt;
+
+&lt;p&gt;curl -X POST &lt;a href=&#34;http://127.0.0.1:5984/_replicate&#34;&gt;http://127.0.0.1:5984/_replicate&lt;/a&gt; -d &amp;lsquo;{&amp;ldquo;source&amp;rdquo;:&amp;ldquo;&lt;a href=&#34;http://isaacs.iriscouch.com/registry/&amp;quot;&#34;&gt;http://isaacs.iriscouch.com/registry/&amp;quot;&lt;/a&gt;, &amp;ldquo;target&amp;rdquo;:&amp;ldquo;registry&amp;rdquo;, &amp;ldquo;continuous&amp;rdquo;:true, &amp;ldquo;create_target&amp;rdquo;:true}&amp;rsquo; -H &amp;ldquo;Content-Type: application/json&amp;rdquo;&lt;br /&gt;
+We are now replicating continuously from npmjs.org to our private CouchDB instance! If you ever want to stop these replications you can easily do this by running the same command as before but add a &amp;ldquo;cancel&amp;rdquo;:true parameter to the JSON POST data.&lt;/p&gt;
+
+&lt;p&gt;curl -X POST &lt;a href=&#34;http://127.0.0.1:5984/_replicate&#34;&gt;http://127.0.0.1:5984/_replicate&lt;/a&gt; -d &amp;lsquo;{&amp;ldquo;source&amp;rdquo;:&amp;ldquo;&lt;a href=&#34;http://isaacs.iriscouch.com/registry/&amp;quot;&#34;&gt;http://isaacs.iriscouch.com/registry/&amp;quot;&lt;/a&gt;, &amp;ldquo;target&amp;rdquo;:&amp;ldquo;registry&amp;rdquo;, &amp;ldquo;continuous&amp;rdquo;:true, &amp;ldquo;create_target&amp;rdquo;:true, &amp;ldquo;cancel&amp;rdquo;:true}&amp;rsquo; -H &amp;ldquo;Content-Type: application/json&amp;rdquo;&lt;br /&gt;
+And we&amp;rsquo;re almost done! All we need to do now is to set up our own version of the npmjs.org registry &lt;/p&gt;
+
+&lt;p&gt;Getting npm to work with our replicated CouchDB&lt;br /&gt;
+Most of the steps can be found on isaacs github in the npmjs.org git repositories README&lt;/p&gt;
+
+&lt;p&gt;Of course we need to have nodejs and git installed for this:&lt;/p&gt;
+
+&lt;p&gt;git clone git://github.com/isaacs/npmjs.org.git&lt;br /&gt;
+cd npmjs.org&lt;br /&gt;
+sudo npm install -g couchapp&lt;br /&gt;
+npm install couchapp&lt;br /&gt;
+npm install semver&lt;br /&gt;
+couchapp push registry/app.js &lt;a href=&#34;http://localhost:5984/registry&#34;&gt;http://localhost:5984/registry&lt;/a&gt;&lt;br /&gt;
+couchapp push www/app.js &lt;a href=&#34;http://localhost:5984/registry&#34;&gt;http://localhost:5984/registry&lt;/a&gt;&lt;br /&gt;
+Boom, we now have a working npm repository, to test this we can run the following command.&lt;/p&gt;
+
+&lt;p&gt;npm &amp;ndash;registry &lt;a href=&#34;http://localhost:5984/registry/_design/scratch/_rewrite&#34;&gt;http://localhost:5984/registry/_design/scratch/_rewrite&lt;/a&gt; login&lt;br /&gt;
+npm &amp;ndash;registry &lt;a href=&#34;http://localhost:5984/registry/_design/scratch/_rewrite&#34;&gt;http://localhost:5984/registry/_design/scratch/_rewrite&lt;/a&gt; search&lt;br /&gt;
+If you are getting results then everything is fine.&lt;/p&gt;
+
+&lt;p&gt;Running on your own subdomain is to modify the [vhosts] section in /usr/local/etc/couchdb/local.ini. Uncomment the example and restart CouchDB.&lt;/p&gt;
+
+&lt;p&gt;$ vim /usr/local/etc/couchdb/local.ini&lt;br /&gt;
+[vhosts]&lt;br /&gt;
+example.com = /registry/_design/scratch/_rewrite&lt;br /&gt;
+And while we are at it will lock down the application and prevent unauthorised users from deleting our data.&lt;/p&gt;
+
+&lt;p&gt;$ vim /usr/local/etc/couchdb/local.ini&lt;br /&gt;
+[admins]&lt;br /&gt;
+admin = password&lt;br /&gt;
+$ sudo /etc/init.d/couchdb restart&lt;br /&gt;
+Start using your version of npm with the client!&lt;br /&gt;
+Straight from the npmjs.org README, just replace &lt;registryurl&gt; with your registries url, for example:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:5984/registry/_design/app/_rewrite&#34;&gt;http://localhost:5984/registry/_design/app/_rewrite&lt;/a&gt;&lt;br /&gt;
+You can point the npm client at the registry by putting this in your ~/.npmrc file:&lt;/p&gt;
+
+&lt;p&gt;registry = &lt;registryurl&gt;&lt;br /&gt;
+You can also set the npm registry config property like:&lt;/p&gt;
+
+&lt;p&gt;npm config set &lt;registryurl&gt;&lt;br /&gt;
+Or you can simple override the registry config on each call:&lt;/p&gt;
+
+&lt;p&gt;npm &amp;ndash;registry &lt;registryurl&gt; install &lt;packagename&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

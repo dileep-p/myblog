@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/security/index.xml</link>
+    <description>Recent content in Security on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:17</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol17/</link>
+      <pubDate>Thu, 08 Dec 2016 13:22:26 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol17/</guid>
+      <description>
+
+&lt;p&gt;Sharing some interesting links to keep you busy during the weekend ;) &lt;/p&gt;
+
+&lt;h3 id=&#34;aws-reinvent-2016-new-services&#34;&gt;&lt;strong&gt;&lt;em&gt;AWS Reinvent 2016 new services:&lt;/em&gt;&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-athena-interactive-sql-queries-for-data-in-amazon-s3/&#34;&gt;Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using SQL&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/glue/&#34;&gt;AWS Glue is a fully managed ETL service that makes it easy to understand your data sources, prepare the data, and load it reliably to data stores. It simplifies and automates data discovery, transformation, and job scheduling tasks.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-shield-protect-your-applications-from-ddos-attacks/&#34;&gt;AWS Shield is a managed DDoS protection service that safeguards your web applications using Elastic Load Balancing (ELB), Amazon CloudFront, and Amazon Route 53.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-codebuild-fully-managed-build-service/&#34;&gt;AWS CodeBuild – Fully Managed Build Service&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-x-ray-see-inside-of-your-distributed-application/&#34;&gt;AWS X-Ray – See Inside of Your Distributed Application&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/ec2/systems-manager/&#34;&gt;Amazon EC2 Systems Manager is a management service that helps you automatically collect software inventory, apply Windows OS patches, create system images, and configure Windows and Linux operating systems.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/polly-text-to-speech-in-47-voices-and-24-languages/&#34;&gt;Amazon Polly – Text to Speech in 47 Voices and 24 Languages&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-lex-build-conversational-voice-text-interfaces/&#34;&gt;Amazon Lex is a service for building conversational interfaces using voice and text. &lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-rekognition-image-detection-and-recognition-powered-by-deep-learning/&#34;&gt;Amazon Rekognition is a service that makes it easy to add image analysis to your applications.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_&lt;a href=&#34;https://aws.amazon.com/mxnet/&#34;&gt;MXNet - Deep Learning Framework of Choice at AWS&lt;/a&gt; _&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-lightsail-the-power-of-aws-the-simplicity-of-a-vps/&#34;&gt;Amazon Lightsail is the easiest way to launch and manage a virtual private server with AWS. Get everything you need to jumpstart your project - compute, storage, and networking - starting at $5/month.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-batch-run-batch-computing-jobs-on-aws/&#34;&gt;AWS Batch – Run Batch Computing Jobs on AWS&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-aws-personal-health-dashboard-status-you-can-relate-to/&#34;&gt;AWS Personal Health Dashboard – Status You Can Relate To&lt;/a&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/appstream2/&#34;&gt;Amazon AppStream 2.0 allows you to stream desktop apps securely from the AWS cloud directly to users on the device of their choice, eliminating the need to rewrite desktop apps for the cloud.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/about-aws/whats-new/2016/11/amazon-workspaces-introduces-new-graphics-bundles/&#34;&gt;Amazon WorkSpaces Graphics bundles offer a virtual cloud desktop which includes a high-end GPU that supports engineering, design, and architectural applications.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-pinpoint-hit-your-targets-with-aws/&#34;&gt;Amazon Pinpoint makes it easy to run targeted push notification campaigns to improve user engagement in mobile apps.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/artifact/&#34;&gt;AWS Artifact provides on-demand access to AWS compliance reports to verify and demonstrate security and compliance of the cloud.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/organizations/&#34;&gt;AWS Organizations allows you to create groups of AWS accounts that you can use to more easily manage security and automation settings.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;security&#34;&gt;&lt;em&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zmMpgbIhCpw&#34;&gt;Encryption: It Was the Best of Controls, It Was the Worst of Controls&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.troyhunt.com/heres-1-4-billion-records-from-have-i-been-pwned-for-you-to-analyse/&#34;&gt;Here&amp;rsquo;s 1.4 billion records from Have I been pwned for you to analyse&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://thehackerblog.com/the-orphaned-internet-taking-over-120k-domains-via-a-dns-vulnerability-in-aws-google-cloud-rackspace-and-digital-ocean/&#34;&gt;The Orphaned Internet – Taking Over 120K Domains via a DNS Vulnerability in AWS, Google Cloud, Rackspace and Digital Ocean&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/07/news-in-brief-dirtycow-patched-for-android-naked-lack-of-security-south-korea-hacked&#34;&gt;DirtyCOW patched for Android; naked lack of security; South Korea hacked&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.brokenbrowser.com/spoof-addressbar-malware/&#34;&gt;Spoofing the address bar with Malware warning&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/07/flaw-spotted-in-north-koreas-red-star-operating-system/&#34;&gt;Flaw spotted in North Korea’s Red Star operating system&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://redmonk.com/fryan/2016/12/01/containers-in-production-is-security-a-barrier-a-dataset-from-anchore/&#34;&gt;Containers in Production – Is Security a Barrier? A Dataset from Anchore&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/05/how-to-guess-credit-card-security-codes/&#34;&gt;How to guess credit card security codes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.ripstech.com/2016/roundcube-command-execution-via-email/&#34;&gt;Roundcube: Command Execution via Email&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://kel.bz/post/javaexec/&#34;&gt;User-influenced os commands are still considered harmful&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.sec-consult.com/2016/12/backdoor-in-sony-ipela-engine-ip-cameras.html&#34;&gt;Backdoor in Sony IPELA Engine IP Cameras&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://seclists.org/oss-sec/2016/q4/607&#34;&gt;Race Condition in Linux Kernel, Privilege Escalation, CVE-2016-8655&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://redpill-linpro.com/sysadvent/2016/12/06/spicing-up-your-access.html&#34;&gt;Linux-Shell: Spicing up your own access with capabilities&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/05/apple-set-to-deploy-drones-to-boost-maps-accuracy/&#34;&gt;Apple set to deploy drones to boost Maps accuracy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://pusher.com/sessions/meetup/front-end-london/https-is-hard&#34;&gt;HTTPS is hard but it&amp;rsquo;s also absolutely worth it&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;docker&#34;&gt;&lt;em&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://youtu.be/BQP67FWF1P8&#34;&gt;Serverless functions in Docker on a Raspberry Pi cluster&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.brianchristner.io/the-insiders-guide-to-docker-serverless/&#34;&gt;The Insiders Guide to Docker Serverless&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://speakerdeck.com/rossbachp/docker-swarming-groove&#34;&gt;Orchestration with Docker Swarming&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;kubernetes&#34;&gt;_&lt;strong&gt;Kubernetes&lt;/strong&gt;_ &lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.zhaw.ch/icclab/container-management-with-kubernetes-practical-example/&#34;&gt;Container management with Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://distelli.engineering/kubernetes-ci-cd-with-docker-and-node-2ac29cf48b2b#.vme88cz8h&#34;&gt;Continuous containers on kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.nivenly.com/k8s-aws-private-networking/&#34;&gt;How to set up a HA privately networked Kubernetes cluster in AWS with kops&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLj6h78yzYM2PqgIGU1Qmi8nY7dqn9PCr4&#34;&gt;CloudNativeCon + KubeCon 2016 - Seattle&lt;/a&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;bigdata&#34;&gt;&lt;em&gt;&lt;strong&gt;BigData&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://www.slideshare.net/JoshBaer/shortening-the-feedback-loop-big-data-spain-external&#34;&gt;This presentation describes how and why Spotify has moved their data platform to the Google Cloud, replacing Hadoop/Hive with BigQuery, Kafka with Cloud Pub/Sub, and Storm/MapReduce with Dataflow.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/Verizon/trapezium&#34;&gt;Trapezium is an open-source Spark/Akka-based framework for batch and streaming from Verizon.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://site.clairvoyantsoft.com/kafka-great-choice-large-scale-event-processing/&#34;&gt;Kafka – A great choice for large scale event processing&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://slack.engineering/data-wrangling-at-slack-f2e0ff633b69#.nh6o7143j&#34;&gt;Data Wrangling at Slack&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://cloud.google.com/blog/big-data/2016/12/analyzing-nyc-biking-data-with-google-bigquery&#34;&gt;Analyzing NYC Biking Data with Google BigQuery&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.techinasia.com/mckinsey-finds-data-analytics-sham&#34;&gt;McKinsey finds it’s all talk and little action with data analytics in most companies&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.rakam.io/why-sql-superior-for-analytic-queries-comparison-with-mixpanels-jql-ec9935f292bd#.y7dacov7g&#34;&gt;SQL is still superior for big-data analytics&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_&lt;a href=&#34;http://8kmprod.s3.amazonaws.com/wp-content/uploads/2016/10/8KMiles_WhitePaper_BigDataBenchmark1.pdf&#34;&gt;BigData Solution Benchmark&lt;/a&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://community.hortonworks.com/articles/67756/ingesting-log-data-using-minifi-nifi.html&#34;&gt;This tutorial shows how to use Apache Ambari and Apache NiFi to configure data ingestion via the light-weight MiNiFi process.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:12</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol12/</link>
+      <pubDate>Wed, 02 Mar 2016 10:10:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol12/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://drownattack.com/&#34;&gt;The DROWN Attack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2016/03/01/go-home-sslv2-youre-drowning/&#34;&gt;Go home SSLv2, you’re DROWNing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/aws-services&#34;&gt;Micro-services to provide various conveniences in managing AWS services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/videos-ansiblefest-london-2016?platform=hootsuite&#34;&gt;Videos ANSIBLEFEST LONDON 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://eng.uber.com/go-geofence/&#34;&gt;How we built Uber Engineering&amp;rsquo;s highest query per second service using go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.netresec.com/?page=Blog&amp;amp;month=2016-03&amp;amp;post=Packet-Injection-Attacks-in-the-Wild&#34;&gt;Packet Injection Attacks in the Wild&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/condensation&#34;&gt;Package, reuse and share particles for CloudFormation projects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/casidiablo/tako&#34;&gt;Github notifications on Slack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/uber/ringpop-go&#34;&gt;Scalable, fault-tolerant application-layer sharding for Go applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/msoap/go-carpet&#34;&gt;go-carpet - show test coverage for Go source files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramnes/awesome-mongodb&#34;&gt;A curated list of awesome MongoDB resources, libraries, tools and applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/pygemony&#34;&gt;A tool written in Python to parse files for &amp;ldquo;TODO&amp;rdquo; and to raise an issue in the github repository with the todo message.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/microsoft/kafkanet&#34;&gt;.Net implementation of the Apache Kafka Protocol that provides basic functionality through Producer/Consumer classes. The project also offers balanced consumer implementation.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.dasblinkenlichten.com/kubernetes-with-saltstack-revisited/&#34;&gt;Kubernetes with SaltStack revisited&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cossacklabs.com/Introducing-WebThemis.html&#34;&gt;WEBTHEMIS: Stronger Cryptography for Modern web&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fulldecent/system-bus-radio&#34;&gt;This program transmits radio on computers without radio transmitting hardware.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ssrg.nicta.com.au/projects/TS/cachebleed//&#34;&gt;CacheBleed: A Timing Attack on OpenSSL Constant Time RSA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker/dockercloud-cli&#34;&gt;CLI for Docker Cloud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.blockbridge.com/improving-docker-security-with-authenticated-volumes/&#34;&gt;Improving Docker Security with Authenticated Volumes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/aws-config-rules&#34;&gt;Repository of sample Custom Rules for AWS Config&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/fresco&#34;&gt;Fresco is a powerful system for displaying images in Android applications.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/EVCache&#34;&gt;EVCache is a memcached &amp;amp; spymemcached based caching solution that is mainly used for AWS EC2 infrastructure for caching frequently used data.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubespray/setup-kubernetes&#34;&gt;Setup a kubernetes cluster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/&#34;&gt;Using Scikit-Learn In AWS Lambda&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/pGeSxIB3KzY&#34;&gt;Building A Private Cloud With OpenStack Charms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/gRPC-protobufs-swagger.html&#34;&gt;Take a REST with HTTP/2, Protobufs, and Swagger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://machinezone.github.io/research/networking-solutions-for-kubernetes/&#34;&gt;Comparison of Networking Solutions for Kubernetes&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fixing the GHOST Vulnerability  CVE-2015-0235 on Debian</title>
+      <link>https://www.vishnu-tech.com/blog/fixing-the-ghost-vulnerability-cve-2015-0235-on-debian/</link>
+      <pubDate>Wed, 28 Jan 2015 14:49:06 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/fixing-the-ghost-vulnerability-cve-2015-0235-on-debian/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;A serious vulnerability in the Linux glibc library. It allows attackers to remotely take complete control of the victim system without having any prior knowledge of system credentials.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;During a code audit Qualys researchers discovered a buffer overflow in the __nss_hostname_digits_dots() function of glibc. This bug can be triggered both locally and remotely via all the gethostbyname&lt;em&gt;() functions. Applications have access to the DNS resolver primarily through the gethostbyname&lt;/em&gt;() set of functions. These functions convert a hostname into an IP address.&lt;/p&gt;
+
+&lt;p&gt;This is for the Debian :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/vu.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/vu.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;to-check-if-you-are-affected&#34;&gt;&lt;strong&gt;To Check if you are affected &lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;you-can-download-the-file-from-this-link-https-gist-githubusercontent-com-koelling-ef9b2b9d0be6d6dbab63-raw-de1730049198c64eaf8f8ab015a3c8b23b63fd34-gistfile1-c&#34;&gt;You can download the file from  this &lt;a href=&#34;https://gist.githubusercontent.com/koelling/ef9b2b9d0be6d6dbab63/raw/de1730049198c64eaf8f8ab015a3c8b23b63fd34/gistfile1.c&#34;&gt;link&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/wget.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/wget.png&#34; alt=&#34;wget&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/roo.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/roo.png&#34; alt=&#34;roo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/ro.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/ro.png&#34; alt=&#34;ro&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are VULNERABLE, you&amp;rsquo;ll get an output like&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/v.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/v.png&#34; alt=&#34;v&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are not, it will show as &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/notvull.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/notvull.png&#34; alt=&#34;notvull&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To FIX:- &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Check what are the packages are vulnerable using the dpkg command and update it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lb11.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lb11.png&#34; alt=&#34;lb11&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/apt.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/apt.png&#34; alt=&#34;apt&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And check if its updated by running the dpkg command.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/7.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/7.png&#34; alt=&#34;7&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then you need to restart the services.  To find which services you need to restart, try the below command&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lsof.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lsof.png&#34; alt=&#34;lsof&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

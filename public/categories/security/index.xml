@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/categories/security/index.xml</link>
+    <description>Recent content in Security on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fixing OpenSSH: Information-leak vulnerability (CVE-2016-0777)</title>
+      <link>https://www.vishnu-tech.com/blog/fixing-openssh-information-leak-vulnerability-cve-2016-0777/</link>
+      <pubDate>Fri, 15 Jan 2016 11:55:22 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/fixing-openssh-information-leak-vulnerability-cve-2016-0777/</guid>
+      <description>
+
+&lt;p&gt;OpenSSH: Client Information leak from use of roaming connection feature (CVE-2016-0777)&lt;/p&gt;
+
+&lt;p&gt;An information leak flaw was found in the way the OpenSSH client roaming feature was implemented. A malicious server could potentially use this flaw to leak portions of memory (possibly including private SSH keys) of a successfully authenticated OpenSSH client.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;How to fix the isssue&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Upgrade the openssh packages to the latest version. You can find the details below:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;For Debian:-&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can check this &lt;a href=&#34;https://security-tracker.debian.org/tracker/CVE-2016-0777&#34;&gt;link&lt;/a&gt; for more details:- &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;For Ubuntu:- &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can check this &lt;a href=&#34;http://www.ubuntu.com/usn/usn-2869-1/&#34;&gt;link&lt;/a&gt; for more details:-&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;__For Manual fixes or &lt;em&gt;Mitigation:- &lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;on-linux&#34;&gt;&lt;em&gt;On Linux&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;echo &#39;UseRoaming no&#39; | sudo tee -a /etc/ssh/ssh_config
+&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;h3 id=&#34;on-mac-osx&#34;&gt;&lt;em&gt;&lt;strong&gt;On Mac OSX&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/em&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo &amp;quot;UseRoaming no&amp;quot; &amp;gt;&amp;gt; ~/.ssh/config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fixing the GHOST Vulnerability  CVE-2015-0235 on Debian</title>
+      <link>https://www.vishnu-tech.com/blog/fixing-the-ghost-vulnerability-cve-2015-0235-on-debian/</link>
+      <pubDate>Wed, 28 Jan 2015 14:49:06 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/fixing-the-ghost-vulnerability-cve-2015-0235-on-debian/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;A serious vulnerability in the Linux glibc library. It allows attackers to remotely take complete control of the victim system without having any prior knowledge of system credentials.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;During a code audit Qualys researchers discovered a buffer overflow in the __nss_hostname_digits_dots() function of glibc. This bug can be triggered both locally and remotely via all the gethostbyname&lt;em&gt;() functions. Applications have access to the DNS resolver primarily through the gethostbyname&lt;/em&gt;() set of functions. These functions convert a hostname into an IP address.&lt;/p&gt;
+
+&lt;p&gt;This is for the Debian :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/vu.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/vu.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;to-check-if-you-are-affected&#34;&gt;&lt;strong&gt;To Check if you are affected &lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;you-can-download-the-file-from-this-link-https-gist-githubusercontent-com-koelling-ef9b2b9d0be6d6dbab63-raw-de1730049198c64eaf8f8ab015a3c8b23b63fd34-gistfile1-c&#34;&gt;You can download the file from  this &lt;a href=&#34;https://gist.githubusercontent.com/koelling/ef9b2b9d0be6d6dbab63/raw/de1730049198c64eaf8f8ab015a3c8b23b63fd34/gistfile1.c&#34;&gt;link&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/wget.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/wget.png&#34; alt=&#34;wget&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/roo.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/roo.png&#34; alt=&#34;roo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/ro.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/ro.png&#34; alt=&#34;ro&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are VULNERABLE, you&amp;rsquo;ll get an output like&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/v.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/v.png&#34; alt=&#34;v&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are not, it will show as &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/notvull.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/notvull.png&#34; alt=&#34;notvull&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To FIX:- &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Check what are the packages are vulnerable using the dpkg command and update it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lb11.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lb11.png&#34; alt=&#34;lb11&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/apt.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/apt.png&#34; alt=&#34;apt&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And check if its updated by running the dpkg command.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/7.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/7.png&#34; alt=&#34;7&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then you need to restart the services.  To find which services you need to restart, try the below command&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lsof.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/01/lsof.png&#34; alt=&#34;lsof&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CLOUD SECURITY</title>
+      <link>https://www.vishnu-tech.com/blog/cloud-security/</link>
+      <pubDate>Tue, 18 Dec 2012 05:32:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/cloud-security/</guid>
+      <description>&lt;p&gt;Cloud computing is nearly synonymous with cost and usability improvements.  But among with these benefits are the security concerns; especially if your organization is looking to adopt the cloud for business critical applications that house your sensitive data.  Let’s take a look at one of  CTI’s Top Ten considerations checklist for choosing your cloud provider.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Where’s the data? Different countries have different requirements and controls placed on access.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cloudsherpaz.wordpress.com/2012/12/18/cloud-security/security_pros/&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2012/12/security_pros.jpg?w=300&#34; alt=&#34;security_pros&#34; /&gt;&lt;/a&gt;   Because your data is in the cloud. You may not realize that the data must reside in a physical location. Your cloud provider should agree in writing to provide the level of security required for your customers.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Who has access? Access control is a key concern, because insider attacks are a huge risk. A potential hacker is someone who has been entrusted with approved access to the cloud.  Anyone considering using the cloud needs to look at who is managing their data and what types of controls are applied to these individuals.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What are your regulatory requirements? Organizations operating in the US, Canada, or the European Union have many regulatory requirements that they must abide by (e.g., ISO 27002, Safe Harbor, ITIL, and COBIT). You must ensure that your cloud provider is able to meet these requirements and is willing to undergo certification, accreditation, and review.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Do you have the right to audit? This particular item is no small matter; the cloud provider should agree in writing to the terms of audit.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What type of training does the provider offer their employees? This is actually a rather important item, because people will always be the weakest link in security. Knowing how your provider trains their employees is an important item to review.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What type of data classification system does the provider use? Questions you should be concerned with here include: Is the data classified? How is your data separated from other users? Encryption should also be discussed. Is it being used while the data is at rest and in transit? You will also want to know what type of encryption is being used. As an example, there is a big difference between WEP and WPA2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What are the service level agreement (SLA) terms? The SLA serves as a contracted level of guaranteed service between the cloud provider and the customer that specifies what level of services will be provided.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What is the long-term viability of the provider? How long has the cloud provider been in business and what is their track record. If they go out of business, what happens to your data? Will your data be returned, and if so, in what format?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What happens if there is a security breach? If a security incident occurs, what support will you receive from the cloud provider? While many providers promote their services as being unhackable, cloudbased services are an attractive target to hackers.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What is the disaster recovery/business continuity plan (DR/BCP)? While you may not know the physical location of your services, it is physically located somewhere. All physical locations face threats such as fire, storms, natural disasters, and loss of power. In case of any of these events, how will the cloud provider respond, and what guarantee of continued services are they promising?&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitbucket on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/bitbucket/index.xml</link>
+    <description>Recent content in Bitbucket on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Moving github repo to Bitbucket due to DDOS</title>
+      <link>https://www.vishnu-tech.com/blog/moving-github-repo-to-bitbucket-due-to-ddos/</link>
+      <pubDate>Mon, 30 Mar 2015 10:48:31 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/moving-github-repo-to-bitbucket-due-to-ddos/</guid>
+      <description>
+
+&lt;h3 id=&#34;github-under-js-based-greatfire-ddos-attack-allegedly-from-chinese-government&#34;&gt;&lt;strong&gt;Github Under JS-Based &amp;ldquo;Greatfire&amp;rdquo; DDoS Attack, Allegedly From Chinese Government.&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;h4 id=&#34;during-the-past-two-days-popular-code-hosting-site-github-has-been-under-a-ddos-attack-which-has-led-to-intermittent-service-interruptions-as-blogger-anthr-x-http-insight-labs-org-p-1682-reports-from-traceroute-lists-the-attack-originated-from-mitm-modified-javascript-files-for-the-chinese-company-baidu-s-user-tracking-code-changing-the-unencrypted-content-as-it-passed-through-the-great-firewall-of-china-to-request-the-urls-github-com-greatfire-and-github-com-cn-nytimes-the-chinese-government-s-dislike-of-widespread-vpn-usage-may-have-caused-it-to-arrange-the-attack-where-only-people-accessing-baidu-s-services-from-outside-the-firewall-would-contribute-to-the-ddos-this-wouldn-t-have-been-the-first-time-china-arranged-this-kind-of-protest&#34;&gt;During the past two days, popular code hosting site GitHub has been under a DDoS attack, which has led to intermittent service interruptions. As blogger &lt;a href=&#34;http://insight-labs.org/?p=1682&#34;&gt;Anthr@X&lt;/a&gt; reports from traceroute lists, the attack originated from MITM-modified JavaScript files for the Chinese company Baidu&amp;rsquo;s user tracking code, changing the unencrypted content as it passed through the great firewall of China to request the URLs github.com/greatfire/ and github.com/cn-nytimes/. The Chinese government&amp;rsquo;s dislike of widespread VPN usage may have caused it to arrange the attack, where only people accessing Baidu&amp;rsquo;s services from outside the firewall would contribute to the DDoS. This wouldn&amp;rsquo;t have been the first time China arranged this kind of &amp;ldquo;protest.&amp;rdquo;&lt;/h4&gt;
+
+&lt;p&gt;_**Because of this DDOS attack, it affects our depolyment process. So we planned to move some of the critical repos to &lt;strong&gt;__&lt;/strong&gt;bitbucket (for temp).**_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;STEP1:-&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Create your private repo in the bitbucket.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;STEP2:-&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Let&amp;rsquo;s suppose in your local machine you already have a clone repo of your code from github.com&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;From your local machine, you need to change the origin, you need to push all tags, branches and refs to the bitbucket.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;So you need to do the below commands&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;git remote -v     #It will show the origin (fetch and push) like below:&lt;/p&gt;
+
+&lt;p&gt;origin git@github.com:username/yourproject.git (fetch)&lt;/p&gt;
+
+&lt;p&gt;origin git@github.com:username/yourproject.git (push)&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now your origin is github.com. Before changing it to bitbucket, you need to do checkout all your remote branches to your local machine, then only you can push your branches to bitbucket, otherwise you can only push the tags, there won&amp;rsquo;t be any branches apart from &amp;ldquo;master&amp;rdquo;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;git branch     #will list the branch in your local machine&lt;/p&gt;
+
+&lt;p&gt;git branch -r     #will list the remote branch from github&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; Now, you can use the below commands to checkout all your remote branches to your localmachine.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;for remote in &lt;code&gt;git branch -r&lt;/code&gt;; do git branch &amp;ndash;track $remote; done&lt;/p&gt;
+
+&lt;p&gt;for remote in &lt;code&gt;git branch -r&lt;/code&gt;; do git checkout $remote ; git pull; done&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; Then again checkout to master&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;git status&lt;/p&gt;
+
+&lt;p&gt;git checkout master&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, we need to move the origin from github to bitbucket&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;git remote -v&lt;/p&gt;
+
+&lt;p&gt;git remote rm origin&lt;/p&gt;
+
+&lt;p&gt;git remote -v&lt;/p&gt;
+
+&lt;p&gt;git remote add origin git@bitbucket.org:username/your-repo-in-bitbucket.git&lt;/p&gt;
+
+&lt;p&gt;git push -u origin &amp;ndash;all&lt;/p&gt;
+
+&lt;p&gt;git push -u origin &amp;ndash;tags&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This will move all from github to bitbucket.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;We use Capistrano for deployment, so update your deploy.rb file.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Change the git repo to bitbucket repo.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;set :repository, &amp;ldquo;git@github.com:username/githubrepo.git&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt; Change the above line and update it with your bitbucket repo.&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;set :repository, &amp;ldquo;git@bitbucket.org:username/your-repo-in-bitbucket.git&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;**Now you are good to deploy. **&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

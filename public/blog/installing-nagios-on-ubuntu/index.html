@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Installing Nagios on Ubuntu &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/installing-nagios-on-ubuntu/">Installing Nagios on Ubuntu</a></h1>
+            <span class="post-date">Dec 15, 2012 </span>
+            <div class="post-content">
+                <p><a href="http://www.nagios.org/">Nagios</a> is the Industry Standard Network Monitoring Engine. OK great so whats that mean, well nagios is a server that monitors your hosts and services and will inform you if something goes wrong and when it is fixed again. It can monitor network services, host resources and even network probes such as temperature and moisture.</p>
+
+<p>These features as well as many more make nagios, by far, the most complete Network Monitoring tool on the market, however with all these features comes complexity and nagios has obviously been designed with the experienced Network Administrator in mind. But don’t worry too much, its not that difficult to learn as long as you take it one step at a time, and in today’s tutorial we’re going to look at the first step, actually getting it installed</p>
+
+<p>First of all you will need a server running the LAMP Stack. Then you will need to setup a special user account and group for nagios, this allows nagios to have some rights over the server without giving it full root access, to do this first type:</p>
+
+<pre><code>sudo useradd -m -s /bin/bash nagios
+</code></pre>
+
+<p>to add the new user and group, then you’ll need to set the password, use:</p>
+
+<pre><code>sudo passwd nagios
+</code></pre>
+
+<p>Now create the ‘nagcmd’ group to allow external commands to be run, then add the nagios user and the apache user to the group:</p>
+
+<pre><code>sudo /usr/sbin/groupadd nagcmd
+sudo /usr/sbin/usermod -a -G nagcmd nagios
+sudo /usr/sbin/usermod -a -G nagcmd www-data
+</code></pre>
+
+<p>Now that’s all out of the way you’ll need to download Nagios (I recommend downloading it to its own directory, eg. ~/nagios-install):</p>
+
+<pre><code>wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.4.3.tar.gz
+</code></pre>
+
+<p>then extract the source code form the tar file and navigate into the new folder:</p>
+
+<pre><code>tar -xzf nagios-3.4.3.tar.gz
+cd nagios-3.2.1
+</code></pre>
+
+<p>now we just need to download gcc, the c++ compiler,</p>
+
+<pre><code>sudo apt-get install gcc
+</code></pre>
+
+<p>Now its time to install nagios, we are going to do this buy compiling the source code, this can seem a little confusing the first time you do it, but don’t worry you don’t relay have to understand it yet (that comes when you start to make your own programs) just follow the lines and you will be ok:</p>
+
+<pre><code>./configure --with-command-group=nagcmd
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-config
+sudo make install-commandmode
+</code></pre>
+
+<p>Now we just need to configure the contacts .cfg file so nagious can email us the report:</p>
+
+<pre><code>sudo vim /usr/local/nagios/etc/objects/contacts.cfg
+</code></pre>
+
+<p>and change the email field to your email address.</p>
+
+<p>Because the installer thinks Apache is installed in /etc/httpd/ witch it isn’t, we need to make a symlink to /etc/apache2/. A symlink is a file or folder that contains reference to another folder/file, so when the installer thinks its installing into /etc/httpd its actually installing into apache2, to do this type:</p>
+
+<pre><code>sudo mkdir /etc/httpd
+sudo ln -s /etc/apache2/* /etc/httpd/
+sudo make install-webconf
+</code></pre>
+
+<p>now we need to add the password to login to our nagios site, remember this password you will need it later:</p>
+
+<pre><code>sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+</code></pre>
+
+<p>restart apache</p>
+
+<pre><code>sudo /etc/init.d/apache2 reload
+</code></pre>
+
+<p>You don’t need to do the next step, however its extremely useful to install the base plug in pack to provide some extra functionality for nagios, to do this</p>
+
+<pre><code>cd ~/
+wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.14.tar.gz
+tar -xzf nagios-plugins-1.4.14.tar.gz
+cd nagios-plugins-1.4.14
+sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+sudo make
+sudo make install
+</code></pre>
+
+<p>Configure Nagios to automatically start when the system boots.</p>
+
+<pre><code>sudo ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
+</code></pre>
+
+<p>Verify the sample Nagios configuration files.</p>
+
+<pre><code>sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+</code></pre>
+
+<p>If there are no errors, start Nagios.</p>
+
+<pre><code>sudo /etc/init.d/nagios start
+</code></pre>
+
+<p>now you can login to Nagios buy going to <a href="http://your_ip/nagios/">http://your_ip/nagios/</a> in your web browser and using the details:</p>
+
+<p>username:nagiosadmin
+password:<em>[the password you set earler]</em></p>
+
+<p>And that’s about it you should now have a nagios server set-up that is monitoring the local host</p>
+
+<p><strong>You may need to update nagios to its latest version, to do this type:</strong></p>
+
+<pre><code>cd /usr/local/src
+sudo wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.2.tar.gz
+sudo tar xvzf nagios-3.2.2.tar.gz
+cd nagios-3.2.2
+sudo ./configure --prefix=/usr/local/nagios --with-nagios-user=nagios --with-nagios-group=nagios --with-command-group=nagcmd --enable-nanosleep --enable-event-broker
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-commandmode
+sudo make install-config
+sudo update-rc.d -f nagios defaults
+cd ..
+</code></pre>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/installing-nagios-on-ubuntu\/';
+    var disqus_title = 'Installing Nagios on Ubuntu';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/installing-nagios-on-ubuntu\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

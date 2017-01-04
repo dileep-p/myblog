@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phpmyadmin on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/phpmyadmin/index.xml</link>
+    <description>Recent content in Phpmyadmin on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/phpmyadmin/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Install RockMongo For Mongodb On CentOS, RHEL, Debian, Ubuntu</title>
+      <link>https://www.vishnu-tech.com/blog/install-rockmongo-for-mongodb-on-centos-rhel-debian-ubuntu/</link>
+      <pubDate>Mon, 01 Apr 2013 06:44:11 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/install-rockmongo-for-mongodb-on-centos-rhel-debian-ubuntu/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are looking for a phpadmin like tool for mongodb, RockMongo is your best bet. It is one of the best PHP MongoDB Administrator tool available today. It lets you create database, collections and insert and fetch documents using a web interface. This post will help you setup RockMongo&lt;/p&gt;
+
+&lt;p&gt;Install RockMongo for mongodb on CentOS, RHEL, Debian, Ubuntu&lt;/p&gt;
+
+&lt;p&gt;The prerequisites include mongo-php-driver, lets install it first&lt;/p&gt;
+
+&lt;p&gt;On CentOS, RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;yum-install-php-devel-git-httpd&#34;&gt;yum install php-devel git httpd&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;apt-get-install-php5-dev-apache2-git&#34;&gt;apt-get install php5-dev apache2 git&lt;/h1&gt;
+
+&lt;p&gt;Pull mongo-php-driver from git&lt;/p&gt;
+
+&lt;h1 id=&#34;git-clone-https-github-com-mongodb-mongo-php-driver-git&#34;&gt;git clone &lt;a href=&#34;https://github.com/mongodb/mongo-php-driver.git&#34;&gt;https://github.com/mongodb/mongo-php-driver.git&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;cd-mongo-php-driver&#34;&gt;cd mongo-php-driver/&lt;/h1&gt;
+
+&lt;h1 id=&#34;phpize&#34;&gt;phpize&lt;/h1&gt;
+
+&lt;h1 id=&#34;configure&#34;&gt;./configure&lt;/h1&gt;
+
+&lt;h1 id=&#34;make-all&#34;&gt;make all&lt;/h1&gt;
+
+&lt;h1 id=&#34;make-install&#34;&gt;make install&lt;/h1&gt;
+
+&lt;p&gt;Open php.ini and add the so that it gets loaded&lt;/p&gt;
+
+&lt;p&gt;On CentOS/RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;vi-etc-php-ini&#34;&gt;vi /etc/php.ini&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;vi-etc-php5-apache2-php-ini&#34;&gt;vi /etc/php5/apache2/php.ini&lt;/h1&gt;
+
+&lt;p&gt;Append the following to it&lt;/p&gt;
+
+&lt;p&gt;extension=mongo.so&lt;/p&gt;
+
+&lt;p&gt;Download the latest rockmongo zip file and unzip it into root directory of the web server.&lt;/p&gt;
+
+&lt;h1 id=&#34;wget-http-rockmongo-com-downloads-go-id-12&#34;&gt;wget &lt;a href=&#34;http://rockmongo.com/downloads/go?id=12&#34;&gt;http://rockmongo.com/downloads/go?id=12&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;On CentOS/RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;mv-rockmongo-1-1-5-zip-var-www-html&#34;&gt;mv rockmongo-1.1.5.zip /var/www/html/&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;mv-rockmongo-1-1-5-zip-var-www&#34;&gt;mv rockmongo-1.1.5.zip /var/www/&lt;/h1&gt;
+
+&lt;p&gt;Unzip the package&lt;/p&gt;
+
+&lt;h1 id=&#34;unzip-rockmongo-1-1-5-zip&#34;&gt;unzip rockmongo-1.1.5.zip&lt;/h1&gt;
+
+&lt;p&gt;Restart apache&lt;/p&gt;
+
+&lt;p&gt;On CentOS, RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;etc-init-d-httpd-restart&#34;&gt;/etc/init.d/httpd restart&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;etc-init-d-apache2-restart&#34;&gt;/etc/init.d/apache2 restart&lt;/h1&gt;
+
+&lt;p&gt;Open the web browser and point it to&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ipaddress-or-hostname/rockmongo/index.php&#34;&gt;http://ipaddress-or-hostname/rockmongo/index.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Login using&lt;/p&gt;
+
+&lt;p&gt;username: admin
+password: admin&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/m.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/m.png&#34; alt=&#34;M&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

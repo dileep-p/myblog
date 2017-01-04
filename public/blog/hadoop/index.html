@@ -1,0 +1,4652 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Hadoop &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/hadoop/">Hadoop</a></h1>
+            <span class="post-date">Mar 29, 2014 </span>
+            <div class="post-content">
+                
+
+<p><em><strong>HADOOP</strong></em></p>
+
+<p>Hadoop is an <a href="http://apache.org/">Apache Software Foundation</a> project that importantly provides two things:</p>
+
+<ol>
+<li><p>A distributed filesystem called HDFS (Hadoop Distributed File System)</p></li>
+
+<li><p>A framework and API for building and running <em>MapReduce</em> jobs</p></li>
+</ol>
+
+<h2 id="hdfs"><strong>HDFS</strong></h2>
+
+<p>HDFS is structured similarly to a regular Unix filesystem except that data storage is <em>distributed</em> across several machines. It is not intended as a replacement to a regular filesystem, but rather as a filesystem-like layer for large distributed systems to use. It has in built mechanisms to handle machine outages, and is optimized for throughput rather than latency.</p>
+
+<p>There are two and a half types of machine in a HDFS cluster:</p>
+
+<ul>
+<li><p><strong>Datanode</strong> - where HDFS actually stores the data, there are usually quite a few of these.</p></li>
+
+<li><p><strong>Namenode</strong> - the ‘master’ machine. It controls all the meta data for the cluster. Eg - what blocks make up a file, and what datanodes those blocks are stored on.</p></li>
+
+<li><p><strong>Secondary Namenode</strong> - this is NOT a backup namenode, but is a separate service that keeps a copy of both the edit logs, and filesystem image, merging them periodically to keep the size reasonable.</p>
+
+<ul>
+<li>this is soon being deprecated in favor of the <a href="http://hadoop.apache.org/docs/stable/hdfs_user_guide.html#Backup+Node">backup node</a> and the <a href="http://hadoop.apache.org/docs/stable/hdfs_user_guide.html#Checkpoint+Node">checkpoint node</a>, but the functionality remains similar (if not the same)</li>
+</ul></li>
+</ul>
+
+<p><img src="http://blog.matthewrathbone.com/img/hdfs.png" alt="hdfs diagram" /></p>
+
+<p>Data can be accessed using either the Java API, or the Hadoop command line client. Many operations are similar to their Unix counterparts.</p>
+
+<p>Here are some simple examples:</p>
+
+<p>list files in the root directory</p>
+
+<pre><code>&lt;span style=&quot;color:rgb(0,0,255);&quot;&gt;&lt;code class=&quot;bash&quot;&gt;hadoop fs -ls /
+&lt;/code&gt;&lt;/span&gt;
+</code></pre>
+
+<p>list files in my home directory</p>
+
+<pre><code>&lt;span style=&quot;color:rgb(0,0,255);&quot;&gt;&lt;code class=&quot;bash&quot;&gt;hadoop fs -ls ./
+&lt;/code&gt;&lt;/span&gt;
+</code></pre>
+
+<p>cat a file (decompressing if needed)</p>
+
+<pre><code>&lt;span style=&quot;color:rgb(0,0,255);&quot;&gt;&lt;code class=&quot;bash&quot;&gt;hadoop fs -text ./file.txt.gz
+&lt;/code&gt;&lt;/span&gt;
+</code></pre>
+
+<p>upload and retrieve a file</p>
+
+<pre><code>&lt;span style=&quot;color:rgb(0,0,255);&quot;&gt;&lt;code class=&quot;bash&quot;&gt;hadoop fs -put ./localfile.txt /home/vishnu/remotefile.txt
+
+hadoop fs -get /home/vishnu/remotefile.txt ./local/file/path/file.txt
+&lt;/code&gt;&lt;/span&gt;
+</code></pre>
+
+<p>Note that HDFS is optimized differently than a regular file system. It is designed for non-realtime applications demanding high throughput instead of online applications demanding low latency. For example, files cannot be modified once written, and the latency of reads/writes is really bad by filesystem standards. On the flip side, throughput scales fairly linearly with the number of datanodes in a cluster, so it can handle workloads no single machine would ever be able to.</p>
+
+<p>HDFS also has a bunch of unique features that make it ideal for distributed systems:</p>
+
+<ul>
+<li><p><strong>Failure tolerant</strong> - data can be duplicated across multiple datanodes to protect against machine failures. The industry standard seems to be a replication factor of 3 (everything is stored on three machines).</p></li>
+
+<li><p><strong>Scalability</strong> - data transfers happen directly with the datanodes so your read/write capacity scales fairly well with the number of datanodes</p></li>
+
+<li><p><strong>Space</strong> - need more disk space? Just add more datanodes and re-balance</p></li>
+
+<li><p><strong>Industry standard</strong> - Lots of other distributed applications build on top of HDFS (HBase, Map-Reduce)</p></li>
+
+<li><p>HDFS Resources</p></li>
+</ul>
+
+<p>For more information about the design of HDFS, you should read through <a href="http://hadoop.apache.org/docs/stable/hdfs_design.html">apache documentation page</a>. In particular the <a href="http://hadoop.apache.org/docs/stable/hdfs_design.html#Streaming+Data+Access">streaming and data access section</a> has some really simple and informative diagrams on how data read/writes actually happen.</p>
+
+<h2 id="mapreduce">MapReduce</h2>
+
+<p>The second fundamental part of Hadoop is the MapReduce layer. This is made up of two sub components:</p>
+
+<ul>
+<li><p>An API for writing MapReduce workflows in Java.</p></li>
+
+<li><p>A set of services for managing the execution of these workflows.</p></li>
+</ul>
+
+<h3 id="the-map-and-reduce-apis">The Map and Reduce APIs</h3>
+
+<p>The basic premise is this:</p>
+
+<ol>
+<li><p>Map tasks perform a transformation.</p></li>
+
+<li><p>Reduce tasks perform an aggregation.</p></li>
+</ol>
+
+<p>In scala, a simplified version of a MapReduce job might look like this:</p>
+
+<pre><code>&lt;span style=&quot;color:rgb(255,0,0);&quot;&gt;&lt;code class=&quot;scala&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lineNumber&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentance&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&gt;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;counts&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;counts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&gt;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/span&gt;
+</code></pre>
+
+<p>Notice that the output to a map and reduce task is always a <code>KEY, VALUE</code> pair. You always output exactly one key, and one value. The input to a reduce is <code>KEY, ITERABLE[VALUE]</code>. Reduce is called <strong>exactly once</strong> for each key output by the map phase. The <code>ITERABLE[VALUE]</code> is the set of all values output by the map phase for that key.</p>
+
+<p>So if you had map tasks that output</p>
+
+<pre><code>&lt;span style=&quot;color:rgb(255,0,0);&quot;&gt;&lt;code class=&quot;bash&quot;&gt;map1: key: foo, value: 1
+map2: key: foo, value: 32
+&lt;/code&gt;&lt;/span&gt;
+</code></pre>
+
+<p>Your reducer would receive:</p>
+
+<pre><code>&lt;span style=&quot;color:rgb(255,0,0);&quot;&gt;&lt;code class=&quot;bash&quot;&gt;key: foo, values: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1, 32&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/span&gt;
+</code></pre>
+
+<p>Counter intuitively, one of the most important parts of a MapReduce job is what happens <strong>between</strong> map and reduce, there are 3 other stages; Partitioning, Sorting, and Grouping. In the default configuration, the goal of these intermediate steps is to ensure this behavior; that the values for each key are grouped together ready for the <code>reduce()</code> function. APIs are also provided if you want to tweak how these stages work (like if you want to perform a secondary sort).</p>
+
+<p>Here’s a diagram of the full workflow to try and demonstrate how these pieces all fit together, but really at this stage it’s more important to understand how map and reduce interact rather than understanding all the specifics of how that is implemented.</p>
+
+<p><img src="http://blog.matthewrathbone.com/img/map-reduce.png" alt="mapreduce diagram" /></p>
+
+<p>What’s really powerful about this API is that there is no dependency between any two of the same task. To do it’s job a <code>map()</code> task does not need to know about other map task, and similarly a single <code>reduce()</code> task has all the context it needs to aggregate for any particular key, it does not share any state with other reduce tasks.</p>
+
+<p>Taken as a whole, this design means that the stages of the pipeline can be easily distributed to an arbitrary number of machines. Workflows requiring massive datasets can be easily distributed across hundreds of machines because there are no inherent dependencies between the tasks requiring them to be on the same machine.</p>
+
+<h4 id="mapreduce-api-resources">MapReduce API Resources</h4>
+
+<p>If you want to learn more about MapReduce (generally, and within Hadoop) I recommend you read the <a href="http://research.google.com/archive/mapreduce.html">Google MapReduce paper</a>, the <a href="http://hadoop.apache.org/docs/stable/mapred_tutorial.html">Apache MapReduce documentation</a>, or maybe even <a href="http://www.amazon.com/gp/product/1449311520/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1449311520&amp;linkCode=as2&amp;tag=matratsblo-20">the hadoop book</a>. Performing a web search for MapReduce tutorials also offers a lot of useful information.</p>
+
+<p>To make things more interesting, many projects have been built on top of the MapReduce API to ease the development of MapReduce workflows. For example <a href="http://hive.apache.org/">Hive</a> lets you write SQL to query data on HDFS instead of Java.</p>
+
+<p>The Hadoop Services for Executing MapReduce Jobs</p>
+
+<p>Hadoop MapReduce comes with two primary services for scheduling and running MapReduce jobs. They are the <em>Job Tracker (JT)</em> and the <em>Task Tracker (TT)</em>. Broadly speaking the JT is the master and is in charge of allocating tasks to task trackers and scheduling these tasks globally. A TT is in charge of running the Map and Reduce tasks themselves.</p>
+
+<p>When running, each TT registers itself with the JT and reports the number of ‘map’ and ‘reduce’ slots it has available, the JT keeps a central registry of these across all TTs and allocates them to jobs as required. When a task is completed, the TT re-registers that slot with the JT and the process repeats.</p>
+
+<p>Many things can go wrong in a big distributed system, so these services have some clever tricks to ensure that your job finishes successfully:</p>
+
+<ul>
+<li><p><strong>Automatic retries</strong> - if a task fails, it is retried N times (usually 3) on different task trackers.</p></li>
+
+<li><p><strong>Data locality optimizations</strong> - if you co-locate a TT with a HDFS Datanode (which you should) it will take advantage of data locality to make reading the data faster</p></li>
+
+<li><p><strong>Blacklisting a bad TT</strong> - if the JT detects that a TT has too many failed tasks, it will blacklist it. No tasks will then be scheduled on this task tracker.</p></li>
+
+<li><p><strong>Speculative Execution</strong> - the JT can schedule the same task to run on several machines at the same time, just in case some machines are slower than others. When one version finishes, the others are killed.</p></li>
+</ul>
+
+<p>Here’s a simple diagram of a typical deployment with TTs deployed alongside datanodes. <img src="http://blog.matthewrathbone.com/img/hadoop-infrastructure.jpg" alt="hadoop infra" /></p>
+
+<h4 id="mapreduce-service-resources">MapReduce Service Resources</h4>
+
+<p>For more reading on the JobTracker and TaskTracker check out <a href="http://en.wikipedia.org/wiki/Apache_Hadoop#JobTracker_and_TaskTracker:_the_MapReduce_engine">Wikipedia</a> or the <a href="http://www.amazon.com/gp/product/1449311520/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1449311520&amp;linkCode=as2&amp;tag=matratsblo-20">Hadoop book</a>. I find the <a href="http://hadoop.apache.org/docs/stable/mapred_tutorial.html">apache documentation</a> pretty confusing when just trying to understand these things at a high level, so again doing a web-search can be pretty useful.</p>
+
+<h3 id="cluster"><em><strong>Cluster</strong></em></h3>
+
+<p>A  cluster  is a  group of  computers  connected  via  a network. Similarly a Hadoop Cluster can also be a  combination of  a  number of  systems  connected  together  which  completes the picture of distributed computing. Hadoop uses  a master slave architecture.</p>
+
+<h2 id="components-required-in-the-cluster">Components  required  in the cluster</h2>
+
+<p><strong>NameNodes</strong></p>
+
+<p>Name node is the master server of the cluster. It  doesnot store any file but knows where the blocks are stored in the child nodes and can give pointers and can re-assemble .Namenodes  comes up with  two  features  say Fsimage  and the edit log.FSImage   and edit log</p>
+
+<p>Features</p>
+
+<ol>
+<li><p>Highly memory intensive</p></li>
+
+<li><p>Keeping it safe and isolated is necessary</p></li>
+
+<li><p>Manages the file system namespaces</p></li>
+</ol>
+
+<p><strong>DataNodes</strong></p>
+
+<p>Child nodes are attached to the main node.</p>
+
+<p>Features:</p>
+
+<ol>
+<li><p>Data node  has  a configuration file to make itself  available in the cluster .Again they stores  data regarding storage capacity(Ex:5 out f 10 is available) of   that  particular data  node.</p></li>
+
+<li><p>Data nodes are independent ,since they are not pointing to any other data nodes.</p></li>
+
+<li><p>Manages the storage  attached to the  node.</p></li>
+
+<li><p>There  will be  multiple data nodes  in a cluster.</p></li>
+</ol>
+
+<p><strong>Job Tracker</strong></p>
+
+<ol>
+<li><p>Schedules and assign task to the different datanodes.</p></li>
+
+<li><p>Work Flow</p></li>
+
+<li><p>Takes  the request.</p></li>
+
+<li><p>Assign the  task.</p></li>
+
+<li><p>Validate the requested work.</p></li>
+
+<li><p>Checks  whether  all the  data nodes  are working properly.</p></li>
+
+<li><p>If not, reschedule the tasks.</p></li>
+</ol>
+
+<p><strong>Task Tracker</strong></p>
+
+<p>Job Tracker and  task tracker   works   in  a master slave model. Every  datanode has got a  task tracker which  actually performs  the  task  which ever  assigned to it by the Job tracker.</p>
+
+<p><strong>Secondary Name Node</strong></p>
+
+<p>Secondaryname node  is not  a redundant  namenode but  this actually  provides  the  check pointing  and  housekeeping tasks  periodically.</p>
+
+<p><strong>Types of Hadoop Installations</strong></p>
+
+<ol>
+<li><p><strong>Standalone (local) mode:</strong>  It is used to run Hadoop directly on your local machine. By default Hadoop is configured to run in this mode. It is used for debugging purpose.</p></li>
+
+<li><p><strong>Pseudo-distributed mode:  </strong>It is used to stimulate multi node installation using a single node setup. We can use a single server instead of installing Hadoop in different servers.</p></li>
+
+<li><p><strong>Fully distributed mode:  </strong>In this mode Hadoop is installed in all the servers which is a part of the cluster. One machine need to be designated as NameNode and another one as JobTracker. The rest acts as DataNode and TaskTracker.</p></li>
+</ol>
+
+<h1 id="how-to-make-a-single-node-hadoop-cluster">How to make a Single node Hadoop Cluster</h1>
+
+<p>A Single node cluster is a cluster where all the Hadoop daemons run on a single machine. The development can be described as several steps.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<h3 id="os-requirements">OS Requirements</h3>
+
+<p>Hadoop is meant to be deployed on Linux based platforms which includes OS like Mackintosh. Larger Hadoop production deployments are mostly on Cent OS, Red hat etc.</p>
+
+<p>GNU/Linux is using as the development and production platform. Hadoop has been demonstrated on Linux clusters with more than 4000 nodes.</p>
+
+<p>Win32 can be used as a development platform, but is not used as a production platform. For developing cluster  in windows, we need Cygwin.</p>
+
+<p>Since Ubuntu is a common Linux distribution and with interfaces similar to Windows, we’ll describe the details of Hadoop deployment on Ubuntu, it is better using the latest stable versions of OS.</p>
+
+<p>This document deals with the development of cluster using Ubuntu Linux platform. Version is 12.04.1 LTS 64 bit.</p>
+
+<h3 id="softwares-required">Softwares Required</h3>
+
+<ul>
+<li>Java JDK</li>
+</ul>
+
+<p>The recommended and tested versions of java are listed below, you can choose any of the following</p>
+
+<pre><code>Jdk 1.6.0_20
+
+Jdk 1.6.0_21
+
+Jdk 1.6.0_24
+
+Jdk 1.6.0_26
+
+Jdk 1.6.0_28
+
+Jdk 1.6.0_31
+</code></pre>
+
+<p>*Source Apache Software Foundation wiki. Test resukts announced by Cloudera,MapR,HortonWorks</p>
+
+<ul>
+<li><p>SSH must be installed.</p></li>
+
+<li><p>SSHD must be running.</p></li>
+</ul>
+
+<p>This is used by the Hadoop scripts to manage remote Hadoop daemons.</p>
+
+<ul>
+<li>Download a latest stable version of Hadoop.</li>
+</ul>
+
+<p>Here we are using Hadoop 1.0.3.</p>
+
+<p>Now we are ready with a Linux machine and required softwares. So we can start the set up. Open the terminal and follow the steps described below</p>
+
+<h3 id="step-1">Step 1</h3>
+
+<h4 id="checking-whether-the-os-is-64-bit-or-32-bit">Checking whether the OS is 64 bit or 32 bit</h4>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``uname` `–a`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>If it is showing a 64, then all the softwares(Java, ssh) must be of 64 bit. If it is showing 32, then use the softwares for 32 bit. This is very important.</p>
+
+<h3 id="step-2">Step 2</h3>
+
+<h4 id="installing-java">Installing  Java.</h4>
+
+<p>For setting up hadoop, we need java. It is recommended to use sun java 1.6.</p>
+
+<p>For checking whether the java is already installed or not</p>
+
+<pre><code>&gt;$ java –version
+</code></pre>
+
+<p>This will show the details about java, if it is already installed.</p>
+
+<p>If it is not there, we have to install.</p>
+
+<p>Download a stable version of java as described above.</p>
+
+<p>The downloaded file may be .bin file or .tar file</p>
+
+<p>For installing a .bin file, go to the directory containing the binary file.</p>
+
+<pre><code>&gt;$ sudo chmod u+x &lt;filename&gt;.bin
+
+&gt;$ ./&lt;filename&gt;.bin
+</code></pre>
+
+<p>If it is a tar ball</p>
+
+<pre><code>&gt;$ sudo chmod u+x &lt;filename&gt;.tar
+
+&gt;$ sudo tar xzf &lt;filename&gt;.tar
+</code></pre>
+
+<p>Then set the JAVA_HOME in .bashrc file</p>
+
+<p>Go to $HOME/.bashrc file</p>
+
+<p>For editing .bashrc file</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``sudo` `nano $HOME/.bashrc`
+
+
+
+
+
+
+
+`# Set Java Home`
+
+
+
+
+
+
+
+`export` `JAVA_HOME=<path from root to that java directory>`
+
+
+
+
+
+
+
+`export` `PATH=$PATH:$JAVA_HOME``/bin`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Now close the terminal, re-open again and check whether the java installation is correct.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ java –version`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>This will show the details, if java is installed correct.</p>
+
+<p>Now we are ready with java installed.</p>
+
+<h3 id="step-3">Step 3</h3>
+
+<h4 id="adding-a-user-for-using-hadoop">Adding a user for using Hadoop</h4>
+
+<p>We have to create a separate user account for running Hadoop. This is recommended, because it isolates other softwares and other users on the same machine from hadoop installation.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``sudo` `addgroup hadoop`
+
+
+
+
+
+
+
+`>$ ``sudo` `adduser –ingroup hadoop user`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Here we created a user “user” in a group “hadoop”.</p>
+
+<h3 id="step-4">Step 4</h3>
+
+<p>In the following steps,  If you are not able to do sudo with user.</p>
+
+<p>Then add user to sudoers group.</p>
+
+<p>For that</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``sudo` `nano ``/etc/sudoers`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Then add the following</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`%user ALL= (ALL)ALL`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>This will give user the root privileges.</p>
+
+<p>If you are not interested in giving root privileges, edit the line in the sudoers file as below</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`# Allow members of group sudo to execute any command`
+
+
+
+
+
+
+
+`%``sudo`   `ALL=(ALL:ALL) ALL`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="step-5">Step 5</h3>
+
+<h4 id="installing-ssh-server">Installing SSH server.</h4>
+
+<p>Hadoop requires SSH access to manage the nodes.</p>
+
+<p>In case of multinode cluster, it is remote machines and local machine.</p>
+
+<p>In single node cluster, SSH is needed to access the localhost for user user.</p>
+
+<p>If ssh server is not installed, install it before going further.</p>
+
+<p>Download the correct version (64bit or 32 bit) of open-ssh-server.</p>
+
+<p>Here we are using 64 bit OS, So I downloaded open ssh server for 64 bit.</p>
+
+<p>The download link is</p>
+
+<p><a href="http://www.ubuntuupdates.org/package/core/precise/main/base/openssh-server">http://www.ubuntuupdates.org/package/core/precise/main/base/openssh-server</a></p>
+
+<p>The downloaded file may be a .deb file.</p>
+
+<p>For installing a .deb file</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``sudo` `chmod` `u+x <filename>.deb`
+
+
+
+
+
+
+
+`>$ ``sudo` `dpkg –I <filename>.deb`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>This will install the .deb file.</p>
+
+<h3 id="step-6">Step 6</h3>
+
+<h4 id="configuring-ssh">Configuring SSH</h4>
+
+<p>Now we have SSH up and running.</p>
+
+<p>As the first step, we have to generate an SSH key for the user</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+
+
+
+24
+
+
+
+
+25
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`<div>`
+
+
+
+
+
+
+
+`user@ubuntu:~$ ``su` `- user`
+
+
+
+
+
+
+
+`user@ubuntu:~$ ``ssh``-keygen -t rsa -P ``""`
+
+
+
+
+
+
+
+`Generating public``/private` `rsa key pair.`
+
+
+
+
+
+
+
+`Enter ``file` `in` `which` `to save the key (``/home/user/``.``ssh``/id_rsa``):`
+
+
+
+
+
+
+
+`Created directory ``'/home/user/.ssh'``.`
+
+
+
+
+
+
+
+`Your identification has been saved ``in` `/home/user/``.``ssh``/id_rsa``.`
+
+
+
+
+
+
+
+`Your public key has been saved ``in` `/home/user/``.``ssh``/id_rsa``.pub.`
+
+
+
+
+
+
+
+`The key fingerprint is:`
+
+
+
+
+
+
+
+`9d:47:ab:d7:22:54:f0:f9:b9:3b:64:93:12:75:81:27user@ubuntu`
+
+
+
+
+
+
+
+`The key’s randomart image is:`
+
+
+
+
+
+
+
+`[........]`
+
+
+
+
+
+
+
+`user@ubuntu:~$`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Here it is needed to unlock the key without our interaction, so we are creating an RSA keypair with an empty password. This is done in the second line. If empty password is not given, we have to enter the password every time when Hadoop interacts with its nodes. This is not desirable, so we are giving empty password.</p>
+
+<p>The next step is to enable SSH access to our local machine with the key created in the previous step.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`user@ubuntu:~$ ``cat` `$HOME/.``ssh``/id_rsa``.pub >> $HOME/.``ssh``/authorized_keys`
+
+
+
+
+
+
+
+`<``/div``>`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The last step is to test SSH setup by connecting to our local machine with user. This step is necessary to save our local machine’s host key fingerprint to the useruser’sknown_hosts file.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`user@ubuntu:~$ sshlocalhost`
+
+
+
+
+
+
+
+`The authenticity of host ``'localhost (127.0.0.1)'` `can't be established.`
+
+
+
+
+
+
+
+`RSA key fingerprint is 76:d7:61:86:ea:86:8f:31:89:9f:68:b0:75:88:52:72.`
+
+
+
+
+
+
+
+`Are you sure you want to ``continue` `connecting (``yes``/no``)? ``yes`
+
+
+
+
+
+
+
+`Warning: Permanently added ``'localhost'` `(RSA) to the list of known hosts.`
+
+
+
+
+
+
+
+`Ubuntu 12.04.1`
+
+
+
+
+
+
+
+`...`
+
+
+
+
+
+
+
+`user@ubuntu:~$`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="step-7">Step 7</h3>
+
+<h4 id="disabling-ipv6">Disabling IPv6</h4>
+
+<p>There is no use in enabling IPv6 on our Ubuntu Box, because we are not connected to any IPv6 network. So we can disable IPv6. The performance may vary.</p>
+
+<p>For disabling IPv6 on Ubuntu , go to</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``cd` `/etc/`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Open the file sysctl.conf</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``sudo` `nano sysctl.conf`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Add the following lines to the end of this file</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`#disable ipv6`
+
+
+
+
+
+
+
+`net.ipv6.conf.all.disable_ipv6 = 1`
+
+
+
+
+
+
+
+`net.ipv6.conf.default.disable_ipv6 = 1`
+
+
+
+
+
+
+
+`net.ipv6.conf.lo.disable_ipv6 = 1`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Reboot the machine to make the changes take effect</p>
+
+<p>For checking whether IPv6 is enabled or not, we can use the following command.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``cat`  `/proc/sys/net/ipv6/conf/all/disable_ipv6`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>If the value is ‘0’ , IPv6 is enabled.</p>
+
+<p>If it is ‘1’ , IPv6 is disabled.</p>
+
+<p>We need the value to be ‘1’.</p>
+
+<p>The requirements for installing Hadoop is ready. So we can start hadoop installation.</p>
+
+<h3 id="step-8">Step 8</h3>
+
+<h4 id="hadoop-installation">Hadoop Installation</h4>
+
+<p>Here I am using this version hadoop 1.0.3.</p>
+
+<p>So we are using this tar ball.</p>
+
+<p>We create a directory named ‘utilities’ in user.</p>
+
+<p>Practically, you can choose any directory. It will be good if you are keeping a good and uniform directory structure while installation. It will be good and when you deal with multinode clusters.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``cd` `utilities`
+
+
+
+
+
+
+
+`>$ ``sudo` `tar` `-xvf  hadoop-1.0.3.``tar``.gz`
+
+
+
+
+
+
+
+`>$ ``sudo`   `chown` `–R user:hadoop hadoop-1.0.3`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Here the 2nd line will extract the tar ball.</p>
+
+<p>The 3rd line will the permission(ownership)of hadoop-1.0.3 to user</p>
+
+<h3 id="step-9">Step 9</h3>
+
+<h4 id="setting-hadoop-home-in-home-bashrc">Setting HADOOP_HOME in $HOME/.bashrc</h4>
+
+<p>Add the following lines in the .bashrc file</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`# Set Hadoop_Home`
+
+
+
+
+
+
+
+`export` `HADOOP_HOME=``/home/user/utilities/hadoop-1``.0.3`
+
+
+
+
+
+
+
+`# Adding bin/ directory to PATH`
+
+
+
+
+
+
+
+`export` `PATH=$PATH:$HADOOP_HOME``/bin`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note: If you are editing this $HOME/.bashrc  file, the user doing this only will get the benefit.</p>
+
+<p>For making this affect globally to all users,</p>
+
+<p>go to /etc/bash.bashrc file  and do the same changes.</p>
+
+<p>Thus JAVA_HOME and HADOOP_HOME will be available to all users.</p>
+
+<p>Do the same procedure while setting java also.</p>
+
+<h3 id="step-10">Step 10</h3>
+
+<h4 id="configuring-hadoop">Configuring Hadoop</h4>
+
+<p>In hadoop, we can find three configuration files core-site.xml, mapred-site.xml, hdfs-site.xml.</p>
+
+<p>If we open this files, the only thing we can see is an empty configuration tag <configuration></configuration></p>
+
+<p>What actually happening behind the curtain is that, hadoop assumes default value to a lot of properties. If we want to override that, we can edit these configuration files.</p>
+
+<p>The default values are available in three files</p>
+
+<pre><code>core-default.xml, mapred-default.xml, hdfs-default.xml
+</code></pre>
+
+<p>These are available in the locations</p>
+
+<pre><code>utilities/hadoop-1.0.3/src/core, utilities/hadoop-1.0.3/src/mapred,
+
+utilities/hadoop-1.0.3/src/hdfs.
+</code></pre>
+
+<p>If we open these files, we can see all the default properties.</pre>
+Setting JAVA_HOME for hadoop directly</p>
+
+<p>Open hadoop-env.sh file, you can see a JAVA_HOME with a path.</p>
+
+<p>The location of hadoop-env.sh file is</p>
+
+<pre><code>hadoop-1.0.3/conf/hadoop-env.sh
+</code></pre>
+
+<p>Edit that JAVA_HOME and give the correct path in which java is installed.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ ``sudo`  `nano hadoop-1.0.3``/conf/hadoop-env``.sh`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`#The Java Implementation to use`
+
+
+
+
+
+
+
+`export` `JAVA_HOME=<path from root to java directory>`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="editting-the-configuration-files">Editting the Configuration files</h4>
+
+<p>All these files are present in the directory</p>
+
+<p>hadoop-1.0.3/conf/</p>
+
+<p>Here we are configuring the directory where the hadoop stores its data files, the network ports is listens to…etc</p>
+
+<p>By default Hadoop stores its local file system and HDFS in hadoop.tmp.dir .</p>
+
+<p>Here we are using the directory /app/hadoop/tmp for storing  temparory directories.</p>
+
+<p>For that create a directory and set the ownership and  permissions to user</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$  ``sudo`   `mkdir` `–p ``/app/hadoop/tmp`
+
+
+
+
+
+
+
+`>$ ``sudo`   `chownuser:hadoop ``/app/hadoop/tmp`
+
+
+
+
+
+
+
+`>$ ``sudo`   `chmod` `750 ``/app/hadoop/tmp`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Here the first line will create the directory structure.</p>
+
+<p>Second line will give the ownership of that directory to user</p>
+
+<p>The third line will set the rwx permissions.</p>
+
+<p>Setting the ownership and permission is very important, if you forget this, you will get into some exceptions while formatting the namenode.</p>
+
+<h5 id="1-core-site-xml">1.       Core-site.xml</h5>
+
+<p>Open the core-site.xml file, you can see empty configuration tags.</p>
+
+<p>Add the following lines between the configuration tags.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`<property>`
+
+
+
+
+
+
+
+`<name>hadoop.tmp.``dir``<``/name``>`
+
+
+
+
+
+
+
+`<value>``/app/hadoop/tmp``<``/value``>`
+
+
+
+
+
+
+
+`<description>`
+
+
+
+
+
+
+
+`A base ``for` `other temporary directories.`
+
+
+
+
+
+
+
+`<``/description``>`
+
+
+
+
+
+
+
+`<``/property``>`
+
+
+
+
+
+
+
+`<property>`
+
+
+
+
+
+
+
+`<name>fs.default.name<``/name``>`
+
+
+
+
+
+
+
+`<value>hdfs:``//localhost``:9000<``/value``>`
+
+
+
+
+
+
+
+`<description>The name of the default ``file` `system.<``/description``>`
+
+
+
+
+
+
+
+`<``/property``>`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="2-mapred-site-xml">2.       Mapred-site.xml</h5>
+
+<p>In the mapred-site.xml add the following between the configuration tags.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`<property>`
+
+
+
+
+
+
+
+`<name>mapred.job.tracker<``/name``>`
+
+
+
+
+
+
+
+` ``<value>localhost:9001<``/value``>`
+
+
+
+
+
+
+
+` ``<description> The host and port that the MapReduce job tracker runs <``/description``>`
+
+
+
+
+
+
+
+`<``/property``>`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="3-hdfs-site-xml">3.       Hdfs-site.xml</h5>
+
+<p>In the hdfs-site.xml add the following between the configuration tags.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`<property>`
+
+
+
+
+
+
+
+`<name>dfs.replication<``/name``>`
+
+
+
+
+
+
+
+`<value>1<``/value``>`
+
+
+
+
+
+
+
+`<description>Default block replication<``/description``>`
+
+
+
+
+
+
+
+`<``/property``>`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Here we are giving replication as 1, because we have only one machine.</p>
+
+<p>We can increase this as the number of nodes increases.</p>
+
+<h3 id="step-11">Step 11</h3>
+
+<h4 id="formatting-the-hadoop-distributed-file-system-via-namenode">Formatting the Hadoop Distributed File System via  NameNode.</h4>
+
+<p>The first step for starting our Hadoop installation is to format the distributed file system. This should be done before first use. Be careful that, do not format an already running cluster, because all the data will be lost.</p>
+
+<pre><code>user@ubuntu:~$ $HADOOP_HOME/bin/hadoop namenode –format
+</code></pre>
+
+<p>The output will look like this</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+
+
+
+24
+
+
+
+
+25
+
+
+
+
+26
+
+
+
+
+27
+
+
+
+
+28
+
+
+
+
+29
+
+
+
+
+30
+
+
+
+
+31
+
+
+
+
+32
+
+
+
+
+33
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`09``/10/12` `12:52:54 INFO namenode.NameNode: STARTUP_MSG:`
+
+
+
+
+
+
+
+`/************************************************************`
+
+
+
+
+
+
+
+`STARTUP_MSG: Starting NameNode`
+
+
+
+
+
+
+
+`STARTUP_MSG:   host = ubuntu``/127``.0.1.1`
+
+
+
+
+
+
+
+`STARTUP_MSG:   args = [-``format``]`
+
+
+
+
+
+
+
+`STARTUP_MSG:   version = 0.20.2`
+
+
+
+
+
+
+
+`STARTUP_MSG:   build = https:``//svn``.apache.org``/repos/asf/hadoop/common/branches/branch-1``.0.3 -r 911707; compiled by ``'chrisdo'` `on Fri Feb 19 08:07:34 UTC 2010`
+
+
+
+
+
+
+
+`************************************************************/`
+
+
+
+
+
+
+
+`09``/10/12` `12:52:54 INFO namenode.FSNamesystem: fsOwner=user,hadoop`
+
+
+
+
+
+
+
+`09``/10/12` `12:52:54 INFO namenode.FSNamesystem: supergroup=supergroup`
+
+
+
+
+
+
+
+`09``/10/12` `12:52:54 INFO namenode.FSNamesystem: isPermissionEnabled=``true`
+
+
+
+
+
+
+
+`09``/10/12` `12:52:54 INFO common.Storage: Image ``file` `of size 96 saved ``in` `0 seconds.`
+
+
+
+
+
+
+
+`09``/10/12` `12:52:54 INFO common.Storage: Storage directory ...``/hadoop-user/dfs/name` `has been successfully formatted.`
+
+
+
+
+
+
+
+`09``/10/12` `12:52:54 INFO namenode.NameNode: SHUTDOWN_MSG:`
+
+
+
+
+
+
+
+`/************************************************************`
+
+
+
+
+
+
+
+`SHUTDOWN_MSG: Shutting down NameNode at ubuntu``/127``.0.1.1`
+
+
+
+
+
+
+
+`************************************************************/`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="step-12">Step 12</h3>
+
+<h4 id="starting-our-single-node-cluster">Starting Our single-node Cluster</h4>
+
+<p>Here we have only one node. So all the hadoop daemons are running on a single machine.</p>
+
+<p>So we can start all the daemons by running a shell script.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`user@ubuntu:~$ $HADOOP_HOME``/bin/start-all``.sh`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>This willstartup all the hadoop daemonsNamenode, Datanode, Jobtracker and Tasktracker on our machine.</p>
+
+<p>The output when we run this is shown below.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`user@ubuntu:``/home/user/utilities/hadoop-1``.0.3$ bin``/start-all``.sh`
+
+
+
+
+
+
+
+`startingnamenode, logging to ``/home/user/utilities/hadoop-1``.0.3``/bin/``..``/logs/hadoop-user-namenode-ubuntu``.out`
+
+
+
+
+
+
+
+`localhost: starting datanode, logging to home``/user/utilities/hadoop-1``.0.3``/bin/``..``/logs/hadoop-user-datanode-ubuntu``.out`
+
+
+
+
+
+
+
+`localhost: starting secondarynamenode, logging to home``/user/utilities/hadoop-1``.0.3``/bin/``..``/logs/hadoop-user-secondarynamenode-ubuntu``.out`
+
+
+
+
+
+
+
+`startingjobtracker, logging to home``/user/utilities/hadoop-1``.0.3``/bin/``..``/logs/hadoop-user-jobtracker-ubuntu``.out`
+
+
+
+
+
+
+
+`localhost: starting tasktracker, logging to home``/user/utilities/hadoop-1``.0.3``/bin/``..``/logs/hadoop-user-tasktracker-ubuntu``.out`
+
+
+
+
+
+
+
+`user@ubuntu$`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can check the process running on the by using jps.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`user@ubuntu:``/home/user/utilities/hadoop-1``.0.3$ jps`
+
+
+
+
+
+
+
+`1127 TaskTracker`
+
+
+
+
+
+
+
+`2339 JobTracker`
+
+
+
+
+
+
+
+`1943 DataNode`
+
+
+
+
+
+
+
+`2098 SecondaryNameNode`
+
+
+
+
+
+
+
+`2378 Jps`
+
+
+
+
+
+
+
+`1455 NameNode`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>Note: If jps is not working, you can use another linux command.</em></p>
+
+<p><em>ps –ef | grepuser</em></p>
+
+<p><em>You can check for each daemon also</em></p>
+
+<p><em>ps –ef | grep<daemonname>eg:namenode</em></p>
+
+<h3 id="step-13">Step 13</h3>
+
+<h4 id="stoppingour-single-node-cluster">StoppingOur single-node Cluster</h4>
+
+<p>For stopping all the daemons running in the machine</p>
+
+<p>Run the command</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$stop-all.sh`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The output will be like this</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`user@ubuntu:~``/utilities/hadoop-1``.0.3$ bin``/stop-all``.sh`
+
+
+
+
+
+
+
+`stoppingjobtracker`
+
+
+
+
+
+
+
+`localhost: stopping tasktracker`
+
+
+
+
+
+
+
+`stoppingnamenode`
+
+
+
+
+
+
+
+`localhost: stopping datanode`
+
+
+
+
+
+
+
+`localhost: stopping secondarynamenode`
+
+
+
+
+
+
+
+`user@ubuntu:~``/utilities/hadoop-1``.0.3$`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Then check with jps</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$jps`
+
+
+
+
+
+
+
+`2378 Jps`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="step-14">Step 14</h3>
+
+<h4 id="testing-the-set-up">Testing the set up</h4>
+
+<p>Now our installation part is complete</p>
+
+<p>The next step is to test the installed set up.</p>
+
+<p>Restart the hadoop cluster again by using start-all.sh</p>
+
+<h5 id="checking-with-hdfs">Checking with HDFS</h5>
+
+<ol>
+<li>Make a directory in hdfs</li>
+</ol>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`<``/pre``>`
+
+
+
+
+`<``/li``>`
+
+
+
+
+`<``/ol``>`
+
+
+
+
+`hadoop fs –``mkdir`  `/user/user/trial`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>If it is success list the created directory.</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`hadoop fs –``ls` `/`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The output will be like this</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`drwxr-xr-x   - usersupergroup  0 2012-10-10 18:08 ``/user/user/trial`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>If getting like this, the HDFS is working fine.</p>
+
+<pre><code>1. Copy a file from local linux file system
+</code></pre>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`hadoop fs –copyFromLocal  utilities``/hadoop-1``.0.3``/conf/core-site``.xml  ``/user/user/trial/`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Check for the file in HDFS</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`hadoop fs –``ls` `/user/user/trial/`
+
+
+
+
+
+
+
+`-rw-r--r--   1 usersupergroup 557 2012-10-10 18:20 ``/user/user/trial/core-site``.xml`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>If the output is like this, it is success.</p>
+
+<h5 id="checking-with-a-mapreduce-job">Checking with a MapReduce job</h5>
+
+<p>Mapreduce jars for testing are available with the hadoop itself.</p>
+
+<p>So we can use that jar. No need to import another.</p>
+
+<p>For checking with mapreduce, we can run a wordcountmapreduce job.</p>
+
+<p>Go to $HADOOP_HOME</p>
+
+<p>Then run</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$hadoop jar hadoop-examples-1.0.3.jar`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>This output will be like this</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+
+
+
+24
+
+
+
+
+25
+
+
+
+
+26
+
+
+
+
+27
+
+
+
+
+28
+
+
+
+
+29
+
+
+
+
+30
+
+
+
+
+31
+
+
+
+
+32
+
+
+
+
+33
+
+
+
+
+34
+
+
+
+
+35
+
+
+
+
+36
+
+
+
+
+37
+
+
+
+
+38
+
+
+
+
+39
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`An example program must be given as the first argument.`
+
+
+
+
+
+
+
+`Valid program names are:`
+
+
+
+
+
+
+
+`aggregatewordcount: An Aggregate based map``/reduce` `program that counts the words ``in` `the input files.`
+
+
+
+
+
+
+
+`aggregatewordhist: An Aggregate based map``/reduce` `program that computes the histogram of the words ``in` `the input files.`
+
+
+
+
+
+
+
+`dbcount: An example job that count the pageview counts from a database.`
+
+
+
+
+
+
+
+`grep``: A map``/reduce` `program that counts the matches of a regex ``in` `the input.`
+
+
+
+
+
+
+
+`join``: A job that effects a ``join` `over sorted, equally partitioned datasets`
+
+
+
+
+
+
+
+`multifilewc: A job that counts words from several files.`
+
+
+
+
+
+
+
+`pentomino: A map``/reduce` `tile laying program to ``find` `solutions to pentomino problems.`
+
+
+
+
+
+
+
+`pi: A map``/reduce` `program that estimates Pi using monte-carlo method.`
+
+
+
+
+
+
+
+`randomtextwriter: A map``/reduce` `program that writes 10GB of random textual data per node.`
+
+
+
+
+
+
+
+`randomwriter: A map``/reduce` `program that writes 10GB of random data per node.`
+
+
+
+
+
+
+
+`secondarysort: An example defining a secondary ``sort` `to the reduce.`
+
+
+
+
+
+
+
+`sleep``: A job that sleeps at each map and reduce task.`
+
+
+
+
+
+
+
+`sort``: A map``/reduce` `program that sorts the data written by the random writer.`
+
+
+
+
+
+
+
+`sudoku: A sudoku solver.`
+
+
+
+
+
+
+
+`teragen: Generate data ``for` `the terasort`
+
+
+
+
+
+
+
+`terasort: Run the terasort`
+
+
+
+
+
+
+
+`teravalidate: Checking results of terasort`
+
+
+
+
+
+
+
+`wordcount: A map``/reduce` `program that counts the words ``in` `the input files.`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The above shown are the programs that are contained inside that jar, we can choose any program.</p>
+
+<p>Here we are  going to run the wordcount process.</p>
+
+<p>The input file using is the file that we already copied from local to HDFS.</p>
+
+<p>Run the following commands for executing the wordcount</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+
+
+
+24
+
+
+
+
+25
+
+
+
+
+26
+
+
+
+
+27
+
+
+
+
+28
+
+
+
+
+29
+
+
+
+
+30
+
+
+
+
+31
+
+
+
+
+32
+
+
+
+
+33
+
+
+
+
+34
+
+
+
+
+35
+
+
+
+
+36
+
+
+
+
+37
+
+
+
+
+38
+
+
+
+
+39
+
+
+
+
+40
+
+
+
+
+41
+
+
+
+
+42
+
+
+
+
+43
+
+
+
+
+44
+
+
+
+
+45
+
+
+
+
+46
+
+
+
+
+47
+
+
+
+
+48
+
+
+
+
+49
+
+
+
+
+50
+
+
+
+
+51
+
+
+
+
+52
+
+
+
+
+53
+
+
+
+
+54
+
+
+
+
+55
+
+
+
+
+56
+
+
+
+
+57
+
+
+
+
+58
+
+
+
+
+59
+
+
+
+
+60
+
+
+
+
+61
+
+
+
+
+62
+
+
+
+
+63
+
+
+
+
+64
+
+
+
+
+65
+
+
+
+
+66
+
+
+
+
+67
+
+
+
+
+68
+
+
+
+
+69
+
+
+
+
+70
+
+
+
+
+71
+
+
+
+
+72
+
+
+
+
+73
+
+
+
+
+74
+
+
+
+
+75
+
+
+
+
+76
+
+
+
+
+77
+
+
+
+
+78
+
+
+
+
+79
+
+
+
+
+80
+
+
+
+
+81
+
+
+
+
+82
+
+
+
+
+83
+
+
+
+
+84
+
+
+
+
+85
+
+
+
+
+86
+
+
+
+
+87
+
+
+
+
+88
+
+
+
+
+89
+
+
+
+
+90
+
+
+
+
+91
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$ hadoop jar hadoop-examples-1.0.3.jar wordcount user``/user/trial/core-site``.xml user``/user/trial/output/`
+
+
+
+
+
+
+
+`The output will be like this`
+
+
+
+
+
+
+
+`12``/10/10` `18:42:30 INFO input.FileInputFormat: Total input paths to process : 1`
+
+
+
+
+
+
+
+`12``/10/10` `18:42:30 INFO util.NativeCodeLoader: Loaded the native-hadoop library`
+
+
+
+
+
+
+
+`12``/10/10` `18:42:30 WARN snappy.LoadSnappy: Snappy native library not loaded`
+
+
+
+
+
+
+
+`12``/10/10` `18:42:31 INFO mapred.JobClient: Running job: job_201210041646_0003`
+
+
+
+
+
+
+
+`12``/10/10` `18:42:32 INFO mapred.JobClient:  map 0% reduce 0%`
+
+
+
+
+
+
+
+`12``/10/10` `18:42:46 INFO mapred.JobClient:  map 100% reduce 0%`
+
+
+
+
+
+
+
+`12``/10/10` `18:42:58 INFO mapred.JobClient:  map 100% reduce 100%`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient: Job complete: job_201210041646_0003`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient: Counters: 29`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:   Job Counters`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Launched reduce tasks=1`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     SLOTS_MILLIS_MAPS=12386`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Total ``time` `spent by all reduces waiting after reserving slots (ms)=0`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Total ``time` `spent by all maps waiting after reserving slots (ms)=0`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Launched map tasks=1`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Data-``local` `map tasks=1`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     SLOTS_MILLIS_REDUCES=10083`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:   File Output Format Counters`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Bytes Written=617`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:   FileSystemCounters`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     FILE_BYTES_READ=803`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     HDFS_BYTES_READ=688`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=44801`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=617`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:   File Input Format Counters`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Bytes Read=557`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:   Map-Reduce Framework`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Map output materialized bytes=803`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Map input records=18`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Reduce shuffle bytes=803`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Spilled Records=90`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Map output bytes=746`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     CPU ``time` `spent (ms)=3320`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Total committed heap usage (bytes)=233635840`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Combine input records=48`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     SPLIT_RAW_BYTES=131`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Reduce input records=45`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Reduce input ``groups``=45`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Combine output records=45`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Physical memory (bytes) snapshot=261115904`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Reduce output records=45`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=2876592128`
+
+
+
+
+
+
+
+`12``/10/10` `18:43:03 INFO mapred.JobClient:     Map output records=48`
+
+
+
+
+
+
+
+`user@ubuntu:~``/utilities/hadoop-1``.0.3$`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>If the program executed successfully, the output will be in</p>
+
+<p>user/user/trial/output/part-r-00000 file in hdfs</p>
+
+<p>Check the output</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td class="gutter" >
+
+
+1
+
+</td>
+
+<td class="code" >
+
+
+
+
+
+`>$hadoop fs –``cat` `user``/user/trial/output/part-r-00000`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>If output is coming, then our installation is success with mapreduce.</p>
+
+<p>Thus we checked our installation.</p>
+
+<p>So our single node hadoop cluster is ready</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/hadoop\/';
+    var disqus_title = 'Hadoop';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/hadoop\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

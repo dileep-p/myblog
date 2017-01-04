@@ -1,0 +1,3579 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Source on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/categories/open-source/index.xml</link>
+    <description>Recent content in Open Source on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:15</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol15/</link>
+      <pubDate>Wed, 31 Aug 2016 15:17:19 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol15/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2016/08/dropbox-data-breach.html&#34;&gt;Dropbox Hacked — More Than 68 Million Account Details Leaked Online&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://techcrunch.com/2016/08/30/dropbox-employees-password-reuse-led-to-theft-of-60m-user-credentials/amp/&#34;&gt;Dropbox employee’s password reuse led to theft of 60M+ user credentials&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://engineeringblog.yelp.com/2016/08/undebt-how-we-refactored-3-million-lines-of-code.html&#34;&gt;Undebt: How We Refactored 3 Million Lines of Code&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.zorinaq.com/nginx-resolver-vulns/&#34;&gt;Nginx resolver vulnerabilities allow cache poisoning attack&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://use-the-index-luke.com/blog/2016-07-29/on-ubers-choice-of-databases&#34;&gt;On Uber’s Choice of Databases&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kennethreitz.org/essays/on-cybersecurity-and-being-targeted&#34;&gt;On Cybersecurity and Being Targeted&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dschep/ntfy&#34;&gt;A utility for sending notifications, on demand and when commands finish&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=12376596&#34;&gt;How do you handle DDoS attacks?&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/results?search_query=%22Big+Data+Day+LA+2016%22&#34;&gt;Videos from Big Data Day LA 2016&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://techblog.netflix.com/2016/08/building-fastcom.html&#34;&gt;Building fast.com&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/eon01/NodeSS&#34;&gt;nodeSS : Node.js Security Scanner&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/forking-docker-daniel-riek?trk=hp-feed-article-title-like&#34;&gt;Forking Docker Not&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/mozilla-tech/promoting-security-best-practices-with-observatory-7b164a190425#.neshhjqht&#34;&gt;Promoting Security Best Practices with Observatory&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/4-use-cases-insights-regarding-kubernetes-namespaces-van-velzen?trk=hp-feed-article-title-like&#34;&gt;4 use cases and insights regarding Kubernetes namespaces&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://thehackerblog.com/floating-domains-taking-over-20k-digitalocean-domains-via-a-lax-domain-import-system/index.html&#34;&gt;Floating Domains – Taking Over 20K DigitalOcean Domains via a Lax Domain Import System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://polynome.co/infosec/inversoft/elasticsearch/linode/penetration-testing/2016/08/16/hack-that-inversoft.html&#34;&gt;HackedThat: Breaking in to a hardened server via the back door&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ilikebigbits.com/blog/2016/8/28/designing-a-fast-hash-table&#34;&gt;Designing a fast Hash Table&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/blog/ansible-openshift-enterprise-container-platform&#34;&gt;Automating the provisioning and configuration of Redhat Mobile Application platform&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/geshan/embrace-chatops-stop-installing-deployment-software-larcon-eu-2016&#34;&gt;Embrace chatops, stop installing deployment software&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/powerful-aws-platform-features-now-for-containers/&#34;&gt;Powerful AWS Platform Features, Now for Containers&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-aws-application-load-balancer/&#34;&gt;AWS Application Load Balancer&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-week-in-review&#34;&gt;The files in this GitHub Repo are used to produce the AWS Week in Review&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/bbc/chaos-lambda&#34;&gt;Randomly terminate ASG instances during business hours&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/stevenharradine/checkall&#34;&gt;Runs commands against every box within aws&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/DevOpsDave/ssh-everywhere&#34;&gt;Integrates ssh and tmux with aws cli to create tmux sessions that open a pane for each aws instance.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/08/create-couchbase-cluster-using-kubernetes.html&#34;&gt;Create a Couchbase cluster using Kubernetes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Yelp/git-code-debt&#34;&gt;A dashboard for monitoring code debt in a git repository.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/EntilZha/spot-price-reporter&#34;&gt;Fetch and plot AWS spot pricing history&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cosiner/socker&#34;&gt;Socker is a library for Go to simplify the use of SSH&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/Olivia&#34;&gt;Go: A distributed, in-memory key-value storage.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iamduo/workq&#34;&gt;Job server in Go&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.docker.com/2016/08/securing-enterprise-software-supply-chain-using-docker/&#34;&gt;Securing The Enterprise Software Supply Chain Using Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/08/14/containers-clean-up-your-house/&#34;&gt;Containers – Clean up your House&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://channel9.msdn.com/Shows/msftazure/Run-PowerShell-Natively-on-Linux-with-Docker&#34;&gt;Run PowerShell Natively on Linux with Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kendrickcoleman.com/index.php/Tech-Blog/how-to-use-volume-drivers-and-storage-with-new-docker-service-command.html&#34;&gt;How to Use Volume Drivers and Storage with New Docker Service Command&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.com/news/2016/08/docker-service-load-balancing&#34;&gt;Improved Options for Service Load Balancing in Docker 1.12.0&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.sqreen.io/one-easy-way-to-inject-malicious-code-in-any-node-js-application/&#34;&gt;One easy way to inject malicious code in any Node.js application&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.pivotal.io/pivotal/products/new-single-multi-node-sandboxes-for-pivotal-hdb-apache-hawq&#34;&gt;Docker-based sandbox (both single and multi-node) for Apache HAWQ &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@allingeek/we-do-rest-is-not-enough-7fa2a683e2f4#.7eiyaabb6&#34;&gt;“We do REST” is not Enough&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/building-a-remote-caching-system&#34;&gt;Building a Remote Caching System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kelseyhightower/kubernetes-the-hard-way&#34;&gt;Bootstrap Kubernetes the hard way. &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://githubengineering.com/context-aware-mysql-pools-via-haproxy/&#34;&gt;Context aware MySQL pools via HAProxy&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.codeship.com/autoscaling-purpose-strategies/&#34;&gt;Autoscaling: Its Purpose and Strategies&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/fetching-and-running-docker-container-images-with-rkt.html&#34;&gt;Fetching and running docker container images with rkt&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.madewithtea.com/processing-tweets-with-kafka-streams.html&#34;&gt;Processing Tweets with Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://inventous.com/database-scaling-mongodb/&#34;&gt;Database Scaling (Sharding) with MongoDB&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to create a private npm.js repository</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-create-a-private-npm-js-repository/</link>
+      <pubDate>Sat, 22 Feb 2014 14:46:38 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-create-a-private-npm-js-repository/</guid>
+      <description>
+
+&lt;p&gt;I want to create a mirror of the npm repository to mitigate periods of npm outages and to speed things up a little bit, so here’s how I did it!&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-couchdb&#34;&gt;&lt;em&gt;&lt;strong&gt;Installing CouchDB&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt; Install the required packages:&lt;/p&gt;
+
+&lt;p&gt; &lt;code&gt;sudo apt-get install build-essential autoconf automake libtool erlang libicu-dev libmozjs-dev libcurl4-openssl-dev &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Download CouchDB 1.5:-&lt;/p&gt;
+
+&lt;p&gt;wget &lt;a href=&#34;http://mirror.cc.columbia.edu/pub/software/apache/couchdb/source/1.5.0/apache-couchdb-1.5.0.tar.gz&#34;&gt;http://mirror.cc.columbia.edu/pub/software/apache/couchdb/source/1.5.0/apache-couchdb-1.5.0.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Extracting :-&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tar xfv apache-couchdb-1.5.0.tar.gz &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Compile:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;  &lt;/code&gt;&lt;code&gt;cd apache-couchdb-1.2.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;``&lt;code&gt; ./configure&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;``&lt;code&gt;  make&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;``&lt;code&gt;  make install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To check:-&lt;/p&gt;
+
+&lt;p&gt;   $ couchdb&lt;br /&gt;
+  Apache CouchDB 1.5.0 (LogLevel=info) is starting.&lt;br /&gt;
+  Apache CouchDB has started. Time to relax.&lt;br /&gt;
+  [info] [&lt;0.32.0&gt;] Apache CouchDB has started on &lt;a href=&#34;http://127.0.0.1:5984/&#34;&gt;http://127.0.0.1:5984/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;   $ curl -X GET &lt;a href=&#34;http://localhost:5984&#34;&gt;http://localhost:5984&lt;/a&gt;&lt;br /&gt;
+   [info] [&lt;0.361.0&gt;] 127.0.0.1 - - GET / 200&lt;/p&gt;
+
+&lt;p&gt;Adding CouchDB to the init.d scripts&lt;/p&gt;
+
+&lt;p&gt;     $ sudo adduser &amp;ndash;disabled-login &amp;ndash;disabled-password &amp;ndash;no-create-home couchdb&lt;/p&gt;
+
+&lt;p&gt;     Adding user &lt;code&gt;couchdb&#39; ...  
+     Adding new group&lt;/code&gt;couchdb&amp;rsquo; (1001) &amp;hellip;&lt;br /&gt;
+     Adding new user &lt;code&gt;couchdb&#39; (1001) with group&lt;/code&gt;couchdb&amp;rsquo; &amp;hellip;&lt;br /&gt;
+     Not creating home directory `/home/couchdb&amp;rsquo;.&lt;br /&gt;
+     Changing the user information for couchdb Enter the new value, or press ENTER for the default&lt;br /&gt;
+     Full Name []: CouchDB Admin&lt;br /&gt;
+     Room Number []:  &lt;br /&gt;
+     Work Phone []:&lt;br /&gt;
+     Home Phone []:&lt;br /&gt;
+    Other []:&lt;br /&gt;
+    Is the information correct? [Y/n] Y&lt;/p&gt;
+
+&lt;p&gt;User added, now permissions:&lt;/p&gt;
+
+&lt;p&gt;    sudo chown -R couchdb:couchdb /usr/local/var/{log,lib,run}/couchdb&lt;/p&gt;
+
+&lt;p&gt;    sudo chown -R couchdb:couchdb /usr/local/etc/couchdb/local.ini&lt;/p&gt;
+
+&lt;p&gt;    $ sudo vim /usr/local/etc/couchdb/default.ini&lt;br /&gt;
+    [httpd]&lt;br /&gt;
+    secure_rewrites = false&lt;/p&gt;
+
+&lt;p&gt;    sudo ln -s /usr/local/etc/init.d/couchdb /etc/init.d&lt;br /&gt;
+    sudo update-rc.d couchdb defaults&lt;br /&gt;
+    sudo /etc/init.d/couchdb start&lt;/p&gt;
+
+&lt;p&gt;    &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Replicating npmjs.org&lt;/strong&gt;&lt;br /&gt;
+Now to replicate the npm registry.&lt;/p&gt;
+
+&lt;p&gt;curl -X POST &lt;a href=&#34;http://127.0.0.1:5984/_replicate&#34;&gt;http://127.0.0.1:5984/_replicate&lt;/a&gt; -d &amp;lsquo;{&amp;ldquo;source&amp;rdquo;:&amp;ldquo;&lt;a href=&#34;http://isaacs.iriscouch.com/registry/&amp;quot;&#34;&gt;http://isaacs.iriscouch.com/registry/&amp;quot;&lt;/a&gt;, &amp;ldquo;target&amp;rdquo;:&amp;ldquo;registry&amp;rdquo;, &amp;ldquo;create_target&amp;rdquo;:true}&amp;rsquo; -H &amp;ldquo;Content-Type: application/json&amp;rdquo;&lt;br /&gt;
+What this means is that once this is completed your local replication will be an exact copy of the npm registry. However, to ensure we do indeed receive all updates we will add a &amp;ldquo;continuous&amp;rdquo;:true parameter to the JSON string in our POST request, this utilises CouchDB’s _changes API and will pull any new changes when this API is notified.&lt;/p&gt;
+
+&lt;p&gt;curl -X POST &lt;a href=&#34;http://127.0.0.1:5984/_replicate&#34;&gt;http://127.0.0.1:5984/_replicate&lt;/a&gt; -d &amp;lsquo;{&amp;ldquo;source&amp;rdquo;:&amp;ldquo;&lt;a href=&#34;http://isaacs.iriscouch.com/registry/&amp;quot;&#34;&gt;http://isaacs.iriscouch.com/registry/&amp;quot;&lt;/a&gt;, &amp;ldquo;target&amp;rdquo;:&amp;ldquo;registry&amp;rdquo;, &amp;ldquo;continuous&amp;rdquo;:true, &amp;ldquo;create_target&amp;rdquo;:true}&amp;rsquo; -H &amp;ldquo;Content-Type: application/json&amp;rdquo;&lt;br /&gt;
+We are now replicating continuously from npmjs.org to our private CouchDB instance! If you ever want to stop these replications you can easily do this by running the same command as before but add a &amp;ldquo;cancel&amp;rdquo;:true parameter to the JSON POST data.&lt;/p&gt;
+
+&lt;p&gt;curl -X POST &lt;a href=&#34;http://127.0.0.1:5984/_replicate&#34;&gt;http://127.0.0.1:5984/_replicate&lt;/a&gt; -d &amp;lsquo;{&amp;ldquo;source&amp;rdquo;:&amp;ldquo;&lt;a href=&#34;http://isaacs.iriscouch.com/registry/&amp;quot;&#34;&gt;http://isaacs.iriscouch.com/registry/&amp;quot;&lt;/a&gt;, &amp;ldquo;target&amp;rdquo;:&amp;ldquo;registry&amp;rdquo;, &amp;ldquo;continuous&amp;rdquo;:true, &amp;ldquo;create_target&amp;rdquo;:true, &amp;ldquo;cancel&amp;rdquo;:true}&amp;rsquo; -H &amp;ldquo;Content-Type: application/json&amp;rdquo;&lt;br /&gt;
+And we&amp;rsquo;re almost done! All we need to do now is to set up our own version of the npmjs.org registry &lt;/p&gt;
+
+&lt;p&gt;Getting npm to work with our replicated CouchDB&lt;br /&gt;
+Most of the steps can be found on isaacs github in the npmjs.org git repositories README&lt;/p&gt;
+
+&lt;p&gt;Of course we need to have nodejs and git installed for this:&lt;/p&gt;
+
+&lt;p&gt;git clone git://github.com/isaacs/npmjs.org.git&lt;br /&gt;
+cd npmjs.org&lt;br /&gt;
+sudo npm install -g couchapp&lt;br /&gt;
+npm install couchapp&lt;br /&gt;
+npm install semver&lt;br /&gt;
+couchapp push registry/app.js &lt;a href=&#34;http://localhost:5984/registry&#34;&gt;http://localhost:5984/registry&lt;/a&gt;&lt;br /&gt;
+couchapp push www/app.js &lt;a href=&#34;http://localhost:5984/registry&#34;&gt;http://localhost:5984/registry&lt;/a&gt;&lt;br /&gt;
+Boom, we now have a working npm repository, to test this we can run the following command.&lt;/p&gt;
+
+&lt;p&gt;npm &amp;ndash;registry &lt;a href=&#34;http://localhost:5984/registry/_design/scratch/_rewrite&#34;&gt;http://localhost:5984/registry/_design/scratch/_rewrite&lt;/a&gt; login&lt;br /&gt;
+npm &amp;ndash;registry &lt;a href=&#34;http://localhost:5984/registry/_design/scratch/_rewrite&#34;&gt;http://localhost:5984/registry/_design/scratch/_rewrite&lt;/a&gt; search&lt;br /&gt;
+If you are getting results then everything is fine.&lt;/p&gt;
+
+&lt;p&gt;Running on your own subdomain is to modify the [vhosts] section in /usr/local/etc/couchdb/local.ini. Uncomment the example and restart CouchDB.&lt;/p&gt;
+
+&lt;p&gt;$ vim /usr/local/etc/couchdb/local.ini&lt;br /&gt;
+[vhosts]&lt;br /&gt;
+example.com = /registry/_design/scratch/_rewrite&lt;br /&gt;
+And while we are at it will lock down the application and prevent unauthorised users from deleting our data.&lt;/p&gt;
+
+&lt;p&gt;$ vim /usr/local/etc/couchdb/local.ini&lt;br /&gt;
+[admins]&lt;br /&gt;
+admin = password&lt;br /&gt;
+$ sudo /etc/init.d/couchdb restart&lt;br /&gt;
+Start using your version of npm with the client!&lt;br /&gt;
+Straight from the npmjs.org README, just replace &lt;registryurl&gt; with your registries url, for example:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://localhost:5984/registry/_design/app/_rewrite&#34;&gt;http://localhost:5984/registry/_design/app/_rewrite&lt;/a&gt;&lt;br /&gt;
+You can point the npm client at the registry by putting this in your ~/.npmrc file:&lt;/p&gt;
+
+&lt;p&gt;registry = &lt;registryurl&gt;&lt;br /&gt;
+You can also set the npm registry config property like:&lt;/p&gt;
+
+&lt;p&gt;npm config set &lt;registryurl&gt;&lt;br /&gt;
+Or you can simple override the registry config on each call:&lt;/p&gt;
+
+&lt;p&gt;npm &amp;ndash;registry &lt;registryurl&gt; install &lt;packagename&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Centralizing Logs with Lumberjack, Logstash, and Elasticsearch</title>
+      <link>https://www.vishnu-tech.com/blog/centralizing-logs-with-lumberjack-logstash-and-elasticsearch/</link>
+      <pubDate>Sat, 20 Jul 2013 06:04:34 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/centralizing-logs-with-lumberjack-logstash-and-elasticsearch/</guid>
+      <description>
+
+&lt;h2 id=&#34;elasticsearch&#34;&gt;Elasticsearch&lt;/h2&gt;
+
+&lt;p&gt;Elasticsearch is RESTful search server based on Apache Lucene. It&amp;rsquo;s easily scalable and uses push replication in distributed environments. But really, the Logstash/Elasticsearch/Kibana integration is great! If it wasn&amp;rsquo;t for how well these applications integrate with one another, I probably would have looked into putting my logs into SOLR (which I&amp;rsquo;m more familiar with).&lt;/p&gt;
+
+&lt;p&gt;As of Logstash 1.1.9, the Elasticsearch output plugin works with the 0.20.2 version of Elasticsearch, so even though Elasticsearch currently has a newer version available, we&amp;rsquo;re going to use 0.20.2. (If you really need to use the most current version of Elasticsearch, you can use the elasticsearch_http output plugin to make Logstash interface with Elasticsearch&amp;rsquo;s REST API. If you&amp;rsquo;re using the elasticsearch output plugin, your versions must match between Logstash and Elasticsearch.)&lt;/p&gt;
+
+&lt;p&gt;First, you&amp;rsquo;ll need to download a headless runtime environment. We run Squeeze around here, so we&amp;rsquo;re using apt-get install default-jre-headless&lt;/p&gt;
+
+&lt;p&gt;Then, you&amp;rsquo;ll need to download the .deb package.&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Download and install Elasticsearch
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`wget http:``//download``.elasticsearch.org``/elasticsearch/elasticsearch/elasticsearch-0``.20.2.deb`
+
+
+
+
+`dpkg -i elasticsearch-0.20.2.deb`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;​&lt;/p&gt;
+
+&lt;p&gt;You should see that elasticsearch is now running on your server. Stop it for now /etc/init.d/elasticsearch stop - We might want to set up some configuration. For example, you&amp;rsquo;re probably going to be generating a lot of data. And even if you&amp;rsquo;re not, I highly recommend using external block storage if you&amp;rsquo;re on cloud hosting. That way, your data stays when your instance dies.&lt;/p&gt;
+
+&lt;p&gt;On some hosts, you may need to run modprobe acpiphp before attaching the block storage device for the first time. By the way, keep in mind that you will generate a LOT of I/O requests. I do NOT recommend setting this up at places like Amazon or HP Cloud where you get billed per 1,000,000 requests. That 1,000,000 may sound like a lot of requests, but if you&amp;rsquo;re stashing 100GB of logs per month, don&amp;rsquo;t be surprised when your I/O bill is more than $3,000. Just a heads up.&lt;/p&gt;
+
+&lt;p&gt;Next, you&amp;rsquo;ll want to edit the configuration in /etc/elasticsearch/elasticsearch.yml. If you&amp;rsquo;re on cloud hosting and running more than one node, odds are multicast won&amp;rsquo;t work so you&amp;rsquo;ll have to specify the IPs of your Elasticsearch nodes. You&amp;rsquo;ll also need to make sure that the data directory has been properly specified. By the way, Rackspace &lt;strong&gt;does&lt;/strong&gt; support multicast using Cloud Networks. If you&amp;rsquo;ve got a multicast-enabled network, then all that you&amp;rsquo;ll need to do for your nodes to communicate with each other is ensure they are configured with the same cluster name.&lt;/p&gt;
+
+&lt;p&gt;After configuring Elasticsearch, you can go ahead and start it. If you&amp;rsquo;re running more than one node, I recommend waiting a few minutes between starting each one (or &lt;a href=&#34;http://www.elasticsearch.org/guide/reference/api/admin-cluster-health.html&#34;&gt;check the health of the cluster&lt;/a&gt; first).&lt;/p&gt;
+
+&lt;h2 id=&#34;logstash&#34;&gt;Logstash&lt;/h2&gt;
+
+&lt;p&gt;Once again, you&amp;rsquo;ll need a JRE to run this.&lt;/p&gt;
+
+&lt;p&gt;First, you&amp;rsquo;ll want to generate self-signed SSL on logstash server:&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Generate SSL
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`openssl req -x509 -newkey rsa:2048 -keyout ``/etc/ssl/logstash``.key -out ``/etc/ssl/logstash``.pub -nodes -days 365`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;You will need the public key for your Lumberjack shipper.&lt;/p&gt;
+
+&lt;p&gt;Next, you&amp;rsquo;ll need to get the Logstash jar.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Download/Install Logstash
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`mkdir` `/opt/logstash`
+
+
+
+
+`wget https:``//logstash``.objects.dreamhost.com``/release/logstash-1``.1.9-monolithic.jar -O ``/opt/logstash/logstash``.jar`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;You&amp;rsquo;ll need to put together your logstash.conf file according to the documentation. Be sure that you have an output filter for Elasticsearch if you&amp;rsquo;re going to store your logs there. If you put it in /etc/logstash/logstash.conf, you can use the following init script to run it. Otherwise, you&amp;rsquo;ll need to run /usr/bin/java -jar /opt/logstash/logstash.jar agent -f &lt;path-to-your.conf&gt; -l &lt;path-to-where-you-want-the.log&gt;&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Logstash Init Script
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+
+
+
+24
+
+
+
+
+25
+
+
+
+
+26
+
+
+
+
+27
+
+
+
+
+28
+
+
+
+
+29
+
+
+
+
+30
+
+
+
+
+31
+
+
+
+
+32
+
+
+
+
+33
+
+
+
+
+34
+
+
+
+
+35
+
+
+
+
+36
+
+
+
+
+37
+
+
+
+
+38
+
+
+
+
+39
+
+
+
+
+40
+
+
+
+
+41
+
+
+
+
+42
+
+
+
+
+43
+
+
+
+
+44
+
+
+
+
+45
+
+
+
+
+46
+
+
+
+
+47
+
+
+
+
+48
+
+
+
+
+49
+
+
+
+
+50
+
+
+
+
+51
+
+
+
+
+52
+
+
+
+
+53
+
+
+
+
+54
+
+
+
+
+55
+
+
+
+
+56
+
+
+
+
+57
+
+
+
+
+58
+
+
+
+
+59
+
+
+
+
+60
+
+
+
+
+61
+
+
+
+
+62
+
+
+
+
+63
+
+
+
+
+64
+
+
+
+
+65
+
+
+
+
+66
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`#! /bin/sh`
+
+
+
+
+ 
+
+
+
+
+`### BEGIN INIT INFO`
+
+
+
+
+`# Provides:          logstash`
+
+
+
+
+`# Required-Start:    $remote_fs $syslog`
+
+
+
+
+`# Required-Stop:     $remote_fs $syslog`
+
+
+
+
+`# Default-Start:     2 3 4 5`
+
+
+
+
+`# Default-Stop:      0 1 6`
+
+
+
+
+`# Short-Description: Start daemon at boot time`
+
+
+
+
+`# Description:       Enable service provided by daemon.`
+
+
+
+
+`### END INIT INFO`
+
+
+
+
+ 
+
+
+
+
+`. ``/lib/lsb/init-functions`
+
+
+
+
+ 
+
+
+
+
+`name=``&#34;logstash&#34;`
+
+
+
+
+`logstash_bin=``&#34;/usr/bin/java -- -jar /opt/logstash/logstash.jar&#34;`
+
+
+
+
+`logstash_conf=``&#34;/etc/logstash/logstash.conf&#34;`
+
+
+
+
+`logstash_log=``&#34;/var/log/logstash.log&#34;`
+
+
+
+
+`pid_file=``&#34;/var/run/$name.pid&#34;`
+
+
+
+
+ 
+
+
+
+
+`start () {`
+
+
+
+
+`        ``command``=``&#34;${logstash_bin} agent -f $logstash_conf --log ${logstash_log}&#34;`
+
+
+
+
+ 
+
+
+
+
+`        ``log_daemon_msg ``&#34;Starting $name&#34;` `&#34;$name&#34;`
+
+
+
+
+`        ``if` `start-stop-daemon --start --quiet --oknodo --pidfile ``&#34;$pid_file&#34;` `-b -m --``exec` `$``command``; ``then`
+
+
+
+
+`                ``log_end_msg 0`
+
+
+
+
+`        ``else`
+
+
+
+
+`                ``log_end_msg 1`
+
+
+
+
+`        ``fi`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`stop () {`
+
+
+
+
+`        ``log_daemon_msg ``&#34;Stopping $name&#34;` `&#34;$name&#34;`
+
+
+
+
+`        ``start-stop-daemon --stop --quiet --oknodo --pidfile ``&#34;$pid_file&#34;`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`status () {`
+
+
+
+
+`        ``status_of_proc -p $pid_file ``&#34;&#34;` `&#34;$name&#34;`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`case` `$1 ``in`
+
+
+
+
+`        ``start)`
+
+
+
+
+`                ``if` `status; ``then` `exit` `0; ``fi`
+
+
+
+
+`                ``start`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``stop)`
+
+
+
+
+`                ``stop`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``reload)`
+
+
+
+
+`                ``stop`
+
+
+
+
+`                ``start`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``restart)`
+
+
+
+
+`                ``stop`
+
+
+
+
+`                ``start`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``status)`
+
+
+
+
+`                ``status &amp;&amp; ``exit` `0 || ``exit` `$?`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``*)`
+
+
+
+
+`                ``echo` `&#34;Usage: $0 {start|stop|restart|reload|status}&#34;`
+
+
+
+
+`                ``exit` `1`
+
+
+
+
+`                ``;;`
+
+
+
+
+`esac`
+
+
+
+
+ 
+
+
+
+
+`exit` `0`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;​&lt;/p&gt;
+
+&lt;p&gt;By the way, any inputs in your conf file that are accepting data from a Lumberjack shipper need to use the Lumberjack input filter. While it may be tempting to receive logs over UDP due to reduce overhead, I highly recommend using TCP. UDP is great if you don&amp;rsquo;t care if you actually receive it or not, but we want to receive all of our logs. TCP is a better choice in this case for better accounting since it will attempt to resend data that wasn&amp;rsquo;t acknowledged to have been received.&lt;/p&gt;
+
+&lt;p&gt;Also, here is a sample config for /etc/logstash/logstash.conf:&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Logstash Conf
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+
+
+
+24
+
+
+
+
+25
+
+
+
+
+26
+
+
+
+
+27
+
+
+
+
+28
+
+
+
+
+29
+
+
+
+
+30
+
+
+
+
+31
+
+
+
+
+32
+
+
+
+
+33
+
+
+
+
+34
+
+
+
+
+35
+
+
+
+
+36
+
+
+
+
+37
+
+
+
+
+38
+
+
+
+
+39
+
+
+
+
+40
+
+
+
+
+41
+
+
+
+
+42
+
+
+
+
+43
+
+
+
+
+44
+
+
+
+
+45
+
+
+
+
+46
+
+
+
+
+47
+
+
+
+
+48
+
+
+
+
+49
+
+
+
+
+50
+
+
+
+
+51
+
+
+
+
+52
+
+
+
+
+53
+
+
+
+
+54
+
+
+
+
+55
+
+
+
+
+56
+
+
+
+
+57
+
+
+
+
+58
+
+
+
+
+59
+
+
+
+
+60
+
+
+
+
+61
+
+
+
+
+62
+
+
+
+
+63
+
+
+
+
+64
+
+
+
+
+65
+
+
+
+
+66
+
+
+
+
+67
+
+
+
+
+68
+
+
+
+
+69
+
+
+
+
+70
+
+
+
+
+71
+
+
+
+
+72
+
+
+
+
+73
+
+
+
+
+74
+
+
+
+
+75
+
+
+
+
+76
+
+
+
+
+77
+
+
+
+
+78
+
+
+
+
+79
+
+
+
+
+80
+
+
+
+
+81
+
+
+
+
+82
+
+
+
+
+83
+
+
+
+
+84
+
+
+
+
+85
+
+
+
+
+86
+
+
+
+
+87
+
+
+
+
+88
+
+
+
+
+89
+
+
+
+
+90
+
+
+
+
+91
+
+
+
+
+92
+
+
+
+
+93
+
+
+
+
+94
+
+
+
+
+95
+
+
+
+
+96
+
+
+
+
+97
+
+
+
+
+98
+
+
+
+
+99
+
+
+
+
+100
+
+
+
+
+101
+
+
+
+
+102
+
+
+
+
+103
+
+
+
+
+104
+
+
+
+
+105
+
+
+
+
+106
+
+
+
+
+107
+
+
+
+
+108
+
+
+
+
+109
+
+
+
+
+110
+
+
+
+
+111
+
+
+
+
+112
+
+
+
+
+113
+
+
+
+
+114
+
+
+
+
+115
+
+
+
+
+116
+
+
+
+
+117
+
+
+
+
+118
+
+
+
+
+119
+
+
+
+
+120
+
+
+
+
+121
+
+
+
+
+122
+
+
+
+
+123
+
+
+
+
+124
+
+
+
+
+125
+
+
+
+
+126
+
+
+
+
+127
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`input {`
+
+
+
+
+`  ``lumberjack {`
+
+
+
+
+`    ``port =&gt; 5000`
+
+
+
+
+`    ``type` `=&gt; syslog`
+
+
+
+
+`    ``ssl_certificate =&gt; ``&#34;/etc/ssl/logstash.pub&#34;`
+
+
+
+
+`    ``ssl_key =&gt; ``&#34;/etc/ssl/logstash.key&#34;`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``lumberjack {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;nginx_access&#34;`
+
+
+
+
+`    ``port =&gt; 5001`
+
+
+
+
+`    ``ssl_certificate =&gt; ``&#34;/etc/ssl/logstash.pub&#34;`
+
+
+
+
+`    ``ssl_key =&gt; ``&#34;/etc/ssl/logstash.key&#34;`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``lumberjack {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;varnishncsa&#34;`
+
+
+
+
+`    ``port =&gt; ``&#34;5002&#34;`
+
+
+
+
+`    ``ssl_certificate =&gt; ``&#34;/etc/ssl/logstash.pub&#34;`
+
+
+
+
+`    ``ssl_key =&gt; ``&#34;/etc/ssl/logstash.key&#34;`
+
+
+
+
+`  ``}`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`filter {`
+
+
+
+
+`  ``# Lumberjack sends custom fields. We&#39;re going to use those for multi-user`
+
+
+
+
+`  ``# Kibana access control.`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``add_tag =&gt; [ ``&#34;%{customer}&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``remove =&gt; [ ``&#34;customer&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+ 
+
+
+
+
+`  ``# strip the syslog PRI part and create facility and severity fields.`
+
+
+
+
+`  ``# the original syslog message is saved in field %{syslog_raw_message}.`
+
+
+
+
+`  ``# the extracted PRI is available in the %{syslog_pri} field.`
+
+
+
+
+`  ``#`
+
+
+
+
+`  ``# You get %{syslog_facility_code} and %{syslog_severity_code} fields.`
+
+
+
+
+`  ``# You also get %{syslog_facility} and %{syslog_severity} fields if the`
+
+
+
+
+`  ``# use_labels option is set True (the default) on syslog_pri filter.`
+
+
+
+
+`  ``grok {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``pattern =&gt; [ ``&#34;&lt;%{POSINT:syslog_pri}&gt;%{SPACE}%{GREEDYDATA:message_remainder}&#34;` `]`
+
+
+
+
+`    ``add_tag =&gt; ``&#34;got_syslog_pri&#34;`
+
+
+
+
+`    ``add_field =&gt; [ ``&#34;syslog_raw_message&#34;``, ``&#34;%{@message}&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``syslog_pri {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_pri&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_pri&#34;` `]`
+
+
+
+
+`    ``replace =&gt; [ ``&#34;@message&#34;``, ``&#34;%{message_remainder}&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``# XXX must not be combined with replacement which uses same field`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_pri&#34;` `]`
+
+
+
+
+`    ``remove =&gt; [ ``&#34;message_remainder&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+ 
+
+
+
+
+`  ``# strip the syslog timestamp and force event timestamp to be the same.`
+
+
+
+
+`  ``# the original string is saved in field %{syslog_timestamp}.`
+
+
+
+
+`  ``# the original logstash input timestamp is saved in field %{received_at}.`
+
+
+
+
+`  ``grok {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``pattern =&gt; [ ``&#34;%{SYSLOGTIMESTAMP:syslog_timestamp}%{SPACE}%{GREEDYDATA:message_remainder}&#34;` `]`
+
+
+
+
+`    ``add_tag =&gt; ``&#34;got_syslog_timestamp&#34;`
+
+
+
+
+`    ``add_field =&gt; [ ``&#34;received_at&#34;``, ``&#34;%{@timestamp}&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_timestamp&#34;` `]`
+
+
+
+
+`    ``replace =&gt; [ ``&#34;@message&#34;``, ``&#34;%{message_remainder}&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``# XXX must not be combined with replacement which uses same field`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_timestamp&#34;` `]`
+
+
+
+
+`    ``remove =&gt; [ ``&#34;message_remainder&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``date` `{`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_timestamp&#34;` `]`
+
+
+
+
+`    ``# season to taste for your own syslog format(s)`
+
+
+
+
+`    ``syslog_timestamp =&gt; [ ``&#34;MMM  d HH:mm:ss&#34;``, ``&#34;MMM dd HH:mm:ss&#34;``, ``&#34;ISO8601&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+ 
+
+
+
+
+`  ``# strip the host field from the syslog line.`
+
+
+
+
+`  ``# the extracted host field becomes the logstash %{@source_host} metadata`
+
+
+
+
+`  ``# and is also available in the filed %{syslog_hostname}.`
+
+
+
+
+`  ``# the original logstash source_host is saved in field %{logstash_source}.`
+
+
+
+
+`  ``grok {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``pattern =&gt; [ ``&#34;%{SYSLOGHOST:syslog_hostname}%{SPACE}%{GREEDYDATA:message_remainder}&#34;` `]`
+
+
+
+
+`    ``add_tag =&gt; [ ``&#34;got_syslog_host&#34;``, ``&#34;%{syslog_hostname}&#34;` `]`
+
+
+
+
+`    ``add_field =&gt; [ ``&#34;logstash_source&#34;``, ``&#34;%{@source_host}&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_host&#34;` `]`
+
+
+
+
+`    ``replace =&gt; [ ``&#34;@source_host&#34;``, ``&#34;%{syslog_hostname}&#34;` `]`
+
+
+
+
+`    ``replace =&gt; [ ``&#34;@message&#34;``, ``&#34;%{message_remainder}&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``mutate {`
+
+
+
+
+`    ``# XXX must not be combined with replacement which uses same field`
+
+
+
+
+`    ``type` `=&gt; ``&#34;syslog&#34;`
+
+
+
+
+`    ``tags =&gt; [ ``&#34;got_syslog_host&#34;` `]`
+
+
+
+
+`    ``remove =&gt; [ ``&#34;message_remainder&#34;` `]`
+
+
+
+
+`  ``}`
+
+
+
+
+ 
+
+
+
+
+`  ``grok {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;nginx_access&#34;`
+
+
+
+
+`    ``pattern =&gt; ``&#34;%{COMBINEDAPACHELOG}&#34;`
+
+
+
+
+`  ``}`
+
+
+
+
+`  ``grok {`
+
+
+
+
+`    ``type` `=&gt; ``&#34;varnishncsa&#34;`
+
+
+
+
+`    ``pattern =&gt; ``&#34;%{COMBINEDAPACHELOG}&#34;`
+
+
+
+
+`  ``}`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`output {`
+
+
+
+
+`#  stdout { debug =&gt; true debug_format =&gt; &#34;json&#34; }`
+
+
+
+
+ 
+
+
+
+
+`  ``elasticsearch {`
+
+
+
+
+`    ``cluster =&gt; ``&#34;my-logstash-cluster&#34;`
+
+
+
+
+`  ``}`
+
+
+
+
+`}`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;By the way, you&amp;rsquo;ll notice that a lot of the filters have &amp;ldquo;type&amp;rdquo; set, as well as the inputs. This is so you can limit which type a filter is acting on. Additionally, you can add multiple outputs that send only certain types to different destinations. For example, you might want to send Varnish and Nginx logs to statsd in addition to Elasticsearch, or maybe you want to send certain events &lt;a href=&#34;http://logstash.net/docs/1.1.9/outputs/pagerduty&#34;&gt;to PagerDuty&lt;/a&gt;, or perhaps even &lt;a href=&#34;http://logstash.net/docs/1.1.9/outputs/irc&#34;&gt;to IRC&lt;/a&gt;. There are currently &lt;a href=&#34;http://logstash.net/docs/1.1.9/&#34;&gt;over 45 outputs&lt;/a&gt; that come with Logstash, and if what you need isn&amp;rsquo;t there you can always write your own. By the way, Lumberjack isn&amp;rsquo;t the only input; it&amp;rsquo;s just the one we&amp;rsquo;re focusing on here.&lt;/p&gt;
+
+&lt;p&gt;Also, the above logstash.conf assumes that you have Grok installed and that you&amp;rsquo;re running on a multicast-enabled network. Also, don&amp;rsquo;t get discouraged waiting for Logstash to start. It typically takes 70-90 seconds in my experience, although I&amp;rsquo;ve seen it take up to two minutes to start up and fully connect to Elasticsearch. I banged my head against the wall my first day with Logstash trying to figure out what was wrong - and then I went and got another cup of coffee and returned back to see it finally running.&lt;/p&gt;
+
+&lt;h2 id=&#34;start-shipping-with-lumberjack&#34;&gt;Start Shipping with Lumberjack&lt;/h2&gt;
+
+&lt;p&gt;I know, you&amp;rsquo;re probably thinking one of two things at this point.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Logstash can ship logs, too.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Rsyslog can ship logs and ships with most distros.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And you&amp;rsquo;re right. But when you&amp;rsquo;re shipping a lot of logs, especially on a system with limited resources, you need a lightweight solution that does nothing but ship. Enter Lumberjack.&lt;/p&gt;
+
+&lt;p&gt;Remember, Logstash is Java. Running as a shipper, its probably going to be using a significant part of your memory. While that might be acceptable on a 32GB server, if your deployment consists of mostly 512MB or 1GB cloud servers for web nodes then you&amp;rsquo;re giving up a significant chunk of resources that can be put to better use for other tasks.&lt;/p&gt;
+
+&lt;p&gt;The next option might be to ship using Rsyslog. But even then, I&amp;rsquo;ve seen that grow to over 60MB of memory usage, and I&amp;rsquo;ve heard people talk about over 100MB of memory usage. For shipping logs.&lt;/p&gt;
+
+&lt;p&gt;Both of those scenarios are unacceptable to me. Lumberjack uses a whopping 64K in my experience. (For reference, the most busy server I have at this moment generates &amp;gt;1M entries per day from the Nginx logs.)&lt;/p&gt;
+
+&lt;p&gt;First, you&amp;rsquo;ll need to clone the repo, and then it&amp;rsquo;s just the usual &amp;ldquo;make&amp;rdquo;. However, to make my life a little easier, I like to use a neat little Rubygem called &amp;ldquo;fpm&amp;rdquo;. And with that, I run  &amp;rdquo;make deb&amp;rdquo; after running &amp;ldquo;make&amp;rdquo; and it gives me a Debian package that I can reuse over and over again.&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Install Lumberjack
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`apt-get ``install` `rubygems`
+
+
+
+
+`gem ``install` `fpm`
+
+
+
+
+`export` `PATH=$PATH:``/var/lib/gems/1``.8``/bin`
+
+
+
+
+`git clone https:``//github``.com``/jordansissel/lumberjack``.git`
+
+
+
+
+`cd` `lumberjack`
+
+
+
+
+`make`
+
+
+
+
+`make` `deb`
+
+
+
+
+`dpkg -i lumberjack_0.0.8_amd64.deb`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;So now that we have Lumberjack, how do we run it? Basically, you just need to tell Lumberjack what files to ship to Logstash. The basic command is &amp;ldquo;/opt/lumberjack/bin/lumberjack &amp;ndash;host your.logstash.host &amp;ndash;port port-for-these-logs &amp;ndash;ssl-ca-path /etc/ssl/logstash.pub /path/to/your.log /path/to/your/other.log&amp;rdquo;. You can also pass custom fields using &amp;ldquo;&amp;ndash;field key=value&amp;rdquo;. (The custom fields can be useful in a multi-user Kibana environment.)&lt;/p&gt;
+
+&lt;p&gt;To make my life easier, I run the following init script:&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Lumberjack Init.d Script
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+
+
+
+18
+
+
+
+
+19
+
+
+
+
+20
+
+
+
+
+21
+
+
+
+
+22
+
+
+
+
+23
+
+
+
+
+24
+
+
+
+
+25
+
+
+
+
+26
+
+
+
+
+27
+
+
+
+
+28
+
+
+
+
+29
+
+
+
+
+30
+
+
+
+
+31
+
+
+
+
+32
+
+
+
+
+33
+
+
+
+
+34
+
+
+
+
+35
+
+
+
+
+36
+
+
+
+
+37
+
+
+
+
+38
+
+
+
+
+39
+
+
+
+
+40
+
+
+
+
+41
+
+
+
+
+42
+
+
+
+
+43
+
+
+
+
+44
+
+
+
+
+45
+
+
+
+
+46
+
+
+
+
+47
+
+
+
+
+48
+
+
+
+
+49
+
+
+
+
+50
+
+
+
+
+51
+
+
+
+
+52
+
+
+
+
+53
+
+
+
+
+54
+
+
+
+
+55
+
+
+
+
+56
+
+
+
+
+57
+
+
+
+
+58
+
+
+
+
+59
+
+
+
+
+60
+
+
+
+
+61
+
+
+
+
+62
+
+
+
+
+63
+
+
+
+
+64
+
+
+
+
+65
+
+
+
+
+66
+
+
+
+
+67
+
+
+
+
+68
+
+
+
+
+69
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`#! /bin/sh`
+
+
+
+
+`# BEGIN INIT INFO`
+
+
+
+
+`# Provides:          lumberjack-nginx`
+
+
+
+
+`# Required-Start:    $remote_fs $syslog`
+
+
+
+
+`# Required-Stop:     $remote_fs $syslog`
+
+
+
+
+`# Default-Start:     2 3 4 5`
+
+
+
+
+`# Default-Stop:      0 1 6`
+
+
+
+
+`# Short-Description: Start daemon at boot time`
+
+
+
+
+`# Description:       Enable service provided by daemon.`
+
+
+
+
+`### END INIT INFO`
+
+
+
+
+ 
+
+
+
+
+`. ``/lib/lsb/init-functions`
+
+
+
+
+ 
+
+
+
+
+`name=``&#34;lumberjack-nginx&#34;`
+
+
+
+
+ 
+
+
+
+
+`# Read configuration variable file if it is present`
+
+
+
+
+`[ -r ``/etc/default/``$name ] &amp;&amp; . ``/etc/default/``$name`
+
+
+
+
+ 
+
+
+
+
+`lumberjack_bin=``&#34;/opt/lumberjack/bin/lumberjack.sh&#34;`
+
+
+
+
+`pid_file=``&#34;/var/run/$name.pid&#34;`
+
+
+
+
+`cwd=```pwd````
+
+
+
+
+ 
+
+
+
+
+`start () {`
+
+
+
+
+`        ``command``=``&#34;${lumberjack_bin}&#34;`
+
+
+
+
+ 
+
+
+
+
+`        ``if` `start-stop-daemon --start --quiet --oknodo --pidfile ``&#34;$pid_file&#34;` `-b -m -N 19 --``exec` `$``command` `-- $LUMBERJACK_OPTIONS; ``then`
+
+
+
+
+`                ``log_end_msg 0`
+
+
+
+
+`        ``else`
+
+
+
+
+`                ``log_end_msg 1`
+
+
+
+
+`        ``fi`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`stop () {`
+
+
+
+
+`        ``start-stop-daemon --stop --quiet --oknodo --pidfile ``&#34;$pid_file&#34;`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`status () {`
+
+
+
+
+`        ``status_of_proc -p $pid_file ``&#34;&#34;` `&#34;$name&#34;`
+
+
+
+
+`}`
+
+
+
+
+ 
+
+
+
+
+`case` `$1 ``in`
+
+
+
+
+`        ``start)`
+
+
+
+
+`                ``if` `status; ``then` `exit` `0; ``fi`
+
+
+
+
+`                ``echo` `-n ``&#34;Starting $name: &#34;`
+
+
+
+
+`                ``start`
+
+
+
+
+`                ``echo` `&#34;$name.&#34;`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``stop)`
+
+
+
+
+`                ``echo` `-n ``&#34;Stopping $name: &#34;`
+
+
+
+
+`                ``stop`
+
+
+
+
+`                ``echo` `&#34;$name.&#34;`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``restart)`
+
+
+
+
+`                ``echo` `-n ``&#34;Restarting $name: &#34;`
+
+
+
+
+`                ``stop`
+
+
+
+
+`                ``sleep` `1`
+
+
+
+
+`                ``start`
+
+
+
+
+`                ``echo` `&#34;$name.&#34;`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``status)`
+
+
+
+
+`                ``status &amp;&amp; ``exit` `0 || ``exit` `$?`
+
+
+
+
+`                ``;;`
+
+
+
+
+`        ``*)`
+
+
+
+
+`                ``echo` `&#34;Usage: $0 {start|stop|restart|status}&#34;`
+
+
+
+
+`                ``exit` `1`
+
+
+
+
+`                ``;;`
+
+
+
+
+`esac`
+
+
+
+
+ 
+
+
+
+
+`exit` `0`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;You might have noticed it&amp;rsquo;s called &amp;ldquo;lumberjack-nginx&amp;rdquo;. That&amp;rsquo;s because I run a separate daemon for shipping different log formats, such as MySQL, Varnish, Syslog, etc. The options are defined in /etc/default/lumberjack-nginx (or whatever you&amp;rsquo;re shipping.)&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Lumberjack Options File
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`LUMBERJACK_OPTIONS=``&#34;--field customer=clientname --host 172.16.0.52 --port 5001 --ssl-ca-path /etc/ssl/logstash.pub /var/log/nginx/access.log&#34;`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;bonus-kibana&#34;&gt;Bonus: Kibana&lt;/h2&gt;
+
+&lt;p&gt;Kibana is awesome. No really. It&amp;rsquo;s a really great front-end for Elasticsearch and makes analyzing your logs much, much more enjoyable. It&amp;rsquo;s super simple to install, too.&lt;/p&gt;
+
+&lt;p&gt;First, you&amp;rsquo;ll need to clone the repo: git clone &amp;ndash;branch=kibana-ruby &lt;a href=&#34;https://github.com/rashidkpc/Kibana.git&#34;&gt;https://github.com/rashidkpc/Kibana.git&lt;/a&gt;&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Install Kibana
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`git clone --branch=kibana-ruby https:``//github``.com``/rashidkpc/Kibana``.git ``/opt/kibana`
+
+
+
+
+`apt-get ``install` `rubygems libcurl4-openssl-dev`
+
+
+
+
+`export` `PATH=$PATH:``/var/lib/gems/1``.8``/bin`
+
+
+
+
+`cd` `/opt/kibana`
+
+
+
+
+`bundle ``install`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;By the way, there&amp;rsquo;s also a &amp;ldquo;kibana-ruby-auth&amp;rdquo; branch for multiuser installs. It seems to work pretty good from my testing, although there have been several bugs in the interface. At last checkout, there is an issue with the &amp;ldquo;Home&amp;rdquo; button linking to &amp;ldquo;index.html&amp;rdquo; which needs to be changed to &amp;ldquo;/&amp;rdquo;. I&amp;rsquo;m not up to speed on Ruby, so I don&amp;rsquo;t know what the &amp;ldquo;right&amp;rdquo; fixes are, but I get by.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll also need to install the following packages:&lt;/p&gt;
+
+&lt;p&gt;apt-get install rubygems libcurl4-openssl-dev&lt;/p&gt;
+
+&lt;p&gt;If you want to play with the multiuser install (not recommended for production at this time), you&amp;rsquo;ll also need the libpam0g-dev package.&lt;/p&gt;
+
+&lt;p&gt;After that, you just need to make some minor changes to KibanaConfig.rb (such as pointing it to the right Elasticsearch server and making sure Kibana will listen on the right ports) and run &amp;ldquo;ruby kibana.rb&amp;rdquo;, or use this handy init script:&lt;/p&gt;
+
+&lt;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; &gt;Kibana Init Script
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;
+
+
+1
+
+
+
+
+2
+
+
+
+
+3
+
+
+
+
+4
+
+
+
+
+5
+
+
+
+
+6
+
+
+
+
+7
+
+
+
+
+8
+
+
+
+
+9
+
+
+
+
+10
+
+
+
+
+11
+
+
+
+
+12
+
+
+
+
+13
+
+
+
+
+14
+
+
+
+
+15
+
+
+
+
+16
+
+
+
+
+17
+
+&lt;/td&gt;
+
+&lt;td &gt;
+
+
+
+
+
+`#!/bin/bash`
+
+
+
+
+ 
+
+
+
+
+`# Author - Matt Mencel - 2012`
+
+
+
+
+`# Borrowed heavily from Patrick McKenzie&#39;s example`
+
+
+
+
+`# [http://www.kalzumeus.com/2010/01/15/deploying-sinatra-on-ubuntu-in-which-i-employ-a-secretary/](http://www.kalzumeus.com/2010/01/15/deploying-sinatra-on-ubuntu-in-which-i-employ-a-secretary/)`
+
+
+
+
+`#`
+
+
+
+
+`# kibana-daemon       Startup script for the Kibana Web UI running on sinatra`
+
+
+
+
+`# chkconfig: 2345 20 80`
+
+
+
+
+`#`
+
+
+
+
+`## Copy to /etc/init.d/kibana and make it executable`
+
+
+
+
+`## Add to system startup through chkconfig (CentOS/RHEL) or Upstart (Ubuntu)`
+
+
+
+
+`KIBANA_PATH=``&#34;/opt/kibana&#34;`
+
+
+
+
+ 
+
+
+
+
+`ruby1.8 $KIBANA_PATH``/kibana-daemon``.rb $1`
+
+
+
+
+`RETVAL=$?`
+
+
+
+
+ 
+
+
+
+
+`exit` `$RETVAL`
+
+
+
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;so-what-does-this-have-to-do-with-drupal&#34;&gt;So&amp;hellip; what does this have to do with Drupal?&lt;/h2&gt;
+
+&lt;p&gt;It will make your Drupal logging life easier.&lt;/p&gt;
+
+&lt;p&gt;No, really. I&amp;rsquo;m sure that most people have their Drupal site send all log messages to the database, and that&amp;rsquo;s fine if you have a low traffic site. But what about when you need to actually search for something, such as the messages associated with a particular issue your users are sporadically experiencing? If you&amp;rsquo;ve ever tried to attempt that through the DB log, you probably realize how painful it can be.&lt;/p&gt;
+
+&lt;p&gt;Why not take advantage of another built-in feature of Drupal? Drupal can send its log messages to syslog (via the core Syslog module). If you want to go to a specific file only for Drupal, &lt;a href=&#34;http://drupal.org/project/flog&#34;&gt;there&amp;rsquo;s a contrib module for that&lt;/a&gt;. With Drupal logging to the filesystem, you take a load off of the database and you&amp;rsquo;re able to easily ship your logs elsewhere. They can be sent to be indexed in Elasticsearch for easy search and analysis through Kibana, or to several other places such as Graphite, Email, IRC, PagerDuty, etc. You get to decide how and where your logs are processed.&lt;/p&gt;
+
+&lt;p&gt;And if you have the spare RAM and aggressive log rotation, you could just send your logs to tmpfs and avoid disk load altogether. After all, you are shipping them out to be stored elsewhere.&lt;/p&gt;
+
+&lt;p&gt;Even if you can&amp;rsquo;t log to a file, Logstash can help. Logstash has an &lt;a href=&#34;http://logstash.net/docs/1.1.9/inputs/drupal_dblog&#34;&gt;input for Drupal&amp;rsquo;s DBLog&lt;/a&gt;. All you have to do is tell it what database to connect to and it handles the rest. It only pulls the log messages that it hasn&amp;rsquo;t received previously. This can be useful if you don&amp;rsquo;t want to deal with configuring Drupal to log to Syslog or another file, or if you&amp;rsquo;re one of those crazy types that runs multiple web heads without configuration management to ensure that everyone is shipping file-based logs properly and consistently.&lt;/p&gt;
+
+&lt;p&gt;One situation where I&amp;rsquo;ve found shipping Drupal logs useful is debugging. A good Drupal module logs errors (and optional debugging messages) through watchdog. If you&amp;rsquo;re just leaving those watchdogs in DBLog or syslog, you&amp;rsquo;ve got a tough time ahead of you searching for issues. If you&amp;rsquo;re having your watchdogs shipped through Logstash, you can have them indexed in Elasticsearch and search through the messages, or you can have them graphed by statsd to see if there&amp;rsquo;s a trend for when your users are hitting errors, or you can have your developers nagged in IRC.&lt;/p&gt;
+
+&lt;p&gt;Another useful situation is easily tracking logins and user signups. Now you&amp;rsquo;re able to easily build charts showing when users are signing up or how often they are logging in, as well as figure out if someone is setting up multiple fake accounts.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

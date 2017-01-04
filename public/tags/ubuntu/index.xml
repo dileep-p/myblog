@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/ubuntu/index.xml</link>
+    <description>Recent content in Ubuntu on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fixing OpenSSH: Information-leak vulnerability (CVE-2016-0777)</title>
+      <link>https://www.vishnu-tech.com/blog/fixing-openssh-information-leak-vulnerability-cve-2016-0777/</link>
+      <pubDate>Fri, 15 Jan 2016 11:55:22 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/fixing-openssh-information-leak-vulnerability-cve-2016-0777/</guid>
+      <description>
+
+&lt;p&gt;OpenSSH: Client Information leak from use of roaming connection feature (CVE-2016-0777)&lt;/p&gt;
+
+&lt;p&gt;An information leak flaw was found in the way the OpenSSH client roaming feature was implemented. A malicious server could potentially use this flaw to leak portions of memory (possibly including private SSH keys) of a successfully authenticated OpenSSH client.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;How to fix the isssue&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Upgrade the openssh packages to the latest version. You can find the details below:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;For Debian:-&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can check this &lt;a href=&#34;https://security-tracker.debian.org/tracker/CVE-2016-0777&#34;&gt;link&lt;/a&gt; for more details:- &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;For Ubuntu:- &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can check this &lt;a href=&#34;http://www.ubuntu.com/usn/usn-2869-1/&#34;&gt;link&lt;/a&gt; for more details:-&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;__For Manual fixes or &lt;em&gt;Mitigation:- &lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;on-linux&#34;&gt;&lt;em&gt;On Linux&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;echo &#39;UseRoaming no&#39; | sudo tee -a /etc/ssh/ssh_config
+&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;h3 id=&#34;on-mac-osx&#34;&gt;&lt;em&gt;&lt;strong&gt;On Mac OSX&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/em&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo &amp;quot;UseRoaming no&amp;quot; &amp;gt;&amp;gt; ~/.ssh/config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Install and Use Memcache on Ubuntu 12.04</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-install-and-use-memcache-on-ubuntu-12-04/</link>
+      <pubDate>Fri, 24 May 2013 11:51:14 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-install-and-use-memcache-on-ubuntu-12-04/</guid>
+      <description>
+
+&lt;h3 id=&#34;about-memcache&#34;&gt;About Memcache&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Memcache is a system that works to speed up virtual private servers by caching server information. The program allows you to allocate a specific amount of the server ram toward caching recently queried data for a certain amount of time. Once the data is requested again, memcache speeds up the process of retrieving it by displaying the cached information instead of generating the result from the database.&lt;/p&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;The steps in this tutorial require the user to have root privileges. You can see how to set that up in the &lt;a href=&#34;https://www.digitalocean.com/community/articles/how-to-add-and-delete-users-on-ubuntu-12-04-and-centos-6&#34;&gt;Basic Users Tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before starting off, it’s a good idea to update apt-get to make sure that all of the packages we download to the VPS are up to date.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get update&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you should have MySQL and PHP installed on the virtual server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install mysql-server php5-mysql php5 php5-memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;install-memcache&#34;&gt;Install Memcache&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Installing memcache takes several steps.&lt;/p&gt;
+
+&lt;p&gt;To start, install memcached via apt-get.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install memcached&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next step is to install php-pear, the repository that stores memcache.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install php-pear&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you do not have a compiler on your server, you can download build-essential in order to install memcache:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install build-essential&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally use PECL (PHP Extension Community Library) to install memcache:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo pecl install memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Say yes by pressing enter during the installation when you are asked if you would like to “Enable memcache session handler support? [yes] :”&lt;/p&gt;
+
+&lt;p&gt;Once you have completed the installation of memcache with PECL on the VPS, add memcached to memcache.ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo echo &amp;quot;extension=memcache.so&amp;quot; &amp;gt; sudo /etc/php5/conf.d/memcache.ini&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you are ready to start using Memcache.&lt;/p&gt;
+
+&lt;h2 id=&#34;confirm-memcache-and-see-stats&#34;&gt;Confirm Memcache and See Stats&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;After Memcache is downloaded, you can check that it has been installed by searching for it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;ps aux | grep memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you can see the memcache stats by typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt; echo &amp;quot;stats settings&amp;quot; | nc localhost 11211&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-three-how-memcache-works&#34;&gt;Step Three—How Memcache Works&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Memcache works by redirecting code to first attempt to retrieve data from the cache before querying the server’s database. The cache populates by saving recently retrieved server data for a certain amount of time. By caching recently requested information, future queries do not have to go through the longer process of retrieving the information from a database and can, instead, access it through the cache.&lt;/p&gt;
+
+&lt;p&gt;The memcache page shows this abbreviated code on its homepage to summarize the memcache process:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;function get_foo(foo_id)
+    foo = memcached_get(&amp;quot;foo:&amp;quot; . foo_id)
+    return foo if defined foo
+
+    foo = fetch_foo_from_database(foo_id)
+    memcached_set(&amp;quot;foo:&amp;quot; . foo_id, foo)
+    return foo
+end&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;a-simple-memcache-example&#34;&gt;A Simple Memcache Example&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This section will set up a simple php script to use memcache for retrieving a single value originally found in a mysql table.&lt;/p&gt;
+
+&lt;p&gt;The following steps set up a mysql user who can access the appropriate database, create a table to query, and insert the one value that we will test in the new mysql table.&lt;/p&gt;
+
+&lt;p&gt;Log into mysql: &lt;code&gt;mysql -u root -p&lt;/code&gt; and execute the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;use test;
+
+grant all on test.* to test@localhost identified by &#39;testing123&#39;;
+
+create table example (id int, name varchar(30));
+
+insert into example values (1, &amp;quot;new_data&amp;quot;);
+
+exit;
+&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you have exited MySQL, create the memcache script file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;nano memtest.php&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We are now going to build up the php script step by step (the entire script will be at the end of the section):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Start off by creating a new persistent connection with memcache, which runs on memcache’s default port, 11211.
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;?php
+$meminstance = new Memcache();
+$meminstance-&amp;gt;pconnect(&#39;localhost&#39;, 11211);&amp;lt;/span&amp;gt;
+
+
+
+
+
+
+
+
+
+
+* The next step is to connect to the new mysql database with the user that we created earlier:
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;mysql_connect(&amp;quot;localhost&amp;quot;, &amp;quot;test&amp;quot;, &amp;quot;testing123&amp;quot;) or die(mysql_error());
+mysql_select_db(&amp;quot;test&amp;quot;) or die(mysql_error());&amp;lt;/span&amp;gt;
+
+
+
+
+
+
+
+
+
+
+* After that, go ahead and create the query that we will pose to the server, as well as provide a key to identify that specific action:
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;$query = &amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;;
+$querykey = &amp;quot;KEY&amp;quot; . md5($query);&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The script first searches the cache for the answer to the query. If the result does not exist, the script reroutes the question to the original database. Once the query has been answered by the original database, the script stores the result in memcache, using the “set” command&amp;ndash; which both saves it and allows the user to designate the number of seconds that it should remain in the cache (600 would save it in the cache for 10 minutes).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we run the script for the first time, it will inform us that the data was collected from the mysql database. However, as it does so, it stores the information in the cache, so that a second run of the script retrieves it from the cache and lets the user know.&lt;/p&gt;
+
+&lt;p&gt;In 10 minutes the cache is emptied once more and running the script will make it access the database once again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;$result = $meminstance-&amp;gt;get($querykey);
+
+if (!$result) {
+       $result = mysql_fetch_array(mysql_query(&amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;)) or die(&#39;mysql error&#39;);
+       $meminstance-&amp;gt;set($querykey, $result, 0, 600);
+print &amp;quot;got result from mysqln&amp;quot;;
+return 0;
+}
+
+print &amp;quot;got result from memcachedn&amp;quot;;
+return 0;
+
+?&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Altogether the script looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;?php
+$meminstance = new Memcache();
+$meminstance-&amp;gt;pconnect(&#39;localhost&#39;, 11211);
+
+mysql_connect(&amp;quot;localhost&amp;quot;, &amp;quot;test&amp;quot;, &amp;quot;testing123&amp;quot;) or die(mysql_error());
+mysql_select_db(&amp;quot;test&amp;quot;) or die(mysql_error());
+
+$query = &amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;;
+$querykey = &amp;quot;KEY&amp;quot; . md5($query);
+
+$result = $meminstance-&amp;gt;get($querykey);
+
+if (!$result) {
+       $result = mysql_fetch_array(mysql_query(&amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;)) or die(&#39;mysql error&#39;);
+       $meminstance-&amp;gt;set($querykey, $result, 0, 600);
+print &amp;quot;got result from mysqln&amp;quot;;
+return 0;
+}
+
+print &amp;quot;got result from memcachedn&amp;quot;;
+return 0;
+
+?&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running the script on the command line produces the following results:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;# php memtest.php 
+got result from mysql
+
+# php memtest.php 
+got result from memcached
+
+# php memtest.php 
+got result from memcached&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This tutorial covers speeding up the retrieval of data from a database by connecting it to memcache. However, do keep in mind that memcache’s strengh originates from the fact that is a cache—it is not a datastore. When using memcache, do not expect it to replace a database. Because memcache only holds values for a set length of time for a given key, you may not always find the information you need cached, and in cases like these, having the original server database is imperative.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, memcache is a very useful program and can do a lot to increase the server efficiency.&lt;/p&gt;
+
+&lt;p&gt;If you have any other questions about Memcache, feel free to ask&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrate Mysql database to Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/</link>
+      <pubDate>Sat, 05 Jan 2013 10:31:37 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/</guid>
+      <description>&lt;p&gt;I recently had a chance to try out one of the new NoSQL databases called MongoDB &lt;a href=&#34;http://www.mongodb.org&#34;&gt;http://www.mongodb.org&lt;/a&gt;. This new class of databases seems to solve many of the bottlenecks in MySql and other relational databases. It will give you shear performance, self replication and scalability at not cost because it open source. MongoDB has plenty of drivers for other scripting and high-level languages I use PHP so I download the PHP driver. You can see the supported list here: &lt;a href=&#34;http://www.mongodb.org/display/DOCS/Drivers&#34;&gt;http://www.mongodb.org/display/DOCS/Drivers&lt;/a&gt;. In this blog I convert  a MySQL database using PHP to MongoDB.&lt;/p&gt;
+
+&lt;p&gt;First you install MongoDB, you can do it by checking my previous blog.&lt;/p&gt;
+
+&lt;p&gt;Then we run the script to convert a Mysql DB to Mongodb.&lt;/p&gt;
+
+&lt;p&gt;create a new file called MySqltoMongodb&lt;strong&gt;.php, In that file please copy paste the below contants (please give your Mysql DB details as well as your Mongodb details)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;lt;?php&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;// mysql settings&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mydb = &amp;ldquo;database&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$myconn = &lt;a href=&#34;http://www.php.net/mysql_connect&#34;&gt;mysql_connect&lt;/a&gt;(&amp;lsquo;localhost&amp;rsquo;,&amp;lsquo;user&amp;rsquo;,&amp;lsquo;password&amp;rsquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$setmydb = &lt;a href=&#34;http://www.php.net/mysql_select_db&#34;&gt;mysql_select_db&lt;/a&gt;( $mydb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mytables = getMyTables( $mydb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; //mongo db settings&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$modb = &amp;ldquo;database&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$moConnect=&amp;ldquo;mongodb://user:password@localhost&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function getMyTables( $dbname ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$tables = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;SHOW TABLES FROM $dbname &amp;ldquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;(&amp;ldquo;Error getting tables from $dbname&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; if( &lt;a href=&#34;http://www.php.net/mysql_num_rows&#34;&gt;mysql_num_rows&lt;/a&gt;( $sql ) &amp;gt; 0 ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;while( $table = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql ) ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$explain = explainMyTable( $table[0] );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$tables[$table[0]] = $explain;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $tables;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function explainMyTable( $tbname ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$explain = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;EXPLAIN $tbname&amp;rdquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;(&amp;ldquo;Error getting table structure&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$i = 0;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; while( $get = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql ) ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.php.net/array_push&#34;&gt;array_push&lt;/a&gt;( $explain, $get[0] );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$i++;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $explain;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function checkEncode($string) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if( !mb_check_encoding($string,&amp;lsquo;UTF-8&amp;rsquo;)) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return &lt;a href=&#34;http://www.php.net/mb_convert_encoding&#34;&gt;mb_convert_encoding&lt;/a&gt;($string,&amp;lsquo;UTF-8&amp;rsquo;,&amp;lsquo;ISO-8859-1&amp;rsquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} else {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $string;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; }&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;try {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$moconn = new Mongo($moConnect);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$modb = $moconn-&amp;gt;selectDB( $modb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} catch(MongoConnectionException $e) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;($e.&amp;ldquo;Problem during mongodb initialization. Please start mongodb server.&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; foreach( $mytables as $table =&amp;gt; $struct ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;SELECT * FROM $table LIMIT 0 , 500000&amp;rdquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;( &lt;a href=&#34;http://www.php.net/mysql_error&#34;&gt;mysql_error&lt;/a&gt;() );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$count = &lt;a href=&#34;http://www.php.net/mysql_num_rows&#34;&gt;mysql_num_rows&lt;/a&gt;( $sql );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; // Starts new collection on mongodb&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$collection = $modb-&amp;gt;$table;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; // If it has content insert all content&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if( $count &amp;gt; 0 ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;while( $info = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql, MYSQL_NUM )) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$infosize = &lt;a href=&#34;http://www.php.net/count&#34;&gt;count&lt;/a&gt;( $info );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; for( $i=0; $i &amp;lt; $infosize; $i++ ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if(&lt;img src=&#34;http://www.php.net/empty&#34; alt=&#34;empty&#34; /&gt;($struct[$i]))&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql[$struct[$i]] = checkEncode($info[$i]);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; $collection-&amp;gt;insert($mosql);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;// Only create a new entry empty&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} else {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; for( $i=0; $i &amp;lt; $infosize; $i++ ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if(&lt;img src=&#34;http://www.php.net/empty&#34; alt=&#34;empty&#34; /&gt;($struct[$i]))&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql[$struct[$i]] = &amp;ldquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; }&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$collection-&amp;gt;insert($mosql);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; &lt;a href=&#34;http://www.php.net/echo&#34;&gt;echo&lt;/a&gt; &amp;ldquo;Done! Please, check your MongoDB collection!&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Now fire up your browser and launch the page. If all all goes well you should see
+&lt;strong&gt;&amp;ldquo;Done! Please, check your MongoDB collection!&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;After running this script check your Mongo db collection, in that you can see your Mysql Table.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png?w=300&#34; alt=&#34;Screenshot-6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/mongodb/</link>
+      <pubDate>Sat, 05 Jan 2013 09:39:03 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/mongodb/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-mongodb&#34;&gt;Why MongoDB?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Document-oriented&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Documents (objects) map nicely to programming language data types&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Embedded documents and arrays reduce need for joins&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Dynamically-typed (schemaless) for easy schema evolution&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;No joins and no multi-document transactions for high performance and easy scalability&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;High performance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;No joins and embedding makes reads and writes fast&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Indexes including indexing of keys from embedded documents and arrays&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Optional streaming writes (no acknowledgements)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;High availability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replicated servers with automatic master failover
+
+
+
+
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Easy scalability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Automatic sharding (auto-partitioning of data across servers)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Reads and writes are distributed over shards&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;No joins or multi-document transactions make distributed queries easy and fast&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Eventually-consistent reads can be distributed over replicated servers&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Rich query language&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mongo-data-model&#34;&gt;Mongo data model&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A Mongo system (see deployment above) holds a set of databases&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;database&lt;/strong&gt; holds a set of collections&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;collection&lt;/strong&gt; holds a set of documents&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;document&lt;/strong&gt; is a set of fields&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;field&lt;/strong&gt; is a key-value pair&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;key&lt;/strong&gt; is a name (string)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;value&lt;/strong&gt; is a&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;basic type like string, integer, float, timestamp, binary, etc.,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;a document, or&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;an array of value&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mongo query language&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;To retrieve certain documents from a db collection, you supply a query document containing the fields the desired documents should match. For example, {name: {first: &amp;lsquo;John&amp;rsquo;, last: &amp;lsquo;Doe&amp;rsquo;}} will match all documents in the collection with name of John Doe. Likewise, {name.last: &amp;lsquo;Doe&amp;rsquo;} will match all documents with last name of Doe. Also, {name.last: /^D/} will match all documents with last name starting with &amp;rsquo;D&amp;rsquo; (regular expression match).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Queries will also match inside embedded arrays. For example, {keywords: &amp;lsquo;storage&amp;rsquo;} will match all documents with &amp;lsquo;storage&amp;rsquo; in its keywords array. Likewise, {keywords: {$in: [&amp;lsquo;storage&amp;rsquo;, &amp;lsquo;DBMS&amp;rsquo;]}} will match all documents with &amp;lsquo;storage&amp;rsquo; or &amp;lsquo;DBMS&amp;rsquo; in its keywords array.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you have lots of documents in a collection and you want to make a query fast then build an index for that query. For example, ensureIndex({name.last: 1}) or ensureIndex({keywords: 1}). Note, indexes occupy space and slow down updates a bit, so use them only when the tradeoff is worth it.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;install-mongodb-on-ubuntu-10-04&#34;&gt;Install MongoDB on Ubuntu 10.04&lt;/h1&gt;
+
+&lt;h3 id=&#34;configure-package-management-system-apt&#34;&gt;Configure Package Management System (APT)&lt;/h3&gt;
+
+&lt;p&gt;The Ubuntu package management tool (i.e. dpkg and apt) ensure package consistency and authenticity by requiring that distributors sign packages with GPG keys. Issue the following command to import the &lt;a href=&#34;http://docs.mongodb.org/10gen-gpg-key.asc&#34;&gt;10gen public GPG Key&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a /etc/apt/sources.list.d/10gen.list file and include the following line for the 10gen repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now issue the following command to reload your repository:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h3&gt;
+
+&lt;p&gt;Issue the following command to install the latest stable version of MongoDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install mongodb-10gen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When this command completes, you have successfully installed MongoDB! Continue for configuration and start-up suggestions.&lt;/p&gt;
+
+&lt;h2 id=&#34;configure-mongodb&#34;&gt;Configure MongoDB&lt;/h2&gt;
+
+&lt;p&gt;These packages configure MongoDB using the /etc/mongodb.conf file in conjunction with the &lt;a href=&#34;http://docs.mongodb.org/manual/reference/glossary/#term-101&#34;&gt;&lt;em&gt;control script&lt;/em&gt;&lt;/a&gt;. You will find the control script is at /etc/init.d/mongodb.&lt;/p&gt;
+
+&lt;p&gt;This MongoDB instance will store its data files in the /var/lib/mongodb and its log files in /var/log/mongodb, and run using the mongodb user account.&lt;/p&gt;
+
+&lt;p&gt;Note&lt;/p&gt;
+
+&lt;p&gt;If you change the user that runs the MongoDB process, you will need to modify the access control rights to the /var/lib/mongodb and /var/log/mongodb directories.&lt;/p&gt;
+
+&lt;h2 id=&#34;controlling-mongodb&#34;&gt;Controlling MongoDB&lt;/h2&gt;
+
+&lt;h3 id=&#34;starting-mongodb&#34;&gt;Starting MongoDB&lt;/h3&gt;
+
+&lt;p&gt;You can start the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can verify that mongod has started successfully by checking the contents of the log file at /var/log/mongodb/mongodb.log.&lt;/p&gt;
+
+&lt;h3 id=&#34;stopping-mongodb&#34;&gt;Stopping MongoDB&lt;/h3&gt;
+
+&lt;p&gt;As needed, you may stop the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;restarting-mongodb&#34;&gt;Restarting MongoDB&lt;/h3&gt;
+
+&lt;p&gt;You may restart the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;controlling-mongos-http-docs-mongodb-org-manual-reference-config-database-mongos&#34;&gt;Controlling &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;As of the current release, there are no &lt;a href=&#34;http://docs.mongodb.org/manual/reference/glossary/#term-101&#34;&gt;&lt;em&gt;control scripts&lt;/em&gt;&lt;/a&gt; for &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt;. &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt; is only used in sharding deployments and typically do not run on the same systems where mongod runs. You can use the mongodb script referenced above to derive your own &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt; control script.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Using MongoDB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Among the tools included with the MongoDB package, is the mongo shell. You can connect to your MongoDB instance by issuing the following command at the system prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mongo
+&amp;gt; show dbs (); ---&amp;gt; to show your databases 
+&amp;gt; use &amp;lt;databasename&amp;gt; ----&amp;gt; To switch database 
+&amp;gt; db.createCollection(&amp;quot;collectionname&amp;quot;) ---&amp;gt; to create collection 
+&amp;gt; db.collectionname.find(); ---&amp;gt; To see the contents in the collection
+&amp;lt;code&amp;gt;&amp;gt; db.addUser(&amp;quot;theadmin&amp;quot;, &amp;quot;anadminpassword&amp;quot;) &amp;lt;/code&amp;gt;---&amp;gt; To create user and password
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Add NRPE host to Nagios</title>
+      <link>https://www.vishnu-tech.com/blog/add-nrpe-host-to-nagios/</link>
+      <pubDate>Sat, 15 Dec 2012 10:40:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/add-nrpe-host-to-nagios/</guid>
+      <description>&lt;p&gt;NRPE &lt;em&gt;(Nagios Remote Plugin Executor)&lt;/em&gt; is a Nagios agent witch allows for remote  system monitoring by executing scripts on a remote system allowing monitoring of disk usage, system’s load or number of users currently logged in and much more. Normally Nagios can only monitor public services such as HTTP &amp;amp; FTP. This is great if you only want to monitor public servers, however I bet that most people want to monitor their own servers and have access to private information, that’s were NRPE comes in. It works on a client server basis, you install a daemon on the machine you  want to monitor, then setup your Nagios server to connect to the remote daemon to gather information&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/nrpe_diag/&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2012/12/nrpe_diag.png?w=300&#34; alt=&#34;nrpe_diag&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/nagios-config/&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2012/12/nagios-config.png?w=300&#34; alt=&#34;nagios-config&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So how do we set this up, well first we need to be running a Nagios server.Once you have a Nagios server setup you’ll need to download and install the NRPE daemon on the remote machine.&lt;/p&gt;
+
+&lt;p&gt;So lets get started first SSH into your remote machine and enter:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/sbin/useradd nagios
+passwd nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this will setup a new Nagios user, now we need to install some plugins:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.14.tar.gz
+tar -xzf nagios-plugins-1.4.14.tar.gz
+cd nagios-plugins-1.4.14
+sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+sudo make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will download and install the Nagios plugins required for NRPE to run, now we need to give the plugins access via the new Nagios user:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chown nagios.nagios /usr/local/nagios
+chown -R nagios.nagios /usr/local/nagios/libexec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NRPE require you install xinetd and libssl-dev so we’ll do that now&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apt-get install xinetd
+sudo apt-get install libssl-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that done its time to install the NRPE daemon itself:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/
+wget http://prdownloads.sourceforge.net/sourceforge/nagios/nrpe-2.12.tar.gz
+tar xzf nrpe-2.12.tar.gz
+cd nrpe-2.12
+./configure
+make all
+make install-plugin
+make install-daemon
+make install-daemon-config
+make install-xinetd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now we need to configure the daemon so it will talk to our Nagios server, well do this buy editing /etc/xinetd.d/nrpe and adding our monitoring servers address:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /etc/xinetd.d/nrpe
+&amp;lt;em&amp;gt;Should Look Like:&amp;lt;/em&amp;gt;
+# default: on
+# description: NRPE (Nagios Remote Plugin Executor)
+service nrpe
+{
+        flags           = REUSE
+        socket_type     = stream
+        port            = 5666
+        wait            = no
+        user            = nagios
+        group           = nagios
+        server          = /usr/local/nagios/bin/nrpe
+        server_args     = -c /usr/local/nagios/etc/nrpe.cfg --inetd
+        log_on_failure  += USERID
+        disable         = no
+        only_from       = 127.0.0.1 &amp;lt;strong&amp;gt;[NAGIOS SERVER ADDRESS]&amp;lt;/strong&amp;gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then add “nrpe 5666/tcp # NRPE” to /etc/services:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /etc/services
+&amp;lt;em&amp;gt;add:&amp;lt;/em&amp;gt;
+nrpe 5666/tcp # NRPE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can check this all been configured probably by typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;netstat -at | grep nrpe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;this should show something like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(tcp        0      0 *:nrpe                  *:*                     LISTEN)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If that worked correctly its time to setup your Nagios server to monitor your remote host, so ssh into your Nagios server. Now we are going to add separate host file for the new host so we need to edit the nano “nagios.cfg” file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /usr/local/nagios/etc/nagios.cfg
+&amp;lt;em&amp;gt;add lines:&amp;lt;/em&amp;gt;
+cfg_file=/usr/local/nagios/etc/objects/host1.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we need to create the Host1.cfg:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /usr/local/nagios/etc/objects/host1.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and enter the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;define host{
+        use linux-server ; Inherit default values from a template
+        host_name remotehost ; The name we&#39;re giving to this server
+        alias Fedora Core 6 ; A longer name for the server
+        address the-tech-tutorial.com; IP address of the server
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description CPU Load
+        check_command check_nrpe!check_load
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Current Users
+        check_command check_nrpe!check_users
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description /dev/hda1 Free Space
+        check_command check_nrpe!check_sda1
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Total Processes
+        check_command check_nrpe!check_total_procs
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Zombie Processes
+        check_command check_nrpe!check_zombie_procs
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run the nagios config check then restart nagios:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+/etc/init.d/nagios restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And hay presto you Nagios should now be monitoring your remote host, don’t worry if it says pending it can take up to 5 minutes for the information to come through.&lt;/p&gt;
+
+&lt;p&gt;If you want to add more hosts repeat the above steps and use host2.cfg instead of host1.cfg.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/finished/&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2012/12/finished.jpg?w=300&#34; alt=&#34;Finished&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;the critical in the above screen dump is because I had disabled ICMP on the remote server.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Installing Nagios on Ubuntu</title>
+      <link>https://www.vishnu-tech.com/blog/installing-nagios-on-ubuntu/</link>
+      <pubDate>Sat, 15 Dec 2012 10:22:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/installing-nagios-on-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.nagios.org/&#34;&gt;Nagios&lt;/a&gt; is the Industry Standard Network Monitoring Engine. OK great so whats that mean, well nagios is a server that monitors your hosts and services and will inform you if something goes wrong and when it is fixed again. It can monitor network services, host resources and even network probes such as temperature and moisture.&lt;/p&gt;
+
+&lt;p&gt;These features as well as many more make nagios, by far, the most complete Network Monitoring tool on the market, however with all these features comes complexity and nagios has obviously been designed with the experienced Network Administrator in mind. But don’t worry too much, its not that difficult to learn as long as you take it one step at a time, and in today’s tutorial we’re going to look at the first step, actually getting it installed&lt;/p&gt;
+
+&lt;p&gt;First of all you will need a server running the LAMP Stack. Then you will need to setup a special user account and group for nagios, this allows nagios to have some rights over the server without giving it full root access, to do this first type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo useradd -m -s /bin/bash nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to add the new user and group, then you’ll need to set the password, use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo passwd nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now create the ‘nagcmd’ group to allow external commands to be run, then add the nagios user and the apache user to the group:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /usr/sbin/groupadd nagcmd
+sudo /usr/sbin/usermod -a -G nagcmd nagios
+sudo /usr/sbin/usermod -a -G nagcmd www-data
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that’s all out of the way you’ll need to download Nagios (I recommend downloading it to its own directory, eg. ~/nagios-install):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.4.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then extract the source code form the tar file and navigate into the new folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -xzf nagios-3.4.3.tar.gz
+cd nagios-3.2.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now we just need to download gcc, the c++ compiler,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install gcc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now its time to install nagios, we are going to do this buy compiling the source code, this can seem a little confusing the first time you do it, but don’t worry you don’t relay have to understand it yet (that comes when you start to make your own programs) just follow the lines and you will be ok:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./configure --with-command-group=nagcmd
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-config
+sudo make install-commandmode
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we just need to configure the contacts .cfg file so nagious can email us the report:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo vim /usr/local/nagios/etc/objects/contacts.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and change the email field to your email address.&lt;/p&gt;
+
+&lt;p&gt;Because the installer thinks Apache is installed in /etc/httpd/ witch it isn’t, we need to make a symlink to /etc/apache2/. A symlink is a file or folder that contains reference to another folder/file, so when the installer thinks its installing into /etc/httpd its actually installing into apache2, to do this type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mkdir /etc/httpd
+sudo ln -s /etc/apache2/* /etc/httpd/
+sudo make install-webconf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now we need to add the password to login to our nagios site, remember this password you will need it later:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;restart apache&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /etc/init.d/apache2 reload
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You don’t need to do the next step, however its extremely useful to install the base plug in pack to provide some extra functionality for nagios, to do this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/
+wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.14.tar.gz
+tar -xzf nagios-plugins-1.4.14.tar.gz
+cd nagios-plugins-1.4.14
+sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+sudo make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Configure Nagios to automatically start when the system boots.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Verify the sample Nagios configuration files.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If there are no errors, start Nagios.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /etc/init.d/nagios start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now you can login to Nagios buy going to &lt;a href=&#34;http://your_ip/nagios/&#34;&gt;http://your_ip/nagios/&lt;/a&gt; in your web browser and using the details:&lt;/p&gt;
+
+&lt;p&gt;username:nagiosadmin
+password:&lt;em&gt;[the password you set earler]&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And that’s about it you should now have a nagios server set-up that is monitoring the local host&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You may need to update nagios to its latest version, to do this type:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/local/src
+sudo wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.2.tar.gz
+sudo tar xvzf nagios-3.2.2.tar.gz
+cd nagios-3.2.2
+sudo ./configure --prefix=/usr/local/nagios --with-nagios-user=nagios --with-nagios-group=nagios --with-command-group=nagcmd --enable-nanosleep --enable-event-broker
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-commandmode
+sudo make install-config
+sudo update-rc.d -f nagios defaults
+cd ..
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

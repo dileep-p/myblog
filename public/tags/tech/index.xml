@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/tech/index.xml</link>
+    <description>Recent content in Tech on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:17</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol17/</link>
+      <pubDate>Thu, 08 Dec 2016 13:22:26 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol17/</guid>
+      <description>
+
+&lt;p&gt;Sharing some interesting links to keep you busy during the weekend ;) &lt;/p&gt;
+
+&lt;h3 id=&#34;aws-reinvent-2016-new-services&#34;&gt;&lt;strong&gt;&lt;em&gt;AWS Reinvent 2016 new services:&lt;/em&gt;&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-athena-interactive-sql-queries-for-data-in-amazon-s3/&#34;&gt;Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using SQL&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/glue/&#34;&gt;AWS Glue is a fully managed ETL service that makes it easy to understand your data sources, prepare the data, and load it reliably to data stores. It simplifies and automates data discovery, transformation, and job scheduling tasks.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-shield-protect-your-applications-from-ddos-attacks/&#34;&gt;AWS Shield is a managed DDoS protection service that safeguards your web applications using Elastic Load Balancing (ELB), Amazon CloudFront, and Amazon Route 53.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-codebuild-fully-managed-build-service/&#34;&gt;AWS CodeBuild – Fully Managed Build Service&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-x-ray-see-inside-of-your-distributed-application/&#34;&gt;AWS X-Ray – See Inside of Your Distributed Application&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/ec2/systems-manager/&#34;&gt;Amazon EC2 Systems Manager is a management service that helps you automatically collect software inventory, apply Windows OS patches, create system images, and configure Windows and Linux operating systems.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/polly-text-to-speech-in-47-voices-and-24-languages/&#34;&gt;Amazon Polly – Text to Speech in 47 Voices and 24 Languages&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-lex-build-conversational-voice-text-interfaces/&#34;&gt;Amazon Lex is a service for building conversational interfaces using voice and text. &lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-rekognition-image-detection-and-recognition-powered-by-deep-learning/&#34;&gt;Amazon Rekognition is a service that makes it easy to add image analysis to your applications.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_&lt;a href=&#34;https://aws.amazon.com/mxnet/&#34;&gt;MXNet - Deep Learning Framework of Choice at AWS&lt;/a&gt; _&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-lightsail-the-power-of-aws-the-simplicity-of-a-vps/&#34;&gt;Amazon Lightsail is the easiest way to launch and manage a virtual private server with AWS. Get everything you need to jumpstart your project - compute, storage, and networking - starting at $5/month.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/aws-batch-run-batch-computing-jobs-on-aws/&#34;&gt;AWS Batch – Run Batch Computing Jobs on AWS&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-aws-personal-health-dashboard-status-you-can-relate-to/&#34;&gt;AWS Personal Health Dashboard – Status You Can Relate To&lt;/a&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/appstream2/&#34;&gt;Amazon AppStream 2.0 allows you to stream desktop apps securely from the AWS cloud directly to users on the device of their choice, eliminating the need to rewrite desktop apps for the cloud.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/about-aws/whats-new/2016/11/amazon-workspaces-introduces-new-graphics-bundles/&#34;&gt;Amazon WorkSpaces Graphics bundles offer a virtual cloud desktop which includes a high-end GPU that supports engineering, design, and architectural applications.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/amazon-pinpoint-hit-your-targets-with-aws/&#34;&gt;Amazon Pinpoint makes it easy to run targeted push notification campaigns to improve user engagement in mobile apps.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/artifact/&#34;&gt;AWS Artifact provides on-demand access to AWS compliance reports to verify and demonstrate security and compliance of the cloud.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://aws.amazon.com/organizations/&#34;&gt;AWS Organizations allows you to create groups of AWS accounts that you can use to more easily manage security and automation settings.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;security&#34;&gt;&lt;em&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zmMpgbIhCpw&#34;&gt;Encryption: It Was the Best of Controls, It Was the Worst of Controls&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.troyhunt.com/heres-1-4-billion-records-from-have-i-been-pwned-for-you-to-analyse/&#34;&gt;Here&amp;rsquo;s 1.4 billion records from Have I been pwned for you to analyse&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://thehackerblog.com/the-orphaned-internet-taking-over-120k-domains-via-a-dns-vulnerability-in-aws-google-cloud-rackspace-and-digital-ocean/&#34;&gt;The Orphaned Internet – Taking Over 120K Domains via a DNS Vulnerability in AWS, Google Cloud, Rackspace and Digital Ocean&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/07/news-in-brief-dirtycow-patched-for-android-naked-lack-of-security-south-korea-hacked&#34;&gt;DirtyCOW patched for Android; naked lack of security; South Korea hacked&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.brokenbrowser.com/spoof-addressbar-malware/&#34;&gt;Spoofing the address bar with Malware warning&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/07/flaw-spotted-in-north-koreas-red-star-operating-system/&#34;&gt;Flaw spotted in North Korea’s Red Star operating system&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://redmonk.com/fryan/2016/12/01/containers-in-production-is-security-a-barrier-a-dataset-from-anchore/&#34;&gt;Containers in Production – Is Security a Barrier? A Dataset from Anchore&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/05/how-to-guess-credit-card-security-codes/&#34;&gt;How to guess credit card security codes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.ripstech.com/2016/roundcube-command-execution-via-email/&#34;&gt;Roundcube: Command Execution via Email&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://kel.bz/post/javaexec/&#34;&gt;User-influenced os commands are still considered harmful&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.sec-consult.com/2016/12/backdoor-in-sony-ipela-engine-ip-cameras.html&#34;&gt;Backdoor in Sony IPELA Engine IP Cameras&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://seclists.org/oss-sec/2016/q4/607&#34;&gt;Race Condition in Linux Kernel, Privilege Escalation, CVE-2016-8655&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://redpill-linpro.com/sysadvent/2016/12/06/spicing-up-your-access.html&#34;&gt;Linux-Shell: Spicing up your own access with capabilities&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://nakedsecurity.sophos.com/2016/12/05/apple-set-to-deploy-drones-to-boost-maps-accuracy/&#34;&gt;Apple set to deploy drones to boost Maps accuracy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://pusher.com/sessions/meetup/front-end-london/https-is-hard&#34;&gt;HTTPS is hard but it&amp;rsquo;s also absolutely worth it&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;docker&#34;&gt;&lt;em&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://youtu.be/BQP67FWF1P8&#34;&gt;Serverless functions in Docker on a Raspberry Pi cluster&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.brianchristner.io/the-insiders-guide-to-docker-serverless/&#34;&gt;The Insiders Guide to Docker Serverless&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://speakerdeck.com/rossbachp/docker-swarming-groove&#34;&gt;Orchestration with Docker Swarming&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;kubernetes&#34;&gt;_&lt;strong&gt;Kubernetes&lt;/strong&gt;_ &lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.zhaw.ch/icclab/container-management-with-kubernetes-practical-example/&#34;&gt;Container management with Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://distelli.engineering/kubernetes-ci-cd-with-docker-and-node-2ac29cf48b2b#.vme88cz8h&#34;&gt;Continuous containers on kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.nivenly.com/k8s-aws-private-networking/&#34;&gt;How to set up a HA privately networked Kubernetes cluster in AWS with kops&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLj6h78yzYM2PqgIGU1Qmi8nY7dqn9PCr4&#34;&gt;CloudNativeCon + KubeCon 2016 - Seattle&lt;/a&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;bigdata&#34;&gt;&lt;em&gt;&lt;strong&gt;BigData&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://www.slideshare.net/JoshBaer/shortening-the-feedback-loop-big-data-spain-external&#34;&gt;This presentation describes how and why Spotify has moved their data platform to the Google Cloud, replacing Hadoop/Hive with BigQuery, Kafka with Cloud Pub/Sub, and Storm/MapReduce with Dataflow.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/Verizon/trapezium&#34;&gt;Trapezium is an open-source Spark/Akka-based framework for batch and streaming from Verizon.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://site.clairvoyantsoft.com/kafka-great-choice-large-scale-event-processing/&#34;&gt;Kafka – A great choice for large scale event processing&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://slack.engineering/data-wrangling-at-slack-f2e0ff633b69#.nh6o7143j&#34;&gt;Data Wrangling at Slack&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://cloud.google.com/blog/big-data/2016/12/analyzing-nyc-biking-data-with-google-bigquery&#34;&gt;Analyzing NYC Biking Data with Google BigQuery&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.techinasia.com/mckinsey-finds-data-analytics-sham&#34;&gt;McKinsey finds it’s all talk and little action with data analytics in most companies&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.rakam.io/why-sql-superior-for-analytic-queries-comparison-with-mixpanels-jql-ec9935f292bd#.y7dacov7g&#34;&gt;SQL is still superior for big-data analytics&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_&lt;a href=&#34;http://8kmprod.s3.amazonaws.com/wp-content/uploads/2016/10/8KMiles_WhitePaper_BigDataBenchmark1.pdf&#34;&gt;BigData Solution Benchmark&lt;/a&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://community.hortonworks.com/articles/67756/ingesting-log-data-using-minifi-nifi.html&#34;&gt;This tutorial shows how to use Apache Ambari and Apache NiFi to configure data ingestion via the light-weight MiNiFi process.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:14</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol14/</link>
+      <pubDate>Tue, 19 Jul 2016 20:57:48 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol14/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/serverless.html&#34;&gt;Serverless Architectures&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://code.facebook.com/posts/290023971344425/what-s-new-in-facebook-open-source/&#34;&gt;What&amp;rsquo;s new in Facebook open source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cloudonaut.io/serverless-big-data-pipeline-on-aws/&#34;&gt;Serverless Big Data pipeline on AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gocardless.com/blog/from-idea-to-reality-containers-in-production-at-gocardless/&#34;&gt;From idea to reality: containers in production at GoCardless&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.drud.com/sanctuary-a-turn-key-vault-in-the-cloud/&#34;&gt;Sanctuary is a handy tool for launching a Vault instance in AWS. It provides a simple tool which configures AWS services like S3 (for logs), DynamoDB (for secrets) and a VPC network, along with certs from letsencrypt.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/leveros/leveros&#34;&gt;Serverless + Microservices&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mheffner/awsam&#34;&gt;AWSAM (Amazon Web Services Account Manager) allows you to easily manage multiple sets of AWS credentials.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/swipely/iam-docker&#34;&gt;Use different IAM roles for each Docker container on an EC2 instance&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/chalice&#34;&gt;Python Serverless Microframework for AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kristovatlas/osx-config-check&#34;&gt;Verify the configuration of your OS X machine.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jakobovski/aws-spot-bot&#34;&gt;A simple script to automate the creation of the cheapest AWS spot instances given your requirements.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sohelamin/chatbot&#34;&gt;An AI Based Chatbot&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amadeusitgroup.github.io/GraphDash/&#34;&gt;GraphDash: A web-based dashboard built on graphs and their metadata&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/reconquest/orgalorg&#34;&gt;Parallel SSH commands executioner and file synchronization tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Requilence/integram&#34;&gt;Integrate Telegram into your workflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLECEw2eFfW7iTsIrldRO2b6NLEuRQYD2L&#34;&gt;PyConSG 2016 videos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vE1iDPx6-Ok&amp;amp;list=PLkA60AVN3hh9gnrYwNO6zTb9U3i1Y9FMY&#34;&gt;DockerCon 2016 videos&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lucjuggery.com/blog/?p=604&#34;&gt;Deploy a multi services application with swarm mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.exoscale.ch/syslog/2016/07/11/elk-docker/&#34;&gt;Deploy ELK with Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/9-jChl9PmA8&#34;&gt;Docker Swarm on DigitalOcean&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/introducing-confluent-control-center&#34;&gt;Build and monitor Kafka pipelines with Confluent Control Center&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://philippedecuzey.wordpress.com/2016/06/05/fromapachepigtospark/&#34;&gt;From Pig to Spark : an easy journey to Spark for Apache Pig developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wecode.wepay.com/posts/wepays-data-warehouse-bigquery-airflow&#34;&gt;Building WePay&amp;rsquo;s data warehouse using BigQuery and Airflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLKnYDs_-dq16K1NH83Bke2dGGUO3YKZ5b&#34;&gt;Hadoop Summit San Jose 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/kafka-tools&#34;&gt;A collection of tools for working with Apache Kafka.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pierrevillard.com/2016/07/09/apache-nifi-minifi-is-almost-out/&#34;&gt;Apache NiFi – MiNiFi is (almost) out!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/elastic-scaling-in-kafka-streams&#34;&gt;Elastic Scaling in Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://syslog.ravelin.com/powering-real-time-fraud-detection-with-bigquery-4f85b999a4e9#.uxh8g3gfc&#34;&gt;Powering real time fraud detection with BigQuery&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.feedly.com/what-goes-down-better-come-up-a-k-a-adventures-in-hbase-diagnostics/&#34;&gt;What Goes Down Better Come Up a.k.a. Adventures in Hbase Diagnostics&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://yahoohadoop.tumblr.com/post/147399828686/moving-the-utilization-needle-with-hadoop&#34;&gt;Moving the Utilization Needle with Hadoop Overcommit&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.svds.com/brain-monitoring-kafka-opentsdb-grafana/&#34;&gt;Brain Monitoring with Kafka, OpenTSDB, and Grafana&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fhussonnois/kafkastreams-cep&#34;&gt;Complex Event Processing on top of Kafka Streams&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:13</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol13/</link>
+      <pubDate>Tue, 12 Apr 2016 10:09:54 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol13/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Sharing some interesting links&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/brendangregg/srecon-2016-performance-checklists-for-sres&#34;&gt;SREcon 2016 Performance Checklists for SREs&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tech.zalando.com/blog/apache-showdown-flink-vs.-spark/&#34;&gt;Apache Showdown: Flink vs. Spark&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://csc.fi/web/blog/post/-/blogs/the-largest-unplanned-outage-in-years-and-how-we-survived-it&#34;&gt;The largest unplanned outage in years and how we survived it.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://scene-si.org/2016/04/01/how-to-live-inside-a-docker-container/&#34;&gt;How to live inside a docker container?&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jascha.me/2016/03/29/running-a-tor-hidden-service-using-docker/&#34;&gt;Running a TOR hidden service using docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.freecodecamp.com/d-oh-my-zsh-af99ca54212c#.lbqec6faz&#34;&gt;d’Oh My Zsh: How I unexpectedly built a monster of an open source project&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.simonmetzger.de/2016/04/event-driven-network-automation/&#34;&gt;Event-driven network automation using Slack, hubot, StackStorm and Ansible&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://githubengineering.com/introducing-dgit/&#34;&gt;Introducing DGit&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vmware/harbor&#34;&gt;An Enterprise-class Container Registry Server based on Docker Distribution&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://codeblog.shank.in/go-hn-command-line-client-for-hacker-news-written-in-golang/&#34;&gt;go-hn: command line client for hacker news, written in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.cloud66.com/9-crtitical-decisions-needed-to-run-docker-in-production/&#34;&gt;9 Critical Decisions for Running Docker in Production&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://iovisor.github.io/bcc/&#34;&gt;Dynamic Tracing Tools for Linux&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lucamezzalira.com/2016/04/03/how-to-dockerize-your-node-application/&#34;&gt;How to Dockerize your Node application&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/coreroller/coreroller&#34;&gt;CoreRoller is a set of tools to control and monitor the rollout of your updates.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://raygun.com/blog/2016/03/golang-auto-scaling/&#34;&gt;Auto-scaling and self-defensive services in Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://crondev.com/running-docker-behind-proxy/&#34;&gt;Running Docker behind a proxy&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.cloudera.com/blog/2016/04/inside-wargamings-data-driven-real-time-rules-engine/&#34;&gt;Inside Wargaming.net’s Data-driven, Real-time Rules Engine&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://neovintage.org/2016/04/07/data-modeling-in-cassandra-from-a-postgres-perspective/&#34;&gt;Data Modeling in Cassandra from a Postgres Perspective&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudflare/cfssl&#34;&gt;CFSSL: CloudFlare&amp;rsquo;s PKI and TLS toolkit &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/lloiser/go-debug&#34;&gt;A go debugger for atom using delve&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/on-docker/federated-clusters-with-docker-swarm-dce5516ecc8d&#34;&gt;Federated Clusters with Docker Swarm.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/pLdpxoT6v8A&#34;&gt;Beyond the Distributed System&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rakyll/gom&#34;&gt;A visual interface to work with runtime profiling data for Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/get-put-post/from-side-project-to-250-million-daily-requests-909b9e373d94#.mtsc4cbqs&#34;&gt;From side project to 250 million daily requests&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://webkay.robinlinus.com/&#34;&gt;What every Browser knows about you&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions&#34;&gt;Optimize Performance Under Varying Network Conditions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pbpython.com/xlwings-pandas-excel.html&#34;&gt;Interactive Data Analysis with Python and Excel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/z7MgtxugWHQ&#34;&gt;Using AlexaPi on Raspberry Pi Zero&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/airbnb/caravel&#34;&gt;Caravel is a data exploration platform designed to be visual, intuitive, and interactive&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/fbtftp&#34;&gt;Fbtftp is Facebook&amp;rsquo;s implementation of a dynamic TFTP server framework.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://engineering.riotgames.com/news/building-jenkins-inside-ephemeral-docker-container&#34;&gt;Building with Jenkins inside an ephemeral docker container&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://puppet.com/blog/deploying-docker-swarm-puppet&#34;&gt;Deploying Docker Swarm with Puppet&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/03/building-highly-available-applications-using-Kubernetes-new-multi-zone-clusters-a.k.a-Ubernetes-Lite.html&#34;&gt;Building highly available applications using Kubernetes new multi-zone clusters (a.k.a. &amp;ldquo;Ubernetes Lite&amp;rdquo;)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/03/using-Spark-and-Zeppelin-to-process-Big-Data-on-Kubernetes.html&#34;&gt;Using Spark and Zeppelin to process big data on Kubernetes 1.2&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/BUp_6Yp3Bvw&#34;&gt;Containers - Scaling with Kubernetes, Automatically!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://alexfernandez.github.io/2016/nginx-balancer.html&#34;&gt;Creating a Heavy-Duty Balancer With Nginx and Lua&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.hboeck.de/archives/880-Pwncloud-bad-crypto-in-the-Owncloud-encryption-module.html&#34;&gt;Pwncloud – bad crypto in the Owncloud encryption module&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.terranillius.com/post/pumba_docker_chaos_testing/&#34;&gt;Pumba - Chaos Testing for Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sobolevn/git-secret&#34;&gt;A bash-tool to store your private data inside a git repository.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/nginx-certwatch&#34;&gt;Certwatch cron implementation for nginx vhosts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fgeller/kt&#34;&gt;Kafka command line tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/matryer/bitbar&#34;&gt;Put the output from any script or program in your Mac OS X Menu Bar&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/shaunvxc/ripe&#34;&gt;Micro optimization for local re-installations from source&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.packagecloud.io/eng/2016/04/05/the-definitive-guide-to-linux-system-calls/&#34;&gt;The Definitive Guide to Linux System Calls&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/future-architect/vuls&#34;&gt;Vulnerability scanner for Linux, agentless, written in golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/CISOfy/lynis&#34;&gt;Lynis - Security auditing tool &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/firehol/netdata&#34;&gt;Real-time performance monitoring,&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securitychecklist.org/&#34;&gt;Security Checklist&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mlamina/Kubernetes-Manager&#34;&gt;Kubernetes Manager&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dylang/npm-check&#34;&gt;Check for outdated, incorrect, and unused dependencies&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://serverfault.com/questions/769357/recovering-from-a-rm-rf&#34;&gt;Recovering from a rm -rf /&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://capgemini.github.io/devops/apollo/&#34;&gt;Apollo: An open source platform for running your apps&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:12</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol12/</link>
+      <pubDate>Wed, 02 Mar 2016 10:10:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol12/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://drownattack.com/&#34;&gt;The DROWN Attack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2016/03/01/go-home-sslv2-youre-drowning/&#34;&gt;Go home SSLv2, you’re DROWNing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/aws-services&#34;&gt;Micro-services to provide various conveniences in managing AWS services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/videos-ansiblefest-london-2016?platform=hootsuite&#34;&gt;Videos ANSIBLEFEST LONDON 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://eng.uber.com/go-geofence/&#34;&gt;How we built Uber Engineering&amp;rsquo;s highest query per second service using go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.netresec.com/?page=Blog&amp;amp;month=2016-03&amp;amp;post=Packet-Injection-Attacks-in-the-Wild&#34;&gt;Packet Injection Attacks in the Wild&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/condensation&#34;&gt;Package, reuse and share particles for CloudFormation projects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/casidiablo/tako&#34;&gt;Github notifications on Slack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/uber/ringpop-go&#34;&gt;Scalable, fault-tolerant application-layer sharding for Go applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/msoap/go-carpet&#34;&gt;go-carpet - show test coverage for Go source files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramnes/awesome-mongodb&#34;&gt;A curated list of awesome MongoDB resources, libraries, tools and applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/pygemony&#34;&gt;A tool written in Python to parse files for &amp;ldquo;TODO&amp;rdquo; and to raise an issue in the github repository with the todo message.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/microsoft/kafkanet&#34;&gt;.Net implementation of the Apache Kafka Protocol that provides basic functionality through Producer/Consumer classes. The project also offers balanced consumer implementation.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.dasblinkenlichten.com/kubernetes-with-saltstack-revisited/&#34;&gt;Kubernetes with SaltStack revisited&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cossacklabs.com/Introducing-WebThemis.html&#34;&gt;WEBTHEMIS: Stronger Cryptography for Modern web&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fulldecent/system-bus-radio&#34;&gt;This program transmits radio on computers without radio transmitting hardware.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ssrg.nicta.com.au/projects/TS/cachebleed//&#34;&gt;CacheBleed: A Timing Attack on OpenSSL Constant Time RSA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker/dockercloud-cli&#34;&gt;CLI for Docker Cloud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.blockbridge.com/improving-docker-security-with-authenticated-volumes/&#34;&gt;Improving Docker Security with Authenticated Volumes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/aws-config-rules&#34;&gt;Repository of sample Custom Rules for AWS Config&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/fresco&#34;&gt;Fresco is a powerful system for displaying images in Android applications.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/EVCache&#34;&gt;EVCache is a memcached &amp;amp; spymemcached based caching solution that is mainly used for AWS EC2 infrastructure for caching frequently used data.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubespray/setup-kubernetes&#34;&gt;Setup a kubernetes cluster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/&#34;&gt;Using Scikit-Learn In AWS Lambda&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/pGeSxIB3KzY&#34;&gt;Building A Private Cloud With OpenStack Charms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/gRPC-protobufs-swagger.html&#34;&gt;Take a REST with HTTP/2, Protobufs, and Swagger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://machinezone.github.io/research/networking-solutions-for-kubernetes/&#34;&gt;Comparison of Networking Solutions for Kubernetes&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:11</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol11/</link>
+      <pubDate>Mon, 31 Aug 2015 18:09:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol11/</guid>
+      <description>&lt;p&gt;Some interesting links :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cloudwebops/cwoautoscale&#34;&gt;CWOAUTOSCALE Ansible playbook&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ambitioninc/container-transform&#34;&gt;Transform docker-compose configs to ECS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nvbn/thefuck&#34;&gt;Magnificent app which corrects your previous console command.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/anishathalye/git-remote-dropbox&#34;&gt;A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kern/filepizza&#34;&gt;Peer-to-peer file transfers in your browser&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://icodealot.com/convert-data-to-base64-in-nodejs/&#34;&gt;Convert Data to Base64 in Node.js.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://slides.com/seldo/npm-past-present-and-future?token=xYgn8LKj#/&#34;&gt;Npm past, present and future by seldo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/michaeldfallen/git-radar&#34;&gt;A heads up display for git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ahmetalpbalkan/registry-benchmark&#34;&gt;Simple tool to benchmark docker-registry &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ruanyf/react-demos&#34;&gt;A collection of simple demos of React.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://arstechnica.com/security/2015/08/github-attacked-again-as-chinese-developers-forced-to-pull-code-by-police/&#34;&gt;GitHub attacked again as Chinese developers forced by police to pull code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/CenturyLinkLabs/watchtower&#34;&gt;Automatically update running Docker containers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/achiku/jungle&#34;&gt;AWS operations by cli should be simpler&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jaxenter.com/how-to-share-docker-volumes-across-hosts-119602.html&#34;&gt;How to share Docker volumes across hosts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/duedil-ltd/portainer&#34;&gt;Apache Mesos framework for building Docker images on a cluster of machines.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jshomes/learning-resources&#34;&gt;Free learning resources.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/danluu/debugging-stories&#34;&gt;A collection of debugging stories.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/boxen/our-boxen&#34;&gt;Copy me for your team.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=qFqChTq55MI&amp;amp;feature=youtu.be&#34;&gt;Docker monitoring using Sysdig.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.codeship.com/packer-ansible/&#34;&gt;Using Packer and Ansible to Build Immutable Infrastructure.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/robertreiz/docker-ansible-51576034&#34;&gt;Infrastructure Deployment with Docker &amp;amp; Ansible.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.electricmonk.nl/log/2015/08/12/introducing-ansible-cmdb-a-host-overview-generator-for-ansible-managed-hosts/&#34;&gt;Introducing ansible-cmdb: a host overview generator for ansible-managed hosts.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/quarkslab/ansible-selenium-server&#34;&gt;A Vagrant VM using Ansible to provide a Selenium Server.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:9</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol9/</link>
+      <pubDate>Sat, 04 Apr 2015 08:47:30 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol9/</guid>
+      <description>&lt;p&gt;Sharing some interesting links :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/chef/devops-kungfu&#34;&gt;Chef Style DevOps Kung fu&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.heavybit.com/blog/2015/3/23/dockermeetup&#34;&gt;The Realities of Docker in Production.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://saltstack.com/saltconf15-video/&#34;&gt;Saltconf15 videos.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2015/04/hack-delete-youtube-video.html&#34;&gt;Delete any video from YouTube in one shot.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.theregister.co.uk/2015/04/01/netflix_teams_with_aws_to_launch_vhsasaservice_variant&#34;&gt;Netflix teams with AWS to launch VHS-as-a-service.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=f_JeAEBxpUs&#34;&gt;Discover Pinterest: Search and Discovery.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2015/04/freak-attack-how-to-protect-yourself.html&#34;&gt;FREAK ATTACK.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://presentations-thesteve0.rhcloud.com/openshiftv3/#/&#34;&gt;Docker, Kubernets, &amp;amp; OpenShift.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenextweb.com/facebook/2015/04/03/facebook-might-be-shutting-down-access-to-hashtags-in-its-api/&#34;&gt;Facebook is shutting down access to hashtags in its API.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://reapp.io/&#34;&gt;An easier, faster way to build apps with React and JavaScript.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sw3NjVMMXz8&amp;amp;feature=youtu.be&#34;&gt;Seccomp, a proposed new security feature in Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.torusware.com/2015/04/optimizing-communications-between.html&#34;&gt;Optimizing communications between Docker containers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rxin/db-readings&#34;&gt;Readings in Databases.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nilpath.se/building-a-rest-api-in-golang/&#34;&gt;Building a REST API in golang.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.sharethis.com/blog/2015/04/01/monitoring-large-scale-data-pipelines/#sthash.gsbKml0u.dpbs&#34;&gt;Monitoring Large Scale Data Pipelines.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.tutum.co/2015/03/31/why-stacks-are-huge-for-devs-using-docker/&#34;&gt;Why Stacks are HUGE for Devs Using Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.gopheracademy.com/gobench/&#34;&gt;gobench - Go Benchmark Competition.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/oilbeater/Autoheal&#34;&gt;Auto restart distribute services from power cut or service crash.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://antirez.com/news/88&#34;&gt;Adventures in message queues.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gethamsa.com/&#34;&gt;A dead simple, data-binding &amp;amp; observable model.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/garnaat/kappa&#34;&gt;Kappa is a command line tool that (hopefully) makes it easier to deploy, update, and test functions for AWS Lambda.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://eng.erisindustries.com/blockchains/2015/04/01/peer-server-networks-current-paradigm/&#34;&gt;How We Set Up Peer Server Networks Using Tutum and Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/djherbis/buffer&#34;&gt;Composable Buffers for Go #golang.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://container-solutions.com/2015/03/docker-inspect-template-magic/&#34;&gt;Docker Inspect Template Magic.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://matthewkwilliams.com/index.php/2015/03/23/shrinking-docker-images/&#34;&gt;Shrinking Docker Images.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sysadmincasts.com/episodes/47-zero-downtime-deployments-with-ansible-part-4-4&#34;&gt;Zero-downtime Deployments with Ansible.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.tryolabs.com/2015/03/26/configurable-docker-containers-for-multiple-environments/&#34;&gt;Configurable docker containers for multiple environments.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://arstechnica.com/security/2015/03/github-battles-largest-ddos-in-sites-history-targeted-at-anti-censorship-tools/&#34;&gt;GitHub battles “largest DDoS” in site’s history, targeted at anti-censorship tools.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://scotch.io/tutorials/build-chrome-like-tabs-with-bootstrap-and-angularjs&#34;&gt;Build Chrome-like Tabs with Bootstrap and AngularJS.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://scotch.io/lessons/login-with-the-built-in-laravel-5-scaffolding&#34;&gt;Login with the built-in Laravel 5 Scaffolding.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://arstechnica.com/security/2015/03/google-warns-of-unauthorized-tls-certificates-trusted-by-almost-all-oses/&#34;&gt;Google warns of unauthorized TLS certificates trusted by almost all OSes.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lattice.cf/&#34;&gt;Lattice is a container management platform combining web load-balancing, a cluster scheduler, log aggregation and health management.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ripienaar/free-for-dev&#34;&gt;A list of software and SaaS, PaaS etc offerings that have free tiers for devs.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/klen/graphite-beacon&#34;&gt;Graphite beacon is a very simple alerting system for Graphite metrics. &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/metral/corekube&#34;&gt;CoreOS + Kubernetes + OpenStack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jgrahamc/httpdiff&#34;&gt;Perform the same request against two HTTP servers and diff the results.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.skjegstad.com/blog/2015/03/25/mirageos-vm-per-url-experiment/&#34;&gt;A unikernel experiment: A VM for every URL.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gdstechnology.blog.gov.uk/2015/03/25/test-driving-web-server-configuration/&#34;&gt;Test-driving web server configuration.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://shk.io/2015/03/22/transparent-huge-pages/&#34;&gt;Transparent huge pages and memory usage.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://mesosphere.com/2015/03/26/integration-testing-with-mesos-chronos-docker/&#34;&gt;Integration testing with Mesos, Chronos and Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bazel.io/&#34;&gt;Correct, reproducible, fast builds for everyone.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://calvinmetcalf.com/&#34;&gt;Javascript and maps.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.sunsama.com/meteor-docker-opsworks/&#34;&gt;meteor, docker, aws opsworks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://facebook.github.io/react-native/&#34;&gt;A framework for building native apps using REACT.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vishnudxb/sshban&#34;&gt;Control your SSH Logins.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://radar.oreilly.com/2015/03/how-to-create-a-swarm-cluster-with-docker.html&#34;&gt;How to create a Swarm cluster with Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://anandmanisankar.com/posts/docker-container-nginx-node-redis-example/&#34;&gt;A sample Docker workflow with Nginx, Node.js and Redis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://opensource.com/business/15/3/docker-security-future&#34;&gt;Docker security in the future.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:8</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol8/</link>
+      <pubDate>Sat, 28 Feb 2015 11:34:13 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol8/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy for this weekend :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yG-UaBJXZ80&#34;&gt;Hacking with Andrew and Brad: Writing an HTTP/2 Client in Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nginx.com/blog/microservices-at-netflix-architectural-best-practices/&#34;&gt;Adopting Microservices at Netflix: Lessons for Architectural Design.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://engineering.sharethis.com/post/110139007424/docker-at-sharethis&#34;&gt;Welcome to Engineering @ShareThis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mesosphere.com/2015/02/26/deploying-with-docker-swarm/&#34;&gt;Docker Containers at Scale.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bbc.co.uk/blogs/internet/entries/47a96d23-ae04-444e-808f-678e6809765d&#34;&gt;How we built the new BBC Homepage.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.serverdensity.com/18-must-browser-plugins-extensions-sysadmins/&#34;&gt;18 Must have browser plugins / extensions for SysAdmins&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/KosyanMedia/burlesque&#34;&gt;Message queue server with HTTP interface&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.devco.net/archives/2015/02/24/moving-a-service-from-puppet-to-docker-2.php&#34;&gt;Moving a service from Puppet to Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://clusterhq.com/blog/powerstrip-flocker-portable-volumes-using-just-docker-cli/&#34;&gt;Powerstrip-flocker: Portable volumes using just the Docker CLI.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.elasticsearch.org/blog/elasticsearch-1-4-3-and-1-3-8-released/&#34;&gt;Latest Upgrade of Elasticsearch fix the groovy scripting vulnerability&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://t37.net/nginx-optimization-understanding-sendfile-tcp_nodelay-and-tcp_nopush.html&#34;&gt;NGINX OPTIMIZATION: UNDERSTANDING SENDFILE, TCP_NODELAY AND TCP_NOPUSH&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://rogerignazio.com/blog/managing-mesos-with-puppet/&#34;&gt;Managing Mesos Clusters with Puppet.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://peter.bourgon.org/go-in-production/&#34;&gt;Go: Best Practices for Production Environments&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.parsehub.com/&#34;&gt;Turn dynamic websites into APIs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gaearon.github.io/react-hot-loader/&#34;&gt;Tweak reactjs components in real time &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/ec2-container-service-ecs-update-access-private-docker-repos-mount-volumes-in-containers&#34;&gt;EC2 Container Service (ECS) Update – Access Private Docker Repos &amp;amp; Mount Volumes in Containers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.inspectlet.com/&#34;&gt;Record and playback everything visitors do on your site.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://facebook.github.io/stetho/&#34;&gt;Stetho:- A new debugging platform for Android, built by Facebook &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.nkode.io/2014/08/24/valuable-docker-links.html&#34;&gt;VALUABLE DOCKER LINKS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/joewalnes/websocketd&#34;&gt;Turn any program that uses STDIN/STDOUT into a WebSocket server. Like inetd, but for WebSockets &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/wlanslovenija/netcfg&#34;&gt;Network configuration of Docker containers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2015/02/whatsapp-web-desktop-messenger.html&#34;&gt;WhatsApp Web Client Now Available on Firefox and Opera Browsers.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2015/02/lenovo-hacked.html&#34;&gt;Lenovo Website has been Hacked&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/crosbymichael/slex&#34;&gt;SSH multiplex &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/aluzzardi/wssh&#34;&gt;SSH to WebSockets Bridge &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.infoworld.com/article/2886381/internet/seven-no-bull-facts-about-the-new-http-2-protocol.html&#34;&gt;Seven no-bull facts about the new HTTP/2 protocol&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/aws-activate-startup-blog/managing-resources-across-multiple-environments-in-aws-7e139351f9c7?adbsc=startups_20150206_40075486&amp;amp;adbid=UPDATE-c2382910-5969549230166003712&amp;amp;adbpl=li&amp;amp;adbpr=2382910&#34;&gt;Managing Resources across Multiple Environments in AWS.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:7</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol7/</link>
+      <pubDate>Wed, 31 Dec 2014 15:10:05 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol7/</guid>
+      <description>&lt;p&gt;Hey Amigos,&lt;/p&gt;
+
+&lt;p&gt;As 2014 draws to a close, signalling the end of another year of my life.  It has been an Amazing year, learned lots of New Technologies, Faces lots of challenges, New places, New people and so on&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;I hope you guys also enjoyed this year very well !! and I wish you a very very Happy New year!! &lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Tomorrow is the first blank page of a 365 page book. Write a good one&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/newyear-e1420037405536.jpg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/newyear-225x300.jpg&#34; alt=&#34;newyear&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I am sharing some of the interesting links which will keep you busy for the next week :)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://titanous.com/posts/docker-insecurity&#34;&gt;Docker Image Insecurity.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/l0rd/sublime-docker&#34;&gt;sublime-docker: A Sublime Text plugin to use Docker Language Stacks as build systems.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://containerops.org/2014/12/19/docker-vs-rocket-gimme-a-break/&#34;&gt;Container Wars! Docker vs Rocket (CoreOS).&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://containerops.org/2014/12/19/docker-vs-rocket-gimme-a-break/&#34;&gt;Where would you be on New Year&amp;rsquo;s Eve without a #sophospuzzle?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://news.softpedia.com/news/Updating-the-Linux-Kernel-Without-Restart-Could-Arrive-Soon-for-Users-468215.shtml&#34;&gt;Updating the Linux Kernel Without Restart Could Arrive Soon for Users.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://blog.docker.com/2014/12/dockercon-eu-enterprise-ci-problems-and-our-solutions-by-simon-thulbourne/&#34;&gt;ENTERPRISE CI at BBC News.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://blog.docker.com/2014/12/dockercon-eu-the-future-of-the-docker-project-by-solomon-hykes/&#34;&gt;THE future of the Docker Project explained by Solomon Hykes.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://threatpost.com/two-factor-snafu-opened-door-to-jpmorgan-breach/110119&#34;&gt;Two-Factor Snafu Opened Door to JPMorgan Breach.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.theregister.co.uk/2014/12/24/rackspace_restored_after_ddos_takes_out_dns/&#34;&gt;Rackspace restored after DDOS takes out DNS.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://leandromoreira.com.br/2014/11/20/how-to-start-to-learn-high-scalability/&#34;&gt;How to start learning high scalability.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/vishnunamshi/terraform-coreos&#34;&gt;Using Terraform inorder to run the Vegeta docker container in CoreOS in Amazon AWS.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/vishnunamshi/docker-vegeta&#34;&gt;docker-vegeta:- A simple docker container to run the HTTP LOAD TESTS.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/Priam&#34;&gt;Priam: Co-Process for backup/recovery, Token Management, and Centralized Configuration management for Cassandra.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/google/trace-viewer&#34;&gt;Frontend for chrome://tracing and Android systrace. &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/dustjs&#34;&gt;dustjs: Asynchronous templates for the browser and node.js&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/twitter/twemproxy&#34;&gt;Twemproxy: A fast, light-weight proxy for memcached and redis.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/emirozer/fake2db&#34;&gt;fake2db: Create test databases that are populated with fake data.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://ionicframework.com/blog/docker-hot-code-deploys/&#34;&gt;Fast code deployments with Docker.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://nathanleclaire.com/blog/2014/12/22/migrating-to-hugo-from-octopress/&#34;&gt;Migrating to Hugo From Octopress.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://sethvargo.com/getting-an-a-plus-on-qualys-ssl-labs-tester/&#34;&gt;Getting an A+ on Qualy&amp;rsquo;s SSL Labs Tester.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/cakper/2014-0407-php-spec-the-only-design-tool-you-need-4developers&#34;&gt;PHPSpec - the only Design Tool you need - 4Developers.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://williamdurand.fr/2014/12/17/elasticsearch-logstash-kibana-with-docker/&#34;&gt;Elasticsearch, Logstash &amp;amp; Kibana with Docker.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://blog.hipchat.com/2014/06/24/elasticsearch-at-hipchat-10x-faster-queries/&#34;&gt;Elasticsearch at HipChat: 10x faster queries.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:6</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol6/</link>
+      <pubDate>Sat, 29 Nov 2014 08:55:34 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol6/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.informationweek.com/cloud/infrastructure-as-a-service/docker-security-flaw-found/d/d-id/1317751&#34;&gt;Docker Security Flaw Found.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://agiletesting.blogspot.co.uk/2014/11/service-discovery-with-consul-and.html&#34;&gt;Service discovery with consul and consul-template.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://opbeat.com/blog/posts/how-we-scaled-instagram-mike-krieger/&#34;&gt;How we scaled Instagram.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/edda&#34;&gt;Edda is a Service to track changes in your cloud deployments.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/edda&#34;&gt;Docker vs VMs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/certificate-transparency&#34;&gt;Auditing for TLS certificates. &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.venusjs.org/&#34;&gt;venus.js: where bugs go to die&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Shopify/minesweeper&#34;&gt;Minesweeper is a tool to detect websites infected with drive-by malware.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vclfiddle/vclfiddle&#34;&gt;VclFiddle is an online tool for experimenting with the Varnish Cache HTTP reverse-proxy in a sandboxed environment. &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/eureka&#34;&gt;AWS Service registry for resilient mid-tier load balancing and failover.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bravenewgeek.com/sometimes-kill-9-isnt-enough/&#34;&gt;Sometimes Kill -9 Isn&amp;rsquo;t Enough.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/brendangregg/performance-tuning-ec2-instances&#34;&gt;Performance Tuning EC2 Instances.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sosedoff/pgweb&#34;&gt;Web-based PostgreSQL database browser.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://eager.io/blog/go-and-json/&#34;&gt;Go and JSON.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&#34;&gt;Aurora on Amazon RDS.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/namshi/cdnwhaaat&#34;&gt;Check that your files are on your CDN.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/blogs/aws/aws-ip-ranges-json/&#34;&gt;AWS Public IP Address Ranges Now Available in JSON Form.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.deimos.fr/2014/11/17/which-configuration-management-tool-should-you-use/&#34;&gt;Which configuration management tool should you use?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/madflojo/salt-api-reactor-formula&#34;&gt;A Saltstack salt-api and reactor formula for integrating HTTP webhooks with Saltstack executions.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wiki.jenkins-ci.org/display/JENKINS/saltstack-plugin&#34;&gt;Jenkins: saltstack-plugin.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.rancher.io/&#34;&gt;Portable AWS-style infrastructure service for Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/olx-inc/octopush&#34;&gt;Octopush is an application to manage deployment requests executed by Jenkins.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/spotify/helios&#34;&gt;Helios: Docker container orchestration platform.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackshare.io/zenhub&#34;&gt;ZenHub is a lightweight browser extension that injects features directly into GitHub&amp;rsquo;s native interface. Fast, simple, and effective.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackshare.io/firehose&#34;&gt;Firehose is both a Rack application and JavaScript library that makes building real-time web applications possible.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ifdattic.com/how-to-deploy-symfony-application-to-aws-elasticbeanstalk/&#34;&gt;How-to: Deploy Symfony Application to AWS ElasticBeanstalk.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/newrelic/hhvm&#34;&gt;HHVM is an open-source virtual machine designed for executing programs written in Hack and PHP.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/newrelic/centurion&#34;&gt;A mass deployment tool for Docker fleets.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/blockly&#34;&gt;Google&amp;rsquo;s Blockly is a web-based, visual programming editor.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/spotify/docker-client&#34;&gt;A simple docker client for the JVM.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/namshi/docker-kibana4&#34;&gt;A docker container to run kibana, compatible with found.no.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/namshi/docker-elasticsearch&#34;&gt;ElasticSearch 1.4.0 on Docker until the official dockerfile/elasticsearch image gets updated.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:5</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol5/</link>
+      <pubDate>Fri, 31 Oct 2014 18:56:00 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol5/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Biv58QU2dv4&#34;&gt;Introduction to Fig&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/110484264&#34;&gt;Docker at Shopify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sslmate.com/&#34;&gt;Buy SSL certs from the command line.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sslmate.com/&#34;&gt;Goodbye Google: Why This Man Chose to Quit His Amazing Job&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://protectyourselfie.org/&#34;&gt;http://protectyourselfie.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.thinkful.com/learn/angularjs-tutorial-build-a-gmail-clone/&#34;&gt;Learn Angular by building a Gmail clone&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scotch.io/tutorials/javascript/build-a-real-time-twitter-stream-with-node-and-react-js&#34;&gt;Build A Real-Time Twitter Stream with Node and React.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nginx.com/blog/deploying-nginx-nginx-plus-docker/&#34;&gt;Deploying NGINX and NGINX Plus with Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.infoworld.com/article/2838008/javascript/nginx-has-big-plans-for-javascript.html&#34;&gt;Nginx has big plans for JavaScript&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/album/3093746/video/110482963&#34;&gt;5 Minutes for 10 DevOps Tools &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/adobe-webplatform/dropcap.js&#34;&gt;dropcap.js:- Beautiful CSS drop caps made easy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jacksoncage.se/posts/2014/10/01/use-salt-to-manage-and-deploy-docker-containers/&#34;&gt;Use Salt to manage and deploy Docker containers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pypi.python.org/pypi/pepa/0.7.9&#34;&gt;Pepa: Configuration templating for SaltStack using Hierarchical substitution and Jinja.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.backand.com/construct-angularjs-dashboard/&#34;&gt;Constructing a Dashboard with AngularJS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/buth/stocker&#34;&gt;Manage environment variables securely.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://material.angularjs.org/#/&#34;&gt;Angular Material&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://easelinc.github.io/tourist/&#34;&gt;Tourist.js:- Simple, flexible tours brought to you by easel.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blog/1269-the-github-hiring-experience&#34;&gt;The GitHub hiring experience.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://boundary.com/info/rabbitmq.html&#34;&gt;Boundary:- Monitor RabbitMQ Performance&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-perform-continuous-integration-testing-with-drone-io-on-coreos-and-docker&#34;&gt;How To Perform Continuous Integration Testing with Drone.io on CoreOS and Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/article/20141027200232-1485298-why-i-left-my-254-895-pm-role-at-microsoft-to-start-a-seattle-tech-startup&#34;&gt;Why I left my $254,895 PM role at Microsoft to start a Seattle tech startup.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://clusterhq.com/blog/deploying-multi-node-elasticsearch-logstash-kibana-cluster-using-docker/&#34;&gt;Deploying and migrating a multi-node ElasticSearch-Logstash-Kibana cluster using Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.centurylinklabs.com/linking-docker-containers-with-a-serf-ambassador/&#34;&gt;Linking Docker containers with a Serf Ambassador.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/scopely-devops/skewer&#34;&gt;The Skew Elasticsearch Repository.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.npmjs.org/package/object-history&#34;&gt;JavaScript Object history (undo/redo)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/cirpo/don-t-screw-it-up-how-to-build-durable-api&#34;&gt;Don&amp;rsquo;t screw it up! How to build durable API.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tech.namshi.com/blog/2014/10/27/winston-graylog2-a-new-life-under-namshi/&#34;&gt;Winston-graylog2: A New Life Under Namshi.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.npmjs.org/post/100099402720/registry-roadmap&#34;&gt;Registry roadmap.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/danielstjules/jsinspect&#34;&gt;Detect copy-pasted and structurally similar code.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/romansanchez/Calaca&#34;&gt;Search UI for Elasticsearch.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://utcc.utoronto.ca/~cks/space/blog/web/VegetaLoadTesting&#34;&gt;Vegeta, a tool for web server stress testing.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.regexper.com/&#34;&gt;Enter Javascript style regular expression to display.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/virtkick/virtkick&#34;&gt;A simple orchestrator. Manage virtual machines or Docker containers easily. &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.atatus.com/&#34;&gt;Frontend JavaScript Contextual Error Tracking.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://humongous.io/&#34;&gt;mongoDB User Interface.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://contribsys.com/inspeqtor/&#34;&gt;Inspector:- Application infrastructure monitoring, reimagined.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lwan.ws/&#34;&gt;Lwan is a high-performance &amp;amp; scalable web server for glibc/Linux platforms.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.javaworld.com/article/2840332/html-css-js/next-up-for-node-js-going-mobile.html&#34;&gt;Next up for Node.js: Going mobile.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ahmetalpbalkan.com/blog/docker-http-basic-auth/&#34;&gt;Securing Docker with HTTP Basic Authentication.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/&#34;&gt;AngularJS: Factory vs Service vs Provider.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://java.dzone.com/articles/docker-rabbitmq-cluster&#34;&gt;Docker RabbitMQ Cluster.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://rivetsjs.com/&#34;&gt;Rivets.js:- Lightweight and powerful data binding + templating solution for building modern web applications.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ropensci.org/blog/2014/10/23/introducing-rocker/&#34;&gt;Introducing Rocker:Docker for R.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jonathan.bergknoff.com/journal/building-good-docker-images&#34;&gt;What constitutes a good docker image?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.stateoftheinternet.com/resources-web-security-threat-advisories-2014-poodle-sslv3-vulnerability-cybersecurity.html&#34;&gt;Poodle SSLv3 Vulnerability.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blogs.vmware.com/performance/2014/10/docker-containers-performance-vmware-vsphere.html&#34;&gt;Docker Containers Performance in VMware vSphere.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ocombe/ocLazyLoad&#34;&gt;Load modules on demand (lazy load) in AngularJS.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/blogs/aws/aws-region-germany/&#34;&gt;Now Open - AWS Germany (Frankfurt) Region - EC2, DynamoDB, S3, and Much More.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://catjsteam.github.io/&#34;&gt;Catjs: Mobile web automation testing framework. Unit tests can be added to any HTML5 application easily. With catjs you get to be Agile. &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.hakkalabs.co/articles/simple-fast-agile-rest-spray-io&#34;&gt;Simple, fast &amp;amp; agile REST with Spray.io.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bencane.com/2014/10/13/quick-and-practical-reference-for-tcpdump/&#34;&gt;A Quick and Practical Reference for tcpdump.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/crosbymichael/slex&#34;&gt;SSH multiplex.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/&#34;&gt;Running GUI apps with Docker.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://arqex.com/939/learning-much-javascript-one-line-code&#34;&gt;Learning much javascript from one line of code.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gNmWybAyBHI&#34;&gt;Angular 2.0 Core by Igor Minar &amp;amp; Tobias Bosch at ng-europe 2014.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeman/perfmap&#34;&gt;perfmap: Front-end performance heatmap bookmarklet.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:4</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol4/</link>
+      <pubDate>Tue, 30 Sep 2014 19:27:42 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol4/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ansible.com/blog/official-ansible-content-on-docker-hub&#34;&gt;Official Ansible Content on Docker Hub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=U4oB28ksiIo&amp;amp;feature=youtu.be&#34;&gt;What happens when you steal a hackers computer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.cloudflare.com/introducing-universal-ssl/&#34;&gt;Introducing Universal SSL&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mnx.io/blog/a-proper-server-naming-scheme/&#34;&gt;A PROPER SERVER NAMING SCHEME&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.loggly.com/blog/five-things-every-developer-know-syslog/&#34;&gt;Five Things Every Developer Should Know About Syslog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://alblue.bandlem.com/2014/09/bash-remote-vulnerability.html&#34;&gt;Bash remote vulnerability&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.troyhunt.com/2014/09/everything-you-need-to-know-about.html&#34;&gt;Everything you need to know about the Shellshock Bash bug&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.docker.com/2014/09/docker-hub-official-repos-announcing-language-stacks/&#34;&gt;DOCKER HUB OFFICIAL REPOS: ANNOUNCING LANGUAGE STACKS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.loggly.com/blog/why-aws-route-53-over-elastic-load-balancing/&#34;&gt;Why Loggly Chose AWS Route 53 over Elastic Load Balancing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.cloudflare.com/keyless-ssl-the-nitty-gritty-technical-details/&#34;&gt;Keyless SSL: The Nitty Gritty Technical Details&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.pwc.com/en_US/us/technology-forecast/2014/issue1/interviews/interview-ben-golub-docker.jhtml&#34;&gt;Simplifying and securing multicloud development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.twitterflight.com/&#34;&gt;Twitter’s Mobile Developers developer conference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mesosphere.com/2014/09/25/marathon-0.7.0-released/&#34;&gt;Marathon v0.7.0 — Running Dockers at Scale and More&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kartar.net/2014/09/when-logstash-and-syslog-go-wrong/&#34;&gt;When Logstash and Syslog go wrong&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.thestateofme.com/2014/09/12/docker-networking/&#34;&gt;Docker Networking &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mnapoli.fr/decoupling-packages/&#34;&gt;Decoupling packages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://addyosmani.com/blog/video-javascript-memory-management-masterclass/&#34;&gt;JavaScript Memory Management Masterclass&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=XCVOxht34Hs&#34;&gt;Be a happier developer with Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sindresorhus/internal-ip&#34;&gt;Get your internal IPv4 address&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sindresorhus/internal-ip&#34;&gt;The Dockerfile is not the source of truth for your image.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2014/09/FBI-iPhone-android-full-encryption.html&#34;&gt;FBI Not Happy With Apple &amp;amp; Google&amp;rsquo;s Encryption Policy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kobra.io&#34;&gt;Collaborative &amp;ldquo;Google Docs&amp;rdquo; for code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://foundationdb.com/&#34;&gt;Multi-model database with particularly strong fault tolerance, performance, and operational ease.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/cayley&#34;&gt;An open-source graph database&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://xlwings.org/&#34;&gt;Use Python in Excel without add-ins&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.parsehub.com/&#34;&gt;Turn dynamic websites into APIs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/angular/material&#34;&gt;Material Design for AngularJS Apps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://paypal.github.io/nemo/&#34;&gt;PayPal’s open source node.js automation framework&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

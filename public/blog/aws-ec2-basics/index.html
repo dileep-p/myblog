@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> AWS EC2 Basics &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/aws-ec2-basics/">AWS EC2 Basics</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                
+
+<h2 id="ec2-elastic-cloud-compute">EC2 (elastic cloud compute)</h2>
+
+<p><strong>Instance Stop</strong>:</p>
+
+<ul>
+<li><p>The instance will be shutdown and the virtual machine that was provisioned for you will be permanently taken away.</p></li>
+
+<li><p>Will NO longer be charged for instance usage.</p></li>
+
+<li><p>The attached bootable EBS volume will NOT be deleted.</p></li>
+
+<li><p>All information on the local (ephemeral) hard drive will be lost.</p></li>
+
+<li><p>Volume will continue to persist in its availability zone and standard charges for EBS volumes will apply.</p></li>
+
+<li><p>Ability to stop an instance is only supported on instances that were launched using an EBS-based AMI where the root device data is stored on an attached EBS volume as an EBS boot partition instead of being stored on the local instance itself.</p></li>
+
+<li><p>When you start a stopped instance the EBS volume is simply attached to the newly provisioned instance.  Although, the AWS-id of the new virtual machine will be the same, it will have new IP Addresses, DNS Names, etc.</p></li>
+
+<li><p>Starting a stopped instance isnt same as Rebooting an instance because according to the former the Instance gets newly provisioned VM.</p></li>
+
+<li><p><strong>Things that change when you stop/start include:</strong></p></li>
+</ul>
+
+<ol>
+<li><p>New internal IP address (though could randomly be the same).</p></li>
+
+<li><p>New external IP address (though could randomly be the same).</p></li>
+
+<li><p>If an Elastic IP address was associated with the instance before it was stopped, then you’ll need to re-associate it after the start. (Behavior may differ with VPC instances.)</p></li>
+
+<li><p>Any contents on the instance’s former ephemeral storage were wiped and you are given fresh ephemeral storage (often mounted as /mnt).</p></li>
+
+<li><p>You can leave an instance stopped for as long as you like and not get charged for run time (though you do get charged at a much lower rate for the EBS volume storage). See the next point.</p></li>
+
+<li><p>A fresh billing hour is started for the instance when you start it again. E.g., if you start a new instance and then stop/start it 3 times within the first 60 minutes, you’ll get charged for 4 hours instead of 1.</p></li>
+
+<li><p>There is a small chance that EC2 will not have available slots of the correct instance type to run your instance when you want to start it again. I’ve had this happen and temporarily switched to a different, available instance type to get it running again.</p></li>
+</ol>
+
+<p><strong>Instance Termination</strong></p>
+
+<ul>
+<li><p>The key difference between stopping and terminating an instance is that the attached bootable EBS volume will be deleted on Instance Termination.</p></li>
+
+<li><p>EC2 instance will be shutdown and the virtual machine that was provisioned for you will be permanently taken away.</p></li>
+
+<li><p>Will no longer be charged for instance usage.</p></li>
+</ul>
+
+<p><strong>Instance Reboot</strong></p>
+
+<ul>
+<li>When you reboot, it’s a simple reboot at the OS level and the instance stays running on the same hardware, with the same private and public IP addresses, keeps the same Elastic IP address (if associated), and keeps the same ephemeral storage without getting wiped. No new billing hour is started on a reboot and you do not give up the instance hardware.</li>
+</ul>
+
+<p><strong>EBS Boot Vs Instance Store</strong></p>
+
+<p>If you are just getting started with Amazon EC2, then use EBS boot instances and stop reading this article. Forget that you ever heard about instance-store and accept my apology that I just mentioned it. Once you are completely comfortable with using EBS boot instances on EC2, you may (or may not) want to come back here and read why you made a good decision.</p>
+
+<ul>
+<li>Instance-store users don’t mind losing all of the data on the instance.</li>
+</ul>
+
+<p>Benefits of EBS Boot Instances</p>
+
+<ul>
+<li><p>EBS boot instances store the root file system on an EBS volume which is persistent storage. If the instance hardware fails, the EBS volume remains accessible. It is also possible to request the EBS volume to persist beyond the termination of an EC2 instance. _When an instance-store instance fails or is shut down, all of the data on the root disk is lost forever and can never be retrieved._ Read more about <a href="http://alestic.com/2010/01/ec2-instance-locking">protecting EC2 instances from accidental termination and loss of data</a>.</p></li>
+
+<li><p>EBS boot instances can be stopped and restarted at will. The “stopped” state suspends the hourly instance billing charges, preserving the information on the EBS volumes. The stopped instance can be started again a few minutes later or months later, restoring state just as if the instance was rebooted. _An instance-store instance can only be left running with full charges or terminated, which causes you to lose all data on the disk._ Read more about <a href="http://alestic.com/2011/09/ec2-reboot-stop-start">how stop/start of an EBS boot instance is similar to and different from a simple reboot</a>.</p></li>
+
+<li><p>When something goes wrong with an EBS boot instance so that it can’t be booted, or you lose access through ssh (e.g., lost keys, bad ssh config change), you can still view and modify or fix the EBS root volume by attaching it to another running instance. _With an instance-store instance, everything on the root disk is lost and cannot be recovered._ Read more about <a href="http://alestic.com/2011/02/ec2-fix-ebs-root">fixing files on the root EBS volume of an EC2 instance</a>.</p></li>
+
+<li><p>EBS boot instances can be run with a root EBS volume size from the default specified by the AMI (often 8GB) up to 1,000GB (1TB). _The instance-store AMIs have a max root disk size of 10GB with no way to increase it._ Read more about <a href="http://alestic.com/2009/12/ec2-ebs-boot-resize">increasing the root disk size of an EBS boot AMI</a>.</p></li>
+
+<li><p>It is possible to grow the size of the root disk after an EBS boot instance has been started. _An instance-store instance has no way to grow the root disk size._ Read more about <a href="http://alestic.com/2010/02/ec2-resize-running-ebs-root">resizing the root disk on a running EBS boot EC2 instance</a>.</p></li>
+
+<li><p>It is possible to change the instance type for a running EBS boot instance without needing to start a new instance. For example, you can scale up from an m1.large to an m1.xlarge and then a few hours or days later, scale back down. _An instance-store instance is stuck with the type on which it was originally run._ Read more about <a href="http://alestic.com/2011/02/ec2-change-type">changing the instance type of a running EBS boot instance</a>.</p></li>
+
+<li><p>You can easily replace the hardware for your instance if you are running an EBS boot instance. This is extremely valuable if your instance is having problems that you suspect may be related to the underlying hardware. _An instance-store instance is bound to the hardware it started on and cannot be moved._ Read more about <a href="http://alestic.com/2011/02/ec2-move-hardware">using stop/start to replace EC2 hardware</a>.</p></li>
+
+<li><p>EBS boot AMIs are simpler and faster to create than instance-store AMIs. In fact, you can trigger the creation of an EBS boot AMI from a running instance in one command, API call, or console click. <em>You need to copy sensitive AWS credentials to the instance when creating an instance-store AMI.</em></p></li>
+
+<li><p>Amazon has stated that EBS boot AMIs boot up faster than S3 based AMIs (instance-store). In my recent experience, the difference is negligible, especially when testing popular AMIs that are likely to be cached, but we might as well chalk this up as another benefit.</p></li>
+
+<li><p>The t1.micro instance type released recently by Amazon only supports EBS boot instances. This move is like a sign from Amazon that you really don’t want to run the legacy instance-store instances.</p></li>
+</ul>
+
+<p>Even if you use an EBS boot instance, I still recommend keeping your data on a separate EBS volume. This has a number of benefits.</p>
+
+<p><strong>Changing Instance type(large or small), architecture (32bit or 64bit)</strong>
+There are 3 limitations that we need to keep in mind</p>
+
+<ul>
+<li><p>This action can only performed on Instances that are in the stopped state.</p></li>
+
+<li><p>It is not permitted to switch between 32 and 64 bit Instance types due to AMI limitations.</p></li>
+</ul>
+
+<p>For example: Small Instances can only grow to Medium while Extra Large Instances can only shrink to Large.</p>
+
+<p><strong><a href="http://alestic.com/2009/08/ec2-connectivity">Solved – “I can’t connect to my server on Amazon EC2″ by Alestic.</a></strong></p>
+
+<p><a href="http://alestic.com/2009/08/ec2-connectivity">http://alestic.com/2009/08/ec2-connectivity</a></p>
+
+<p><strong><a href="http://stackoverflow.com/questions/2082724/amazon-ec2-swap-root-instance-store-device-with-ebs-device">Convert Instance store to EBS backed Instance.</a></strong></p>
+
+<p><a href="http://stackoverflow.com/questions/2082724/amazon-ec2-swap-root-instance-store-device-with-ebs-device">http://stackoverflow.com/questions/2082724/amazon-ec2-swap-root-instance-store-device-with-ebs-device</a></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/aws-ec2-basics\/';
+    var disqus_title = 'AWS EC2 Basics';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/aws-ec2-basics\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

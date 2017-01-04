@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database Migration on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/database-migration/index.xml</link>
+    <description>Recent content in Database Migration on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/database-migration/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Database Migration From Postgresql to Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/</link>
+      <pubDate>Fri, 13 Nov 2015 15:38:14 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/</guid>
+      <description>&lt;p&gt;Here I am migrating the Postgresql database to Mongodb with the help &lt;em&gt;&lt;strong&gt;&lt;a href=&#34;http://mongify.com/&#34;&gt;Mongify.&lt;/a&gt; &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you check my postgres db, you can see a table named &amp;ldquo;rep_test&amp;rdquo; and the data inside the table.&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;postgres=# \dt&lt;/p&gt;
+
+&lt;p&gt;List of relations&lt;/p&gt;
+
+&lt;p&gt;Schema |   Name   | Type  |  Owner   &lt;/p&gt;
+
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+
+&lt;p&gt;public | rep_test | table | postgres&lt;/p&gt;
+
+&lt;p&gt;(1 row)&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;postgres=# select * from rep_test;&lt;/p&gt;
+
+&lt;p&gt;      test       &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;data one&lt;/p&gt;
+
+&lt;p&gt;some more words&lt;/p&gt;
+
+&lt;p&gt;lalala&lt;/p&gt;
+
+&lt;p&gt;hello there&lt;/p&gt;
+
+&lt;p&gt;blahblah&lt;/p&gt;
+
+&lt;p&gt;(5 rows)&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now for the db migration, you need to install the Mongify.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;gem install mongify&lt;/p&gt;
+
+&lt;p&gt;Then you need to create a file named &amp;ldquo;database.config&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;For eg:-&lt;/p&gt;
+
+&lt;p&gt;root@locahost:~# cat database.config&lt;/p&gt;
+
+&lt;p&gt;_sql&lt;em&gt;connection do&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  adapter     &amp;rdquo;postgresql&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  host           &amp;rdquo;localhost&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  username  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  password  &amp;ldquo;postgres123&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  database  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;end&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_mongodb&lt;em&gt;connection do&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  host      &amp;ldquo;localhost&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  database  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;end&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Then, you need to check if the database.config file is correct and the connections are working fine. You can check this by the below command:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;mongify check database.config&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;If the adapter is missing, it will give an error and you need to install the adapter by running the below command:&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;gem install activerecord-postgresql-adapter&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, you need to run the translation command&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;mongify translation database.config &amp;gt; translation.rb&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, you can tell the mongify to move the data to mongodb. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;mongify process database.config translation.rb&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, Verify everything is migrated to your Mongodb&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;show collections&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;rep_test&lt;/p&gt;
+
+&lt;p&gt;system.indexes&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;db.rep_test.find()&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000001&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;data one&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000002&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;some more words&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000003&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;lalala&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000004&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;hello there&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000005&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;blahblah&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

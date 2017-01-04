@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> High Availability @ Load Balancing Layer-HAProxy / ELB &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/">High Availability @ Load Balancing Layer-HAProxy / ELB</a></h1>
+            <span class="post-date">Apr 1, 2013 </span>
+            <div class="post-content">
+                
+
+<p>Architecting High Availability at the Load Balancing layer is one of the important aspects in the web scale systems in AWS. We can follow multiple strategies for achieving the same. I am listing some of the designs for achieving the same.</p>
+
+<h1 id="pattern-1-route-53-dns-rr-haproxy"><em>Pattern 1: Route 53 DNS RR + HAProxy</em></h1>
+
+<p>Route53 is a Managed DNS service provided by Amazon Web Services. Route 53 supports Round robin and weighted algorithms. If the Route53 DNS server has several entries for a given hostname, it will return all of them in a rotating order. This way, various users will see different addresses for the same name and will be able to reach different EC2 instances in LB Tier.</p>
+
+<p>$ host -t a HAProxyTestXYZ.com</p>
+
+<p>HAProxyTestXYZ.com. has address <strong>50.19.82.183 (Primary EIP)</strong></p>
+
+<p>HAProxyTestXYZ.com. has address <strong>23.23.174.254 (Secondary EIP)</strong></p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/04/1.jpg"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/04/1.jpg" alt="1" /></a></p>
+
+<p>Example, if we attach the Elastic IP’s of 2 HAProxy EC2 instances under the Route 53, both the IP’s are sent to the user browsers by the Route 53 DNS. In case, the algorithm configured is Round Robin at the Route 53 level, then browser- 1 will get <strong>EIP-1(50.19.82.183</strong>) of HAProxy-1 as the primary IP and browser -2 will get <strong>EIP-2</strong> <strong>(23.23.174.254)</strong> of HAProxy-2 as the primary IP in rotation basis.  The browser- 1 will contact the HAProxy-1 and in case HAProxy-1 is not reachable it will contact the secondary EIP which is HAproxy-2 and so forth. This is an age old technique generally used by search engines, content servers (or) web scale systems for achieving scalability in LB layer. But this method does not provide any means of High availability @ LB layer. It requires additional measures to permanently check the HAProxy EC2 LB instances status and switch a failed EC2 instance EIP to another HAProxy EC2 LB. For this reason, this pattern is generally used as a complementary solution in High Availability, not as a primary one.  For achieving better stability at this layer in AWS, I usually recommend having 2 or more HAProxies distributed on multiple AZ’s inside the Amazon EC2 region. This way if one of the HAProxy is down, the website still functions with the help of other HAProxies and even if the entire Amazon EC2 AZ is down still the HAProxies in the other AZ can handle the requests and keep the website active. Some load tests have proven that HAProxy on m1.large EC2 instance can handle close to ~4500+ HTTP requests/second. So depending upon the number of concurrent requests/sec needed on your application you can go ahead and attach multiple HAProxy EC2 instances to the Route 53. Now that we achieved availability horizontally using the Route53 DNS Round Robin in HAProxy layer let us try to understand the intricacies behind this architecture.  Since we now have 2 or more HAProxies what will happen to the contextual web sessions data that resides in the application servers. HAProxies need to know in which application server the session data of the user resides else the requests will have authorization failures.</p>
+
+<p>There are 2 architecture designs we can follow for solving this contextual problem they are:</p>
+
+<p>**Stateless Application design: ** This is the recommended and widely used design. The web session data is separated out from the Web/App server memory and they are kept in common cache stores like MemCacheD, TerraCotta etc.Since the session data is now kept in a common store like MemCacheD, HAProxies can direct their requests to any of the web/app servers attached under it without knowing where the session state is mapped. Whenever any web/app server receives the request from any of the HAProxies, it will validate and authorize the session data from the common store.  In event of any HAProxy or Web/App EC2 failure still the website functions without problems because other HAProxies and Web/App servers are still able to handle the subsequent requests. Thus we achieve availability and scalability on the HAProxy/Load Balancing layer following this model.</p>
+
+<p><strong>Sticky Application design:</strong> Things are usually not ideal and the way we assume to be in real world. Some applications are still designed with stateful nature and they store the session data, cache data etc. in their web/app server memory.  We can always recommend the application teams to re-architect this model to stateless, but not always this suggestion works for short term migrations, inter dependencies etc.  So as architects we need to find way to live and cope up with this design and still try to achieve availability on the load balancing layer. HAProxy follows a technique called as “<strong>Cookie Learning”</strong> and <strong>“Cookie Insertion”</strong> to help state full applications. HAProxy can be configured to learn the application cookie (&ldquo;JSESSIONID&rdquo;), when HAProxy receives the user&rsquo;s request, it checks if it contains this particular cookie and a known value. If this is not the case, it will direct the request to any Web/App EC2 server, according to the load balancing algorithm configured. HAProxy will then extract the cookie value from the response and add it along with the server&rsquo;s identifier to a local table. When the user request comes back again, the load balancer sees the cookie, lookups the table and finds the Web/App EC2 server to which it forwards the request. Let me detail this important flow a little bit;</p>
+
+<p>HAProxy-1 EC2 instance will receive client’s requests from the browser. If a request does not contain a cookie, it will be forwarded to a valid Web/App EC2 Instance Apache-A. In return, if a JESSIONID cookie is seen, the Web/App EC2 Instance name (Example “A”)will be prefixed into it, followed by a delimiter (&rsquo;~&lsquo;) like &ldquo;JSESSIONID=A~xxx&rdquo;.When the browser client requests again with the cookie  JSESSIONID=A~xxx&rdquo;, HAProxy-1 will know that it must be forwarded to Web/App Instance Apache-A. The EC2 Instance name ”A” will then be extracted from cookie before it is sent to the Web/App EC2 Instance Apache-A.</p>
+
+<p>If Web/App EC2 Instance Apache-A dies, then requests will be sent to another valid server Web/App EC2 Instance Apache-B by LB and the cookie will be reassigned.</p>
+
+<p>If HAProxy-1 itself dies, then requests will be sent to HAProxy-2 which will identify the Web/App EC2 instance to forward the request. This way even if the subsequent requests moves from HAProxy-1 to HAProxy-2 in event of HAProxy-1 failure, still the requests are sent to the same Web/App instance Apache-A by the cookie learning/insertion mechanism of HAProxy.</p>
+
+<p>Sample HAProxy Settings to achieve this</p>
+
+<pre><code>&lt;span style=&quot;color:#0000ff;&quot;&gt;listen webfarm 192.168.1.1:80&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       mode http&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       balance roundrobin&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       cookie JSESSIONID prefix&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       option httpclose&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       option forwardfor&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       option httpchk HEAD /index.html HTTP/1.0&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       server Apache-A 192.168.1.11:80 cookie A check&lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;       server Apache-B 192.168.1.12:80 cookie B check&lt;/span&gt;
+</code></pre>
+
+<p>Note: You can use more sophisticated DNS services like UltraDNS , DNSMadeEasy etc also in this architecture to better control the Load balancing and traffic direction at the DNS level.</p>
+
+<p>Pattern 2: Route 53 DNS RR + HAProxy in Active-Passive mode</p>
+
+<p>This is an extension of the Route53 DNS RR pattern and everything discussed in the previous pattern still applies to this context. In addition to associating HAProxies horizontally under Route53, we will build availability for every HAProxy vertically as well in this pattern. High Availability is built taking into consideration HAProxy process failure and HAProxy EC2 instance failure.</p>
+
+<p>2 or more HAProxies from multiple AZ’s are taken and they are attached with Amazon Elastic IP’s. These Elastic IP’s are then associated in Route 53 with DNS RR. These HAProxies are now “Active” and are ready to handle the user requests. For HA, another equivalent set of HAProxies are launched in the respective AZ’s as “Standby”. In event of the “Active” HAProxy failure, the Standby HAProxy remaps to the same Amazon Elastic IP takes over the subsequent requests from the client.</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/04/2.jpg"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/04/2.jpg" alt="2" /></a></p>
+
+<p>In the above diagram, there are 2 HAProxies in “Active” state with Elastic IP’s <strong>50.19.82.183</strong> <strong>&amp;</strong> <strong>23.23.174.254</strong>. They are deployed across Multiple Availability Zones inside an Amazon EC2 region. Another 2 HAProxies are launched in respective AZ’s, but they are kept idle in “Standby” state. In event of <strong>HAProxy-1 (EIP: 50.19.82.183)</strong> failure the Elastic IP is remapped to Standby HAProxy-3 in the same AZ. The remapping takes ~60 seconds and the HAPorxy-3 will be handling the subsequent requests directed by the browsers to the <strong>50.19.82.183</strong>** IP.**</p>
+
+<p>Broadly there are 2 levels of failure in this pattern;</p>
+
+<p><strong>Failure @ HAProxy Process level</strong></p>
+
+<p><strong>Failure @ HAProxy EC2 instance level</strong></p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/04/3.jpg"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/04/3.jpg" alt="3" /></a></p>
+
+<p> <strong>Failure @HAProxy Process level:</strong>  When HAProxy Process at the “Active” server fails; we can detect this using **KeepAliveD **and switch the Elastic IP from Active -&gt; Standby. We have observed it takes ~60-120 seconds for the standby to takeover. During this time the <strong>particular HAProxy alone</strong> will be unreachable. KeepAliveD script is configured in both the Active and standby HAProxy EC2 instance. KeepAliveD implements a set of checkers to dynamically and adaptively maintain and manage load balanced server pool according to their health. High availability is achieved by Virtual Router Redundancy Protocol <a href="http://datatracker.ietf.org/wg/vrrp/">VRRP</a> protocol of the KeepAliveD. Since Amazon EC2 currently does not support Multicast protocol we need to configure KeepAliveD with Unicast TCP in this scenario.  For more details refer <a href="http://www.keepalived.org/">http://www.keepalived.org/</a>. Mean time manually we can bring the failed HAProxy Process up and make this as the new standby.</p>
+
+<p><strong>Script Name: “/etc/keepalived/keepalived.conf”</strong></p>
+
+<p>vrrp_script chk_haproxy {           # Requires keepalived-1.1.13</p>
+
+<p>script &ldquo;killall -0 haproxy&rdquo;     # cheaper than pidof</p>
+
+<p>interval 20                      # check every 2 seconds</p>
+
+<p>weight 20                        # add 2 points of prio if OK</p>
+
+<p>}</p>
+
+<p>vrrp_instance VI_1 {</p>
+
+<p>interface eth0</p>
+
+<p>state MASTER</p>
+
+<p>virtual_router_id 51</p>
+
+<p>ipriority 101                    # 101 on master, 100 on backup</p>
+
+<p>vrrp_unicast_bind 10.215.31.4</p>
+
+<p>      #internal IP address of EC2 instance 01</p>
+
+<p>vrrp_unicast_peer 10.85.110.252</p>
+
+<p>  #internal IP address of EC2 instance 02</p>
+
+<p>notify_master &ldquo;/etc/keepalived/vrrp.sh&rdquo;</p>
+
+<p>track_script {</p>
+
+<p>chk_haproxy weight 20</p>
+
+<p>}</p>
+
+<p> </p>
+
+<p>}</p>
+
+<p><strong>Script Name: /etc/keepalived/vrrp.sh</strong></p>
+
+<p>#vrrp.sh</p>
+
+<p>#!/bin/bash</p>
+
+<p>cd /opt/aws/apitools/ec2/bin</p>
+
+<p>#DisAssociate EIP from this instance.</p>
+
+<p>./ec2-disassociate-address &ndash;aws-access-key XXXXXXX –aws-secret-key XXXXXXX  [EIP]</p>
+
+<p>#Mapping EIP to secondary server</p>
+
+<p>./ec2-associate-address &ndash;aws-access-key XXXXXXX  –aws-secret-key XXXXXXX  [EIP] -i [ec2_instance_id_of_primary_or_secondary]</p>
+
+<p>**Failure @ HAProxy EC2 instance level: **When the Active HAProxy EC2 instance itself fails; we can detect this using **Heartbeat **and switch the Elastic IP from Active -&gt; Standby. <strong>&ldquo;<a href="http://en.wikipedia.org/wiki/Heartbeat_%28program%29">Heartbeat</a>&ldquo;</strong> tool connects two servers and checks the regular &ldquo;pulse&rdquo; or &ldquo;heartbeat&rdquo; between them. The standby server takes over the work of the “Active” as soon as it detects an alteration in the &ldquo;heartbeat&rdquo; of the former. We have observed it takes ~120+ seconds for the standby to takeover. During this time the <strong>particular HAProxy alone</strong> will be unreachable. Heartbeat has to be configured in both the Active and standby HAProxy EC2 instance. Since Amazon EC2 currently does not support Multicast protocol we need to configure Heartbeat with Unicast UDP in this scenario. Mean time manually we can bring the failed HAProxy EC2 instance up and make this as the new standby.</p>
+
+<p><strong>Script Name: /etc/ha.d/ha.cf</strong></p>
+
+<p>logfile /var/log/ha-log</p>
+
+<p>logfacility local0</p>
+
+<p>keepalive 2</p>
+
+<p>deadtime 30</p>
+
+<p>initdead 120</p>
+
+<p>udpport 694</p>
+
+<p>ucast eth0 xx.xxx.xxx.xxa #Internal IP of EC2 instance 01</p>
+
+<p>ucast eth0 xx.xxx.xxx.xxb #Internal IP of EC2 instance 02</p>
+
+<p>auto_failback off</p>
+
+<p><strong>Script Name: Create a script named “elastic_ip” in both the servers.</strong></p>
+
+<p>#!/bin/bash</p>
+
+<p>I_ID=&rdquo;[ec2_instance_id&rdquo; # different for each EC2 servers.</p>
+
+<p>ELASTIC_IP=&ldquo;X.X.X.X&rdquo;</p>
+
+<p>case $1 in</p>
+
+<p>    start)</p>
+
+<p>ec2-associate-address &ndash;aws-access-key XXXXX &ndash;aws-secret-key XXXXX &ldquo;$ELASTIC_IP&rdquo; -i &ldquo;$I_ID&rdquo; &gt; /dev/null</p>
+
+<p>       echo $0 started</p>
+
+<p>       ;;</p>
+
+<p>    stop)</p>
+
+<p>ec2-disassociate-address &ndash;aws-access-key XXXXX &ndash;aws-secret-key XXXXX &ldquo;$ELASTIC_IP&rdquo; &gt; /dev/null</p>
+
+<p>    echo $0 stopped</p>
+
+<p>       ;;</p>
+
+<p>    status)</p>
+
+<p>ec2-describe-addresses &ndash;aws-access-key XXXXX &ndash;aws-secret-key XXXXX | grep &ldquo;$ELASTIC_IP&rdquo; | grep &ldquo;$I_ID&rdquo; &gt; /dev/null</p>
+
+<p>    # grep will return true if this ip is mapped to this instance</p>
+
+<p>    [ $? -eq 0 ] &amp;&amp; echo $0 OK || echo $0 FAIL</p>
+
+<p>    ;;</p>
+
+<p> </p>
+
+<p>esac</p>
+
+<p><strong>Why do we need this redundancy in the HAProxy layer?</strong></p>
+
+<p>Not all the times the DNS RR with LB Cookie Insertion alone is enough for ensuring availability;</p>
+
+<p><strong>Case 1:</strong> Imagine you have not automated the scalability @ Load Balancing Layer and one of your Load balancer is down. You do not want to be waked up in the middle of the night rather it is better to have a standby Load Balancer automatically replacing the failed one. Manually you can replace the faulty LB next day.</p>
+
+<p>**Case 2: **You have a gaming site where long running TCP sockets are established from flash gaming clients to the LB layer. You have planned the capacity of Front end Load Balancers with concurrent connections/sec. Now couple of your Load balancers are down, the new connections will be established to other running LB, but overall your site will now start performing poorly and chances are new connections are exhausted after few hours of heavy traffic. It is better to automatically detect and replace the faulty LB EC2 instance with the standby.</p>
+
+<p>**Case 3: **Some clients cache the IP address of the Load Balancer, Some of them have long running sticky sessions with web/app, Some hardware devices can take only IP address to push data into the Server infrastructure. Though it is suggested to resolve the IP using DNS, still in reality some use cases does not work the same way.</p>
+
+<p><strong>Pattern 3: Use ELB</strong></p>
+
+<p>Do not worry about all the above patterns, just go and configure Amazon Elastic Load Balancing (ELB). For most of the use cases ELB is more than sufficient.</p>
+
+<p>Amazon Elastic Load Balancer can distribute incoming traffic across your Amazon EC2 instances in a single Availability Zone or multiple Availability Zones. Amazon Elastic Load Balancing automatically scales its request handling capacity in response to incoming application traffic. It can handle 20k+ concurrent requests/sec with ease. It enables you to achieve even greater fault tolerance in your applications, seamlessly providing the amount of load balancing capacity needed in response to incoming application traffic. Elastic Load Balancing detects unhealthy instances within a pool and automatically reroutes traffic to healthy instances until the unhealthy instances have been restored. Any faulty Load balancers in the ELB tier are automatically replaced.</p>
+
+<p>Though for most of the common use cases ELB is more than sufficient in AWS. There are some unique cases which demand the use of Load balancers like HAProxy, Nginx and NetScaler in our architecture in the AWS infrastructure.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/high-availability-load-balancing-layer-haproxy-elb\/';
+    var disqus_title = 'High Availability @ Load Balancing Layer-HAProxy \/ ELB';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/high-availability-load-balancing-layer-haproxy-elb\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

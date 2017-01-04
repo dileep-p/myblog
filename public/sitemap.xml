@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol17/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol16/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol15/</loc>
+    <lastmod>2016-08-31T15:17:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</loc>
+    <lastmod>2016-08-19T09:23:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol14/</loc>
+    <lastmod>2016-07-19T20:57:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/ansible-role-for-installing-presto-using-ambari-service/</loc>
+    <lastmod>2016-06-23T17:26:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/running-openstack-with-lxc-as-hypervisor-using-terraform/</loc>
+    <lastmod>2016-05-24T18:35:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol13/</loc>
+    <lastmod>2016-04-12T10:09:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol12/</loc>
+    <lastmod>2016-03-02T10:10:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/fixing-openssh-information-leak-vulnerability-cve-2016-0777/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/docker-container-for-de-registering-sensu-clients-from-its-master/</loc>
+    <lastmod>2015-12-19T12:42:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/</loc>
+    <lastmod>2015-11-13T15:38:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/docker-container-for-redis-cluster-verison-3-0-4/</loc>
+    <lastmod>2015-10-07T10:46:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/docker-container-for-running-postfix-using-gmail-as-the-smtp/</loc>
+    <lastmod>2015-09-30T16:37:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol11/</loc>
+    <lastmod>2015-08-31T18:09:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol10/</loc>
+    <lastmod>2015-07-25T16:06:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</loc>
+    <lastmod>2015-06-09T15:22:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</loc>
+    <lastmod>2015-05-09T19:53:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/ansible-playbook-for-chaos-monkey/</loc>
+    <lastmod>2015-05-02T17:57:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol9/</loc>
+    <lastmod>2015-04-04T08:47:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/moving-github-repo-to-bitbucket-due-to-ddos/</loc>
+    <lastmod>2015-03-30T10:48:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol8/</loc>
+    <lastmod>2015-02-28T11:34:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/fixing-the-ghost-vulnerability-cve-2015-0235-on-debian/</loc>
+    <lastmod>2015-01-28T14:49:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol7/</loc>
+    <lastmod>2014-12-31T15:10:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</loc>
+    <lastmod>2014-12-29T07:55:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol6/</loc>
+    <lastmod>2014-11-29T08:55:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol5/</loc>
+    <lastmod>2014-10-31T18:56:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol4/</loc>
+    <lastmod>2014-09-30T19:27:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol3/</loc>
+    <lastmod>2014-08-31T19:41:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol2/</loc>
+    <lastmod>2014-07-27T16:57:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol1/</loc>
+    <lastmod>2014-06-13T05:27:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</loc>
+    <lastmod>2014-05-02T19:06:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/simple-nodejs-webserver/</loc>
+    <lastmod>2014-05-02T18:49:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/hadoop/</loc>
+    <lastmod>2014-03-29T19:32:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/how-to-create-a-private-npm-js-repository/</loc>
+    <lastmod>2014-02-22T14:46:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/git-mirror-if-git-hub-goes-down/</loc>
+    <lastmod>2014-01-19T13:46:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/script-to-take-the-db-backup-by-passing-the-db-name-and-host-names-to-s3/</loc>
+    <lastmod>2013-12-29T13:14:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/</loc>
+    <lastmod>2013-08-31T07:00:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/phantomjs-and-load-speed-test-for-websites/</loc>
+    <lastmod>2013-08-31T06:39:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/centralizing-logs-with-lumberjack-logstash-and-elasticsearch/</loc>
+    <lastmod>2013-07-20T06:04:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/automated-vm-generation-with-veewee-vagrant-jenkins-and-amazon-s3/</loc>
+    <lastmod>2013-07-20T05:43:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/aws-storage-gateway/</loc>
+    <lastmod>2013-05-25T04:26:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/equip-with-elasticache/</loc>
+    <lastmod>2013-05-25T04:21:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/s3cmd-elaborated/</loc>
+    <lastmod>2013-05-25T04:11:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/aws-ec2-internal-security-structure/</loc>
+    <lastmod>2013-05-25T04:04:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/how-to-set-up-master-slave-replication-in-mysql/</loc>
+    <lastmod>2013-05-24T18:15:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/how-to-install-and-use-memcache-on-ubuntu-12-04/</loc>
+    <lastmod>2013-05-24T11:51:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/</loc>
+    <lastmod>2013-04-01T07:23:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/install-rockmongo-for-mongodb-on-centos-rhel-debian-ubuntu/</loc>
+    <lastmod>2013-04-01T06:44:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/setting-up-keepalived-load-balancing-using-haproxy-part-2/</loc>
+    <lastmod>2013-03-14T11:48:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/high-availability-load-balancing-using-haproxy-part-1/</loc>
+    <lastmod>2013-03-14T11:22:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/</loc>
+    <lastmod>2013-01-05T10:31:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/mongodb/</loc>
+    <lastmod>2013-01-05T09:39:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/cloud-security/</loc>
+    <lastmod>2012-12-18T05:32:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/add-nrpe-host-to-nagios/</loc>
+    <lastmod>2012-12-15T10:40:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/installing-nagios-on-ubuntu/</loc>
+    <lastmod>2012-12-15T10:22:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/about/about/</loc>
+    <lastmod>2012-12-10T17:52:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-7/</loc>
+    <lastmod>2012-12-10T11:39:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-6/</loc>
+    <lastmod>2012-12-10T11:38:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-5/</loc>
+    <lastmod>2012-12-10T11:36:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-4/</loc>
+    <lastmod>2012-12-10T11:32:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-3/</loc>
+    <lastmod>2012-12-10T11:28:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-2/</loc>
+    <lastmod>2012-12-10T11:26:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/linux-cool-tips-and-tricks-log-1/</loc>
+    <lastmod>2012-12-10T11:19:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/</loc>
+    <lastmod>2012-12-10T10:40:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</loc>
+    <lastmod>2012-12-10T10:38:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/quick-mysql-commands/</loc>
+    <lastmod>2012-12-10T10:33:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</loc>
+    <lastmod>2012-12-10T10:29:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/mysql-database-sharding/</loc>
+    <lastmod>2012-12-10T10:26:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/install-use-s3cmd-for-s3-storage/</loc>
+    <lastmod>2012-12-10T10:23:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/aws-productssolutions-admins-capsule/</loc>
+    <lastmod>2012-12-10T10:21:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/rds-cli-tools-setup/</loc>
+    <lastmod>2012-12-10T10:19:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/</loc>
+    <lastmod>2012-12-10T10:17:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/rds-scaling/</loc>
+    <lastmod>2012-12-10T07:29:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/elb-and-autoscaling-in-aws/</loc>
+    <lastmod>2012-12-10T07:27:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/aws-ec2-basics/</loc>
+    <lastmod>2012-12-10T07:24:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/some-quick-ec2-commands/</loc>
+    <lastmod>2012-12-10T07:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/copy-s3-buckets-across-aws-accounts/</loc>
+    <lastmod>2012-12-10T07:15:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/about/</loc>
+    <lastmod>2012-12-10T17:52:41-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/amazon/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/amazon-aws/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/amazon-ec2/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/amazon-s3/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/amazon-s3/</loc>
+    <lastmod>2016-08-31T15:17:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/amazon-ses/</loc>
+    <lastmod>2014-12-29T07:55:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ambari/</loc>
+    <lastmod>2016-06-23T17:26:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ansible/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/ansible/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/apache/</loc>
+    <lastmod>2016-07-19T20:57:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/asg/</loc>
+    <lastmod>2015-12-19T12:42:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/autoscaling/</loc>
+    <lastmod>2015-12-19T12:42:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/aws/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/aws-ec2/</loc>
+    <lastmod>2016-08-19T09:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/aws-reinvent-2016/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/aws-s3/</loc>
+    <lastmod>2015-06-09T15:22:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/backup-mysql-server/</loc>
+    <lastmod>2013-05-24T18:15:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/big-data/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/bigdata/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/bitbucket/</loc>
+    <lastmod>2015-03-30T10:48:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/blog/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/centralized/</loc>
+    <lastmod>2013-07-20T06:04:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/chaosmonkey/</loc>
+    <lastmod>2015-05-02T17:57:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/cloud/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/cloudera/</loc>
+    <lastmod>2014-03-29T19:32:45+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/cluster/</loc>
+    <lastmod>2015-10-07T10:46:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/computing/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/container/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/containers/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/cve-2015-0235/</loc>
+    <lastmod>2015-01-28T14:49:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/cve-2016-0777/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/data-discovery/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/database/</loc>
+    <lastmod>2015-11-13T15:38:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/database-migration/</loc>
+    <lastmod>2015-11-13T15:38:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/debian/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/devops/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/docker/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/docker/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/docker-registry/</loc>
+    <lastmod>2016-08-19T09:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/docker-swarm/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/dom/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/dropbox/</loc>
+    <lastmod>2016-08-31T15:17:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ec2/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/elastic-cache/</loc>
+    <lastmod>2013-05-24T11:51:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/elastic-ip/</loc>
+    <lastmod>2014-05-02T19:06:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/elasticache/</loc>
+    <lastmod>2015-06-09T15:22:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/elasticsearch/</loc>
+    <lastmod>2013-07-20T06:04:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/elb/</loc>
+    <lastmod>2015-05-09T19:53:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/email/</loc>
+    <lastmod>2014-12-29T07:55:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/forever/</loc>
+    <lastmod>2014-05-02T18:49:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/gateway/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ghost/</loc>
+    <lastmod>2015-01-28T14:49:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ghost-vulnerability/</loc>
+    <lastmod>2015-01-28T14:49:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/git/</loc>
+    <lastmod>2015-03-30T10:48:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/git/</loc>
+    <lastmod>2015-03-30T10:48:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/git-mirror/</loc>
+    <lastmod>2014-01-19T13:46:59+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/github/</loc>
+    <lastmod>2015-03-30T10:48:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/github-down/</loc>
+    <lastmod>2015-03-30T10:48:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/gmail/</loc>
+    <lastmod>2015-09-30T16:37:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/golang/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ha-proxy/</loc>
+    <lastmod>2013-04-01T07:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/ha-proxy/</loc>
+    <lastmod>2013-04-01T07:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/hadoop/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/hadoop/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/high-availability/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/hortonworks/</loc>
+    <lastmod>2016-06-23T17:26:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ignore-table/</loc>
+    <lastmod>2013-08-31T07:00:33+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/install/</loc>
+    <lastmod>2013-01-05T10:31:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/install-mongodb/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/javascript/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/kafka/</loc>
+    <lastmod>2016-07-19T20:57:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/kubernetes/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/linkedin/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/linux/</loc>
+    <lastmod>2016-08-19T09:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/linux-tips-and-tricks/</loc>
+    <lastmod>2012-12-10T11:39:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/load-balancing/</loc>
+    <lastmod>2015-05-09T19:53:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/load-speed/</loc>
+    <lastmod>2013-08-31T06:39:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/load-test/</loc>
+    <lastmod>2013-08-31T06:39:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/log/</loc>
+    <lastmod>2015-05-09T19:53:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/logs/</loc>
+    <lastmod>2013-07-20T06:04:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/logstash/</loc>
+    <lastmod>2013-07-20T06:04:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/lumberjack/</loc>
+    <lastmod>2013-07-20T06:04:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/lxc/</loc>
+    <lastmod>2016-05-24T18:35:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/master-server/</loc>
+    <lastmod>2013-05-24T18:15:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/memcache/</loc>
+    <lastmod>2013-05-24T11:51:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/memcache/</loc>
+    <lastmod>2013-05-24T11:51:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/mesos/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/microservices/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/migration/</loc>
+    <lastmod>2015-11-13T15:38:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/mirror/</loc>
+    <lastmod>2014-01-19T13:46:59+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/misc/</loc>
+    <lastmod>2012-12-10T17:52:41-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/mongo/</loc>
+    <lastmod>2013-01-05T10:31:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/mongo-db/</loc>
+    <lastmod>2016-08-31T15:17:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/mongodb/</loc>
+    <lastmod>2016-03-02T10:10:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/mysql/</loc>
+    <lastmod>2013-08-31T07:00:33+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/mysql/</loc>
+    <lastmod>2013-08-31T07:00:33+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/mysql-replica/</loc>
+    <lastmod>2013-05-24T18:15:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/mysqldump/</loc>
+    <lastmod>2013-08-31T07:00:33+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/nagios/</loc>
+    <lastmod>2012-12-15T10:40:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/nagios/</loc>
+    <lastmod>2012-12-15T10:40:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/nat/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/nat-gateway/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/netflix/</loc>
+    <lastmod>2015-05-02T17:57:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/news-letter/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/newsletter/</loc>
+    <lastmod>2015-07-25T16:06:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/newsletter/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/nginx/</loc>
+    <lastmod>2015-05-09T19:53:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/nodejs/</loc>
+    <lastmod>2014-05-02T18:49:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/nosql/</loc>
+    <lastmod>2015-11-13T15:38:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/npm/</loc>
+    <lastmod>2014-05-02T18:49:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/npm-mirror/</loc>
+    <lastmod>2014-02-22T14:46:38+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/nrpe/</loc>
+    <lastmod>2012-12-15T10:40:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/open-source/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/opensource/</loc>
+    <lastmod>2016-08-31T15:17:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/openssh/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/openstack/</loc>
+    <lastmod>2016-05-24T18:35:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/page-load-test/</loc>
+    <lastmod>2013-08-31T06:39:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/phantomjs/</loc>
+    <lastmod>2013-08-31T06:39:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/php-cache/</loc>
+    <lastmod>2013-05-24T11:51:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/phpmyadmin/</loc>
+    <lastmod>2013-04-01T06:44:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/playbook/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/postfix/</loc>
+    <lastmod>2015-09-30T16:37:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/postgres/</loc>
+    <lastmod>2015-11-13T15:38:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/postgresql/</loc>
+    <lastmod>2015-11-13T15:38:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/presto/</loc>
+    <lastmod>2016-06-23T17:26:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/prestodb/</loc>
+    <lastmod>2016-06-23T17:26:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/private-subnet/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/proxy/</loc>
+    <lastmod>2015-05-09T19:53:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/public-subnet/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/python/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/rds/</loc>
+    <lastmod>2012-12-10T10:19:59+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/redis/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/regex/</loc>
+    <lastmod>2013-08-31T07:00:33+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/registry/</loc>
+    <lastmod>2016-08-19T09:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/regular-expressions/</loc>
+    <lastmod>2013-08-31T07:00:33+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/reinvent/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/replication/</loc>
+    <lastmod>2013-05-24T18:15:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/rockmongo/</loc>
+    <lastmod>2013-04-01T06:44:11+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/route53/</loc>
+    <lastmod>2013-04-01T07:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/s3/</loc>
+    <lastmod>2016-08-31T15:17:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/s3cmd/</loc>
+    <lastmod>2013-05-25T04:11:02+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/saltstack/</loc>
+    <lastmod>2016-03-02T10:10:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/security/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/security/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/sensu/</loc>
+    <lastmod>2015-12-19T12:42:27+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ses/</loc>
+    <lastmod>2014-12-29T07:55:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/simianarmy/</loc>
+    <lastmod>2015-05-02T17:57:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/slave-mysql-server/</loc>
+    <lastmod>2013-05-24T18:15:48+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/smtp/</loc>
+    <lastmod>2015-09-30T16:37:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/soa/</loc>
+    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/sql/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ssh/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/subnet/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/swarm/</loc>
+    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/tech/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/tech-volume/</loc>
+    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/terraform/</loc>
+    <lastmod>2016-05-24T18:35:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/tricks/</loc>
+    <lastmod>2012-12-10T11:39:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/ubuntu/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/vpc/</loc>
+    <lastmod>2016-02-15T13:46:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/vulnerability/</loc>
+    <lastmod>2016-01-15T11:55:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/website-test/</loc>
+    <lastmod>2013-08-31T06:39:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/tags/wherehow/</loc>
+    <lastmod>2016-10-18T14:17:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

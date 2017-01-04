@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Page Load Test on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/page-load-test/index.xml</link>
+    <description>Recent content in Page Load Test on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/page-load-test/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PhantomJS and Load Speed test for websites</title>
+      <link>https://www.vishnu-tech.com/blog/phantomjs-and-load-speed-test-for-websites/</link>
+      <pubDate>Sat, 31 Aug 2013 06:39:53 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/phantomjs-and-load-speed-test-for-websites/</guid>
+      <description>
+
+&lt;h2 id=&#34;phantomjs-is-an-optimal-solution-for&#34;&gt;&lt;em&gt;&lt;strong&gt;PhantomJS is an optimal solution for&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;1) Headless Website Testing&lt;/p&gt;
+
+&lt;p&gt;2) Screen Capture&lt;/p&gt;
+
+&lt;p&gt;3) Page Automation&lt;/p&gt;
+
+&lt;p&gt;4) Network Monitoring&lt;/p&gt;
+
+&lt;p&gt;Please check this link  &lt;a href=&#34;http://phantomjs.org/&#34;&gt;http://phantomjs.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;TO INSTALL PHANTOMJS&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;cd /usr/local/share
+wget &lt;a href=&#34;https://phantomjs.googlecode.com/files/phantomjs-1.9.1-linux-x86_64.tar.bz2&#34;&gt;https://phantomjs.googlecode.com/files/phantomjs-1.9.1-linux-x86_64.tar.bz2&lt;/a&gt;
+tar xjvf phantomjs-1.9.1-linux-x86_64.tar.bz2
+ln -s /usr/local/share/phantomjs-1.9.1-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
+ln -s /usr/local/share/phantomjs-1.9.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+ln -s /usr/local/share/phantomjs-1.9.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs&lt;/p&gt;
+
+&lt;h1 id=&#34;additional-package&#34;&gt;Additional package&lt;/h1&gt;
+
+&lt;p&gt;apt-get install fontconfig&lt;/p&gt;
+
+&lt;p&gt;Then go to the location&lt;/p&gt;
+
+&lt;p&gt;root@machine# cd /usr/local/share/phantomjs-1.9.1-linux-x86_64/examples&lt;/p&gt;
+
+&lt;p&gt;root@machine# vim loadspeed.js&lt;/p&gt;
+
+&lt;p&gt;ADD OUR EDITED FILE TO GET THE LOAD PAGE SPEED&lt;/p&gt;
+
+&lt;p&gt;var args = require(&amp;lsquo;system&amp;rsquo;).args;
+    if(args[1] === undefined){
+        console.log(&amp;lsquo;you should provide an url&amp;rsquo;);
+        phantom.exit();
+    }&lt;/p&gt;
+
+&lt;p&gt;var namshiUrl = args[1];&lt;/p&gt;
+
+&lt;p&gt;var page = require(&amp;lsquo;webpage&amp;rsquo;).create(),
+    system = require(&amp;lsquo;system&amp;rsquo;),
+    t,address;&lt;/p&gt;
+
+&lt;p&gt;if (system.args.length === 1) {
+    console.log(&amp;lsquo;Usage: loadspeed.js &amp;lsquo;+ namshiUrl);
+    phantom.exit(1);
+} else {
+    t = Date.now();
+    address = system.args[1];
+    page.open(address, function (status) {
+      if (status !== &amp;lsquo;success&amp;rsquo;) {
+            console.log(&amp;lsquo;FAIL to load the address&amp;rsquo;);
+        } else {
+            t = Date.now() - t;
+            console.log(&amp;lsquo;Page title is &amp;rsquo; + page.evaluate(function () {
+                return document.title;
+            }));
+            console.log(&amp;lsquo;Loading time &amp;rsquo; + t + &amp;lsquo; msec&amp;rsquo;);
+        }
+        phantom.exit();
+    });
+}&lt;/p&gt;
+
+&lt;p&gt;THEN TEST IT&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:~# for weburl in &lt;a href=&#34;http://google.com&#34;&gt;http://google.com&lt;/a&gt; &lt;a href=&#34;http://yahoo.com&#34;&gt;http://yahoo.com&lt;/a&gt; ; do phantomjs /usr/local/share/phantomjs-1.9.1-linux-x86_64/examples/loadspeed.js ${weburl}; done&lt;/p&gt;
+
+&lt;p&gt;THEN INORDER TO DOING THIS WRITE A SCRIPT&lt;/p&gt;
+
+&lt;p&gt;#!/bin/bash
+true=0
+for weburl in &lt;a href=&#34;http://google.com&#34;&gt;http://google.com&lt;/a&gt; &lt;a href=&#34;http://yahoo.com&#34;&gt;http://yahoo.com&lt;/a&gt; &lt;a href=&#34;http://hotmail.com&#34;&gt;http://hotmail.com&lt;/a&gt; ; do /usr/local/bin/phantomjs /usr/local/share/phantomjs-1.9.1-linux-x86_64/examples/loadspeed.js ${weburl}; done  &amp;gt; abc.txt
+cat abc.txt | awk &amp;lsquo;{print $3}&amp;rsquo; | sed -n &amp;ldquo;2~2 p&amp;rdquo; &amp;gt; abc2.txt
+for i in &lt;code&gt;cat abc2.txt&lt;/code&gt;
+do
+if [ $i -gt 12000 ]
+then
+    true=1
+fi
+done
+if [ $true -eq 1 ]
+then
+   mail -s loadtime mailadddress@domain.com &amp;lt; abc.txt
+fi&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

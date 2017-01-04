@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title> Mysql &middot; My Tech Blog </title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+	</head>
+
+	<body>
+		<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+		<div class="container wrapper">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>Mysql</h1>
+				</div>
+			</div>
+			<ul id="post-list">
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/">Ignore Mysql Tables using regex when using Mysqldump command</a></h4>
+							<h4 class="post-date">Aug 31, 2013</h4>
+						</div>
+						<div class="post-summary"><p>Hi guys,
+We can ignore database tables while taking mysqldump using the below command
+mysqldump -u username -p database &ndash;ignore-table=database.table1 &ndash;ignore-table=database.table2 &gt; database.sql
+However if we want to ignore more tables we need to add the tables manually and its a real pain in the A$$
+Here I am showing how to take the mysqldump using regex to ignore mysql tables.
+For example:- If I want to ignore the below tables starting from...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/how-to-set-up-master-slave-replication-in-mysql/">How to Set Up Master Slave Replication in MySQL</a></h4>
+							<h4 class="post-date">May 24, 2013</h4>
+						</div>
+						<div class="post-summary"><p>About MySQL replication MySQL replication is a process that allows you to easily maintain multiple copies of a MySQL data by having them copied automatically from a master to a slave database. This can helpful for many reasons including facilating a backup for the data,a way to analyze it without using the main database, or simply as a means to scale out.
+This tutorial will cover a very simple example of mysql replication—one master will send information to a single slave....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/how-to-set-up-master-slave-replication-in-mysql/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/quick-mysql-commands/">Quick MySQL Commands</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>To Login into the MySQL #mysql -u username -ppaswword and if its RDS : #mysql -h rds.indexpoint/dnsname/ip -u username -ppassword
+To List Databases mysql&gt;show databases;
+To View tables mysql&gt;use databasename; mysql&gt;show tables;
+To View Contents Inside the Table mysql&gt;select * from tablename;
+To Delete Database mysql&gt;drop database dbname;
+To create Database user (we also need to grant permission to a db to gain access for the new user.) mysql&gt;create user ‘UNNI’@&lsquo;ipaddress/%/localhost’ identified by ‘passwd3@1′;...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/quick-mysql-commands/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/">How to Reset Mysql ROOT Password</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>1) Stop the mysql demon
+/etc/init.d/mysql stop
+2) Start the mysqld demon process using the –skip-grant-tables option with this command
+/usr/sbin/mysqld –skip-grant-tables –skip-networking &amp;
+3) start the mysql client process using this command
+mysql -u root
+4) from the mysql prompt execute this command to be able to change any password
+FLUSH PRIVILEGES;
+5) Then reset/update your password
+SET PASSWORD FOR root@’localhost’ = PASSWORD(‘password’);
+FLUSH PRIVILEGES;
+6) Then stop the mysqld process and relaunch it with the classical way:...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/mysql-database-sharding/">Mysql- Database Sharding</a></h4>
+							<h4 class="post-date">Dec 10, 2012</h4>
+						</div>
+						<div class="post-summary"><p>“share nonthing” : Key Law on database sharding Architecture. Small Databases are Fast, Big Databases are Slow !!! DB Sharding – Breaking a Bigger DB into a Smaller DB.
+Key Points on DB Sharding –
+ Partition Data across master
+ Writes and read are distributed
+ Application needs modification
+ Needs choice partitioning strategy for uniform data distribution.
+  Issues -
+ Joins cannot be performed across shards...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/mysql-database-sharding/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+
+			</ul>
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+	</body>
+</html>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/categories/mysql/index.xml</link>
+    <description>Recent content in Mysql on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ignore Mysql Tables using regex when using Mysqldump command</title>
+      <link>https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/</link>
+      <pubDate>Sat, 31 Aug 2013 07:00:33 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/</guid>
+      <description>&lt;p&gt;Hi guys,&lt;/p&gt;
+
+&lt;p&gt;We can ignore database tables while taking mysqldump using the below command&lt;/p&gt;
+
+&lt;p&gt;mysqldump -u username -p database &amp;ndash;ignore-table=database.table1 &amp;ndash;ignore-table=database.table2 &amp;gt; database.sql&lt;/p&gt;
+
+&lt;p&gt;However if we want to ignore more tables we need to add the tables manually and its a real pain in the A$$&lt;/p&gt;
+
+&lt;p&gt;Here I am showing how to take the mysqldump using regex to ignore mysql tables.&lt;/p&gt;
+
+&lt;p&gt;For example:- If I want to ignore the below tables starting from&lt;/p&gt;
+
+&lt;p&gt;1) alice_token,&lt;/p&gt;
+
+&lt;p&gt;2) import_&lt;/p&gt;
+
+&lt;p&gt;3)sales_order_item_shipment_tracking&lt;/p&gt;
+
+&lt;p&gt;4)sales_order_item_status_history&lt;/p&gt;
+
+&lt;p&gt;5)stock_import&lt;/p&gt;
+
+&lt;p&gt;6)ums&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine# cd /var/lib/mysql/&lt;database&gt;&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;# echo &amp;lsquo;[mysqldump]&amp;rsquo; &amp;gt; mydump.cnf&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;#  mysql -NBe &amp;ldquo;select concat(&amp;lsquo;ignore-table=&amp;rsquo;, table_schema, &amp;lsquo;.&amp;rsquo;, table_name) from information_schema.tables where table_name REGEXP &amp;lsquo;^(alice&lt;em&gt;token|import&lt;/em&gt;|sales_order_item_shipment_tracking|sales_order_item_status_history|stock_import|ums)&amp;lsquo;;&amp;rdquo; &amp;gt; mydump.cnf&lt;/p&gt;
+
+&lt;p&gt;And verify the file &amp;ldquo;mydump.cnf&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;# cat mydump.cnf&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.alice_token&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.import_token&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.import_sales&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.sales_order_item_shipment_tracking&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.sales_order_item_status_history&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.stock_import&lt;/p&gt;
+
+&lt;p&gt;ignore-table=&lt;database&gt;.ums&lt;/p&gt;
+
+&lt;p&gt;You can see the above entries in the file &amp;ldquo;mydump.cnf&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;root@vishnu-machine:/var/lib/mysql/&lt;database&gt;# mysqldump &amp;ndash;defaults-file=mydump.cnf -u root -p &lt;database&gt; &amp;gt; vishnu.sql&lt;/p&gt;
+
+&lt;p&gt;And here it is new dump without tables as mentioned above.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Set Up Master Slave Replication in MySQL</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-set-up-master-slave-replication-in-mysql/</link>
+      <pubDate>Fri, 24 May 2013 18:15:48 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-set-up-master-slave-replication-in-mysql/</guid>
+      <description>
+
+&lt;h3 id=&#34;about-mysql-replication&#34;&gt;About MySQL replication&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;MySQL replication is a process that allows you to easily maintain multiple copies of a MySQL data by having them copied automatically from a master to a slave database. This can helpful for many reasons including facilating a backup for the data,a way to analyze it without using the main database, or simply as a means to scale out.&lt;/p&gt;
+
+&lt;p&gt;This tutorial will cover a very simple example of mysql replication—one master will send information to a single slave. For the process to work you will need two IP addresses: one of the master server and and one of the slave.&lt;/p&gt;
+
+&lt;p&gt;This tutorial will use the following IP addresses:&lt;/p&gt;
+
+&lt;p&gt;12.34.56.789- Master Database&lt;/p&gt;
+
+&lt;p&gt;12.23.34.456- Slave Database&lt;/p&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This article assumes that you have user with sudo privileges and have MySQL installed. If you do not have mysql, you can install it with this command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install mysql-server mysql-client&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-one-configure-the-master-database&#34;&gt;Step One—Configure the Master Database&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Open up the mysql configuration file on the master server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo nano /etc/mysql/my.cnf&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once inside that file, we need to make a few changes.&lt;/p&gt;
+
+&lt;p&gt;The first step is to find the section that looks like this, binding the server to the local host:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;bind-address            = 127.0.0.1&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Replace the standard IP address with the IP address of server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;bind-address            = 12.34.56.789&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next configuration change refers to the server-id, located in the [mysqld] section. You can choose any number for this spot (it may just be easier to start with 1), but the number must be unique and cannot match any other server-id in your replication group. I’m going to go ahead and call this one 1. Make sure this line is uncommented.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;server-id               = 1&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Move on to the log_bin line. This is where the real details of the replication are kept. The slave is going to copy all of the changes that are registered in the log. For this step we simply need to uncomment the line that refers to log_bin:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;log_bin                 = /var/log/mysql/mysql-bin.log&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, we need to designate the database that will be replicated on the slave server. You can include more than one database by repeating this line for all of the databases you will need.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;binlog_do_db            = newdatabase&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After you make all of the changes, go ahead and save and exit out of the configuration file.&lt;/p&gt;
+
+&lt;p&gt;Refresh MySQL.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo service mysql restart&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next steps will take place in the MySQL shell, itself.&lt;/p&gt;
+
+&lt;p&gt;Open up the MySQL shell.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;mysql -u root -p&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We need to grant privileges to the slave. You can use this line to name your slave and set up their password. The command should be in this format:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;GRANT REPLICATION SLAVE ON *.* TO &#39;slave_user&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Follow up with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;FLUSH PRIVILEGES;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next part is a bit finicky. To accomplish the task you will need to open a &lt;em&gt;new window or tab&lt;/em&gt; in addition to the one that you are already using a few steps down the line.&lt;/p&gt;
+
+&lt;p&gt;In &lt;em&gt;your current tab&lt;/em&gt; switch to “newdatabase”.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;USE newdatabase;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Following that, lock the database to prevent any new changes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;FLUSH TABLES WITH READ LOCK;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then type in:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;SHOW MASTER STATUS;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will see a table that should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;mysql&amp;gt; SHOW MASTER STATUS;
++------------------+----------+--------------+------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB |
++------------------+----------+--------------+------------------+
+| mysql-bin.000001 |      107 | newdatabase  |                  |
++------------------+----------+--------------+------------------+
+1 row in set (0.00 sec)&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is the position from which the slave database will start replicating. Record these numbers, they will come in useful later.&lt;/p&gt;
+
+&lt;p&gt;If you make any new changes in the same window, the database will automatically unlock. For this reason, you should open the new tab or window and continue with the next steps there.&lt;/p&gt;
+
+&lt;p&gt;Proceeding the with the database still locked, export your database using mysqldump in the new window (make sure you are typing this command in the bash shell, not in MySQL).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;mysqldump -u root -p --opt newdatabase &amp;gt; newdatabase.sql&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, returning to your your original window, unlock the databases (making them writeable again). Finish up by exiting the shell.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;UNLOCK TABLES;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;QUIT;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you are all done with the configuration of the the master database.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-two-configure-the-slave-database&#34;&gt;Step Two—Configure the Slave Database&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Once you have configured the master database. You can put it aside for a while, and we will now begin to configure the slave database.&lt;/p&gt;
+
+&lt;p&gt;Log into your slave server, open up the MySQL shell and create the new database that you will be replicating from the master (then exit):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;CREATE DATABASE newdatabase;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;EXIT;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Import the database that you previously exported from the master database.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;mysql -u root -p newdatabase &amp;lt; /path/to/newdatabase.sql&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we need to configure the slave configuration in the same way as we did the master:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo nano /etc/mysql/my.cnf&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We have to make sure that we have a few things set up in this configuration. The first is the server-id. This number, as mentioned before needs to be unique. Since it is set on the default (still 1), be sure to change it’s something different.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;server-id               = 2&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Following that, make sure that your have the following three criteria appropriately filled out:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;relay-log               = /var/log/mysql/mysql-relay-bin.log&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;log_bin                 = /var/log/mysql/mysql-bin.log&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;binlog_do_db            = newdatabase&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will need to add in the relay-log line: it is not there by default.&lt;/p&gt;
+
+&lt;p&gt;Once you have made all of the necessary changes, save and exit out of the slave configuration file.&lt;/p&gt;
+
+&lt;p&gt;Restart MySQL once again:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo service mysql restart&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next step is to enable the replication from within the MySQL shell.&lt;/p&gt;
+
+&lt;p&gt;Open up the the MySQL shell once again and type in the following details, replacing the values to match your information:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;CHANGE MASTER TO MASTER_HOST=&#39;12.34.56.789&#39;,MASTER_USER=&#39;slave_user&#39;, MASTER_PASSWORD=&#39;password&#39;, MASTER_LOG_FILE=&#39;mysql-bin.000001&#39;, MASTER_LOG_POS=  107;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command accomplishes several things at the same time:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. It designates the current server as the slave of our master server.
+
+
+
+
+
+
+
+1. It provides the server the correct login credentials
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Last of all, it lets the slave server know where to start replicating from; the master log file and log position come from the numbers we wrote down previously.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;With that—you have configured a master and slave server. Activate the slave server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;START SLAVE;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You be able to see the details of the slave replication by typing in this command. The G rearranges the text to make it more readable.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;SHOW SLAVE STATUSG&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If there is an issue in connecting, you can try starting slave with a command to skip over it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;SET GLOBAL SQL_SLAVE_SKIP_COUNTER = 1; SLAVE START;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All done.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quick MySQL Commands</title>
+      <link>https://www.vishnu-tech.com/blog/quick-mysql-commands/</link>
+      <pubDate>Mon, 10 Dec 2012 10:33:27 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/quick-mysql-commands/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;To Login into the MySQL&lt;/strong&gt;
+#mysql -u username -ppaswword
+&lt;strong&gt;and if its RDS :&lt;/strong&gt;
+#mysql -h rds.indexpoint/dnsname/ip -u username -ppassword&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List Databases&lt;/strong&gt;
+mysql&amp;gt;show databases;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View tables&lt;/strong&gt;
+mysql&amp;gt;use databasename;
+mysql&amp;gt;show tables;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To View Contents Inside the Table&lt;/strong&gt;
+mysql&amp;gt;select * from tablename;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Delete Database&lt;/strong&gt;
+mysql&amp;gt;drop database dbname;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To create Database user (we also need to grant permission to a db to gain access for the new user.)&lt;/strong&gt;
+mysql&amp;gt;create user ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘passwd3@1′;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Grant Permission to a Database for a User and Create the User at the same Time&lt;/strong&gt;
+mysql&amp;gt;grant all on databasename.* to ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘password’;&lt;/p&gt;
+
+&lt;p&gt;[NOTE&amp;ndash; To provide access from all IP Address use ‘%’ instead of ipaddress.]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To List out all Database Users&lt;/strong&gt;
+mysql&amp;gt;SELECT user,host FROM mysql.user;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Create a Database&lt;/strong&gt;
+mysql&amp;gt;create database UNNI;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To restore a specific Database in Mysql (database UNNI has to be created already)&lt;/strong&gt;
+#mysql -u username -ppassword UNNI &amp;lt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI had to be created before restore]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To dump/backup a specific Database in Mysql&lt;/strong&gt;
+#mysqldump -u username -ppassword UNNI &amp;gt; UNNI.sql&lt;/p&gt;
+
+&lt;p&gt;[NOTE: Database UNNI is backed up into UNNI.sql]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To know the permission of Mysql User&lt;/strong&gt;
+#show grants for ‘unni’@&amp;lsquo;localhost’;&lt;/p&gt;
+
+&lt;h2 id=&#34;need-to-know-create-delete-user&#34;&gt;[NEED TO KNOW]- Create/Delete User :::&lt;/h2&gt;
+
+&lt;p&gt;It must be noted that CREATE USER command was added in the MySQL version 5.0.2. In earlier versions, users could be created automatically when assigning permissions using the GRANT command or by manually inserting records in the mysql database.&lt;/p&gt;
+
+&lt;p&gt;The mysql database contains three tables – &lt;strong&gt;user, host and db. &lt;/strong&gt;These tables contains the database permissions.&lt;/p&gt;
+
+&lt;p&gt;The user table contains the usernames and password combination of anyone who has access to any part of the MYSQL database. The password part is the encrypted string, which can be generated using the PASSWORD() function.&lt;/p&gt;
+
+&lt;p&gt;As an administrator, you can even directly insert the values into the user table of mysql database and get the desired results.
+&lt;strong&gt;&lt;code&gt;mysql&amp;gt;INSERT INTO user(Host,User,Password) VALUES(&#39;localhost&#39;, &#39;UNNI&#39;, PASSWORD(&#39;passwd1@3&#39;));
+&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;mysql&amp;gt;FLUSH PRIVILEGES;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The FLUSH PRIVILEGES command is required to inform MySQL to reload the privilege data after the change is made.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Deleting Users&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To delete users from the MySQL database use the DROP command.
+&lt;code&gt;**mysql&amp;gt;DROP USER user@host;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The command in turn removes the user record from the mysql.user table.&lt;/p&gt;
+
+&lt;p&gt;As the CREATE USER command, even the DROP USER command has been added since MySQL 5.0.2. In previous versions of MySQL you must revoke the user’s privileges first, delete the records from user manually and then issue the FLUSH PRIVILEGES command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;**mysql&amp;gt;DELETE FROM user WHERE User= &#39;technofriends&#39; AND Host= &#39;localhost&#39;;
+FLUSH PRIVILEGES;**&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;General Notes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is no concept in MySQL of “Owner” of database or its objects, as there is in MS Access and MS SQL Server. I surmise this from the lack of “owner” field anywhere in mysql system tables.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Reset Mysql ROOT Password</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</link>
+      <pubDate>Mon, 10 Dec 2012 10:29:59 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-reset-mysql-root-password/</guid>
+      <description>&lt;p&gt;1) &lt;strong&gt;Stop the mysql demon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop&lt;/p&gt;
+
+&lt;p&gt;2) &lt;strong&gt;Start the mysqld demon process using the –skip-grant-tables option with this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/usr/sbin/mysqld –skip-grant-tables –skip-networking &amp;amp;&lt;/p&gt;
+
+&lt;p&gt;3)&lt;strong&gt; start the mysql client process using this command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;mysql -u root&lt;/p&gt;
+
+&lt;p&gt;4) &lt;strong&gt;from the mysql prompt execute this command to be able to change any password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;5)&lt;strong&gt; Then reset/update your password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;SET PASSWORD FOR root@’localhost’ = PASSWORD(‘password’);&lt;/p&gt;
+
+&lt;p&gt;FLUSH PRIVILEGES;&lt;/p&gt;
+
+&lt;p&gt;6) &lt;strong&gt;Then stop the mysqld process and relaunch it with the classical way:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;/etc/init.d/mysql stop
+/etc/init.d/mysql start&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mysql- Database Sharding</title>
+      <link>https://www.vishnu-tech.com/blog/mysql-database-sharding/</link>
+      <pubDate>Mon, 10 Dec 2012 10:26:20 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/mysql-database-sharding/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;“share nonthing” : Key Law on database sharding Architecture.&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;Small Databases are Fast, Big Databases are Slow !!!&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;DB Sharding – Breaking a Bigger DB into a Smaller DB.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Key Points on DB Sharding –&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Partition Data across master&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Writes and read are distributed&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Application needs modification&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Needs choice partitioning strategy for uniform data distribution.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Issues -&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Joins cannot be performed across shards&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Application modification can be expensive.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Example : Evernote uses database sharding – localized failures , no need for joins. Each shards handles all  data &amp;amp;  traffic for about 100,000 users.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sharding is another way to resolve MySQL scalability issues. It usually means splitting up the data by some logic derived from the application. This can be done by selecting a key in the data and splitting the data by hashing that key and having some distribution logic. It can also be done by identifying the application needs and setting different tables or different data sets in different databases (splitting the North-America sales data from the EMEA sales data, etc.)&lt;/p&gt;
+
+&lt;p&gt;This approach is simple from the database standpoint, but is very complex from the application standpoint since the application needs to be modified to deal with the data being scattered into the different shards. Moreover, combining data from different shards can be very complex and involves development in the application (you can’t just run a simple JOIN.)&lt;/p&gt;
+
+&lt;p&gt;Advantages of scaling out and in using sharding:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Scales beyond the limitations of a single machine&lt;/li&gt;
+&lt;li&gt;Scales both read and write operations (but makes some operations impossible to achieve in the database)&lt;/li&gt;
+&lt;li&gt;Scales both throughput and capacity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Disadvantages of scaling out and in using sharding:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complex and requires application changes&lt;/li&gt;
+&lt;li&gt;Scaling is usually offline and requires a re-partitioning event – and may require application changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Today, there are some solutions that introduce auto-sharding (Scalebase, Dbshards). This approach makes sharding more similar to shared-nothing partitioning, thus taking the sting out of some sharding complexities. However, it still requires application awareness and could prove to be a limiting factor if you needed to update your app or migrate to a different database solution.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

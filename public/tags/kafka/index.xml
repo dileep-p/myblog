@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kafka on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/kafka/index.xml</link>
+    <description>Recent content in Kafka on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:14</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol14/</link>
+      <pubDate>Tue, 19 Jul 2016 20:57:48 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol14/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/serverless.html&#34;&gt;Serverless Architectures&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://code.facebook.com/posts/290023971344425/what-s-new-in-facebook-open-source/&#34;&gt;What&amp;rsquo;s new in Facebook open source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cloudonaut.io/serverless-big-data-pipeline-on-aws/&#34;&gt;Serverless Big Data pipeline on AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gocardless.com/blog/from-idea-to-reality-containers-in-production-at-gocardless/&#34;&gt;From idea to reality: containers in production at GoCardless&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.drud.com/sanctuary-a-turn-key-vault-in-the-cloud/&#34;&gt;Sanctuary is a handy tool for launching a Vault instance in AWS. It provides a simple tool which configures AWS services like S3 (for logs), DynamoDB (for secrets) and a VPC network, along with certs from letsencrypt.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/leveros/leveros&#34;&gt;Serverless + Microservices&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mheffner/awsam&#34;&gt;AWSAM (Amazon Web Services Account Manager) allows you to easily manage multiple sets of AWS credentials.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/swipely/iam-docker&#34;&gt;Use different IAM roles for each Docker container on an EC2 instance&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/chalice&#34;&gt;Python Serverless Microframework for AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kristovatlas/osx-config-check&#34;&gt;Verify the configuration of your OS X machine.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jakobovski/aws-spot-bot&#34;&gt;A simple script to automate the creation of the cheapest AWS spot instances given your requirements.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sohelamin/chatbot&#34;&gt;An AI Based Chatbot&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amadeusitgroup.github.io/GraphDash/&#34;&gt;GraphDash: A web-based dashboard built on graphs and their metadata&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/reconquest/orgalorg&#34;&gt;Parallel SSH commands executioner and file synchronization tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Requilence/integram&#34;&gt;Integrate Telegram into your workflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLECEw2eFfW7iTsIrldRO2b6NLEuRQYD2L&#34;&gt;PyConSG 2016 videos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vE1iDPx6-Ok&amp;amp;list=PLkA60AVN3hh9gnrYwNO6zTb9U3i1Y9FMY&#34;&gt;DockerCon 2016 videos&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lucjuggery.com/blog/?p=604&#34;&gt;Deploy a multi services application with swarm mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.exoscale.ch/syslog/2016/07/11/elk-docker/&#34;&gt;Deploy ELK with Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/9-jChl9PmA8&#34;&gt;Docker Swarm on DigitalOcean&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/introducing-confluent-control-center&#34;&gt;Build and monitor Kafka pipelines with Confluent Control Center&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://philippedecuzey.wordpress.com/2016/06/05/fromapachepigtospark/&#34;&gt;From Pig to Spark : an easy journey to Spark for Apache Pig developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wecode.wepay.com/posts/wepays-data-warehouse-bigquery-airflow&#34;&gt;Building WePay&amp;rsquo;s data warehouse using BigQuery and Airflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLKnYDs_-dq16K1NH83Bke2dGGUO3YKZ5b&#34;&gt;Hadoop Summit San Jose 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/kafka-tools&#34;&gt;A collection of tools for working with Apache Kafka.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pierrevillard.com/2016/07/09/apache-nifi-minifi-is-almost-out/&#34;&gt;Apache NiFi – MiNiFi is (almost) out!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/elastic-scaling-in-kafka-streams&#34;&gt;Elastic Scaling in Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://syslog.ravelin.com/powering-real-time-fraud-detection-with-bigquery-4f85b999a4e9#.uxh8g3gfc&#34;&gt;Powering real time fraud detection with BigQuery&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.feedly.com/what-goes-down-better-come-up-a-k-a-adventures-in-hbase-diagnostics/&#34;&gt;What Goes Down Better Come Up a.k.a. Adventures in Hbase Diagnostics&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://yahoohadoop.tumblr.com/post/147399828686/moving-the-utilization-needle-with-hadoop&#34;&gt;Moving the Utilization Needle with Hadoop Overcommit&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.svds.com/brain-monitoring-kafka-opentsdb-grafana/&#34;&gt;Brain Monitoring with Kafka, OpenTSDB, and Grafana&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fhussonnois/kafkastreams-cep&#34;&gt;Complex Event Processing on top of Kafka Streams&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

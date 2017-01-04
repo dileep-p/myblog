@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elastic Ip on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/elastic-ip/index.xml</link>
+    <description>Recent content in Elastic Ip on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/elastic-ip/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AWS-ElasticIP-Swapping</title>
+      <link>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</link>
+      <pubDate>Fri, 02 May 2014 19:06:30 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</guid>
+      <description>
+
+&lt;h1 id=&#34;attach-and-detach-public-ip-in-aws&#34;&gt;Attach and Detach Public IP in AWS&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This script is used for detach elastic ip from one server and attach it to the secondary private ip of the other server.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For example:-&lt;/p&gt;
+
+&lt;p&gt;We have two servers with same content named &amp;ldquo;server01&amp;rdquo; and &amp;ldquo;server02&amp;rdquo; with primary and secondary private IP in AWS and each instance have a public IP  (ie. Elastic IP). This two public IP&amp;rsquo;s are pointed to the DNS.&lt;/p&gt;
+
+&lt;p&gt;If &amp;ldquo;server01&amp;rdquo; goes down, only you need to detach the elastic IP and attached it to the &amp;ldquo;server02&amp;rdquo; to the secondary private IP.&lt;/p&gt;
+
+&lt;p&gt;You can find the script in the below link:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vishnunamshi/ElasticIP-Swap&#34;&gt;Elastic-IP-Swap&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

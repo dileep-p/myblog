@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ansible on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/ansible/index.xml</link>
+    <description>Recent content in Ansible on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible playbook for WhereHows (A Data Discovery and Lineage Portal)</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</link>
+      <pubDate>Tue, 18 Oct 2016 14:17:34 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/WhereHows&#34;&gt;WhereHows&lt;/a&gt;, a data discovery and lineage portal. At LinkedIn, WhereHows integrates with all of their data processing environments and extracts coarse and fine grain metadata from them. Then, it surfaces this information through two interfaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A web application that enables navigation, search, lineage visualization, annotation, discussion, and community participation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;An &lt;a href=&#34;https://github.com/linkedin/wherehows/wiki/Backend-API&#34;&gt;API&lt;/a&gt; endpoint that empowers automation of other data processes and applications.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am creating an Ansible playbook to play around with WhereHows.&lt;/p&gt;
+
+&lt;p&gt;You can find the playbook from &lt;a href=&#34;https://github.com/vishnudxb/ansible-wherehows&#34;&gt;here.&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible role for installing Presto using Ambari Service</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-role-for-installing-presto-using-ambari-service/</link>
+      <pubDate>Thu, 23 Jun 2016 17:26:37 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-role-for-installing-presto-using-ambari-service/</guid>
+      <description>&lt;p&gt;Hi Guys,&lt;/p&gt;
+
+&lt;p&gt;If anyone wants to try Presto in Hortonworks using Ambari, you can use this &lt;a href=&#34;https://galaxy.ansible.com/vishnudxb/ambari-presto/&#34;&gt;Ansible role.&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:12</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol12/</link>
+      <pubDate>Wed, 02 Mar 2016 10:10:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol12/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://drownattack.com/&#34;&gt;The DROWN Attack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2016/03/01/go-home-sslv2-youre-drowning/&#34;&gt;Go home SSLv2, you’re DROWNing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/aws-services&#34;&gt;Micro-services to provide various conveniences in managing AWS services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/videos-ansiblefest-london-2016?platform=hootsuite&#34;&gt;Videos ANSIBLEFEST LONDON 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://eng.uber.com/go-geofence/&#34;&gt;How we built Uber Engineering&amp;rsquo;s highest query per second service using go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.netresec.com/?page=Blog&amp;amp;month=2016-03&amp;amp;post=Packet-Injection-Attacks-in-the-Wild&#34;&gt;Packet Injection Attacks in the Wild&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/condensation&#34;&gt;Package, reuse and share particles for CloudFormation projects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/casidiablo/tako&#34;&gt;Github notifications on Slack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/uber/ringpop-go&#34;&gt;Scalable, fault-tolerant application-layer sharding for Go applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/msoap/go-carpet&#34;&gt;go-carpet - show test coverage for Go source files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramnes/awesome-mongodb&#34;&gt;A curated list of awesome MongoDB resources, libraries, tools and applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/pygemony&#34;&gt;A tool written in Python to parse files for &amp;ldquo;TODO&amp;rdquo; and to raise an issue in the github repository with the todo message.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/microsoft/kafkanet&#34;&gt;.Net implementation of the Apache Kafka Protocol that provides basic functionality through Producer/Consumer classes. The project also offers balanced consumer implementation.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.dasblinkenlichten.com/kubernetes-with-saltstack-revisited/&#34;&gt;Kubernetes with SaltStack revisited&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cossacklabs.com/Introducing-WebThemis.html&#34;&gt;WEBTHEMIS: Stronger Cryptography for Modern web&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fulldecent/system-bus-radio&#34;&gt;This program transmits radio on computers without radio transmitting hardware.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ssrg.nicta.com.au/projects/TS/cachebleed//&#34;&gt;CacheBleed: A Timing Attack on OpenSSL Constant Time RSA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker/dockercloud-cli&#34;&gt;CLI for Docker Cloud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.blockbridge.com/improving-docker-security-with-authenticated-volumes/&#34;&gt;Improving Docker Security with Authenticated Volumes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/aws-config-rules&#34;&gt;Repository of sample Custom Rules for AWS Config&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/fresco&#34;&gt;Fresco is a powerful system for displaying images in Android applications.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/EVCache&#34;&gt;EVCache is a memcached &amp;amp; spymemcached based caching solution that is mainly used for AWS EC2 infrastructure for caching frequently used data.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubespray/setup-kubernetes&#34;&gt;Setup a kubernetes cluster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/&#34;&gt;Using Scikit-Learn In AWS Lambda&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/pGeSxIB3KzY&#34;&gt;Building A Private Cloud With OpenStack Charms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/gRPC-protobufs-swagger.html&#34;&gt;Take a REST with HTTP/2, Protobufs, and Swagger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://machinezone.github.io/research/networking-solutions-for-kubernetes/&#34;&gt;Comparison of Networking Solutions for Kubernetes&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbook for creating a public subnet and private subnet with NAT gateway in AWS.</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</link>
+      <pubDate>Mon, 15 Feb 2016 13:46:50 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</guid>
+      <description>&lt;p&gt;An Ansible playbook for creating a Public subnet and Private subnet with NAT gateway. Currently Ansible is working on the module &amp;lsquo;ec2_vpc_nat_gateway&amp;rsquo;  and it is not production ready. So I used a bash script along with the Ansible play to create the private subnet with NAT gateway. You can find the github repo from &lt;a href=&#34;https://github.com/vishnudxb/ansible-vpc-nat&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbook for Chaos Monkey</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-chaos-monkey/</link>
+      <pubDate>Sat, 02 May 2015 17:57:35 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-chaos-monkey/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/chaosmonk.jpeg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/chaosmonk.jpeg&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;
+&lt;em&gt;&lt;strong&gt;What is Chaos Monkey and Why we need to use it.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chaos Monkey is a software tool that was developed by Netflix engineers to test the resiliency and recoverability of their Amazon Web Services (AWS).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The software simulates failures of instances of services running within Auto Scaling Groups (ASG) by shutting down one or more of the virtual machines. According to the developers, Chaos Monkey was named for the way it wreaks havoc like a wild and armed monkey set loose in a data center.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chaos Monkey works on the principle that the best way to avoid major failures is to fail constantly. However, unlike unexpected failures, which seem to occur at the worst possible times, the software is opt-out by default. It can also be configured for opt-in.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chaos Monkey has a configurable schedule that allows simulated failures to occur at times when they can be closely monitored. In this way, it’s possible to prepare for major unexpected errors rather than just waiting for catastrophe to strike and seeing how well you can manage.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Here I am using Ubuntu distro in AWS. &lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;you-can-see-the-github-repo-in-here-https-github-com-vishnudxb-ansible-chaosmonkey&#34;&gt;&lt;em&gt;&lt;strong&gt;You can see the Github repo in&lt;/strong&gt; &lt;a href=&#34;https://github.com/vishnudxb/ansible-chaosmonkey&#34;&gt;here.&lt;/a&gt;&lt;/em&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

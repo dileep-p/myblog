@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Some Quick EC2 Commands &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/some-quick-ec2-commands/">Some Quick EC2 Commands</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                
+
+<p>NOTE- The -K and -C are REQUIRED parameters for all the ec2 commands.</p>
+
+<h2 id="ec2-run-instances"><strong>#ec2-run-instances</strong></h2>
+
+<p>Launches a specified number of instances of an AMI for which you have permissions.</p>
+
+<p>If you don’t specify a security group at launch time, the “default” security group is used.</p>
+
+<p>Launching public images without a key pair ID will leave them inaccessible.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<p>ec2-run-instances ami_id [-n instance_count] [-g group ] [-k
+keypair] [&ndash;instance-type instance_type] [&ndash;availability-zone zone] [&ndash;block-device-mapping block_device_mapping] [&ndash;disable-api-termination] [&ndash;instance-initiated-shutdown-behavior behavior] [&ndash;private-ip-address ip_address]</p>
+
+<p>Example1:</p>
+
+<p><em>#ec2-run-instances ami-d1cef5a5 –instance-type t1.micro –region eu-west-1 -k keypairname -K path/pk-Y.pem -C path/cert-O.pem</em></p>
+
+<p><strong>Useful Options</strong></p>
+
+<p>–instance-type : m1.small | m1.medium | m1.large |m1.xlarge | c1.medium | c1.xlarge |  m2.xlarge| m2.2xlarge | m2.4xlarge | cc1.4xlarge |cg1.4xlarge | cc2.8xlarge | t1.micro</p>
+
+<p>–block-device-mapping – Example:</p>
+
+<p><em>-b “/dev/sdb=snap-92d333fb::false”</em></p>
+
+<p>which means “[snapshot-id]:[size]:[delete-on-termination
+(true|false)]“</p>
+
+<p>–disable-api-termination : To disable the ability to terminate the instance using the EC2 API.(To re-enable this ability, you must change the _disableApiTermination_ attribute’s value to _false _using <em>ec2-modify-instance-attribute</em>.)</p>
+
+<p>–instance-initiated-shutdown-behavior stop(or terminate) :  If an instance shutdown is initiated, this determines whether the instance stops or terminates.</p>
+
+<p>–region REGION – to override the default region which is us-east-1 as mentioned in the environment variable EC2_URL.</p>
+
+<p>Example2:</p>
+
+<p><em>#ec2-run-instances ami-d1cef5a5 –instance-type t1.micro –region eu-west-1 -k keypairname -K path/pk-Y.pem -C path/cert-O.pem –disable-api-termination -b “/dev/sdb=snap-92d333fb::false”  –instance-initiated-shutdown-behavior stop</em></p>
+
+<h2 id="toc_1"> </h2>
+
+<h2 id="ec2-describes-regions"><strong>#ec2-describes-regions</strong></h2>
+
+<p>output:</p>
+
+<p>REGION    eu-west-1           ec2.eu-west-1.amazonaws.com
+REGION    sa-east-1            ec2.sa-east-1.amazonaws.com
+REGION    us-east-1            ec2.us-east-1.amazonaws.com
+REGION    ap-northeast-1    ec2.ap-northeast-1.amazonaws.com
+REGION    us-west-2           ec2.us-west-2.amazonaws.com
+REGION    us-west-1           ec2.us-west-1.amazonaws.com
+REGION    ap-southeast-1    ec2.ap-southeast-1.amazonaws.com</p>
+
+<h2 id="ec2kill">#ec2kill</h2>
+
+<p>To Terminate an ec2 instance.</p>
+
+<p>Example1:</p>
+
+<p><em>#ec2kill –region eu-west-1 i-abc12345</em></p>
+
+<h2 id="ec2minatt">#ec2minatt</h2>
+
+<p>To modify an ec2 instance attribute.</p>
+
+<p>Example1 – to set the disable-api-termination attribute to false:</p>
+
+<p><em>#ec2minatt i-abc123456 –disable-api-termination false –region eu-west-1</em></p>
+
+<p><em> </em></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/some-quick-ec2-commands\/';
+    var disqus_title = 'Some Quick EC2 Commands';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/some-quick-ec2-commands\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

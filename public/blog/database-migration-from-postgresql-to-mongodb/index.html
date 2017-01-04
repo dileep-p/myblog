@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Database Migration From Postgresql to Mongodb &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/">Database Migration From Postgresql to Mongodb</a></h1>
+            <span class="post-date">Nov 13, 2015 </span>
+            <div class="post-content">
+                <p>Here I am migrating the Postgresql database to Mongodb with the help <em><strong><a href="http://mongify.com/">Mongify.</a> </strong></em></p>
+
+<p>If you check my postgres db, you can see a table named &ldquo;rep_test&rdquo; and the data inside the table.</p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>postgres=# \dt</p>
+
+<p>List of relations</p>
+
+<p>Schema |   Name   | Type  |  Owner   </p>
+
+<p>&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;-+&mdash;&mdash;-+&mdash;&mdash;&mdash;-</p>
+
+<p>public | rep_test | table | postgres</p>
+
+<p>(1 row)</p>
+
+<p>[/color-box]</p>
+
+<p>[color-box color=&ldquo;blue&rdquo;]</p>
+
+<p>postgres=# select * from rep_test;</p>
+
+<p>      test       </p>
+
+<hr />
+
+<p>data one</p>
+
+<p>some more words</p>
+
+<p>lalala</p>
+
+<p>hello there</p>
+
+<p>blahblah</p>
+
+<p>(5 rows)</p>
+
+<p>[/color-box]</p>
+
+<p><em>Now for the db migration, you need to install the Mongify.</em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>gem install mongify</p>
+
+<p>Then you need to create a file named &ldquo;database.config&rdquo;</p>
+
+<p>For eg:-</p>
+
+<p>root@locahost:~# cat database.config</p>
+
+<p>_sql<em>connection do</em></p>
+
+<p><em>  adapter     &rdquo;postgresql&rdquo;</em></p>
+
+<p><em>  host           &rdquo;localhost&rdquo;</em></p>
+
+<p><em>  username  &ldquo;postgres&rdquo;</em></p>
+
+<p><em>  password  &ldquo;postgres123&rdquo;</em></p>
+
+<p><em>  database  &ldquo;postgres&rdquo;</em></p>
+
+<p><em>end</em></p>
+
+<p>_mongodb<em>connection do</em></p>
+
+<p><em>  host      &ldquo;localhost&rdquo;</em></p>
+
+<p><em>  database  &ldquo;postgres&rdquo;</em></p>
+
+<p><em>end</em></p>
+
+<p>[/color-box]</p>
+
+<p><em>Then, you need to check if the database.config file is correct and the connections are working fine. You can check this by the below command:</em></p>
+
+<p>[color-box color=&ldquo;blue&rdquo;]</p>
+
+<p>mongify check database.config</p>
+
+<p>[/color-box]</p>
+
+<p>If the adapter is missing, it will give an error and you need to install the adapter by running the below command:</p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>gem install activerecord-postgresql-adapter</p>
+
+<p>[/color-box]</p>
+
+<p><em>Now, you need to run the translation command</em></p>
+
+<p>[color-box color=&ldquo;blue&rdquo;]</p>
+
+<p>mongify translation database.config &gt; translation.rb</p>
+
+<p>[/color-box]</p>
+
+<p><em>Now, you can tell the mongify to move the data to mongodb. </em></p>
+
+<p>[color-box color=&ldquo;green&rdquo;]</p>
+
+<p>mongify process database.config translation.rb</p>
+
+<p>[/color-box]</p>
+
+<p><em>Now, Verify everything is migrated to your Mongodb</em></p>
+
+<p>[color-box color=&ldquo;blue&rdquo;]</p>
+
+<blockquote>
+<p>show collections</p>
+</blockquote>
+
+<p>rep_test</p>
+
+<p>system.indexes</p>
+
+<blockquote>
+<p>db.rep_test.find()</p>
+</blockquote>
+
+<p>{ &ldquo;_id&rdquo; : ObjectId(&ldquo;5645f3f000286643c4000001&rdquo;), &ldquo;test&rdquo; : &ldquo;data one&rdquo; }</p>
+
+<p>{ &ldquo;_id&rdquo; : ObjectId(&ldquo;5645f3f000286643c4000002&rdquo;), &ldquo;test&rdquo; : &ldquo;some more words&rdquo; }</p>
+
+<p>{ &ldquo;_id&rdquo; : ObjectId(&ldquo;5645f3f000286643c4000003&rdquo;), &ldquo;test&rdquo; : &ldquo;lalala&rdquo; }</p>
+
+<p>{ &ldquo;_id&rdquo; : ObjectId(&ldquo;5645f3f000286643c4000004&rdquo;), &ldquo;test&rdquo; : &ldquo;hello there&rdquo; }</p>
+
+<p>{ &ldquo;_id&rdquo; : ObjectId(&ldquo;5645f3f000286643c4000005&rdquo;), &ldquo;test&rdquo; : &ldquo;blahblah&rdquo; }</p>
+
+<p>[/color-box]</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/database-migration-from-postgresql-to-mongodb\/';
+    var disqus_title = 'Database Migration From Postgresql to Mongodb';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/database-migration-from-postgresql-to-mongodb\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

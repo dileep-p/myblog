@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon Ec2 on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/categories/amazon-ec2/index.xml</link>
+    <description>Recent content in Amazon Ec2 on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/categories/amazon-ec2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker swarm production setup</title>
+      <link>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</link>
+      <pubDate>Wed, 30 Nov 2016 19:08:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm is a cluster of docker engines.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Swarm mode is native in Docker 1.12 RC&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;You can orchestrate service when it&amp;rsquo;s in Swarm mode.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;We are creating 3 swarm manager and 3 worker nodes for high availability in AWS.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_You can view the full video from_ &lt;strong&gt;&lt;a href=&#34;https://asciinema.org/a/94625&#34;&gt;here&lt;/a&gt; &lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbook for WhereHows (A Data Discovery and Lineage Portal)</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</link>
+      <pubDate>Tue, 18 Oct 2016 14:17:34 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-wherehows-a-data-discovery-and-lineage-portal/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/WhereHows&#34;&gt;WhereHows&lt;/a&gt;, a data discovery and lineage portal. At LinkedIn, WhereHows integrates with all of their data processing environments and extracts coarse and fine grain metadata from them. Then, it surfaces this information through two interfaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A web application that enables navigation, search, lineage visualization, annotation, discussion, and community participation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;An &lt;a href=&#34;https://github.com/linkedin/wherehows/wiki/Backend-API&#34;&gt;API&lt;/a&gt; endpoint that empowers automation of other data processes and applications.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2016/10/wherehows.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I am creating an Ansible playbook to play around with WhereHows.&lt;/p&gt;
+
+&lt;p&gt;You can find the playbook from &lt;a href=&#34;https://github.com/vishnudxb/ansible-wherehows&#34;&gt;here.&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:15</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol15/</link>
+      <pubDate>Wed, 31 Aug 2016 15:17:19 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol15/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2016/08/dropbox-data-breach.html&#34;&gt;Dropbox Hacked — More Than 68 Million Account Details Leaked Online&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://techcrunch.com/2016/08/30/dropbox-employees-password-reuse-led-to-theft-of-60m-user-credentials/amp/&#34;&gt;Dropbox employee’s password reuse led to theft of 60M+ user credentials&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://engineeringblog.yelp.com/2016/08/undebt-how-we-refactored-3-million-lines-of-code.html&#34;&gt;Undebt: How We Refactored 3 Million Lines of Code&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.zorinaq.com/nginx-resolver-vulns/&#34;&gt;Nginx resolver vulnerabilities allow cache poisoning attack&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://use-the-index-luke.com/blog/2016-07-29/on-ubers-choice-of-databases&#34;&gt;On Uber’s Choice of Databases&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kennethreitz.org/essays/on-cybersecurity-and-being-targeted&#34;&gt;On Cybersecurity and Being Targeted&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dschep/ntfy&#34;&gt;A utility for sending notifications, on demand and when commands finish&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=12376596&#34;&gt;How do you handle DDoS attacks?&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/results?search_query=%22Big+Data+Day+LA+2016%22&#34;&gt;Videos from Big Data Day LA 2016&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://techblog.netflix.com/2016/08/building-fastcom.html&#34;&gt;Building fast.com&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/eon01/NodeSS&#34;&gt;nodeSS : Node.js Security Scanner&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/forking-docker-daniel-riek?trk=hp-feed-article-title-like&#34;&gt;Forking Docker Not&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/mozilla-tech/promoting-security-best-practices-with-observatory-7b164a190425#.neshhjqht&#34;&gt;Promoting Security Best Practices with Observatory&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/4-use-cases-insights-regarding-kubernetes-namespaces-van-velzen?trk=hp-feed-article-title-like&#34;&gt;4 use cases and insights regarding Kubernetes namespaces&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://thehackerblog.com/floating-domains-taking-over-20k-digitalocean-domains-via-a-lax-domain-import-system/index.html&#34;&gt;Floating Domains – Taking Over 20K DigitalOcean Domains via a Lax Domain Import System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://polynome.co/infosec/inversoft/elasticsearch/linode/penetration-testing/2016/08/16/hack-that-inversoft.html&#34;&gt;HackedThat: Breaking in to a hardened server via the back door&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ilikebigbits.com/blog/2016/8/28/designing-a-fast-hash-table&#34;&gt;Designing a fast Hash Table&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/blog/ansible-openshift-enterprise-container-platform&#34;&gt;Automating the provisioning and configuration of Redhat Mobile Application platform&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/geshan/embrace-chatops-stop-installing-deployment-software-larcon-eu-2016&#34;&gt;Embrace chatops, stop installing deployment software&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/powerful-aws-platform-features-now-for-containers/&#34;&gt;Powerful AWS Platform Features, Now for Containers&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-aws-application-load-balancer/&#34;&gt;AWS Application Load Balancer&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-week-in-review&#34;&gt;The files in this GitHub Repo are used to produce the AWS Week in Review&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/bbc/chaos-lambda&#34;&gt;Randomly terminate ASG instances during business hours&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/stevenharradine/checkall&#34;&gt;Runs commands against every box within aws&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/DevOpsDave/ssh-everywhere&#34;&gt;Integrates ssh and tmux with aws cli to create tmux sessions that open a pane for each aws instance.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/08/create-couchbase-cluster-using-kubernetes.html&#34;&gt;Create a Couchbase cluster using Kubernetes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Yelp/git-code-debt&#34;&gt;A dashboard for monitoring code debt in a git repository.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/EntilZha/spot-price-reporter&#34;&gt;Fetch and plot AWS spot pricing history&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cosiner/socker&#34;&gt;Socker is a library for Go to simplify the use of SSH&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/Olivia&#34;&gt;Go: A distributed, in-memory key-value storage.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iamduo/workq&#34;&gt;Job server in Go&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.docker.com/2016/08/securing-enterprise-software-supply-chain-using-docker/&#34;&gt;Securing The Enterprise Software Supply Chain Using Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/08/14/containers-clean-up-your-house/&#34;&gt;Containers – Clean up your House&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://channel9.msdn.com/Shows/msftazure/Run-PowerShell-Natively-on-Linux-with-Docker&#34;&gt;Run PowerShell Natively on Linux with Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kendrickcoleman.com/index.php/Tech-Blog/how-to-use-volume-drivers-and-storage-with-new-docker-service-command.html&#34;&gt;How to Use Volume Drivers and Storage with New Docker Service Command&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.com/news/2016/08/docker-service-load-balancing&#34;&gt;Improved Options for Service Load Balancing in Docker 1.12.0&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.sqreen.io/one-easy-way-to-inject-malicious-code-in-any-node-js-application/&#34;&gt;One easy way to inject malicious code in any Node.js application&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.pivotal.io/pivotal/products/new-single-multi-node-sandboxes-for-pivotal-hdb-apache-hawq&#34;&gt;Docker-based sandbox (both single and multi-node) for Apache HAWQ &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@allingeek/we-do-rest-is-not-enough-7fa2a683e2f4#.7eiyaabb6&#34;&gt;“We do REST” is not Enough&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/building-a-remote-caching-system&#34;&gt;Building a Remote Caching System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kelseyhightower/kubernetes-the-hard-way&#34;&gt;Bootstrap Kubernetes the hard way. &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://githubengineering.com/context-aware-mysql-pools-via-haproxy/&#34;&gt;Context aware MySQL pools via HAProxy&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.codeship.com/autoscaling-purpose-strategies/&#34;&gt;Autoscaling: Its Purpose and Strategies&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/fetching-and-running-docker-container-images-with-rkt.html&#34;&gt;Fetching and running docker container images with rkt&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.madewithtea.com/processing-tweets-with-kafka-streams.html&#34;&gt;Processing Tweets with Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://inventous.com/database-scaling-mongodb/&#34;&gt;Database Scaling (Sharding) with MongoDB&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible playbooks to create private docker registry in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</link>
+      <pubDate>Fri, 19 Aug 2016 09:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbooks-to-create-private-docker-registry-in-aws/</guid>
+      <description>
+
+&lt;p&gt;Creating a private docker registry in AWS using Ansible playbooks. You can find the playbooks from &lt;a href=&#34;https://github.com/vishnudxb/ansible-docker-registry&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;variables-in-playbooks&#34;&gt;Variables in playbooks&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;_server_name: &amp;ldquo;docker-registry.vishnudxb.me&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_bundle_crt: &amp;ldquo;/etc/nginx/ssl/ssl-bundle.crt&amp;rdquo; _&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_ssl_crt&lt;em&gt;key: &amp;ldquo;/etc/nginx/ssl/ssl-cert.key&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;aws-instance-tag-name&#34;&gt;AWS instance tag name&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;The playbook will identified the instance using the tag name ie docker-registry&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;to-do&#34;&gt;To-Do&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Authorization for users inside the registry.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TechNewsLetter Vol:14</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol14/</link>
+      <pubDate>Tue, 19 Jul 2016 20:57:48 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol14/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/serverless.html&#34;&gt;Serverless Architectures&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://code.facebook.com/posts/290023971344425/what-s-new-in-facebook-open-source/&#34;&gt;What&amp;rsquo;s new in Facebook open source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cloudonaut.io/serverless-big-data-pipeline-on-aws/&#34;&gt;Serverless Big Data pipeline on AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gocardless.com/blog/from-idea-to-reality-containers-in-production-at-gocardless/&#34;&gt;From idea to reality: containers in production at GoCardless&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.drud.com/sanctuary-a-turn-key-vault-in-the-cloud/&#34;&gt;Sanctuary is a handy tool for launching a Vault instance in AWS. It provides a simple tool which configures AWS services like S3 (for logs), DynamoDB (for secrets) and a VPC network, along with certs from letsencrypt.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/leveros/leveros&#34;&gt;Serverless + Microservices&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mheffner/awsam&#34;&gt;AWSAM (Amazon Web Services Account Manager) allows you to easily manage multiple sets of AWS credentials.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/swipely/iam-docker&#34;&gt;Use different IAM roles for each Docker container on an EC2 instance&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/chalice&#34;&gt;Python Serverless Microframework for AWS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kristovatlas/osx-config-check&#34;&gt;Verify the configuration of your OS X machine.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jakobovski/aws-spot-bot&#34;&gt;A simple script to automate the creation of the cheapest AWS spot instances given your requirements.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sohelamin/chatbot&#34;&gt;An AI Based Chatbot&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://amadeusitgroup.github.io/GraphDash/&#34;&gt;GraphDash: A web-based dashboard built on graphs and their metadata&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/reconquest/orgalorg&#34;&gt;Parallel SSH commands executioner and file synchronization tool&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Requilence/integram&#34;&gt;Integrate Telegram into your workflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLECEw2eFfW7iTsIrldRO2b6NLEuRQYD2L&#34;&gt;PyConSG 2016 videos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vE1iDPx6-Ok&amp;amp;list=PLkA60AVN3hh9gnrYwNO6zTb9U3i1Y9FMY&#34;&gt;DockerCon 2016 videos&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://lucjuggery.com/blog/?p=604&#34;&gt;Deploy a multi services application with swarm mode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.exoscale.ch/syslog/2016/07/11/elk-docker/&#34;&gt;Deploy ELK with Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/9-jChl9PmA8&#34;&gt;Docker Swarm on DigitalOcean&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/introducing-confluent-control-center&#34;&gt;Build and monitor Kafka pipelines with Confluent Control Center&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://philippedecuzey.wordpress.com/2016/06/05/fromapachepigtospark/&#34;&gt;From Pig to Spark : an easy journey to Spark for Apache Pig developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wecode.wepay.com/posts/wepays-data-warehouse-bigquery-airflow&#34;&gt;Building WePay&amp;rsquo;s data warehouse using BigQuery and Airflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLKnYDs_-dq16K1NH83Bke2dGGUO3YKZ5b&#34;&gt;Hadoop Summit San Jose 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/linkedin/kafka-tools&#34;&gt;A collection of tools for working with Apache Kafka.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pierrevillard.com/2016/07/09/apache-nifi-minifi-is-almost-out/&#34;&gt;Apache NiFi – MiNiFi is (almost) out!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.confluent.io/blog/elastic-scaling-in-kafka-streams&#34;&gt;Elastic Scaling in Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://syslog.ravelin.com/powering-real-time-fraud-detection-with-bigquery-4f85b999a4e9#.uxh8g3gfc&#34;&gt;Powering real time fraud detection with BigQuery&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.feedly.com/what-goes-down-better-come-up-a-k-a-adventures-in-hbase-diagnostics/&#34;&gt;What Goes Down Better Come Up a.k.a. Adventures in Hbase Diagnostics&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://yahoohadoop.tumblr.com/post/147399828686/moving-the-utilization-needle-with-hadoop&#34;&gt;Moving the Utilization Needle with Hadoop Overcommit&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.svds.com/brain-monitoring-kafka-opentsdb-grafana/&#34;&gt;Brain Monitoring with Kafka, OpenTSDB, and Grafana&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fhussonnois/kafkastreams-cep&#34;&gt;Complex Event Processing on top of Kafka Streams&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Running Openstack with LXC as hypervisor using Terraform</title>
+      <link>https://www.vishnu-tech.com/blog/running-openstack-with-lxc-as-hypervisor-using-terraform/</link>
+      <pubDate>Tue, 24 May 2016 18:35:19 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/running-openstack-with-lxc-as-hypervisor-using-terraform/</guid>
+      <description>&lt;p&gt;Hi Guys,&lt;/p&gt;
+
+&lt;p&gt;Today I got some time to play around with Terraform &amp;amp; Openstack. If you want a test Openstack environment with LXC in AWS, you can use this &lt;a href=&#34;https://github.com/vishnudxb/terraform-openstack-lxc&#34;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It creates a new VPC environment in AWS in us-east-1 region and boot up an Ubuntu instance in the newly created VPC environment and install Openstack with LXC as hypervisor.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to copy redis dump from AWS Elasticache to AWS S3</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</link>
+      <pubDate>Tue, 09 Jun 2015 15:22:13 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</guid>
+      <description>&lt;p&gt;For Amazon Elasticache, we can&amp;rsquo;t copy the snapshot to AWS S3.  So inorder to do that you need to do the below steps:-&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Spin up new EC2 instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Install Redis on that Instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Setup the instance as a read replica of the AWS Elasticache Primary (redis)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Wait for the Master Slave data sync&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Issue a redis &lt;strong&gt;SAVE &lt;/strong&gt;command to generate a local dump&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Copy local dump.rdb on AWS S3&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can do the whole setup by simply checkout this _&lt;strong&gt;&lt;a href=&#34;https://github.com/vishnudxb/redisbackup-to-s3&#34;&gt;REPO&lt;/a&gt;&lt;/strong&gt;_  and run the below command&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;vishnudxb@server:~# ./terraform apply -var &amp;lsquo;access_key=PUTMYACCESSKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;secret_key=PUTMYSECRETKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_file=/home/redis.pem&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_name=redis&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*&lt;em&gt;                                                              -var &amp;lsquo;region=us-east-1&amp;rsquo; *&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;instance_type=m3.large&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_**                                                              -var &amp;lsquo;availability&lt;em&gt;zone=us-east-1a&amp;rsquo; \ **&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;subnet_id=subnet-e94xxxx&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;security_id=sg-7xxxx1d&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                             -var &amp;lsquo;redis_endpoint=aws redis endpoint&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;redis_port=6379&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;                                                              -var &amp;lsquo;aws_bucket=redis-db-backup&amp;rsquo;&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;p&gt;[/color-box]
+Once you execute the above command and you can see the output like the below:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to get your Client IPaddress with Nginx if you are using TCP on AWS ELB</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</link>
+      <pubDate>Sat, 09 May 2015 19:53:55 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-get-your-client-ipaddress-with-nginx-if-you-are-using-tcp-on-aws-elb/</guid>
+      <description>&lt;p&gt;If your Application is running behind an AWS Load Balancer (&lt;a href=&#34;http://aws.amazon.com/elasticloadbalancing/&#34;&gt;ELB&lt;/a&gt;) and you are using TCP ( for both 80 and 443).&lt;/p&gt;
+
+&lt;p&gt;You can run AWS ELB in different modes.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;1) You can do Load balance with HTTP/HTTPS traffic and if you use this one, the AWS ELB injects an X-Forwarded-For  header  that has the original client ipaddress. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;2)  You can do Load balance straight with TCP traffic. If you use this mode, your application can use Websockets. But it won&amp;rsquo;t provide the X-Forwarded-For  header because the load balancer doesn’t know anything about HTTP headers in this case. So it&amp;rsquo;s hard to track the Client IP address. However we can do this with an AWS ELB feature called &amp;ldquo;&lt;a href=&#34;http://aws.amazon.com/about-aws/whats-new/2013/07/30/elastic-load-balancing-now-supports-proxy-protocol/&#34;&gt;Proxy Protocol&lt;/a&gt;&amp;ldquo; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt; &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Here I am using Ubuntu distro with Nginx version 1.9.0 &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo add-apt-repository ppa:chris-lea/nginx-devel&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get update&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;sudo apt-get -y install nginx-full&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Your AWS ELB Listeners Looks like the below one&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/elb.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now you need to enable Proxy Protocol on the AWS ELB&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;First create a load balancer policy using the below command&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb create-load-balancer-policy &amp;ndash;load-balancer-name vishnudxb  &amp;ndash;policy-name vishnudxb-ProxyProtocol-policy &amp;ndash;policy-type-name ProxyProtocolPolicyType &amp;ndash;policy-attributes AttributeName=ProxyProtocol,AttributeValue=true&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now we need to enable the Newly created policy on the specified ports. (ie 80 &amp;amp; 443)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 80 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aws elb set-load-balancer-policies-for-backend-server &amp;ndash;load-balancer-name vishnudxb &amp;ndash;instance-port 443 &amp;ndash;policy-names vishnudxb-ProxyProtocol-policy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now we need to configure Nginx for Proxy Protocol&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Add the below entries on your &lt;strong&gt;/etc/nginx/nginx.conf&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_log_format elb_log &amp;lsquo;$proxy_protocol_addr - $remote_user [$time_local] &amp;lsquo; &amp;lsquo;&amp;ldquo;$request&amp;rdquo; $status $body_bytes_sent &amp;ldquo;$http_referer&amp;rdquo; &amp;lsquo; &amp;lsquo;&amp;ldquo;$http_user&lt;em&gt;agent&amp;rdquo;&amp;lsquo;;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;Now you need to do some changes on your &lt;em&gt;&lt;strong&gt;sites-enabled like below:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx1.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/nginx2.png&#34; alt=&#34;vu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;And finally you can see the Client IP address on your Nginx logs  when you use AWS ELB TCP traffic straight. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AWS-ElasticIP-Swapping</title>
+      <link>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</link>
+      <pubDate>Fri, 02 May 2014 19:06:30 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</guid>
+      <description>
+
+&lt;h1 id=&#34;attach-and-detach-public-ip-in-aws&#34;&gt;Attach and Detach Public IP in AWS&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This script is used for detach elastic ip from one server and attach it to the secondary private ip of the other server.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For example:-&lt;/p&gt;
+
+&lt;p&gt;We have two servers with same content named &amp;ldquo;server01&amp;rdquo; and &amp;ldquo;server02&amp;rdquo; with primary and secondary private IP in AWS and each instance have a public IP  (ie. Elastic IP). This two public IP&amp;rsquo;s are pointed to the DNS.&lt;/p&gt;
+
+&lt;p&gt;If &amp;ldquo;server01&amp;rdquo; goes down, only you need to detach the elastic IP and attached it to the &amp;ldquo;server02&amp;rdquo; to the secondary private IP.&lt;/p&gt;
+
+&lt;p&gt;You can find the script in the below link:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vishnunamshi/ElasticIP-Swap&#34;&gt;Elastic-IP-Swap&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AWS EC2 Internal Security Structure</title>
+      <link>https://www.vishnu-tech.com/blog/aws-ec2-internal-security-structure/</link>
+      <pubDate>Sat, 25 May 2013 04:04:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/aws-ec2-internal-security-structure/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://media.amazonwebservices.com/pdf/AWS_Security_Whitepaper.pdf&#34;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;An insight into internal structure of EC2.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Hypervisor&lt;/strong&gt;
+Amazon EC2 currently utilizes a highly customized version of the Xen hypervisor, taking advantage of paravirtualization
+(in the case of Linux guests). Because paravirtualized guests rely on the hypervisor to provide support for operations that
+normally require privileged access, the guest OS has no elevated access to the CPU. The CPU provides four separate
+privilege modes: 0-3, called rings. Ring 0 is the most privileged and 3 the least. The host OS executes in Ring 0. However,
+rather than executing in Ring 0 as most operating systems do, the guest OS runs in a lesser-privileged Ring 1 and
+applications in the least privileged Ring 3. This explicit virtualization of the physical resources leads to a clear separation
+between guest and hypervisor, resulting in additional security separation between the two.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paravirtualization&lt;/strong&gt;: In computing, paravirtualization is a virtualization technique that presents a software interface to
+virtual machines that is similar but not identical to that of the underlying hardware.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Instance Isolation&lt;/strong&gt;
+Different instances running on the same physical machine are isolated from each other via the Xen hypervisor. Amazon
+is active in the Xen community, which provides awareness of the latest developments. In addition, the AWS firewall
+resides within the hypervisor layer, between the physical network interface and the instance’s virtual interface. All
+packets must pass through this layer, thus an instance’s neighbors have no more access to that instance than any other
+host on the Internet and can be treated as if they are on separate physical hosts. The physical RAM is separated using
+similar mechanisms.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/awssecurity.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/05/awssecurity.png&#34; alt=&#34;awssecurity&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Customer instances have no access to raw disk devices, but instead are presented with virtualized disks. The AWS proprietary disk virtualization layer automatically resets every block of storage used by the customer, so that one customer’s data are never unintentionally exposed to another. AWS recommends customers further protect their data using appropriate means. One common solution is to run an encrypted file system on top of the virtualized disk device.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Guest Operating System:&lt;/strong&gt; Virtual instances are completely controlled by you, the customer. You have full root access or administrative control over accounts, services, and applications. AWS does not have any access rights to your instances or the guest OS. AWS recommends a base set of security best practices to include disabling password-only access to your guests, and utilizing some form of multi-factor authentication to gain access to your instances (or at a minimum certificate-based SSH Version 2 access). Additionally, you should employ a privilege escalation mechanism with logging on a per-user basis. For example, if the guest OS is Linux, after hardening your instance you should utilize certificatebased SSHv2 to access the virtual instance, disable remote root login, use command-line logging, and use ‘sudo’ for privilege escalation. You should generate your own key pairs in order to guarantee that they are unique, and not shared with other customers or with AWS.&lt;/p&gt;
+
+&lt;p&gt;You also control the updating and patching of your guest OS, including security updates. Amazon-provided Windows and Linux-based AMIs are updated regularly with the latest patches, so if you do not need to preserve data or customizations on your running Amazon AMI instances, you can simply relaunch new instances with the latest updated AMI. In addition, updates are provided for the Amazon Linux AMI via the Amazon Linux yum repositories.&lt;/p&gt;
+
+&lt;p&gt;Well-informed traffic management and security design are still required on a perinstance basis. AWS further encourages you to apply additional per-instance filters with host-based firewalls such as  IPtables or the Windows Firewall and VPNs. This can restrict both inbound and outbound traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why take snapshots if EBS is storing data redundantly?&lt;/strong&gt;
+Well-informed traffic management and security design are still required on a perinstance basis. AWS further encourages you to apply additional per-instance filters with host-based firewalls such as IPtables or the Windows Firewall and VPNs. This can restrict both inbound and outbound traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Security Features on S3&lt;/strong&gt;
+1.Identity and Access Management (IAM) Policies.
+2.Access Control Lists (ACLs).
+3.Bucket Policies.
+4.Encryption/Decryption
+Server-side encryption (SSE): An option for S3 storage for automatically encrypting data at rest. With Amazon S3 SSE,
+customers can encrypt data on upload simply by adding an additional request header when writing the object.
+Decryption happens automatically when data is retrieved.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Security Features on RDS&lt;/strong&gt;
+Amazon RDS has multiple features that enhance reliability for critical production databases, including DB security
+groups, permissions, SSL connections, automated backups, DB snapshots, and multi-AZ deployments. DB instances can
+also be deployed in an Amazon VPC for additional network isolation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install ec2-api Tools on Linux</title>
+      <link>https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/</link>
+      <pubDate>Mon, 10 Dec 2012 10:40:06 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/install-ec2-api-tools-on-linux/</guid>
+      <description>&lt;p&gt;OS -&lt;strong&gt; Ubuntu Lucid&lt;/strong&gt;
+Processor &lt;strong&gt;- x64&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/developertools/351&#34;&gt;Download the ec2-api tools from the amazon site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/java/index.html&#34;&gt;Downloaded jre1.7.0_x64 from the java site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Steps to install JAVA JRE
+&lt;strong&gt;#add-apt-repository ppa:sun-java-community-team/sun-java6&lt;/strong&gt;
+&lt;strong&gt;#apt-get update&lt;/strong&gt;
+&lt;strong&gt;#apt-cache search java* [to know the latest jre/jdk]&lt;/strong&gt;
+&lt;strong&gt;#apt-get install sun-java6-jre&lt;/strong&gt;
+&lt;strong&gt;java is installed into /usr/lib/jvm/java-6-sun-1.6.0.21/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To check successful java installation
+&lt;strong&gt;#java -version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Setting up variables
+&lt;strong&gt;#export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.21&lt;/strong&gt;
+[put it in /etc/profiles]&lt;/p&gt;
+
+&lt;p&gt;Another Check
+&lt;strong&gt;$JAVA_HOME/bin/java -version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the prequisites are done . So comming back to the ec2-api tools
+&lt;strong&gt;#export EC2_HOME=/usr/local/ec2-api-tools-1.5.5.0&lt;/strong&gt;
+[path where i unzipped it , also mention this in /etc/profile]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export PATH=$PATH:$EC2_HOME/bin&lt;/strong&gt;
+[put it in /etc/profile too]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export EC2_PRIVATE_KEY=/EC2_API_Certs/pk-47O.pem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#export EC2_CERT=/EC2_API_Certs/cert-4GV.pem&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>To Terminate an EC2 Instance, disabled via ec2-api</title>
+      <link>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</link>
+      <pubDate>Mon, 10 Dec 2012 10:38:44 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/to-terminate-an-ec2-instance-disabled-via-ec2-api/</guid>
+      <description>&lt;p&gt;#&lt;strong&gt;ec2minatt i-555555 –disable-api-termination false –region us-east-1 -K /EC2_API_Certs/pk-4GGV.pem -C /EC2_API_Certs/cert-GV.pem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Make a note of the ebs-id attached&lt;/p&gt;
+
+&lt;p&gt;Terminate the Instance from the AWS Console and then Delete the EBS, same could be done through command line&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

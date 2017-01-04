@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Setting up keepalived-Load balancing using HAProxy Part 2 &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/setting-up-keepalived-load-balancing-using-haproxy-part-2/">Setting up keepalived-Load balancing using HAProxy Part 2</a></h1>
+            <span class="post-date">Mar 14, 2013 </span>
+            <div class="post-content">
+                <p>In our previous post we have set up a HAProxy loadbalancer to balance the load of our web application between three webservers, here’s the diagram of the situation we have ended up with:</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/03/3.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/03/3.png?w=584" alt="3" /></a></p>
+
+<p>As we already concluded in the last post, there’s still a single point of failure in this setup. If the loadbalancer dies for some reason the whole site will be offline. In this post we will add a second loadbalancer and setup a virtual IP address shared between the loadbalancers. The setup will look like this:</p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/03/5.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/03/5.png?w=584" alt="5" /></a></p>
+
+<p>So our setup now is:
+- Three webservers, WebServer1 (192.168.0.1), WebServer2 (192.168.0.2 ), and WebServer3 (192.168.0.3) each serving the application
+- The first load balancer (loadb01, ip: (192.168.0.100 ))
+- The second load balancer (loadb02, ip: (192.168.0.101 )), configure this in the same way as we configured the first one.</p>
+
+<p>To setup the virtual IP address we will use keepalived</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+</td>
+
+<td >
+
+
+
+
+
+**`loadb01$ ``sudo` `apt-get ``install` `keepalived`**
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Good, keepalived is now installed. Before we proceed with configuring keepalived itself, edit the following file:</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+</td>
+
+<td >
+
+
+
+
+
+`loadb01$ ``sudo` `vi` `/etc/sysctl``.conf`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>And add this line to the end of the file:</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+</td>
+
+<td >
+
+
+
+
+
+`net.ipv4.ip_nonlocal_bind=1`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>This option is needed for applications (haproxy in this case) to be able to bind to non-local addresses (ip adresses which do not belong to an interface on the machine). To apply the setting, run the following command:</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+</td>
+
+<td >
+
+
+
+
+
+`loadb01$ ``sudo` `sysctl -p`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Now let’s add the configuration for keepalived, open the file:</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+</td>
+
+<td >
+
+
+
+
+
+`loadb01$ ``sudo` `vi` `/etc/keepalived/keepalived``.conf`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>And add the following contents
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr ></p>
+
+<p><td ></p>
+
+<p>1</p>
+
+<p>2</p>
+
+<p>3</p>
+
+<p>4</p>
+
+<p>5</p>
+
+<p>6</p>
+
+<p>7</p>
+
+<p>8</p>
+
+<p>9</p>
+
+<p>10</p>
+
+<p>11</p>
+
+<p>12</p>
+
+<p>13</p>
+
+<p>14</p>
+
+<p>15</p>
+
+<p>16</p>
+
+<p>17</p>
+
+<p>18</p>
+
+<p>19</p>
+
+<p>20</p>
+
+<p>21</p>
+
+<p>22</p>
+
+<p>23</p>
+
+<p>24</p>
+
+<p>25</p>
+
+<p>26</p>
+
+<p>27</p>
+
+<p>28</p>
+
+<p>29</p>
+
+<p>30</p>
+
+<p>31</p>
+
+<p>32</p>
+
+<p>33</p>
+
+<p>34</p>
+
+<p>35</p>
+
+<p>36</p>
+
+<p>37</p>
+
+<p>38</p>
+
+<p>39</p>
+
+<p>40</p>
+
+<p>41</p>
+
+<p></td></p>
+
+<p><td ></p>
+
+<p><code># Settings for notifications</code></p>
+
+<p><code>global_defs {</code></p>
+
+<p><code>    </code><code>notification_email {</code></p>
+
+<p><code>        </code><code>your@emailaddress.com    </code><code># Email address for notifications</code></p>
+
+<p><code>    </code><code>}</code></p>
+
+<p><code>    </code><code>notification_email_from loadb01@domain.ext </code><code># The from address for the notifications</code></p>
+
+<p><code>    </code><code>smtp_server 127.0.0.1    </code><code># You can specifiy your own smtp server here</code></p>
+
+<p><code>    </code><code>smtp_connect_timeout 15</code></p>
+
+<p><code>}</code></p>
+
+<p><code> </code> </p>
+
+<p><code># Define the script used to check if haproxy is still working</code></p>
+
+<p><code>vrrp_script chk_haproxy {</code></p>
+
+<p><code>    </code><code>script</code><code>&quot;killall -0 haproxy&quot;</code></p>
+
+<p><code>    </code><code>interval 2</code></p>
+
+<p><code>    </code><code>weight 2</code></p>
+
+<p><code>}</code></p>
+
+<p><code> </code> </p>
+
+<p><code># Configuation for the virtual interface</code></p>
+
+<p><code>vrrp_instance VI_1 {</code></p>
+
+<p><code>    </code><code>interface eth0</code></p>
+
+<p><code>    </code><code>state MASTER       </code><code># set this to BACKUP on the other machine</code></p>
+
+<p><code>    </code><code>priority 101       </code><code># set this to 100 on the other machine</code></p>
+
+<p><code>    </code><code>virtual_router_id 51</code></p>
+
+<p><code> </code> </p>
+
+<p><code>    </code><code>smtp_alert         </code><code># Activate email notifications</code></p>
+
+<p><code> </code> </p>
+
+<p><code>    </code><code>authentication {</code></p>
+
+<p><code>        </code><code>auth_type AH</code></p>
+
+<p><code>        </code><code>auth_pass myPassw0rd     </code><code># Set this to some secret phrase</code></p>
+
+<p><code>    </code><code>}</code></p>
+
+<p><code> </code> </p>
+
+<p><code>    </code><code># The virtual ip address shared between the two loadbalancers</code></p>
+
+<p><code>    </code><code>virtual_ipaddress {</code></p>
+
+<p><code>        </code><code>192.168.0.200</code></p>
+
+<p><code>    </code><code>}</code></p>
+
+<p><code>    </code></p>
+
+<p><code>    </code><code># Use the script above to check if we should fail over</code></p>
+
+<p><code>    </code><code>track_script {</code></p>
+
+<p><code>        </code><code>chk_haproxy</code></p>
+
+<p><code>    </code><code>}</code></p>
+
+<p><code>}</code></p>
+
+<p></td>
+</tr>
+</tbody>
+</table>
+And start keepalived:</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+</td>
+
+<td >
+
+
+
+
+
+`loadb01$ ``/etc/init``.d``/keepalived` `start`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Now the next step is to install and configure keepalived on our second loadbalancer aswell, redo the steps starting from apt-get install keepalived. In the configuration step for keepalived, be sure change these two settings:</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+
+
+
+2
+
+</td>
+
+<td >
+
+
+
+
+
+`state MASTER        ``# set this to BACKUP on the other machine`
+
+
+
+
+`priority 101        ``# set this to 100 on the other machine`
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>To:</p>
+
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+
+
+1
+
+
+
+
+2
+
+</td>
+
+<td >
+
+
+
+
+
+`state BACKUP      `
+
+
+
+
+`priority 100      `
+
+
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>That’s it! We have now configured a virtual IP shared between our two loadbalancers, you can try loading the haproxy statistic page on the virtual IP adddress and should get the statistics for loadb01, then switch off loadb01 and refresh, the virtual IP address will now be assigned to the second loadbalancer and you should see the statistics page for that.</p>
+
+<p>If there’s anything else you’d like us to cover, or if you have any questions please leave a comment!</p>
+
+<table cellpadding="0" width="222" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >
+</td>
+
+<td >
+</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/setting-up-keepalived-load-balancing-using-haproxy-part-2\/';
+    var disqus_title = 'Setting up keepalived-Load balancing using HAProxy Part 2';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/setting-up-keepalived-load-balancing-using-haproxy-part-2\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

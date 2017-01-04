@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> How to create a private npm.js repository &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/how-to-create-a-private-npm-js-repository/">How to create a private npm.js repository</a></h1>
+            <span class="post-date">Feb 22, 2014 </span>
+            <div class="post-content">
+                
+
+<p>I want to create a mirror of the npm repository to mitigate periods of npm outages and to speed things up a little bit, so here’s how I did it!</p>
+
+<h2 id="installing-couchdb"><em><strong>Installing CouchDB</strong></em></h2>
+
+<p> Install the required packages:</p>
+
+<p> <code>sudo apt-get install build-essential autoconf automake libtool erlang libicu-dev libmozjs-dev libcurl4-openssl-dev </code></p>
+
+<p>Download CouchDB 1.5:-</p>
+
+<p>wget <a href="http://mirror.cc.columbia.edu/pub/software/apache/couchdb/source/1.5.0/apache-couchdb-1.5.0.tar.gz">http://mirror.cc.columbia.edu/pub/software/apache/couchdb/source/1.5.0/apache-couchdb-1.5.0.tar.gz</a></p>
+
+<p>Extracting :-</p>
+
+<p><code>tar xfv apache-couchdb-1.5.0.tar.gz </code></p>
+
+<p>Compile:</p>
+
+<p><code>  </code><code>cd apache-couchdb-1.2.0</code></p>
+
+<p>``<code> ./configure</code></p>
+
+<p>``<code>  make</code></p>
+
+<p>``<code>  make install</code></p>
+
+<p>To check:-</p>
+
+<p>   $ couchdb<br />
+  Apache CouchDB 1.5.0 (LogLevel=info) is starting.<br />
+  Apache CouchDB has started. Time to relax.<br />
+  [info] [<0.32.0>] Apache CouchDB has started on <a href="http://127.0.0.1:5984/">http://127.0.0.1:5984/</a></p>
+
+<p>   $ curl -X GET <a href="http://localhost:5984">http://localhost:5984</a><br />
+   [info] [<0.361.0>] 127.0.0.1 - - GET / 200</p>
+
+<p>Adding CouchDB to the init.d scripts</p>
+
+<p>     $ sudo adduser &ndash;disabled-login &ndash;disabled-password &ndash;no-create-home couchdb</p>
+
+<p>     Adding user <code>couchdb' ...  
+     Adding new group</code>couchdb&rsquo; (1001) &hellip;<br />
+     Adding new user <code>couchdb' (1001) with group</code>couchdb&rsquo; &hellip;<br />
+     Not creating home directory `/home/couchdb&rsquo;.<br />
+     Changing the user information for couchdb Enter the new value, or press ENTER for the default<br />
+     Full Name []: CouchDB Admin<br />
+     Room Number []:  <br />
+     Work Phone []:<br />
+     Home Phone []:<br />
+    Other []:<br />
+    Is the information correct? [Y/n] Y</p>
+
+<p>User added, now permissions:</p>
+
+<p>    sudo chown -R couchdb:couchdb /usr/local/var/{log,lib,run}/couchdb</p>
+
+<p>    sudo chown -R couchdb:couchdb /usr/local/etc/couchdb/local.ini</p>
+
+<p>    $ sudo vim /usr/local/etc/couchdb/default.ini<br />
+    [httpd]<br />
+    secure_rewrites = false</p>
+
+<p>    sudo ln -s /usr/local/etc/init.d/couchdb /etc/init.d<br />
+    sudo update-rc.d couchdb defaults<br />
+    sudo /etc/init.d/couchdb start</p>
+
+<p>    </p>
+
+<p><strong>Replicating npmjs.org</strong><br />
+Now to replicate the npm registry.</p>
+
+<p>curl -X POST <a href="http://127.0.0.1:5984/_replicate">http://127.0.0.1:5984/_replicate</a> -d &lsquo;{&ldquo;source&rdquo;:&ldquo;<a href="http://isaacs.iriscouch.com/registry/&quot;">http://isaacs.iriscouch.com/registry/&quot;</a>, &ldquo;target&rdquo;:&ldquo;registry&rdquo;, &ldquo;create_target&rdquo;:true}&rsquo; -H &ldquo;Content-Type: application/json&rdquo;<br />
+What this means is that once this is completed your local replication will be an exact copy of the npm registry. However, to ensure we do indeed receive all updates we will add a &ldquo;continuous&rdquo;:true parameter to the JSON string in our POST request, this utilises CouchDB’s _changes API and will pull any new changes when this API is notified.</p>
+
+<p>curl -X POST <a href="http://127.0.0.1:5984/_replicate">http://127.0.0.1:5984/_replicate</a> -d &lsquo;{&ldquo;source&rdquo;:&ldquo;<a href="http://isaacs.iriscouch.com/registry/&quot;">http://isaacs.iriscouch.com/registry/&quot;</a>, &ldquo;target&rdquo;:&ldquo;registry&rdquo;, &ldquo;continuous&rdquo;:true, &ldquo;create_target&rdquo;:true}&rsquo; -H &ldquo;Content-Type: application/json&rdquo;<br />
+We are now replicating continuously from npmjs.org to our private CouchDB instance! If you ever want to stop these replications you can easily do this by running the same command as before but add a &ldquo;cancel&rdquo;:true parameter to the JSON POST data.</p>
+
+<p>curl -X POST <a href="http://127.0.0.1:5984/_replicate">http://127.0.0.1:5984/_replicate</a> -d &lsquo;{&ldquo;source&rdquo;:&ldquo;<a href="http://isaacs.iriscouch.com/registry/&quot;">http://isaacs.iriscouch.com/registry/&quot;</a>, &ldquo;target&rdquo;:&ldquo;registry&rdquo;, &ldquo;continuous&rdquo;:true, &ldquo;create_target&rdquo;:true, &ldquo;cancel&rdquo;:true}&rsquo; -H &ldquo;Content-Type: application/json&rdquo;<br />
+And we&rsquo;re almost done! All we need to do now is to set up our own version of the npmjs.org registry </p>
+
+<p>Getting npm to work with our replicated CouchDB<br />
+Most of the steps can be found on isaacs github in the npmjs.org git repositories README</p>
+
+<p>Of course we need to have nodejs and git installed for this:</p>
+
+<p>git clone git://github.com/isaacs/npmjs.org.git<br />
+cd npmjs.org<br />
+sudo npm install -g couchapp<br />
+npm install couchapp<br />
+npm install semver<br />
+couchapp push registry/app.js <a href="http://localhost:5984/registry">http://localhost:5984/registry</a><br />
+couchapp push www/app.js <a href="http://localhost:5984/registry">http://localhost:5984/registry</a><br />
+Boom, we now have a working npm repository, to test this we can run the following command.</p>
+
+<p>npm &ndash;registry <a href="http://localhost:5984/registry/_design/scratch/_rewrite">http://localhost:5984/registry/_design/scratch/_rewrite</a> login<br />
+npm &ndash;registry <a href="http://localhost:5984/registry/_design/scratch/_rewrite">http://localhost:5984/registry/_design/scratch/_rewrite</a> search<br />
+If you are getting results then everything is fine.</p>
+
+<p>Running on your own subdomain is to modify the [vhosts] section in /usr/local/etc/couchdb/local.ini. Uncomment the example and restart CouchDB.</p>
+
+<p>$ vim /usr/local/etc/couchdb/local.ini<br />
+[vhosts]<br />
+example.com = /registry/_design/scratch/_rewrite<br />
+And while we are at it will lock down the application and prevent unauthorised users from deleting our data.</p>
+
+<p>$ vim /usr/local/etc/couchdb/local.ini<br />
+[admins]<br />
+admin = password<br />
+$ sudo /etc/init.d/couchdb restart<br />
+Start using your version of npm with the client!<br />
+Straight from the npmjs.org README, just replace <registryurl> with your registries url, for example:</p>
+
+<p><a href="http://localhost:5984/registry/_design/app/_rewrite">http://localhost:5984/registry/_design/app/_rewrite</a><br />
+You can point the npm client at the registry by putting this in your ~/.npmrc file:</p>
+
+<p>registry = <registryurl><br />
+You can also set the npm registry config property like:</p>
+
+<p>npm config set <registryurl><br />
+Or you can simple override the registry config on each call:</p>
+
+<p>npm &ndash;registry <registryurl> install <packagename></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/how-to-create-a-private-npm-js-repository\/';
+    var disqus_title = 'How to create a private npm.js repository';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/how-to-create-a-private-npm-js-repository\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

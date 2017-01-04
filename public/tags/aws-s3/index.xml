@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws S3 on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/aws-s3/index.xml</link>
+    <description>Recent content in Aws S3 on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/aws-s3/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to copy redis dump from AWS Elasticache to AWS S3</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</link>
+      <pubDate>Tue, 09 Jun 2015 15:22:13 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</guid>
+      <description>&lt;p&gt;For Amazon Elasticache, we can&amp;rsquo;t copy the snapshot to AWS S3.  So inorder to do that you need to do the below steps:-&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Spin up new EC2 instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Install Redis on that Instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Setup the instance as a read replica of the AWS Elasticache Primary (redis)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Wait for the Master Slave data sync&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Issue a redis &lt;strong&gt;SAVE &lt;/strong&gt;command to generate a local dump&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Copy local dump.rdb on AWS S3&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can do the whole setup by simply checkout this _&lt;strong&gt;&lt;a href=&#34;https://github.com/vishnudxb/redisbackup-to-s3&#34;&gt;REPO&lt;/a&gt;&lt;/strong&gt;_  and run the below command&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;vishnudxb@server:~# ./terraform apply -var &amp;lsquo;access_key=PUTMYACCESSKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;secret_key=PUTMYSECRETKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_file=/home/redis.pem&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_name=redis&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*&lt;em&gt;                                                              -var &amp;lsquo;region=us-east-1&amp;rsquo; *&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;instance_type=m3.large&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_**                                                              -var &amp;lsquo;availability&lt;em&gt;zone=us-east-1a&amp;rsquo; \ **&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;subnet_id=subnet-e94xxxx&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;security_id=sg-7xxxx1d&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                             -var &amp;lsquo;redis_endpoint=aws redis endpoint&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;redis_port=6379&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;                                                              -var &amp;lsquo;aws_bucket=redis-db-backup&amp;rsquo;&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;p&gt;[/color-box]
+Once you execute the above command and you can see the output like the below:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

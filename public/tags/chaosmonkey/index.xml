@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chaosmonkey on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/chaosmonkey/index.xml</link>
+    <description>Recent content in Chaosmonkey on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/chaosmonkey/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible playbook for Chaos Monkey</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-chaos-monkey/</link>
+      <pubDate>Sat, 02 May 2015 17:57:35 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-chaos-monkey/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/chaosmonk.jpeg&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/chaosmonk.jpeg&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;
+&lt;em&gt;&lt;strong&gt;What is Chaos Monkey and Why we need to use it.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chaos Monkey is a software tool that was developed by Netflix engineers to test the resiliency and recoverability of their Amazon Web Services (AWS).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The software simulates failures of instances of services running within Auto Scaling Groups (ASG) by shutting down one or more of the virtual machines. According to the developers, Chaos Monkey was named for the way it wreaks havoc like a wild and armed monkey set loose in a data center.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chaos Monkey works on the principle that the best way to avoid major failures is to fail constantly. However, unlike unexpected failures, which seem to occur at the worst possible times, the software is opt-out by default. It can also be configured for opt-in.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chaos Monkey has a configurable schedule that allows simulated failures to occur at times when they can be closely monitored. In this way, it’s possible to prepare for major unexpected errors rather than just waiting for catastrophe to strike and seeing how well you can manage.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Here I am using Ubuntu distro in AWS. &lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;you-can-see-the-github-repo-in-here-https-github-com-vishnudxb-ansible-chaosmonkey&#34;&gt;&lt;em&gt;&lt;strong&gt;You can see the Github repo in&lt;/strong&gt; &lt;a href=&#34;https://github.com/vishnudxb/ansible-chaosmonkey&#34;&gt;here.&lt;/a&gt;&lt;/em&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

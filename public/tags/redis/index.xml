@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/redis/index.xml</link>
+    <description>Recent content in Redis on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:16</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
+      <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol16/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy during the weekend!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eng.uber.com/pyflame/&#34;&gt;Pyflame: Uber Engineering’s Ptracing Profiler for Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ntguardian.wordpress.com/2016/09/26/introduction-stock-market-data-python-2/&#34;&gt;An Introduction to Stock Market Data Analysis with Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.patricksoftwareblog.com/how-to-configure-nginx-for-a-flask-web-application/&#34;&gt;How to Configure NGINX for a Flask Web Application&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kootenpv/whereami&#34;&gt;Uses WiFi signals and machine learning to predict where you are.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pushjet&#34;&gt;Open source push notifications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/forcefield&#34;&gt;Keep email out of your inbox when you&amp;rsquo;re not at work.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@deeeet/trancing-http-request-latency-in-golang-65b2463f548c#.butwajcgx&#34;&gt;Tracing HTTP request latency in golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/davecheney/httpstat&#34;&gt;httpstat: Colored Visualization of HTTP Request Stats&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.redhat.com/en/about/blog/running-production-applications-containers-introducing-ocid&#34;&gt;Running production applications in containers: Introducing OCID&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.bennadel.com/blog/3154-building-microservices-designing-fine-grained-systems-by-sam-newman.htm&#34;&gt;Building Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@pakastin/master-the-dom-bc1a2a06089b#.1fa7g3lbq&#34;&gt;Master the DOM&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UAsTNFLGBGI&#34;&gt;Build A CI/CD Pipeline with Golang&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pforemski/dingo&#34;&gt;A DNS client in Go that supports Google DNS over HTTPS&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/09/26/use-docker-to-build-test-and-push-your-artifacts/&#34;&gt;Use Docker to build, test and push your Artifacts&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/lucjuggery/mongodb-replica-set-on-swarm-mode-45d66bc9245&#34;&gt;MongoDB replica set on swarm mode&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hugopicado.com/2016/09/26/simple-data-processing-pipeline-with-golang.html&#34;&gt;Simple Data Processing Pipeline with Golang&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iampox/androidapps&#34;&gt;A list of interesting and open source Android apps.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://redislabs.com/Downloads/Redis-Labs-6-Features-for-Highly-Available-Redis-1215.pdf&#34;&gt;Six Essential Features for Highly Available Redis&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/pachico/magoo&#34;&gt;Mask credit card numbers, emails and more&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/zeruniverse/Password-Manager&#34;&gt;An online keepass-like tool to manage password. client-side AES encryption!&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.strava.com/blog/mesos/&#34;&gt;Mesos at Strava&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/zstd&#34;&gt;Zstandard - Fast real-time compression algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/OmarElGabry/chat.io&#34;&gt;A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, &amp;amp; Redis.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thenewstack.io/strategies-running-stateful-applications-kubernetes-volumes/&#34;&gt;Strategies for Running Stateful Applications in Kubernetes: Volumes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/david-gpu/srez&#34;&gt;Image super-resolution through deep learning&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cytopia/awesome-ci&#34;&gt;Awesome Continuous Integration - Lot&amp;rsquo;s of tools for git, file and static source code analysis.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/r-kan/BUFFY&#34;&gt;Back Up Files For You&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.alexellis.io/5-things-docker-rpi/&#34;&gt;5 things about Docker on Raspberry Pi&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://collabnix.com/archives/1910&#34;&gt;Running Prometheus Docker container for monitoring Microservices on Raspberry Pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.oreilly.com/live-training/scaling-jenkins-docker-apache.html&#34;&gt;Scaling Jenkins with Docker and Apache Mesos&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker Container for Redis Cluster ( Verison 3.0.4 )</title>
+      <link>https://www.vishnu-tech.com/blog/docker-container-for-redis-cluster-verison-3-0-4/</link>
+      <pubDate>Wed, 07 Oct 2015 10:46:51 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/docker-container-for-redis-cluster-verison-3-0-4/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;A small Docker container for running the Redis Cluster (Version 3.0.4).&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;You can find the github repo from &lt;a href=&#34;https://github.com/vishnudxb/docker-redis-cluster&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to copy redis dump from AWS Elasticache to AWS S3</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</link>
+      <pubDate>Tue, 09 Jun 2015 15:22:13 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</guid>
+      <description>&lt;p&gt;For Amazon Elasticache, we can&amp;rsquo;t copy the snapshot to AWS S3.  So inorder to do that you need to do the below steps:-&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Spin up new EC2 instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Install Redis on that Instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Setup the instance as a read replica of the AWS Elasticache Primary (redis)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Wait for the Master Slave data sync&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Issue a redis &lt;strong&gt;SAVE &lt;/strong&gt;command to generate a local dump&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Copy local dump.rdb on AWS S3&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can do the whole setup by simply checkout this _&lt;strong&gt;&lt;a href=&#34;https://github.com/vishnudxb/redisbackup-to-s3&#34;&gt;REPO&lt;/a&gt;&lt;/strong&gt;_  and run the below command&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;vishnudxb@server:~# ./terraform apply -var &amp;lsquo;access_key=PUTMYACCESSKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;secret_key=PUTMYSECRETKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_file=/home/redis.pem&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_name=redis&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*&lt;em&gt;                                                              -var &amp;lsquo;region=us-east-1&amp;rsquo; *&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;instance_type=m3.large&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_**                                                              -var &amp;lsquo;availability&lt;em&gt;zone=us-east-1a&amp;rsquo; \ **&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;subnet_id=subnet-e94xxxx&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;security_id=sg-7xxxx1d&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                             -var &amp;lsquo;redis_endpoint=aws redis endpoint&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;redis_port=6379&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;                                                              -var &amp;lsquo;aws_bucket=redis-db-backup&amp;rsquo;&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;p&gt;[/color-box]
+Once you execute the above command and you can see the output like the below:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

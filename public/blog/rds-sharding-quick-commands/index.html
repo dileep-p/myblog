@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> RDS Sharding &amp; Quick Commands &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/">RDS Sharding &amp; Quick Commands</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                <p><a href="http://aws.amazon.com/articles/0040302286264415#virtualshards">Source article on RDS sharding by Amazon.</a></p>
+
+<p><a href="http://aws.amazon.com/articles/0040302286264415#virtualshards">http://aws.amazon.com/articles/0040302286264415#virtualshards</a></p>
+
+<p><strong><a href="http://searchcloudcomputing.techtarget.com/definition/sharding">What is sharding?</a></strong></p>
+
+<p>Here unlike ec2 instances there is no rds-db-instance-id instead we use the db-instance names (called as dbinstance_identifiers) in our rds commmands to identify among rds-db-instances.</p>
+
+<p>Example-
+Database Name – news
+RDS DB Instances – shard1, shard2</p>
+
+<p>Consider creating 2 db-shards ie we need 2 db-instance to map those db-shards to db-instances. To reduce the schema setup overhead we use the snapshot and restore capabilities of Amazon RDS to do the following:</p>
+
+<ol>
+<li>Create a single “seed” DB Instance.</li>
+<li>Set up the schema on that database.</li>
+<li>Snapshot the database.</li>
+<li>Create more databases from that snapshot using the RDS RestoreDBInstanceFromSnapshot API.</li>
+</ol>
+
+<p><strong>1.Create SEED DATABASE INSTANCE</strong></p>
+
+<p>_#rds-create-db-instance shard1 –engine mysql5.1 –master-username unni –master-user-password 123 –allocated-storage 5 –db-instance-class db.t1.micro –db-name news –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>$$output$$
+DBINSTANCE  shard1  db.t1.micro  mysql  5  unni  creating  1  ****  n  5.1.63  general-public-license
+SECGROUP  default  active
+PARAMGRP  default.mysql5.1  in-sync
+OPTIONGROUP  default:mysql-5-1  in-sync</p>
+
+<p>Add IP address to DB Security Group to gain access
+1.Find IP from www.whatismyipaddress.com – say its – 122.174.199.204
+2.Add the CIDR – 122.174.199.<sup>204</sup>&frasl;<sub>32</sub> in the DB-Security Group
+3.Try gaining access to rds by – #mysql -h shard1.covaztmm6tup.eu-west-1.rds.amazonaws.com -u unni -p123</p>
+
+<p><strong>2.SETUP SCHEMA ON THE DB</strong></p>
+
+<p>mysql&gt;show database;
+mysql&gt;use news;
+mysql&gt;CREATE TABLE articles (
+article_id numeric(64,0) NOT NULL PRIMARY KEY,
+category char(13),
+CHECK category IN (‘BUSINESS’, ‘ENTERTAINMENT’, ‘HEALTH’, ‘SCIENCE’, ‘SPORTS’, ‘TECHNOLOGY’, ‘WORLD’),
+title char(128),
+submit_time timestamp
+);</p>
+
+<p><strong>3.SNAPSHOT and CREATE OTHER DB INSTANCES</strong></p>
+
+<p>_#rds-create-db-snapshot shard1 –db-snapshot-identifier news-seed-database –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>$$output$$
+DBSNAPSHOT  news-seed-database  shard1  2012-09-04T12:02:30.129Z  mysql  5  creating  unni  5.1.63  general-public-license  manual</p>
+
+<p>Once the snapshot is available it can be used to create any number of DB Instances. We’re only creating two DB Instances in this example, but it could easily be many more. Also, for our trivial setup, the only efficiency we gain is that we don’t need to create the schema on each. However, in a typical scenario there might be a lot more setup involved in creating the seed (e.g., application configuration data, user accounts, permissions, etc.).</p>
+
+<p><strong>4.DB-INSTANCE FROM DB-SNAPSHOT</strong></p>
+
+<p>The following command can be used to create new DB Instances from the seed snapshot:</p>
+
+<p>_#rds-restore-db-instance-from-db-snapshot shard2 –db-snapshot-identifier news-seed-database –db-instance-class db.t1.micro –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>$$output$$
+DBINSTANCE  shard2  db.t1.micro  mysql  5  unni  creating  1  n  5.1.63  general-public-license
+SECGROUP  default  active
+PARAMGRP  default.mysql5.1  in-sync
+OPTIONGROUP  default:mysql-5-1  pending</p>
+
+<p>—————–</p>
+
+<p>To LIST RDS-INSTANCES
+_#rds-describe-db-instances –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>TO DELETE RDS-INSTANCE with FINAL SNAPSHOT
+_#rds-delete-db-instance shard1 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem –final-db-snapshot-identifier shard-final-snapshot</em></p>
+
+<p>TO DELETE RDS-INSTANCE without FINAL SNAPSHOT
+_#rds-delete-db-instance shard2 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem –skip-final-snapshot</em></p>
+
+<p>TO LIST RDS-DB-SNAPSHOTS
+_#rds-describe-db-snapshots –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>TO DELETE RDS-DB-SNAPSHOTS
+_#rds-delete-db-snapshot shard-final-snapshot –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2<em>certs/cert-K4.pem</em></p>
+
+<p>NOTE
+Creating a final snapshot (before dbinstance termination) incurs additional storage fees.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/rds-sharding-quick-commands\/';
+    var disqus_title = 'RDS Sharding \x26 Quick Commands';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/rds-sharding-quick-commands\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sensu on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/sensu/index.xml</link>
+    <description>Recent content in Sensu on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/sensu/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker container for de-registering Sensu clients from its master</title>
+      <link>https://www.vishnu-tech.com/blog/docker-container-for-de-registering-sensu-clients-from-its-master/</link>
+      <pubDate>Sat, 19 Dec 2015 12:42:27 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/docker-container-for-de-registering-sensu-clients-from-its-master/</guid>
+      <description>&lt;p&gt;A Docker container for de-registering Sensu clients from its master. You can find the Github repo from &lt;a href=&#34;https://github.com/vishnudxb/sensu-client-deregistration&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

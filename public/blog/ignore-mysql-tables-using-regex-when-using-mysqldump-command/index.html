@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Ignore Mysql Tables using regex when using Mysqldump command &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/ignore-mysql-tables-using-regex-when-using-mysqldump-command/">Ignore Mysql Tables using regex when using Mysqldump command</a></h1>
+            <span class="post-date">Aug 31, 2013 </span>
+            <div class="post-content">
+                <p>Hi guys,</p>
+
+<p>We can ignore database tables while taking mysqldump using the below command</p>
+
+<p>mysqldump -u username -p database &ndash;ignore-table=database.table1 &ndash;ignore-table=database.table2 &gt; database.sql</p>
+
+<p>However if we want to ignore more tables we need to add the tables manually and its a real pain in the A$$</p>
+
+<p>Here I am showing how to take the mysqldump using regex to ignore mysql tables.</p>
+
+<p>For example:- If I want to ignore the below tables starting from</p>
+
+<p>1) alice_token,</p>
+
+<p>2) import_</p>
+
+<p>3)sales_order_item_shipment_tracking</p>
+
+<p>4)sales_order_item_status_history</p>
+
+<p>5)stock_import</p>
+
+<p>6)ums</p>
+
+<p>root@vishnu-machine# cd /var/lib/mysql/<database></p>
+
+<p>root@vishnu-machine:/var/lib/mysql/<database># echo &lsquo;[mysqldump]&rsquo; &gt; mydump.cnf</p>
+
+<p>root@vishnu-machine:/var/lib/mysql/<database>#  mysql -NBe &ldquo;select concat(&lsquo;ignore-table=&rsquo;, table_schema, &lsquo;.&rsquo;, table_name) from information_schema.tables where table_name REGEXP &lsquo;^(alice<em>token|import</em>|sales_order_item_shipment_tracking|sales_order_item_status_history|stock_import|ums)&lsquo;;&rdquo; &gt; mydump.cnf</p>
+
+<p>And verify the file &ldquo;mydump.cnf&rdquo;</p>
+
+<p>root@vishnu-machine:/var/lib/mysql/<database># cat mydump.cnf</p>
+
+<p>ignore-table=<database>.alice_token</p>
+
+<p>ignore-table=<database>.import_token</p>
+
+<p>ignore-table=<database>.import_sales</p>
+
+<p>ignore-table=<database>.sales_order_item_shipment_tracking</p>
+
+<p>ignore-table=<database>.sales_order_item_status_history</p>
+
+<p>ignore-table=<database>.stock_import</p>
+
+<p>ignore-table=<database>.ums</p>
+
+<p>You can see the above entries in the file &ldquo;mydump.cnf&rdquo;</p>
+
+<p>root@vishnu-machine:/var/lib/mysql/<database># mysqldump &ndash;defaults-file=mydump.cnf -u root -p <database> &gt; vishnu.sql</p>
+
+<p>And here it is new dump without tables as mentioned above.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/ignore-mysql-tables-using-regex-when-using-mysqldump-command\/';
+    var disqus_title = 'Ignore Mysql Tables using regex when using Mysqldump command';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/ignore-mysql-tables-using-regex-when-using-mysqldump-command\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

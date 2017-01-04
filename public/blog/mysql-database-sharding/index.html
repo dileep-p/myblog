@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Mysql- Database Sharding &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/mysql-database-sharding/">Mysql- Database Sharding</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                <p><em><strong>“share nonthing” : Key Law on database sharding Architecture.</strong></em>
+<em><strong>Small Databases are Fast, Big Databases are Slow !!!</strong></em>
+<em><strong>DB Sharding – Breaking a Bigger DB into a Smaller DB.</strong></em></p>
+
+<p>Key Points on DB Sharding –</p>
+
+<ul>
+<li><p>Partition Data across master</p></li>
+
+<li><p>Writes and read are distributed</p></li>
+
+<li><p>Application needs modification</p></li>
+
+<li><p>Needs choice partitioning strategy for uniform data distribution.</p></li>
+</ul>
+
+<p>Issues -</p>
+
+<ul>
+<li><p>Joins cannot be performed across shards</p></li>
+
+<li><p>Application modification can be expensive.</p></li>
+
+<li><p>Example : Evernote uses database sharding – localized failures , no need for joins. Each shards handles all  data &amp;  traffic for about 100,000 users.</p></li>
+</ul>
+
+<p>Sharding is another way to resolve MySQL scalability issues. It usually means splitting up the data by some logic derived from the application. This can be done by selecting a key in the data and splitting the data by hashing that key and having some distribution logic. It can also be done by identifying the application needs and setting different tables or different data sets in different databases (splitting the North-America sales data from the EMEA sales data, etc.)</p>
+
+<p>This approach is simple from the database standpoint, but is very complex from the application standpoint since the application needs to be modified to deal with the data being scattered into the different shards. Moreover, combining data from different shards can be very complex and involves development in the application (you can’t just run a simple JOIN.)</p>
+
+<p>Advantages of scaling out and in using sharding:</p>
+
+<ul>
+<li>Scales beyond the limitations of a single machine</li>
+<li>Scales both read and write operations (but makes some operations impossible to achieve in the database)</li>
+<li>Scales both throughput and capacity</li>
+</ul>
+
+<p>Disadvantages of scaling out and in using sharding:</p>
+
+<ul>
+<li>Complex and requires application changes</li>
+<li>Scaling is usually offline and requires a re-partitioning event – and may require application changes.</li>
+</ul>
+
+<p>Today, there are some solutions that introduce auto-sharding (Scalebase, Dbshards). This approach makes sharding more similar to shared-nothing partitioning, thus taking the sting out of some sharding complexities. However, it still requires application awareness and could prove to be a limiting factor if you needed to update your app or migrate to a different database solution.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/mysql-database-sharding\/';
+    var disqus_title = 'Mysql- Database Sharding';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/mysql-database-sharding\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

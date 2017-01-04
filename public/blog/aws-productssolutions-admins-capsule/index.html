@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> AWS Products/Solutions – Admins Capsule &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/aws-productssolutions-admins-capsule/">AWS Products/Solutions – Admins Capsule</a></h1>
+            <span class="post-date">Dec 10, 2012 </span>
+            <div class="post-content">
+                
+
+<h1 id="database">Database</h1>
+
+<p><strong><a href="http://aws.amazon.com/running_databases/#rds">Amazon RDS</a></strong></p>
+
+<ul>
+<li><p>You can think of a <a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Welcome.html">RDS</a> DB Instance as a database environment in the cloud with the compute and storage resources you specify.</p></li>
+
+<li><p>You can create and delete DB Instances, define/refine infrastructure attributes of your DB Instance(s), and control access and security via the <a href="https://console.aws.amazon.com/">AWS Management Console</a>, Amazon RDS APIs, and Command Line Tools.</p></li>
+
+<li><p>Multiple MySQL databases or SQL Server databases (up to 30) or Oracle database schemas can be created on a given DB Instance.</p></li>
+
+<li><p>For optional <a href="http://aws.amazon.com/rds/faqs/#36">Multi-AZ deployments</a> (currently supported for MySQL and Oracle database engines), Amazon RDS also manages synchronous data replication across Availability Zones and automatic failover.</p></li>
+
+<li><p><a href="http://aws.amazon.com/rds/faqs/">Amazon RDS FAQs</a></p></li>
+
+<li><p>By default, customers are allowed to have up to a total of 20 Amazon RDS DB instances.</p></li>
+
+<li><p><a href="http://aws.amazon.com/articles/2936?_encoding=UTF8&amp;jiveRedirect=1">RDS cannot remove storage once it has been allocated. The only way to reduce the amount of storage allocated to a DB Instance is to dump the data out of the DB Instance, create a new DB Instance with less storage space, and load the data into the new DB Instance.</a></p></li>
+
+<li><p>Unlike Multi-AZ deployments, Read Replicas use MySQL’s built-in replication and are subject to its strengths and limitations.This means recent database updates made to a standard (non Multi-AZ) source DB Instance may not be present on associated Read Replicas in the event of an unplanned outage on the source DB Instance. As such, Read Replicas do not offer the same data durability benefits as Multi-AZ deployments. While Read Replicas can provide some read availability benefits, they and are not designed to improve write availability. Read Replicas are currently supported for Amazon RDS for MySQL. They can also be used for serving read traffic when the primary database is unavailable.</p></li>
+
+<li><p>The read replica mechanism uses MySQL’s native, asynchronous replication. This means replicas might be lagging behind the master as they try to catch up with writes. The interesting thing about this is that multi-AZ RDS instances apparently use another,_ proprietary type_ of synchronous replication.</p></li>
+
+<li><p>A Read Replica will stay active and continue accepting read traffic even after its corresponding source DB Instance has been deleted. If you desire to delete the Read Replica in addition to the source DB Instance, you must explicitly delete the Read Replica using the DeleteDBInstance API or AWS Management Console.</p></li>
+
+<li><p>By default and at no additional charge, Amazon RDS enables automated backups of your DB Instance with a 1 day retention period.</p></li>
+
+<li><p>During the backup window, storage I/O may be suspended while your data is being backed up. This I/O suspension typically lasts a few minutes at most. This I/O suspension is avoided with Multi-AZ DB deployments, since the backup is taken from the standby.</p></li>
+
+<li><p>Amazon RDS DB snapshots and automated backups are stored in S3.</p></li>
+
+<li><p>If you desire to turn off automated backups altogether, you can do so by setting the retention period to 0 (not recommended).</p></li>
+
+<li><p>When you delete a DB Instance, you have the ability to specify whether a final DB Snapshot is created upon deletion, which enables a DB Snapshot restore of the deleted database instance at a later date. All previously created DB Snapshots of your DB Instance will be retained and billed at $0.15 per GB-month, unless you choose to delete them.</p></li>
+
+<li><p>Amazon RDS does not currently provide access to the binary logs for your Database Instance.</p></li>
+
+<li><p>You are not charged for the data transfer incurred in replicating data between your source DB Instance and Read Replica. Billing for a Read Replica begins as soon as the Read Replica has been successfully created (i.e. when status is listed as “active”). The Read Replica will continue being billed at standard Amazon RDS DB Instance hour rates until you issue a command to delete it.</p></li>
+
+<li><p>Amazon RDS primarily has 3 engines – <a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBEngine.MySQL51.html">Mysql Database Engine</a>, <a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBEngine.Oracle.html">Oracle Database Engine</a>,<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBEngine.SQLServer.html">Microsoft SQL Server Database Engine</a>.</p></li>
+
+<li><p><a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/StartCLI.html">Setup RDS CLI.</a></p></li>
+
+<li><p><a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Concepts.DBInstance.html">RDS Terminology and Concepts.</a></p></li>
+
+<li><p><a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html">How to Connect to RDS – MySQL.</a></p></li>
+
+<li><p><a href="http://docs.amazonwebservices.com/AmazonRDS/latest/CommandLineReference/command-reference.html">RDS CLI – References</a>.</p></li>
+
+<li><p><a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Scenarios.InstanceBasics.html">Creating and Modifying  DB Instance.</a></p></li>
+
+<li><p><a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Scenarios.Backups.html">Backing UP and Restoring DB Instances.</a></p></li>
+
+<li><p><a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_ListEvents.html">Viewing RDS Instance events.</a></p></li>
+
+<li><p>working with  <a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">DB Parameter Groups</a>, <a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_WorkingWithSecurityGroups.html">security groups</a>, <a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html">option groups</a> &amp; <a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">viewing DB instance metrics</a>.</p></li>
+
+<li><p><a href="https://forums.aws.amazon.com/thread.jspa?messageID=161973&amp;#161973">RDS Security Best Practices !!!</a></p></li>
+
+<li><p><a href="https://forums.aws.amazon.com/thread.jspa?messageID=180752&amp;#180752">Tech Tips – Scaling Databases with Amazon RDS</a></p></li>
+
+<li><p><a href="https://forums.aws.amazon.com/thread.jspa?messageID=160936&amp;#160936">Tech Tips – On Demand Test Databases</a></p></li>
+
+<li><p><a href="https://forums.aws.amazon.com/thread.jspa?messageID=198765&amp;#198765">Tech Tips IV: Best Practices to Avoid an Inoperable RDS MySQL DB Instance</a></p></li>
+
+<li><p><a href="https://forums.aws.amazon.com/thread.jspa?threadID=56871&amp;tstart=0">Tech Tips V: Defining CloudWatch alarms for Amazon RDS metrics</a></p></li>
+
+<li><p>The default storage engine with RDS is InnoDB, but you are free to choose another, like the popular MyISAM. It is important to realize that read replicas on nontransactional storage engines (like MyISAM) require you to freeze your databases, as the consistency cannot be guaranteed when snapshotting. But if you use InnoDB, you are safe, and the only thing you have to do is fire up a new read replica.</p></li>
+
+<li><p>RDS storage is independent of RDS instance classes. Every class can have from 5 GB to 1 TB of storage associated. Scaling up the storage is easy, and you can do it using the Console. It does require a reboot. On the other hand, scaling down the storage is impossible.</p></li>
+
+<li><p><a href="http://aws.amazon.com/rds/reserved-instances/">Reserved DB Instances page</a>.</p></li>
+
+<li><p><a href="http://aws.amazon.com/rds/">On-Demand DB Instances.</a></p></li>
+
+<li><p><a href="http://aws.amazon.com/developertools/2928/">RDS CLI</a></p></li>
+
+<li><p><a href="http://blog.webyog.com/2009/11/16/top-10-things-to-know-about-amazon-rds/">10 things you should know about RDS.</a></p></li>
+</ul>
+
+<p><strong><a href="http://aws.amazon.com/running_databases/#dynamodb">Amazon DynamoDB</a></strong></p>
+
+<ul>
+<li><p>A fast, highly scalable NoSQL database service</p></li>
+
+<li><p>A fully managed service that offers extremely fast performance, seamless scalability and reliability, low cost and more.</p></li>
+
+<li><p><a href="http://www.youtube.com/watch?v=oz-7wJJ9HZ0">Video</a></p></li>
+</ul>
+
+<p><strong><a href="http://aws.amazon.com/running_databases/#simpledb">Amazon SimpleDB</a></strong></p>
+
+<ul>
+<li><p>A NoSQL database service for smaller datasets.</p></li>
+
+<li><p>A fully managed service that provides a schemaless database, reliability and more.</p></li>
+</ul>
+
+<p><strong><a href="http://aws.amazon.com/running_databases/#relational_amis">Your choice of relational AMIs</a></strong></p>
+
+<ul>
+<li><p>A relational database you can manage on your own.</p></li>
+
+<li><p>On Amazon EC2 and EBS that provide scale compute &amp; storage, complete control over instances, and more.</p></li>
+</ul>
+
+<p><strong><a href="http://aws.amazon.com/elasticache/">Amazon ElastiCache</a></strong></p>
+
+<ul>
+<li><p>Amazon ElastiCache is a web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud.</p></li>
+
+<li><p><a href="http://aws.amazon.com/developertools/2310261897259567">Amazon ElasticCache CLI Tool.</a></p></li>
+</ul>
+
+<h1 id="compute">Compute</h1>
+
+<p><strong><a href="http://aws.amazon.com/ec2/">Amazon Elastic Cloud Compute (EC2)</a></strong></p>
+
+<ul>
+<li><p>Amazon Elastic Compute Cloud delivers scalable, pay-as-you-go compute capacity in the cloud.</p></li>
+
+<li><p><a href="http://aws.amazon.com/ec2/instance-types">Amazon EC2 Instance Types</a></p></li>
+
+<li><p>EBS-Optimized instances are for selected types only such as – Standard Instances(Large,Extra Large), High-Memory Instances(High-Memory Quadruple Extra Large).</p></li>
+
+<li><p>Amazon EC2 instances are grouped into seven families: Standard, Micro, High-Memory, High-CPU, Cluster Compute, Cluster GPU, and High I/O.</p></li>
+
+<li><p><a href="http://aws.amazon.com/developertools/351">Amazon EC2 API (CLI Tools)</a> and <a href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/SettingUp_CommandLine.html">how to setup</a> it.</p></li>
+
+<li><p><a href="http://aws.amazon.com/developertools/739">Simple CLI Access to Amazon EC2 and S3</a></p></li>
+</ul>
+
+<p><strong><a href="http://aws.amazon.com/elasticmapreduce/">Amazon Elastic MapReduce</a></strong></p>
+
+<ul>
+<li>Amazon Elastic MapReduce is a web service that enables businesses, researchers, data analysts, and developers to easily and cost-effectively process vast amounts of data.</li>
+</ul>
+
+<p><strong><a href="http://aws.amazon.com/autoscaling/">Auto Scaling</a></strong></p>
+
+<ul>
+<li><p>Auto Scaling allows you to automatically scale your Amazon EC2 capacity up or down according to conditions you define.</p></li>
+
+<li><p><a href="http://aws.amazon.com/developertools/2535">Auto Scaling CLI Tool.</a></p></li>
+</ul>
+
+<h1 id="networking">Networking</h1>
+
+<p><a href="http://aws.amazon.com/elasticloadbalancing/"><strong>Elastic Load Balancing</strong></a></p>
+
+<ul>
+<li><p><a href="http://aws.amazon.com/developertools/2536">ELB API Tools</a>.</p></li>
+
+<li><p>Elastic Load Balancing automatically distributes incoming application traffic across multiple Amazon EC2 instances.</p></li>
+</ul>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/aws-productssolutions-admins-capsule\/';
+    var disqus_title = 'AWS Products\/Solutions – Admins Capsule';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/aws-productssolutions-admins-capsule\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

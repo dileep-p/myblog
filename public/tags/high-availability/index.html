@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title> High Availability &middot; My Tech Blog </title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+	</head>
+
+	<body>
+		<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+		<div class="container wrapper">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>High Availability</h1>
+				</div>
+			</div>
+			<ul id="post-list">
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/docker-swarm-production-setup/">Docker swarm production setup</a></h4>
+							<h4 class="post-date">Nov 30, 2016</h4>
+						</div>
+						<div class="post-summary"><p>Docker Swarm is a cluster of docker engines.
+ Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.
+ Swarm mode is native in Docker 1.12 RC
+ You can orchestrate service when it&rsquo;s in Swarm mode.
+   We are creating 3 swarm manager and 3 worker nodes for high availability in AWS....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/docker-swarm-production-setup/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/">High Availability @ Load Balancing Layer-HAProxy / ELB</a></h4>
+							<h4 class="post-date">Apr 1, 2013</h4>
+						</div>
+						<div class="post-summary"><p>Architecting High Availability at the Load Balancing layer is one of the important aspects in the web scale systems in AWS. We can follow multiple strategies for achieving the same. I am listing some of the designs for achieving the same.
+Pattern 1: Route 53 DNS RR + HAProxy Route53 is a Managed DNS service provided by Amazon Web Services. Route 53 supports Round robin and weighted algorithms. If the Route53 DNS server has several entries for a given hostname, it will return all of them in a rotating order....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/high-availability-load-balancing-layer-haproxy-elb/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/setting-up-keepalived-load-balancing-using-haproxy-part-2/">Setting up keepalived-Load balancing using HAProxy Part 2</a></h4>
+							<h4 class="post-date">Mar 14, 2013</h4>
+						</div>
+						<div class="post-summary"><p>In our previous post we have set up a HAProxy loadbalancer to balance the load of our web application between three webservers, here’s the diagram of the situation we have ended up with:
+
+As we already concluded in the last post, there’s still a single point of failure in this setup. If the loadbalancer dies for some reason the whole site will be offline. In this post we will add a second loadbalancer and setup a virtual IP address shared between the loadbalancers....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/setting-up-keepalived-load-balancing-using-haproxy-part-2/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/high-availability-load-balancing-using-haproxy-part-1/">High availability load balancing using HAProxy PART-1</a></h4>
+							<h4 class="post-date">Mar 14, 2013</h4>
+						</div>
+						<div class="post-summary"><p>HAProxy is a free, very fast and reliable solution offering high availability, load balancing and proxying for TCP and HTTP-based applications. It is particularly suited for web sites crawling under very high loads while needing persistence or Layer7 processing. Supporting tens of thousands of connections is clearly realistic with todays hardware. Its mode of operation makes its integration into existing architectures very easy and riskless, while still offering the possibility not to expose fragile web servers to the Net,such as below:...</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/high-availability-load-balancing-using-haproxy-part-1/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+
+			</ul>
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+	</body>
+</html>

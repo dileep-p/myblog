@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nodejs on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/nodejs/index.xml</link>
+    <description>Recent content in Nodejs on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simple Nodejs WebServer</title>
+      <link>https://www.vishnu-tech.com/blog/simple-nodejs-webserver/</link>
+      <pubDate>Fri, 02 May 2014 18:49:56 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/simple-nodejs-webserver/</guid>
+      <description>
+
+&lt;p&gt;Node.js is built on Chrome&amp;rsquo;s &lt;a href=&#34;http://code.google.com/p/V8&#34;&gt;V8 JavaScript Engine&lt;/a&gt;. It&amp;rsquo;s useful for a range of applications and it brings JavaScript to the server. Applications written in Node.js are event-driven. For example, if you wanted to create a file, you would provide a callback function to be called upon the file&amp;rsquo;s successful creation. In this sort of model, your app doesn&amp;rsquo;t become stuck waiting for events to finish executing.&lt;/p&gt;
+
+&lt;p&gt;I hope you have installed nodejs. Then you need to install &amp;ldquo;forever&amp;rdquo;&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-forever&#34;&gt;Installing forever&lt;/h2&gt;
+
+&lt;p&gt;forever, developed by nodejitsu, has functions to create applications that are always running—&amp;rdquo;forever&amp;rdquo; running. If the application dies, forever brings it back. It has built-in functionality to monitor processes. It also offers an API you can use to incorporate its features into your own code.&lt;/p&gt;
+
+&lt;p&gt;forever can be installed using npm. npm should have been installed as part of Node.js:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/forever.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/forever.png&#34; alt=&#34;forever&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;running-the-app&#34;&gt;Running the app&lt;/h2&gt;
+
+&lt;p&gt;Create the file index.js with the following contents:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/index.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/index.png&#34; alt=&#34;index&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then run:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/indexx1.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/indexx1.png&#34; alt=&#34;indexx&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Point your browser to &lt;a href=&#34;http://127.0.0.1:8124/&#34;&gt;http://127.0.0.1&lt;/a&gt; or &lt;a href=&#34;http://localhost&#34;&gt;http://localhost&lt;/a&gt;. It should display the index.html&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Now we can use _**forever **_to manage our application:, instead of running the above command.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/foreverr1.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/foreverr1.png&#34; alt=&#34;foreverr&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To check, open the browser and point it to the &lt;a href=&#34;http://127.0.0.1:8124/&#34;&gt;http://127.0.0.1&lt;/a&gt; or &lt;a href=&#34;http://localhost&#34;&gt;http://localhost&lt;/a&gt;. It should display the index.html&lt;/p&gt;
+
+&lt;p&gt;Stopping the app is similar:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/stop.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/05/stop.png&#34; alt=&#34;stop&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

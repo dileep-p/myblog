@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Subnet on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/subnet/index.xml</link>
+    <description>Recent content in Subnet on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/subnet/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible playbook for creating a public subnet and private subnet with NAT gateway in AWS.</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</link>
+      <pubDate>Mon, 15 Feb 2016 13:46:50 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-playbook-for-creating-a-public-subnet-and-private-subnet-with-nat-gateway-in-aws/</guid>
+      <description>&lt;p&gt;An Ansible playbook for creating a Public subnet and Private subnet with NAT gateway. Currently Ansible is working on the module &amp;lsquo;ec2_vpc_nat_gateway&amp;rsquo;  and it is not production ready. So I used a bash script along with the Ansible play to create the private subnet with NAT gateway. You can find the github repo from &lt;a href=&#34;https://github.com/vishnudxb/ansible-vpc-nat&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

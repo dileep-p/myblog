@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon S3 on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/categories/amazon-s3/index.xml</link>
+    <description>Recent content in Amazon S3 on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/categories/amazon-s3/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:15</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol15/</link>
+      <pubDate>Wed, 31 Aug 2016 15:17:19 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol15/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://thehackernews.com/2016/08/dropbox-data-breach.html&#34;&gt;Dropbox Hacked — More Than 68 Million Account Details Leaked Online&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://techcrunch.com/2016/08/30/dropbox-employees-password-reuse-led-to-theft-of-60m-user-credentials/amp/&#34;&gt;Dropbox employee’s password reuse led to theft of 60M+ user credentials&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://engineeringblog.yelp.com/2016/08/undebt-how-we-refactored-3-million-lines-of-code.html&#34;&gt;Undebt: How We Refactored 3 Million Lines of Code&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.zorinaq.com/nginx-resolver-vulns/&#34;&gt;Nginx resolver vulnerabilities allow cache poisoning attack&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://use-the-index-luke.com/blog/2016-07-29/on-ubers-choice-of-databases&#34;&gt;On Uber’s Choice of Databases&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kennethreitz.org/essays/on-cybersecurity-and-being-targeted&#34;&gt;On Cybersecurity and Being Targeted&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dschep/ntfy&#34;&gt;A utility for sending notifications, on demand and when commands finish&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=12376596&#34;&gt;How do you handle DDoS attacks?&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/results?search_query=%22Big+Data+Day+LA+2016%22&#34;&gt;Videos from Big Data Day LA 2016&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://techblog.netflix.com/2016/08/building-fastcom.html&#34;&gt;Building fast.com&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/eon01/NodeSS&#34;&gt;nodeSS : Node.js Security Scanner&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/forking-docker-daniel-riek?trk=hp-feed-article-title-like&#34;&gt;Forking Docker Not&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/mozilla-tech/promoting-security-best-practices-with-observatory-7b164a190425#.neshhjqht&#34;&gt;Promoting Security Best Practices with Observatory&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/4-use-cases-insights-regarding-kubernetes-namespaces-van-velzen?trk=hp-feed-article-title-like&#34;&gt;4 use cases and insights regarding Kubernetes namespaces&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://thehackerblog.com/floating-domains-taking-over-20k-digitalocean-domains-via-a-lax-domain-import-system/index.html&#34;&gt;Floating Domains – Taking Over 20K DigitalOcean Domains via a Lax Domain Import System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://polynome.co/infosec/inversoft/elasticsearch/linode/penetration-testing/2016/08/16/hack-that-inversoft.html&#34;&gt;HackedThat: Breaking in to a hardened server via the back door&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ilikebigbits.com/blog/2016/8/28/designing-a-fast-hash-table&#34;&gt;Designing a fast Hash Table&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/blog/ansible-openshift-enterprise-container-platform&#34;&gt;Automating the provisioning and configuration of Redhat Mobile Application platform&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/geshan/embrace-chatops-stop-installing-deployment-software-larcon-eu-2016&#34;&gt;Embrace chatops, stop installing deployment software&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/powerful-aws-platform-features-now-for-containers/&#34;&gt;Powerful AWS Platform Features, Now for Containers&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/blogs/aws/new-aws-application-load-balancer/&#34;&gt;AWS Application Load Balancer&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/aws/aws-week-in-review&#34;&gt;The files in this GitHub Repo are used to produce the AWS Week in Review&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/bbc/chaos-lambda&#34;&gt;Randomly terminate ASG instances during business hours&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/stevenharradine/checkall&#34;&gt;Runs commands against every box within aws&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/DevOpsDave/ssh-everywhere&#34;&gt;Integrates ssh and tmux with aws cli to create tmux sessions that open a pane for each aws instance.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.kubernetes.io/2016/08/create-couchbase-cluster-using-kubernetes.html&#34;&gt;Create a Couchbase cluster using Kubernetes&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Yelp/git-code-debt&#34;&gt;A dashboard for monitoring code debt in a git repository.&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/EntilZha/spot-price-reporter&#34;&gt;Fetch and plot AWS spot pricing history&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cosiner/socker&#34;&gt;Socker is a library for Go to simplify the use of SSH&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/Olivia&#34;&gt;Go: A distributed, in-memory key-value storage.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/iamduo/workq&#34;&gt;Job server in Go&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.docker.com/2016/08/securing-enterprise-software-supply-chain-using-docker/&#34;&gt;Securing The Enterprise Software Supply Chain Using Docker&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://lostechies.com/gabrielschenker/2016/08/14/containers-clean-up-your-house/&#34;&gt;Containers – Clean up your House&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://channel9.msdn.com/Shows/msftazure/Run-PowerShell-Natively-on-Linux-with-Docker&#34;&gt;Run PowerShell Natively on Linux with Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kendrickcoleman.com/index.php/Tech-Blog/how-to-use-volume-drivers-and-storage-with-new-docker-service-command.html&#34;&gt;How to Use Volume Drivers and Storage with New Docker Service Command&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.com/news/2016/08/docker-service-load-balancing&#34;&gt;Improved Options for Service Load Balancing in Docker 1.12.0&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.sqreen.io/one-easy-way-to-inject-malicious-code-in-any-node-js-application/&#34;&gt;One easy way to inject malicious code in any Node.js application&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.pivotal.io/pivotal/products/new-single-multi-node-sandboxes-for-pivotal-hdb-apache-hawq&#34;&gt;Docker-based sandbox (both single and multi-node) for Apache HAWQ &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@allingeek/we-do-rest-is-not-enough-7fa2a683e2f4#.7eiyaabb6&#34;&gt;“We do REST” is not Enough&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/building-a-remote-caching-system&#34;&gt;Building a Remote Caching System&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kelseyhightower/kubernetes-the-hard-way&#34;&gt;Bootstrap Kubernetes the hard way. &lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://githubengineering.com/context-aware-mysql-pools-via-haproxy/&#34;&gt;Context aware MySQL pools via HAProxy&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.codeship.com/autoscaling-purpose-strategies/&#34;&gt;Autoscaling: Its Purpose and Strategies&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/fetching-and-running-docker-container-images-with-rkt.html&#34;&gt;Fetching and running docker container images with rkt&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.madewithtea.com/processing-tweets-with-kafka-streams.html&#34;&gt;Processing Tweets with Kafka Streams&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://inventous.com/database-scaling-mongodb/&#34;&gt;Database Scaling (Sharding) with MongoDB&lt;/a&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to copy redis dump from AWS Elasticache to AWS S3</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</link>
+      <pubDate>Tue, 09 Jun 2015 15:22:13 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</guid>
+      <description>&lt;p&gt;For Amazon Elasticache, we can&amp;rsquo;t copy the snapshot to AWS S3.  So inorder to do that you need to do the below steps:-&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Spin up new EC2 instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Install Redis on that Instance.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Setup the instance as a read replica of the AWS Elasticache Primary (redis)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Wait for the Master Slave data sync&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Issue a redis &lt;strong&gt;SAVE &lt;/strong&gt;command to generate a local dump&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt; Copy local dump.rdb on AWS S3&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can do the whole setup by simply checkout this _&lt;strong&gt;&lt;a href=&#34;https://github.com/vishnudxb/redisbackup-to-s3&#34;&gt;REPO&lt;/a&gt;&lt;/strong&gt;_  and run the below command&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;vishnudxb@server:~# ./terraform apply -var &amp;lsquo;access_key=PUTMYACCESSKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;secret_key=PUTMYSECRETKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_file=/home/redis.pem&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_name=redis&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*&lt;em&gt;                                                              -var &amp;lsquo;region=us-east-1&amp;rsquo; *&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;instance_type=m3.large&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_**                                                              -var &amp;lsquo;availability&lt;em&gt;zone=us-east-1a&amp;rsquo; \ **&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;subnet_id=subnet-e94xxxx&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;security_id=sg-7xxxx1d&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                             -var &amp;lsquo;redis_endpoint=aws redis endpoint&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;redis_port=6379&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;                                                              -var &amp;lsquo;aws_bucket=redis-db-backup&amp;rsquo;&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;p&gt;[/color-box]
+Once you execute the above command and you can see the output like the below:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AWS-ElasticIP-Swapping</title>
+      <link>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</link>
+      <pubDate>Fri, 02 May 2014 19:06:30 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/aws-elasticip-swapping/</guid>
+      <description>
+
+&lt;h1 id=&#34;attach-and-detach-public-ip-in-aws&#34;&gt;Attach and Detach Public IP in AWS&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This script is used for detach elastic ip from one server and attach it to the secondary private ip of the other server.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For example:-&lt;/p&gt;
+
+&lt;p&gt;We have two servers with same content named &amp;ldquo;server01&amp;rdquo; and &amp;ldquo;server02&amp;rdquo; with primary and secondary private IP in AWS and each instance have a public IP  (ie. Elastic IP). This two public IP&amp;rsquo;s are pointed to the DNS.&lt;/p&gt;
+
+&lt;p&gt;If &amp;ldquo;server01&amp;rdquo; goes down, only you need to detach the elastic IP and attached it to the &amp;ldquo;server02&amp;rdquo; to the secondary private IP.&lt;/p&gt;
+
+&lt;p&gt;You can find the script in the below link:-&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/vishnunamshi/ElasticIP-Swap&#34;&gt;Elastic-IP-Swap&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>s3cmd Elaborated…</title>
+      <link>https://www.vishnu-tech.com/blog/s3cmd-elaborated/</link>
+      <pubDate>Sat, 25 May 2013 04:11:02 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/s3cmd-elaborated/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Use –rr option (reduced redundancy) for every put and sync commands !!!. &lt;/strong&gt;
+&lt;strong&gt;Use –bucket-location option to mention nearest geographical location to avoid latency.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To view contents inside a bucket&lt;/strong&gt;
+#s3cmd ls s3://bucketname&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To copy/sync a directory into a bucket&lt;/strong&gt;
+#s3cmd sync Desktop/check s3://bucket_name&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To view all contents of all buckets one level down (only non empty buckets)&lt;/strong&gt;
+#s3cmd la -H&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To sync contents of a local dir in a buckter under an existing directory (s3 object)&lt;/strong&gt;
+#s3cmd sync Desktop/checkunni/ s3://writingz/check/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To sync remote s3 contents to a local directory&lt;/strong&gt;
+#s3cmd sync s3://writingz/check/ Desktop/checkunni/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To sync contents of a local dir in a bucket under a new directory name&lt;/strong&gt;
+#s3cmd sync Desktop/checkunni/ s3://homie/newname/
+Here newname directory is created on the fly and files of checkunni are copied inside s3://homie/newname&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Copy a non-empty directory (on s3) from one bucket to another bucket&lt;/strong&gt;
+#s3cmd -r cp s3://homie/newname s3://writingz/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Copy a non-empty directory (on s3) from one bucket to another bucket under a new name&lt;/strong&gt;
+#s3cmd -r cp s3://homie/newname s3://writingz/newname2/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To find the size of a bucket/directory&lt;/strong&gt;
+#s3cmd du -H s3://writingz&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To download only a single file&lt;/strong&gt;
+#s3cmd get s3://homie/dirname/filename .&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To download a remote directory locally&lt;/strong&gt;.
+#s3cmd get -rf s3://writingz/checkunni .
+use a / (forward slash) after checkunni to download only the files in it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To upload a single file&lt;/strong&gt;
+#s3cmd put PSY.mp3 s3://homie/newname/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To upload a local dir to bucket&lt;/strong&gt;
+#s3cmd put -rf s3test s3://homie/newname/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Delete a file&lt;/strong&gt;
+#s3cmd del s3://writingz/abc.jpg&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Delete a directory&lt;/strong&gt;
+#s3cmd del -rf s3://writingz/check/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Move a file &lt;/strong&gt;(can also be used for rename with files only)****
+#s3cmd mv s3://writingz/abc.png s3://haye/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Move a directory to another bucket &lt;/strong&gt;
+#s3cmd mv -rf s3://writingz/newname2 s3://haye/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Know the s3cmd version&lt;/strong&gt;
+#s3cmd –version&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make a file public using&lt;/strong&gt;
+#s3cmd put –acl-public hangover3.jpg s3://viewzz/abc.jpg&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make a file private using&lt;/strong&gt;
+#s3cmd setacl –acl-private s3://viewzz/hangover3.jpg&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Set all files in a bucket to public/private&lt;/strong&gt;
+#s3cmd setacl –acl-public -r s3://writingz/&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If an md5 checksum is need to verify files integrity use&lt;/strong&gt;
+#sudo s3cmd info s3://viewzz/hangover3.jpg (an amazon s3 object)
+#md5sum hangover3.jpg (locally downloaded file from s3)
+and compare the checksum value.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To delete a bucket (bucket has to be empty use s3cmd del – to delete all files)&lt;/strong&gt;
+#s3cmd rb s3://logix.cz-test (use -f option if bucket is non-empty)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Get various information about Buckets or Files&lt;/strong&gt;
+#s3cmd info s3://BUCKET[/OBJECT]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Other useful options&lt;/strong&gt;
+&lt;strong&gt;–delete-removed&lt;/strong&gt; Delete remote objects with no corresponding local file
+[sync]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–no-delete-removed&lt;/strong&gt; Don’t delete remote objects.
+&lt;strong&gt;–skip-existing&lt;/strong&gt; Skip over files that exist at the destination (only
+for [get] and [sync] commands).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–continue&lt;/strong&gt; Continue getting a partially downloaded file (only for
+[get] command).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–reduced-redundancy, –rr&lt;/strong&gt;
+Store object with ‘Reduced redundancy’. Lower per-GB
+price. [put, cp, mv, sync]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–acl-public&lt;/strong&gt; Store objects with ACL allowing read for anyone.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–acl-private&lt;/strong&gt; Store objects with default ACL allowing access for you&lt;/p&gt;
+
+&lt;p&gt;only.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;–bucket-location=BUCKET_LOCATION &lt;/strong&gt;Datacentre to create bucket in. Eg :  ap-northeast-1  (Tokyo)&lt;/p&gt;
+
+&lt;p&gt;The ACL (Access Control List) of a file can be set at the time of upload using –acl-public or –acl-private options with ‘s3cmd put’ or s3cmd sync’ commands (see below).&lt;/p&gt;
+
+&lt;p&gt;Alternatively the ACL can be altered for existing remote files with ‘s3cmd setacl –acl-public’ (or –acl-private) command.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Additional Links on &lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.raghuramanb.com/2013/01/aws-log-archive-amazon-s3-glacier-part-4.html&#34;&gt;Store S3 objects to Glacier.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://alestic.com/2012/12/s3-glacier-costs&#34;&gt;Consider the costs Glacier could incur during the Transition from S3.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

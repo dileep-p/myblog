@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Add NRPE host to Nagios &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/add-nrpe-host-to-nagios/">Add NRPE host to Nagios</a></h1>
+            <span class="post-date">Dec 15, 2012 </span>
+            <div class="post-content">
+                <p>NRPE <em>(Nagios Remote Plugin Executor)</em> is a Nagios agent witch allows for remote  system monitoring by executing scripts on a remote system allowing monitoring of disk usage, system’s load or number of users currently logged in and much more. Normally Nagios can only monitor public services such as HTTP &amp; FTP. This is great if you only want to monitor public servers, however I bet that most people want to monitor their own servers and have access to private information, that’s were NRPE comes in. It works on a client server basis, you install a daemon on the machine you  want to monitor, then setup your Nagios server to connect to the remote daemon to gather information</p>
+
+<p><a href="http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/nrpe_diag/"><img src="https://www.vishnu-tech.com/wp-content/uploads/2012/12/nrpe_diag.png?w=300" alt="nrpe_diag" /></a></p>
+
+<p><a href="http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/nagios-config/"><img src="https://www.vishnu-tech.com/wp-content/uploads/2012/12/nagios-config.png?w=300" alt="nagios-config" /></a></p>
+
+<p>So how do we set this up, well first we need to be running a Nagios server.Once you have a Nagios server setup you’ll need to download and install the NRPE daemon on the remote machine.</p>
+
+<p>So lets get started first SSH into your remote machine and enter:</p>
+
+<pre><code>/usr/sbin/useradd nagios
+passwd nagios
+</code></pre>
+
+<p>this will setup a new Nagios user, now we need to install some plugins:</p>
+
+<pre><code>wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.14.tar.gz
+tar -xzf nagios-plugins-1.4.14.tar.gz
+cd nagios-plugins-1.4.14
+sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+sudo make
+sudo make install
+</code></pre>
+
+<p>This will download and install the Nagios plugins required for NRPE to run, now we need to give the plugins access via the new Nagios user:</p>
+
+<pre><code>chown nagios.nagios /usr/local/nagios
+chown -R nagios.nagios /usr/local/nagios/libexec
+</code></pre>
+
+<p>NRPE require you install xinetd and libssl-dev so we’ll do that now</p>
+
+<pre><code>apt-get install xinetd
+sudo apt-get install libssl-dev
+</code></pre>
+
+<p>Now that done its time to install the NRPE daemon itself:</p>
+
+<pre><code>cd ~/
+wget http://prdownloads.sourceforge.net/sourceforge/nagios/nrpe-2.12.tar.gz
+tar xzf nrpe-2.12.tar.gz
+cd nrpe-2.12
+./configure
+make all
+make install-plugin
+make install-daemon
+make install-daemon-config
+make install-xinetd
+</code></pre>
+
+<p>now we need to configure the daemon so it will talk to our Nagios server, well do this buy editing /etc/xinetd.d/nrpe and adding our monitoring servers address:</p>
+
+<pre><code>nano /etc/xinetd.d/nrpe
+&lt;em&gt;Should Look Like:&lt;/em&gt;
+# default: on
+# description: NRPE (Nagios Remote Plugin Executor)
+service nrpe
+{
+        flags           = REUSE
+        socket_type     = stream
+        port            = 5666
+        wait            = no
+        user            = nagios
+        group           = nagios
+        server          = /usr/local/nagios/bin/nrpe
+        server_args     = -c /usr/local/nagios/etc/nrpe.cfg --inetd
+        log_on_failure  += USERID
+        disable         = no
+        only_from       = 127.0.0.1 &lt;strong&gt;[NAGIOS SERVER ADDRESS]&lt;/strong&gt;
+}
+</code></pre>
+
+<p>Then add “nrpe 5666/tcp # NRPE” to /etc/services:</p>
+
+<pre><code>nano /etc/services
+&lt;em&gt;add:&lt;/em&gt;
+nrpe 5666/tcp # NRPE
+</code></pre>
+
+<p>you can check this all been configured probably by typing:</p>
+
+<pre><code>netstat -at | grep nrpe
+</code></pre>
+
+<p>this should show something like</p>
+
+<pre><code>(tcp        0      0 *:nrpe                  *:*                     LISTEN)
+</code></pre>
+
+<p>If that worked correctly its time to setup your Nagios server to monitor your remote host, so ssh into your Nagios server. Now we are going to add separate host file for the new host so we need to edit the nano “nagios.cfg” file:</p>
+
+<pre><code>nano /usr/local/nagios/etc/nagios.cfg
+&lt;em&gt;add lines:&lt;/em&gt;
+cfg_file=/usr/local/nagios/etc/objects/host1.cfg
+</code></pre>
+
+<p>Now we need to create the Host1.cfg:</p>
+
+<pre><code>nano /usr/local/nagios/etc/objects/host1.cfg
+</code></pre>
+
+<p>and enter the following code:</p>
+
+<pre><code>define host{
+        use linux-server ; Inherit default values from a template
+        host_name remotehost ; The name we're giving to this server
+        alias Fedora Core 6 ; A longer name for the server
+        address the-tech-tutorial.com; IP address of the server
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description CPU Load
+        check_command check_nrpe!check_load
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Current Users
+        check_command check_nrpe!check_users
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description /dev/hda1 Free Space
+        check_command check_nrpe!check_sda1
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Total Processes
+        check_command check_nrpe!check_total_procs
+}
+
+define service{
+        use generic-service
+        host_name remotehost
+        service_description Zombie Processes
+        check_command check_nrpe!check_zombie_procs
+}
+</code></pre>
+
+<p>Run the nagios config check then restart nagios:</p>
+
+<pre><code>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+/etc/init.d/nagios restart
+</code></pre>
+
+<p>And hay presto you Nagios should now be monitoring your remote host, don’t worry if it says pending it can take up to 5 minutes for the information to come through.</p>
+
+<p>If you want to add more hosts repeat the above steps and use host2.cfg instead of host1.cfg.</p>
+
+<p><a href="http://cloudsherpaz.wordpress.com/2012/12/15/add-nrpe-host-to-nagios/finished/"><img src="https://www.vishnu-tech.com/wp-content/uploads/2012/12/finished.jpg?w=300" alt="Finished" /></a></p>
+
+<p>the critical in the above screen dump is because I had disabled ICMP on the remote server.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/add-nrpe-host-to-nagios\/';
+    var disqus_title = 'Add NRPE host to Nagios';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/add-nrpe-host-to-nagios\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

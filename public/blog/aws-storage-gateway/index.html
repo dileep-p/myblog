@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> AWS Storage Gateway &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/aws-storage-gateway/">AWS Storage Gateway</a></h1>
+            <span class="post-date">May 25, 2013 </span>
+            <div class="post-content">
+                <p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/05/intro.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/05/intro.png" alt="intro" /></a></p>
+
+<p><strong>Using Amazon AWS Storage Gateway :</strong>
+AWS Storage Gateway is a service that connects an on-premises software appliance with cloud-based storage in the form of an iSCSI devices.
+Storage Gateways Documentation – assume a scenario of Data Centre VM where we use S3 for storage solution.</p>
+
+<p>There are 2 type of iSCSI devices:
+<strong>1. Gateway-Cached Volume Solution :</strong>  create your storage volumes and mount them as iSCSI devices from your on-premises application servers – Data is stored on Amazon S3 and frequently accessed data is stored on the on-premises storage hardware.</p>
+
+<p><strong>2. Gateway-Stored Volume Solution :</strong> store all your data locally in storage volumes on your on-premises storage hardware. The gateway periodically takes snapshots as incremental backups and stores them in Amazon S3.</p>
+
+<p>[<a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=Bb8nk0oWJbU#%21">Youtube Video on StorageGateway walkthrough on Windows</a>]</p>
+
+<p>AWS Storage Gateway uses two different hosting environments: VMware virtualization environment and an Amazon Elastic Compute Cloud (Amazon EC2) environment.</p>
+
+<p><a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/VMwareGateway.html">VMware virtualization environment</a>
+<a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/EC2Gateway.html">Amazon Elastic Compute Cloud (Amazon EC2) environment</a></p>
+
+<p><a href="https://www.vishnu-tech.com/wp-content/uploads/2013/05/working.png"><img src="https://www.vishnu-tech.com/wp-content/uploads/2013/05/working.png" alt="working" /></a></p>
+
+<p><strong>Setting Up AWS Storage Gateway</strong></p>
+
+<p><a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/LaunchingGatewayAMI.html">Steps :</a>
+Click Storage Gateway from the AWS Consol
+Click – Deploy a New Gateway on Amazon EC2
+Click – Lauch Gateway AMI
+Click – Select
+Select – Lauch with EC2 Console
+Click Accept Terms
+One of the following AMI can be choosen</p>
+
+<p>Region    ID
+US East (Virginia)                               ami-29f27a40
+US West (Oregon)                               ami-4847cc78
+US West (Northern California)          ami-36b39373
+EU West (Ireland)                               ami-04393670
+Asia Pacific (Singapore)                     ami-4a94d618
+Asia Pacific (Tokyo)                            ami-d941fbd8
+South America (Sao Paulo)                ami-6526fe78</p>
+
+<p>The instance type must be at least a Standard XL (m1.large) or the instance will not launch.</p>
+
+<p>With default setup – 2 more EBS also needs to be added,  one for cache storage and one for upload buffer.</p>
+
+<p>NOTE: For a gateway-cached setup, you can add up to 18 TB of storage comprised of up to 2 TB allocated to upload buffer and up to 16 TB allocated to cache storage.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/aws-storage-gateway\/';
+    var disqus_title = 'AWS Storage Gateway';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/aws-storage-gateway\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

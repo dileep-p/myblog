@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elastic Cache on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/elastic-cache/index.xml</link>
+    <description>Recent content in Elastic Cache on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/elastic-cache/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Install and Use Memcache on Ubuntu 12.04</title>
+      <link>https://www.vishnu-tech.com/blog/how-to-install-and-use-memcache-on-ubuntu-12-04/</link>
+      <pubDate>Fri, 24 May 2013 11:51:14 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/how-to-install-and-use-memcache-on-ubuntu-12-04/</guid>
+      <description>
+
+&lt;h3 id=&#34;about-memcache&#34;&gt;About Memcache&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Memcache is a system that works to speed up virtual private servers by caching server information. The program allows you to allocate a specific amount of the server ram toward caching recently queried data for a certain amount of time. Once the data is requested again, memcache speeds up the process of retrieving it by displaying the cached information instead of generating the result from the database.&lt;/p&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;The steps in this tutorial require the user to have root privileges. You can see how to set that up in the &lt;a href=&#34;https://www.digitalocean.com/community/articles/how-to-add-and-delete-users-on-ubuntu-12-04-and-centos-6&#34;&gt;Basic Users Tutorial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before starting off, it’s a good idea to update apt-get to make sure that all of the packages we download to the VPS are up to date.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get update&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you should have MySQL and PHP installed on the virtual server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install mysql-server php5-mysql php5 php5-memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;install-memcache&#34;&gt;Install Memcache&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Installing memcache takes several steps.&lt;/p&gt;
+
+&lt;p&gt;To start, install memcached via apt-get.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install memcached&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next step is to install php-pear, the repository that stores memcache.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install php-pear&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you do not have a compiler on your server, you can download build-essential in order to install memcache:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo apt-get install build-essential&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally use PECL (PHP Extension Community Library) to install memcache:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo pecl install memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Say yes by pressing enter during the installation when you are asked if you would like to “Enable memcache session handler support? [yes] :”&lt;/p&gt;
+
+&lt;p&gt;Once you have completed the installation of memcache with PECL on the VPS, add memcached to memcache.ini:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;sudo echo &amp;quot;extension=memcache.so&amp;quot; &amp;gt; sudo /etc/php5/conf.d/memcache.ini&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you are ready to start using Memcache.&lt;/p&gt;
+
+&lt;h2 id=&#34;confirm-memcache-and-see-stats&#34;&gt;Confirm Memcache and See Stats&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;After Memcache is downloaded, you can check that it has been installed by searching for it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;ps aux | grep memcache&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you can see the memcache stats by typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt; echo &amp;quot;stats settings&amp;quot; | nc localhost 11211&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-three-how-memcache-works&#34;&gt;Step Three—How Memcache Works&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Memcache works by redirecting code to first attempt to retrieve data from the cache before querying the server’s database. The cache populates by saving recently retrieved server data for a certain amount of time. By caching recently requested information, future queries do not have to go through the longer process of retrieving the information from a database and can, instead, access it through the cache.&lt;/p&gt;
+
+&lt;p&gt;The memcache page shows this abbreviated code on its homepage to summarize the memcache process:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;function get_foo(foo_id)
+    foo = memcached_get(&amp;quot;foo:&amp;quot; . foo_id)
+    return foo if defined foo
+
+    foo = fetch_foo_from_database(foo_id)
+    memcached_set(&amp;quot;foo:&amp;quot; . foo_id, foo)
+    return foo
+end&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;a-simple-memcache-example&#34;&gt;A Simple Memcache Example&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This section will set up a simple php script to use memcache for retrieving a single value originally found in a mysql table.&lt;/p&gt;
+
+&lt;p&gt;The following steps set up a mysql user who can access the appropriate database, create a table to query, and insert the one value that we will test in the new mysql table.&lt;/p&gt;
+
+&lt;p&gt;Log into mysql: &lt;code&gt;mysql -u root -p&lt;/code&gt; and execute the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;use test;
+
+grant all on test.* to test@localhost identified by &#39;testing123&#39;;
+
+create table example (id int, name varchar(30));
+
+insert into example values (1, &amp;quot;new_data&amp;quot;);
+
+exit;
+&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you have exited MySQL, create the memcache script file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;nano memtest.php&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We are now going to build up the php script step by step (the entire script will be at the end of the section):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Start off by creating a new persistent connection with memcache, which runs on memcache’s default port, 11211.
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;?php
+$meminstance = new Memcache();
+$meminstance-&amp;gt;pconnect(&#39;localhost&#39;, 11211);&amp;lt;/span&amp;gt;
+
+
+
+
+
+
+
+
+
+
+* The next step is to connect to the new mysql database with the user that we created earlier:
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;mysql_connect(&amp;quot;localhost&amp;quot;, &amp;quot;test&amp;quot;, &amp;quot;testing123&amp;quot;) or die(mysql_error());
+mysql_select_db(&amp;quot;test&amp;quot;) or die(mysql_error());&amp;lt;/span&amp;gt;
+
+
+
+
+
+
+
+
+
+
+* After that, go ahead and create the query that we will pose to the server, as well as provide a key to identify that specific action:
+
+
+&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;$query = &amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;;
+$querykey = &amp;quot;KEY&amp;quot; . md5($query);&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The script first searches the cache for the answer to the query. If the result does not exist, the script reroutes the question to the original database. Once the query has been answered by the original database, the script stores the result in memcache, using the “set” command&amp;ndash; which both saves it and allows the user to designate the number of seconds that it should remain in the cache (600 would save it in the cache for 10 minutes).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we run the script for the first time, it will inform us that the data was collected from the mysql database. However, as it does so, it stores the information in the cache, so that a second run of the script retrieves it from the cache and lets the user know.&lt;/p&gt;
+
+&lt;p&gt;In 10 minutes the cache is emptied once more and running the script will make it access the database once again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;$result = $meminstance-&amp;gt;get($querykey);
+
+if (!$result) {
+       $result = mysql_fetch_array(mysql_query(&amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;)) or die(&#39;mysql error&#39;);
+       $meminstance-&amp;gt;set($querykey, $result, 0, 600);
+print &amp;quot;got result from mysqln&amp;quot;;
+return 0;
+}
+
+print &amp;quot;got result from memcachedn&amp;quot;;
+return 0;
+
+?&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Altogether the script looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;&amp;lt;?php
+$meminstance = new Memcache();
+$meminstance-&amp;gt;pconnect(&#39;localhost&#39;, 11211);
+
+mysql_connect(&amp;quot;localhost&amp;quot;, &amp;quot;test&amp;quot;, &amp;quot;testing123&amp;quot;) or die(mysql_error());
+mysql_select_db(&amp;quot;test&amp;quot;) or die(mysql_error());
+
+$query = &amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;;
+$querykey = &amp;quot;KEY&amp;quot; . md5($query);
+
+$result = $meminstance-&amp;gt;get($querykey);
+
+if (!$result) {
+       $result = mysql_fetch_array(mysql_query(&amp;quot;select id from example where name = &#39;new_data&#39;&amp;quot;)) or die(&#39;mysql error&#39;);
+       $meminstance-&amp;gt;set($querykey, $result, 0, 600);
+print &amp;quot;got result from mysqln&amp;quot;;
+return 0;
+}
+
+print &amp;quot;got result from memcachedn&amp;quot;;
+return 0;
+
+?&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running the script on the command line produces the following results:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span style=&amp;quot;color:#0000ff;&amp;quot;&amp;gt;# php memtest.php 
+got result from mysql
+
+# php memtest.php 
+got result from memcached
+
+# php memtest.php 
+got result from memcached&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This tutorial covers speeding up the retrieval of data from a database by connecting it to memcache. However, do keep in mind that memcache’s strengh originates from the fact that is a cache—it is not a datastore. When using memcache, do not expect it to replace a database. Because memcache only holds values for a set length of time for a given key, you may not always find the information you need cached, and in cases like these, having the original server database is imperative.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, memcache is a very useful program and can do a lot to increase the server efficiency.&lt;/p&gt;
+
+&lt;p&gt;If you have any other questions about Memcache, feel free to ask&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

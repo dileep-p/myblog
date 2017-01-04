@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/cluster/index.xml</link>
+    <description>Recent content in Cluster on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker Container for Redis Cluster ( Verison 3.0.4 )</title>
+      <link>https://www.vishnu-tech.com/blog/docker-container-for-redis-cluster-verison-3-0-4/</link>
+      <pubDate>Wed, 07 Oct 2015 10:46:51 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/docker-container-for-redis-cluster-verison-3-0-4/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;A small Docker container for running the Redis Cluster (Version 3.0.4).&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;You can find the github repo from &lt;a href=&#34;https://github.com/vishnudxb/docker-redis-cluster&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

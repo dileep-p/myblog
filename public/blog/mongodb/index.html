@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Mongodb &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/mongodb/">Mongodb</a></h1>
+            <span class="post-date">Jan 5, 2013 </span>
+            <div class="post-content">
+                
+
+<h2 id="why-mongodb">Why MongoDB?</h2>
+
+<ul>
+<li><p><strong>Document-oriented</strong></p>
+
+<ul>
+<li><p>Documents (objects) map nicely to programming language data types</p></li>
+
+<li><p>Embedded documents and arrays reduce need for joins</p></li>
+
+<li><p>Dynamically-typed (schemaless) for easy schema evolution</p></li>
+
+<li><p>No joins and no multi-document transactions for high performance and easy scalability</p></li>
+</ul></li>
+
+<li><p><strong>High performance</strong></p>
+
+<ul>
+<li><p>No joins and embedding makes reads and writes fast</p></li>
+
+<li><p>Indexes including indexing of keys from embedded documents and arrays</p></li>
+
+<li><p>Optional streaming writes (no acknowledgements)</p></li>
+</ul></li>
+
+<li><p><strong>High availability</strong></p>
+
+<ul>
+<li>Replicated servers with automatic master failover
+
+
+
+
+<br /></li>
+</ul></li>
+
+<li><p><strong>Easy scalability</strong></p>
+
+<ul>
+<li><p>Automatic sharding (auto-partitioning of data across servers)</p>
+
+<ul>
+<li><p>Reads and writes are distributed over shards</p></li>
+
+<li><p>No joins or multi-document transactions make distributed queries easy and fast</p></li>
+</ul></li>
+
+<li><p>Eventually-consistent reads can be distributed over replicated servers</p></li>
+</ul></li>
+
+<li><p><strong>Rich query language</strong></p></li>
+</ul>
+
+<h2 id="mongo-data-model">Mongo data model</h2>
+
+<ul>
+<li><p>A Mongo system (see deployment above) holds a set of databases</p></li>
+
+<li><p>A <strong>database</strong> holds a set of collections</p></li>
+
+<li><p>A <strong>collection</strong> holds a set of documents</p></li>
+
+<li><p>A <strong>document</strong> is a set of fields</p></li>
+
+<li><p>A <strong>field</strong> is a key-value pair</p></li>
+
+<li><p>A <strong>key</strong> is a name (string)</p></li>
+
+<li><p>A <strong>value</strong> is a</p>
+
+<ul>
+<li><p>basic type like string, integer, float, timestamp, binary, etc.,</p></li>
+
+<li><p>a document, or</p></li>
+
+<li><p>an array of value</p></li>
+
+<li><p><strong>Mongo query language</strong></p></li>
+</ul></li>
+
+<li><p>To retrieve certain documents from a db collection, you supply a query document containing the fields the desired documents should match. For example, {name: {first: &lsquo;John&rsquo;, last: &lsquo;Doe&rsquo;}} will match all documents in the collection with name of John Doe. Likewise, {name.last: &lsquo;Doe&rsquo;} will match all documents with last name of Doe. Also, {name.last: /^D/} will match all documents with last name starting with &rsquo;D&rsquo; (regular expression match).</p></li>
+
+<li><p>Queries will also match inside embedded arrays. For example, {keywords: &lsquo;storage&rsquo;} will match all documents with &lsquo;storage&rsquo; in its keywords array. Likewise, {keywords: {$in: [&lsquo;storage&rsquo;, &lsquo;DBMS&rsquo;]}} will match all documents with &lsquo;storage&rsquo; or &lsquo;DBMS&rsquo; in its keywords array.</p></li>
+
+<li><p>If you have lots of documents in a collection and you want to make a query fast then build an index for that query. For example, ensureIndex({name.last: 1}) or ensureIndex({keywords: 1}). Note, indexes occupy space and slow down updates a bit, so use them only when the tradeoff is worth it.</p></li>
+</ul>
+
+<h1 id="install-mongodb-on-ubuntu-10-04">Install MongoDB on Ubuntu 10.04</h1>
+
+<h3 id="configure-package-management-system-apt">Configure Package Management System (APT)</h3>
+
+<p>The Ubuntu package management tool (i.e. dpkg and apt) ensure package consistency and authenticity by requiring that distributors sign packages with GPG keys. Issue the following command to import the <a href="http://docs.mongodb.org/10gen-gpg-key.asc">10gen public GPG Key</a>:</p>
+
+<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+</code></pre>
+
+<p>Create a /etc/apt/sources.list.d/10gen.list file and include the following line for the 10gen repository.</p>
+
+<pre><code>deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+</code></pre>
+
+<p>Now issue the following command to reload your repository:</p>
+
+<pre><code>sudo apt-get update
+</code></pre>
+
+<h3 id="install-packages">Install Packages</h3>
+
+<p>Issue the following command to install the latest stable version of MongoDB:</p>
+
+<pre><code>sudo apt-get install mongodb-10gen
+</code></pre>
+
+<p>When this command completes, you have successfully installed MongoDB! Continue for configuration and start-up suggestions.</p>
+
+<h2 id="configure-mongodb">Configure MongoDB</h2>
+
+<p>These packages configure MongoDB using the /etc/mongodb.conf file in conjunction with the <a href="http://docs.mongodb.org/manual/reference/glossary/#term-101"><em>control script</em></a>. You will find the control script is at /etc/init.d/mongodb.</p>
+
+<p>This MongoDB instance will store its data files in the /var/lib/mongodb and its log files in /var/log/mongodb, and run using the mongodb user account.</p>
+
+<p>Note</p>
+
+<p>If you change the user that runs the MongoDB process, you will need to modify the access control rights to the /var/lib/mongodb and /var/log/mongodb directories.</p>
+
+<h2 id="controlling-mongodb">Controlling MongoDB</h2>
+
+<h3 id="starting-mongodb">Starting MongoDB</h3>
+
+<p>You can start the mongod process by issuing the following command:</p>
+
+<pre><code>sudo service mongodb start
+</code></pre>
+
+<p>You can verify that mongod has started successfully by checking the contents of the log file at /var/log/mongodb/mongodb.log.</p>
+
+<h3 id="stopping-mongodb">Stopping MongoDB</h3>
+
+<p>As needed, you may stop the mongod process by issuing the following command:</p>
+
+<pre><code>sudo service mongodb stop
+</code></pre>
+
+<h3 id="restarting-mongodb">Restarting MongoDB</h3>
+
+<p>You may restart the mongod process by issuing the following command:</p>
+
+<pre><code>sudo service mongodb restart
+</code></pre>
+
+<h3 id="controlling-mongos-http-docs-mongodb-org-manual-reference-config-database-mongos">Controlling <a href="http://docs.mongodb.org/manual/reference/config-database/#mongos">mongos</a></h3>
+
+<p>As of the current release, there are no <a href="http://docs.mongodb.org/manual/reference/glossary/#term-101"><em>control scripts</em></a> for <a href="http://docs.mongodb.org/manual/reference/config-database/#mongos">mongos</a>. <a href="http://docs.mongodb.org/manual/reference/config-database/#mongos">mongos</a> is only used in sharding deployments and typically do not run on the same systems where mongod runs. You can use the mongodb script referenced above to derive your own <a href="http://docs.mongodb.org/manual/reference/config-database/#mongos">mongos</a> control script.</p>
+
+<p><strong>Using MongoDB</strong></p>
+
+<p>Among the tools included with the MongoDB package, is the mongo shell. You can connect to your MongoDB instance by issuing the following command at the system prompt:</p>
+
+<pre><code>mongo
+&gt; show dbs (); ---&gt; to show your databases 
+&gt; use &lt;databasename&gt; ----&gt; To switch database 
+&gt; db.createCollection(&quot;collectionname&quot;) ---&gt; to create collection 
+&gt; db.collectionname.find(); ---&gt; To see the contents in the collection
+&lt;code&gt;&gt; db.addUser(&quot;theadmin&quot;, &quot;anadminpassword&quot;) &lt;/code&gt;---&gt; To create user and password
+</code></pre>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vishnudxb';
+    var disqus_identifier = 'https:\/\/www.vishnu-tech.com\/blog\/mongodb\/';
+    var disqus_title = 'Mongodb';
+    var disqus_url = 'https:\/\/www.vishnu-tech.com\/blog\/mongodb\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

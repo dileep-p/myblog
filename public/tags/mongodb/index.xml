@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongodb on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/mongodb/index.xml</link>
+    <description>Recent content in Mongodb on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TechNewsLetter Vol:12</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol12/</link>
+      <pubDate>Wed, 02 Mar 2016 10:10:57 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol12/</guid>
+      <description>&lt;p&gt;Sharing some interesting links to keep you busy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://drownattack.com/&#34;&gt;The DROWN Attack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityblog.redhat.com/2016/03/01/go-home-sslv2-youre-drowning/&#34;&gt;Go home SSLv2, you’re DROWNing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/aws-services&#34;&gt;Micro-services to provide various conveniences in managing AWS services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ansible.com/videos-ansiblefest-london-2016?platform=hootsuite&#34;&gt;Videos ANSIBLEFEST LONDON 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://eng.uber.com/go-geofence/&#34;&gt;How we built Uber Engineering&amp;rsquo;s highest query per second service using go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.netresec.com/?page=Blog&amp;amp;month=2016-03&amp;amp;post=Packet-Injection-Attacks-in-the-Wild&#34;&gt;Packet Injection Attacks in the Wild&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sungardas/condensation&#34;&gt;Package, reuse and share particles for CloudFormation projects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/casidiablo/tako&#34;&gt;Github notifications on Slack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/uber/ringpop-go&#34;&gt;Scalable, fault-tolerant application-layer sharding for Go applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/msoap/go-carpet&#34;&gt;go-carpet - show test coverage for Go source files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramnes/awesome-mongodb&#34;&gt;A curated list of awesome MongoDB resources, libraries, tools and applications&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GrappigPanda/pygemony&#34;&gt;A tool written in Python to parse files for &amp;ldquo;TODO&amp;rdquo; and to raise an issue in the github repository with the todo message.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/microsoft/kafkanet&#34;&gt;.Net implementation of the Apache Kafka Protocol that provides basic functionality through Producer/Consumer classes. The project also offers balanced consumer implementation.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.dasblinkenlichten.com/kubernetes-with-saltstack-revisited/&#34;&gt;Kubernetes with SaltStack revisited&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cossacklabs.com/Introducing-WebThemis.html&#34;&gt;WEBTHEMIS: Stronger Cryptography for Modern web&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fulldecent/system-bus-radio&#34;&gt;This program transmits radio on computers without radio transmitting hardware.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ssrg.nicta.com.au/projects/TS/cachebleed//&#34;&gt;CacheBleed: A Timing Attack on OpenSSL Constant Time RSA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/blackbeardapp/docker-machine-export&#34;&gt;An easy way to export your docker-machine credentials to another machine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker/dockercloud-cli&#34;&gt;CLI for Docker Cloud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.blockbridge.com/improving-docker-security-with-authenticated-volumes/&#34;&gt;Improving Docker Security with Authenticated Volumes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/awslabs/aws-config-rules&#34;&gt;Repository of sample Custom Rules for AWS Config&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebook/fresco&#34;&gt;Fresco is a powerful system for displaying images in Android applications.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Netflix/EVCache&#34;&gt;EVCache is a memcached &amp;amp; spymemcached based caching solution that is mainly used for AWS EC2 infrastructure for caching frequently used data.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubespray/setup-kubernetes&#34;&gt;Setup a kubernetes cluster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/&#34;&gt;Using Scikit-Learn In AWS Lambda&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/pGeSxIB3KzY&#34;&gt;Building A Private Cloud With OpenStack Charms&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coreos.com/blog/gRPC-protobufs-swagger.html&#34;&gt;Take a REST with HTTP/2, Protobufs, and Swagger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://machinezone.github.io/research/networking-solutions-for-kubernetes/&#34;&gt;Comparison of Networking Solutions for Kubernetes&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Database Migration From Postgresql to Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/</link>
+      <pubDate>Fri, 13 Nov 2015 15:38:14 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/</guid>
+      <description>&lt;p&gt;Here I am migrating the Postgresql database to Mongodb with the help &lt;em&gt;&lt;strong&gt;&lt;a href=&#34;http://mongify.com/&#34;&gt;Mongify.&lt;/a&gt; &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you check my postgres db, you can see a table named &amp;ldquo;rep_test&amp;rdquo; and the data inside the table.&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;postgres=# \dt&lt;/p&gt;
+
+&lt;p&gt;List of relations&lt;/p&gt;
+
+&lt;p&gt;Schema |   Name   | Type  |  Owner   &lt;/p&gt;
+
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
+
+&lt;p&gt;public | rep_test | table | postgres&lt;/p&gt;
+
+&lt;p&gt;(1 row)&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;postgres=# select * from rep_test;&lt;/p&gt;
+
+&lt;p&gt;      test       &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;data one&lt;/p&gt;
+
+&lt;p&gt;some more words&lt;/p&gt;
+
+&lt;p&gt;lalala&lt;/p&gt;
+
+&lt;p&gt;hello there&lt;/p&gt;
+
+&lt;p&gt;blahblah&lt;/p&gt;
+
+&lt;p&gt;(5 rows)&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now for the db migration, you need to install the Mongify.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;gem install mongify&lt;/p&gt;
+
+&lt;p&gt;Then you need to create a file named &amp;ldquo;database.config&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;For eg:-&lt;/p&gt;
+
+&lt;p&gt;root@locahost:~# cat database.config&lt;/p&gt;
+
+&lt;p&gt;_sql&lt;em&gt;connection do&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  adapter     &amp;rdquo;postgresql&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  host           &amp;rdquo;localhost&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  username  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  password  &amp;ldquo;postgres123&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  database  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;end&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_mongodb&lt;em&gt;connection do&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  host      &amp;ldquo;localhost&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;  database  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;end&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Then, you need to check if the database.config file is correct and the connections are working fine. You can check this by the below command:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;mongify check database.config&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;If the adapter is missing, it will give an error and you need to install the adapter by running the below command:&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;gem install activerecord-postgresql-adapter&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, you need to run the translation command&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;mongify translation database.config &amp;gt; translation.rb&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, you can tell the mongify to move the data to mongodb. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
+
+&lt;p&gt;mongify process database.config translation.rb&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, Verify everything is migrated to your Mongodb&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;show collections&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;rep_test&lt;/p&gt;
+
+&lt;p&gt;system.indexes&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;db.rep_test.find()&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000001&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;data one&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000002&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;some more words&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000003&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;lalala&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000004&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;hello there&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000005&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;blahblah&amp;rdquo; }&lt;/p&gt;
+
+&lt;p&gt;[/color-box]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install RockMongo For Mongodb On CentOS, RHEL, Debian, Ubuntu</title>
+      <link>https://www.vishnu-tech.com/blog/install-rockmongo-for-mongodb-on-centos-rhel-debian-ubuntu/</link>
+      <pubDate>Mon, 01 Apr 2013 06:44:11 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/install-rockmongo-for-mongodb-on-centos-rhel-debian-ubuntu/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are looking for a phpadmin like tool for mongodb, RockMongo is your best bet. It is one of the best PHP MongoDB Administrator tool available today. It lets you create database, collections and insert and fetch documents using a web interface. This post will help you setup RockMongo&lt;/p&gt;
+
+&lt;p&gt;Install RockMongo for mongodb on CentOS, RHEL, Debian, Ubuntu&lt;/p&gt;
+
+&lt;p&gt;The prerequisites include mongo-php-driver, lets install it first&lt;/p&gt;
+
+&lt;p&gt;On CentOS, RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;yum-install-php-devel-git-httpd&#34;&gt;yum install php-devel git httpd&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;apt-get-install-php5-dev-apache2-git&#34;&gt;apt-get install php5-dev apache2 git&lt;/h1&gt;
+
+&lt;p&gt;Pull mongo-php-driver from git&lt;/p&gt;
+
+&lt;h1 id=&#34;git-clone-https-github-com-mongodb-mongo-php-driver-git&#34;&gt;git clone &lt;a href=&#34;https://github.com/mongodb/mongo-php-driver.git&#34;&gt;https://github.com/mongodb/mongo-php-driver.git&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;cd-mongo-php-driver&#34;&gt;cd mongo-php-driver/&lt;/h1&gt;
+
+&lt;h1 id=&#34;phpize&#34;&gt;phpize&lt;/h1&gt;
+
+&lt;h1 id=&#34;configure&#34;&gt;./configure&lt;/h1&gt;
+
+&lt;h1 id=&#34;make-all&#34;&gt;make all&lt;/h1&gt;
+
+&lt;h1 id=&#34;make-install&#34;&gt;make install&lt;/h1&gt;
+
+&lt;p&gt;Open php.ini and add the so that it gets loaded&lt;/p&gt;
+
+&lt;p&gt;On CentOS/RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;vi-etc-php-ini&#34;&gt;vi /etc/php.ini&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;vi-etc-php5-apache2-php-ini&#34;&gt;vi /etc/php5/apache2/php.ini&lt;/h1&gt;
+
+&lt;p&gt;Append the following to it&lt;/p&gt;
+
+&lt;p&gt;extension=mongo.so&lt;/p&gt;
+
+&lt;p&gt;Download the latest rockmongo zip file and unzip it into root directory of the web server.&lt;/p&gt;
+
+&lt;h1 id=&#34;wget-http-rockmongo-com-downloads-go-id-12&#34;&gt;wget &lt;a href=&#34;http://rockmongo.com/downloads/go?id=12&#34;&gt;http://rockmongo.com/downloads/go?id=12&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;On CentOS/RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;mv-rockmongo-1-1-5-zip-var-www-html&#34;&gt;mv rockmongo-1.1.5.zip /var/www/html/&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;mv-rockmongo-1-1-5-zip-var-www&#34;&gt;mv rockmongo-1.1.5.zip /var/www/&lt;/h1&gt;
+
+&lt;p&gt;Unzip the package&lt;/p&gt;
+
+&lt;h1 id=&#34;unzip-rockmongo-1-1-5-zip&#34;&gt;unzip rockmongo-1.1.5.zip&lt;/h1&gt;
+
+&lt;p&gt;Restart apache&lt;/p&gt;
+
+&lt;p&gt;On CentOS, RHEL&lt;/p&gt;
+
+&lt;h1 id=&#34;etc-init-d-httpd-restart&#34;&gt;/etc/init.d/httpd restart&lt;/h1&gt;
+
+&lt;p&gt;On Debian, Ubuntu&lt;/p&gt;
+
+&lt;h1 id=&#34;etc-init-d-apache2-restart&#34;&gt;/etc/init.d/apache2 restart&lt;/h1&gt;
+
+&lt;p&gt;Open the web browser and point it to&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ipaddress-or-hostname/rockmongo/index.php&#34;&gt;http://ipaddress-or-hostname/rockmongo/index.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Login using&lt;/p&gt;
+
+&lt;p&gt;username: admin
+password: admin&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/m.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/04/m.png&#34; alt=&#34;M&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrate Mysql database to Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/</link>
+      <pubDate>Sat, 05 Jan 2013 10:31:37 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/migrate-mysql-database-to-mongodb/</guid>
+      <description>&lt;p&gt;I recently had a chance to try out one of the new NoSQL databases called MongoDB &lt;a href=&#34;http://www.mongodb.org&#34;&gt;http://www.mongodb.org&lt;/a&gt;. This new class of databases seems to solve many of the bottlenecks in MySql and other relational databases. It will give you shear performance, self replication and scalability at not cost because it open source. MongoDB has plenty of drivers for other scripting and high-level languages I use PHP so I download the PHP driver. You can see the supported list here: &lt;a href=&#34;http://www.mongodb.org/display/DOCS/Drivers&#34;&gt;http://www.mongodb.org/display/DOCS/Drivers&lt;/a&gt;. In this blog I convert  a MySQL database using PHP to MongoDB.&lt;/p&gt;
+
+&lt;p&gt;First you install MongoDB, you can do it by checking my previous blog.&lt;/p&gt;
+
+&lt;p&gt;Then we run the script to convert a Mysql DB to Mongodb.&lt;/p&gt;
+
+&lt;p&gt;create a new file called MySqltoMongodb&lt;strong&gt;.php, In that file please copy paste the below contants (please give your Mysql DB details as well as your Mongodb details)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;lt;?php&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;// mysql settings&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mydb = &amp;ldquo;database&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$myconn = &lt;a href=&#34;http://www.php.net/mysql_connect&#34;&gt;mysql_connect&lt;/a&gt;(&amp;lsquo;localhost&amp;rsquo;,&amp;lsquo;user&amp;rsquo;,&amp;lsquo;password&amp;rsquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$setmydb = &lt;a href=&#34;http://www.php.net/mysql_select_db&#34;&gt;mysql_select_db&lt;/a&gt;( $mydb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mytables = getMyTables( $mydb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; //mongo db settings&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$modb = &amp;ldquo;database&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$moConnect=&amp;ldquo;mongodb://user:password@localhost&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function getMyTables( $dbname ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$tables = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;SHOW TABLES FROM $dbname &amp;ldquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;(&amp;ldquo;Error getting tables from $dbname&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; if( &lt;a href=&#34;http://www.php.net/mysql_num_rows&#34;&gt;mysql_num_rows&lt;/a&gt;( $sql ) &amp;gt; 0 ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;while( $table = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql ) ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$explain = explainMyTable( $table[0] );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$tables[$table[0]] = $explain;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $tables;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function explainMyTable( $tbname ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$explain = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;EXPLAIN $tbname&amp;rdquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;(&amp;ldquo;Error getting table structure&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$i = 0;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; while( $get = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql ) ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.php.net/array_push&#34;&gt;array_push&lt;/a&gt;( $explain, $get[0] );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$i++;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $explain;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; function checkEncode($string) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if( !mb_check_encoding($string,&amp;lsquo;UTF-8&amp;rsquo;)) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return &lt;a href=&#34;http://www.php.net/mb_convert_encoding&#34;&gt;mb_convert_encoding&lt;/a&gt;($string,&amp;lsquo;UTF-8&amp;rsquo;,&amp;lsquo;ISO-8859-1&amp;rsquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} else {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;return $string;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; }&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;try {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$moconn = new Mongo($moConnect);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$modb = $moconn-&amp;gt;selectDB( $modb );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} catch(MongoConnectionException $e) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;($e.&amp;ldquo;Problem during mongodb initialization. Please start mongodb server.&amp;rdquo;);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; foreach( $mytables as $table =&amp;gt; $struct ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$sql = &lt;a href=&#34;http://www.php.net/mysql_query&#34;&gt;mysql_query&lt;/a&gt;(&amp;ldquo;SELECT * FROM $table LIMIT 0 , 500000&amp;rdquo;) or &lt;a href=&#34;http://www.php.net/die&#34;&gt;die&lt;/a&gt;( &lt;a href=&#34;http://www.php.net/mysql_error&#34;&gt;mysql_error&lt;/a&gt;() );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$count = &lt;a href=&#34;http://www.php.net/mysql_num_rows&#34;&gt;mysql_num_rows&lt;/a&gt;( $sql );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; // Starts new collection on mongodb&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$collection = $modb-&amp;gt;$table;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; // If it has content insert all content&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if( $count &amp;gt; 0 ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;while( $info = &lt;a href=&#34;http://www.php.net/mysql_fetch_array&#34;&gt;mysql_fetch_array&lt;/a&gt;( $sql, MYSQL_NUM )) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$infosize = &lt;a href=&#34;http://www.php.net/count&#34;&gt;count&lt;/a&gt;( $info );&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql = &lt;a href=&#34;http://www.php.net/array&#34;&gt;array&lt;/a&gt;();&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; for( $i=0; $i &amp;lt; $infosize; $i++ ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if(&lt;img src=&#34;http://www.php.net/empty&#34; alt=&#34;empty&#34; /&gt;($struct[$i]))&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql[$struct[$i]] = checkEncode($info[$i]);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; $collection-&amp;gt;insert($mosql);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;// Only create a new entry empty&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;} else {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; for( $i=0; $i &amp;lt; $infosize; $i++ ) {&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;if(&lt;img src=&#34;http://www.php.net/empty&#34; alt=&#34;empty&#34; /&gt;($struct[$i]))&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$mosql[$struct[$i]] = &amp;ldquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; }&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;$collection-&amp;gt;insert($mosql);&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; &lt;a href=&#34;http://www.php.net/echo&#34;&gt;echo&lt;/a&gt; &amp;ldquo;Done! Please, check your MongoDB collection!&amp;rdquo;;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Now fire up your browser and launch the page. If all all goes well you should see
+&lt;strong&gt;&amp;ldquo;Done! Please, check your MongoDB collection!&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;After running this script check your Mongo db collection, in that you can see your Mysql Table.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2013/01/screenshot-6.png?w=300&#34; alt=&#34;Screenshot-6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mongodb</title>
+      <link>https://www.vishnu-tech.com/blog/mongodb/</link>
+      <pubDate>Sat, 05 Jan 2013 09:39:03 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/mongodb/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-mongodb&#34;&gt;Why MongoDB?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Document-oriented&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Documents (objects) map nicely to programming language data types&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Embedded documents and arrays reduce need for joins&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Dynamically-typed (schemaless) for easy schema evolution&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;No joins and no multi-document transactions for high performance and easy scalability&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;High performance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;No joins and embedding makes reads and writes fast&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Indexes including indexing of keys from embedded documents and arrays&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Optional streaming writes (no acknowledgements)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;High availability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replicated servers with automatic master failover
+
+
+
+
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Easy scalability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Automatic sharding (auto-partitioning of data across servers)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Reads and writes are distributed over shards&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;No joins or multi-document transactions make distributed queries easy and fast&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Eventually-consistent reads can be distributed over replicated servers&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Rich query language&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mongo-data-model&#34;&gt;Mongo data model&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A Mongo system (see deployment above) holds a set of databases&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;database&lt;/strong&gt; holds a set of collections&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;collection&lt;/strong&gt; holds a set of documents&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;document&lt;/strong&gt; is a set of fields&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;field&lt;/strong&gt; is a key-value pair&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;key&lt;/strong&gt; is a name (string)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A &lt;strong&gt;value&lt;/strong&gt; is a&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;basic type like string, integer, float, timestamp, binary, etc.,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;a document, or&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;an array of value&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mongo query language&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;To retrieve certain documents from a db collection, you supply a query document containing the fields the desired documents should match. For example, {name: {first: &amp;lsquo;John&amp;rsquo;, last: &amp;lsquo;Doe&amp;rsquo;}} will match all documents in the collection with name of John Doe. Likewise, {name.last: &amp;lsquo;Doe&amp;rsquo;} will match all documents with last name of Doe. Also, {name.last: /^D/} will match all documents with last name starting with &amp;rsquo;D&amp;rsquo; (regular expression match).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Queries will also match inside embedded arrays. For example, {keywords: &amp;lsquo;storage&amp;rsquo;} will match all documents with &amp;lsquo;storage&amp;rsquo; in its keywords array. Likewise, {keywords: {$in: [&amp;lsquo;storage&amp;rsquo;, &amp;lsquo;DBMS&amp;rsquo;]}} will match all documents with &amp;lsquo;storage&amp;rsquo; or &amp;lsquo;DBMS&amp;rsquo; in its keywords array.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you have lots of documents in a collection and you want to make a query fast then build an index for that query. For example, ensureIndex({name.last: 1}) or ensureIndex({keywords: 1}). Note, indexes occupy space and slow down updates a bit, so use them only when the tradeoff is worth it.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;install-mongodb-on-ubuntu-10-04&#34;&gt;Install MongoDB on Ubuntu 10.04&lt;/h1&gt;
+
+&lt;h3 id=&#34;configure-package-management-system-apt&#34;&gt;Configure Package Management System (APT)&lt;/h3&gt;
+
+&lt;p&gt;The Ubuntu package management tool (i.e. dpkg and apt) ensure package consistency and authenticity by requiring that distributors sign packages with GPG keys. Issue the following command to import the &lt;a href=&#34;http://docs.mongodb.org/10gen-gpg-key.asc&#34;&gt;10gen public GPG Key&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a /etc/apt/sources.list.d/10gen.list file and include the following line for the 10gen repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now issue the following command to reload your repository:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;install-packages&#34;&gt;Install Packages&lt;/h3&gt;
+
+&lt;p&gt;Issue the following command to install the latest stable version of MongoDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install mongodb-10gen
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When this command completes, you have successfully installed MongoDB! Continue for configuration and start-up suggestions.&lt;/p&gt;
+
+&lt;h2 id=&#34;configure-mongodb&#34;&gt;Configure MongoDB&lt;/h2&gt;
+
+&lt;p&gt;These packages configure MongoDB using the /etc/mongodb.conf file in conjunction with the &lt;a href=&#34;http://docs.mongodb.org/manual/reference/glossary/#term-101&#34;&gt;&lt;em&gt;control script&lt;/em&gt;&lt;/a&gt;. You will find the control script is at /etc/init.d/mongodb.&lt;/p&gt;
+
+&lt;p&gt;This MongoDB instance will store its data files in the /var/lib/mongodb and its log files in /var/log/mongodb, and run using the mongodb user account.&lt;/p&gt;
+
+&lt;p&gt;Note&lt;/p&gt;
+
+&lt;p&gt;If you change the user that runs the MongoDB process, you will need to modify the access control rights to the /var/lib/mongodb and /var/log/mongodb directories.&lt;/p&gt;
+
+&lt;h2 id=&#34;controlling-mongodb&#34;&gt;Controlling MongoDB&lt;/h2&gt;
+
+&lt;h3 id=&#34;starting-mongodb&#34;&gt;Starting MongoDB&lt;/h3&gt;
+
+&lt;p&gt;You can start the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can verify that mongod has started successfully by checking the contents of the log file at /var/log/mongodb/mongodb.log.&lt;/p&gt;
+
+&lt;h3 id=&#34;stopping-mongodb&#34;&gt;Stopping MongoDB&lt;/h3&gt;
+
+&lt;p&gt;As needed, you may stop the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;restarting-mongodb&#34;&gt;Restarting MongoDB&lt;/h3&gt;
+
+&lt;p&gt;You may restart the mongod process by issuing the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo service mongodb restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;controlling-mongos-http-docs-mongodb-org-manual-reference-config-database-mongos&#34;&gt;Controlling &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;As of the current release, there are no &lt;a href=&#34;http://docs.mongodb.org/manual/reference/glossary/#term-101&#34;&gt;&lt;em&gt;control scripts&lt;/em&gt;&lt;/a&gt; for &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt;. &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt; is only used in sharding deployments and typically do not run on the same systems where mongod runs. You can use the mongodb script referenced above to derive your own &lt;a href=&#34;http://docs.mongodb.org/manual/reference/config-database/#mongos&#34;&gt;mongos&lt;/a&gt; control script.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Using MongoDB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Among the tools included with the MongoDB package, is the mongo shell. You can connect to your MongoDB instance by issuing the following command at the system prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mongo
+&amp;gt; show dbs (); ---&amp;gt; to show your databases 
+&amp;gt; use &amp;lt;databasename&amp;gt; ----&amp;gt; To switch database 
+&amp;gt; db.createCollection(&amp;quot;collectionname&amp;quot;) ---&amp;gt; to create collection 
+&amp;gt; db.collectionname.find(); ---&amp;gt; To see the contents in the collection
+&amp;lt;code&amp;gt;&amp;gt; db.addUser(&amp;quot;theadmin&amp;quot;, &amp;quot;anadminpassword&amp;quot;) &amp;lt;/code&amp;gt;---&amp;gt; To create user and password
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
