@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 	<head>
-		<title> {{ .Site.Title }} </title> 
+		<title> {{ .Site.Title }} </title>
 
 		{{ partial "head.html" . }}
 
@@ -54,6 +54,6 @@
 			<div class="push"></div>
 		</div>
 		{{ partial "footer.html" . }}
+		{{ partial "disqus.html" . }}
 	</body>
 </html>
-

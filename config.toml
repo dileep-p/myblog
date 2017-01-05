@@ -2,7 +2,8 @@ languageCode = "en-us"
 title = "My Tech Blog"
 baseurl = "https://www.vishnu-tech.com/"
 theme = "dxb"
-disqusShortname = "vishnudxb"
+disqusShortname = "www-vishnu-tech-com.disqus.com"
+
 
 [params]
   GithubID = "vishnudxb"
@@ -30,3 +31,4 @@ disqusShortname = "vishnudxb"
 
 [Permalinks]
     post = "/:year/:month/:day/:filename/"
+

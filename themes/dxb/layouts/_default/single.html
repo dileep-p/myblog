@@ -18,7 +18,7 @@
             {{ if (isset .Params "nocomments")  }}
             {{ else }}
             <div class="post-comments">
-                {{ template "_internal/disqus.html" . }}
+                {{ partial "disqus.html" . }}
             </div>
             {{ end }}
             <div class="push"></div>
