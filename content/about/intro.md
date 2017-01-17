@@ -1,7 +1,7 @@
 +++
 categories = ["misc"]
 title = "About Me"
-date = "2012-12-10T17:52:41-05:00" 
+date = "2017-01-17T17:52:41-05:00"
 +++
 
 Vishnu Nair is Head of Devops – R&D BigData in Vimpelcom. His Job responsibilities include in setting up a high available, scalable & reliable architecture for the DMP. He is responsible for finding the right & latest tools which can improve the performance & stability of the DMP components. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies.
@@ -37,4 +37,4 @@ He holds a Bachelor’s Degree in B.TECH from the Pondicherry University in Indi
 
 * **Monitoring** :- *Prometheus, Sensu, Newrelic, Nagios, Graylog2, ELK & Icinga.*
 
-* ***Other tools which I used are Docker, Kubernetes, Lxd, Systemd, Deis, Sysdig, Serverspec, HAProxy, Supervisor, Virtualenv and so on.***
+* ***Other tools which I used are Docker, Kubernetes, Lxd, DC/OS, Mesos, Systemd, Deis, Sysdig, Serverspec, HAProxy, Supervisor, Virtualenv and so on.***
