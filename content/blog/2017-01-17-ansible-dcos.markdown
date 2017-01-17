@@ -29,7 +29,7 @@ tags:
 
 * *Most of our microservice applications are running on containers and container orchestration is pretty easy with dc/os. You can also use other tools like docker-swarm, Kubernetes etc for this purpose however there are some apps which are not running in containers & connected to some microservice container applications. So we need way to provide HA, reliability and scalability for those apps as well.*
 
-* *we used AWS for our development/staging environments. Our testing & production env are running on-premises due to data compliance policies.*
+* *We used AWS for our development/staging environments. Our testing & production env are running on-premises due to data compliance policies.*
 
 * *dc/os provides Cloudformation templates to create the setup in AWS.* [Click here to see the cloudformation template](https://downloads.dcos.io/dcos/stable/aws.html?_ga=1.118161932.488990590.1483648358).
 
