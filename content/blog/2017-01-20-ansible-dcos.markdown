@@ -42,6 +42,7 @@ tags:
 
 ### You can see the ansible repo from [here](https://github.com/vishnudxb/ansible-dcos)
 
+FYI, from the below images, you may notice the ELB's & ip's, don't worry 🙄🙄 it's a temporary cluster created for testing this playbook 😛😜
 
 ### Once you installed, you can see the number of nodes like below
 ================================================================================
