@@ -1,41 +1,169 @@
-<h2 id="why-dcos">Why dc/os?</h2>
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Ansible Playbook for dc/os &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/ansible-dcos/">Ansible Playbook for dc/os</a></h1>
+            <span class="post-date">Jan 17, 2017 </span>
+            <div class="post-content">
+                
+
+<h2 id="why-dc-os">Why dc/os?</h2>
+
 <p><em>DC/OS is based on the production proven Apache Mesos distributed systems kernel, combining years of real-life experience with best practices for building and running modern applications in production.</em></p>
+
 <p><em>Build modern apps using state of the art technologies such as containers and big data services, and confidently move from development to production.</em></p>
+
 <p><em>You can learn more about dc/os from <a href="https://github.com/dcos">here</a></em></p>
-<h2 id="why-dcos-in-vimpelcom">Why dc/os in Vimpelcom?</h2>
+
+<h2 id="why-dc-os-in-vimpelcom">Why dc/os in Vimpelcom?</h2>
+
 <ul>
 <li><p><em>At VimpelCom we are embarking on the journey of transformation and intend to become one of the pioneers of digital disruption.</em></p></li>
+
 <li><p><em>Most of our microservice applications are running on containers and container orchestration is pretty easy with dc/os. You can also use other tools like docker-swarm, Kubernetes etc for this purpose however there are some apps which are not running in containers &amp; connected to some microservice container applications. So we need way to provide HA, reliability and scalability for those apps as well.</em></p></li>
+
 <li><p><em>We used AWS for our development/staging environments. Our testing &amp; production env are running on-premises due to data compliance policies.</em></p></li>
+
 <li><p><em>dc/os provides Cloudformation templates to create the setup in AWS.</em> <a href="https://downloads.dcos.io/dcos/stable/aws.html?_ga=1.118161932.488990590.1483648358">Click here to see the cloudformation template</a>.</p></li>
+
 <li><p><em>However we cannot use this Cloudformation template for our purpose because our production is running on-premises. So we created an Ansible playbook which can be used in AWS as well as on-premises.</em></p></li>
+
 <li><p><em>I am not sharing the original source code in here however I am open sourcing a simple ansible playbook which can be used for both in AWS as well as in Datacenter</em></p></li>
-<li><p><em>In order to use this playbook for on-premises, you may need to change some env variables and few alternations which is pretty easy if you're familiar with Ansible.</em></p></li>
+
+<li><p><em>In order to use this playbook for on-premises, you may need to change some env variables and few alternations which is pretty easy if you&rsquo;re familiar with Ansible.</em></p></li>
 </ul>
-<h3 id="you-can-see-the-ansible-repo-from-here">You can see the ansible repo from <a href="https://github.com/vishnudxb/ansible-dcos">here</a></h3>
-<p>FYI, from the below images, you may notice the ELB's &amp; ip's, don't worry 🙄🙄 it's a temporary cluster created for testing this playbook 😛😜</p>
-<h1 id="once-you-installed-you-can-see-the-number-of-nodes-like-below">### Once you installed, you can see the number of nodes like below</h1>
-<div class="figure">
-<img src="/images/nodes.png" alt="Number of nodes" />
-<p class="caption">Number of nodes</p>
-</div>
-<h1 id="for-installing-dcos-cli">### For installing dcos cli</h1>
-<div class="figure">
-<img src="/images/install-cli.png" alt="dcos cli" />
-<p class="caption">dcos cli</p>
-</div>
-<h1 id="for-running-a-single-service">### For running a single service</h1>
-<div class="figure">
-<img src="/images/running-1-service.png" alt="Single service" />
-<p class="caption">Single service</p>
-</div>
-<h1 id="for-scaling-the-running-service">### For scaling the running service</h1>
-<div class="figure">
-<img src="/images/scale-service.png" alt="Scaling service" />
-<p class="caption">Scaling service</p>
-</div>
-<h1 id="here-you-can-see-the-service-has-been-scaled-to-5">### Here you can see the service has been scaled to 5</h1>
-<div class="figure">
-<img src="/images/running-5-service.png" alt="Scaling service" />
-<p class="caption">Scaling service</p>
-</div>
+
+<h3 id="you-can-see-the-ansible-repo-from-here-https-github-com-vishnudxb-ansible-dcos">You can see the ansible repo from <a href="https://github.com/vishnudxb/ansible-dcos">here</a></h3>
+
+<p>FYI, from the below images, you may notice the ELB&rsquo;s &amp; ip&rsquo;s, don&rsquo;t worry 🙄🙄 it&rsquo;s a temporary cluster created for testing this playbook 😛😜😜</p>
+
+<h3 id="once-you-installed-you-can-see-the-number-of-nodes-like-below">Once you installed, you can see the number of nodes like below</h3>
+
+<p>================================================================================</p>
+
+<p><img src="/images/nodes.png" alt="Number of nodes" /></p>
+
+<h3 id="for-installing-dcos-cli">For installing dcos cli</h3>
+
+<p>===========================</p>
+
+<p><img src="/images/install-cli.png" alt="dcos cli" /></p>
+
+<h3 id="for-running-a-single-service">For running a single service</h3>
+
+<p>==================================</p>
+
+<p><img src="/images/running-1-service.png" alt="Single service" /></p>
+
+<h3 id="for-scaling-the-running-service">For scaling the running service</h3>
+
+<p>=======================================</p>
+
+<p><img src="/images/scale-service.png" alt="Scaling service" /></p>
+
+<h3 id="here-you-can-see-the-service-has-been-scaled-to-5">Here you can see the service has been scaled to 5</h3>
+
+<p>===============================================================</p>
+
+<p><img src="/images/running-5-service.png" alt="Scaling service" /></p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = '//www-vishnu-tech-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

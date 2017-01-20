@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datacenter on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/datacenter/index.xml</link>
+    <description>Recent content in Datacenter on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/datacenter/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible Playbook for dc/os</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-dcos/</link>
+      <pubDate>Tue, 17 Jan 2017 13:22:26 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-dcos/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-dc-os&#34;&gt;Why dc/os?&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;DC/OS is based on the production proven Apache Mesos distributed systems kernel, combining years of real-life experience with best practices for building and running modern applications in production.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Build modern apps using state of the art technologies such as containers and big data services, and confidently move from development to production.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can learn more about dc/os from &lt;a href=&#34;https://github.com/dcos&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;why-dc-os-in-vimpelcom&#34;&gt;Why dc/os in Vimpelcom?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;At VimpelCom we are embarking on the journey of transformation and intend to become one of the pioneers of digital disruption.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Most of our microservice applications are running on containers and container orchestration is pretty easy with dc/os. You can also use other tools like docker-swarm, Kubernetes etc for this purpose however there are some apps which are not running in containers &amp;amp; connected to some microservice container applications. So we need way to provide HA, reliability and scalability for those apps as well.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;We used AWS for our development/staging environments. Our testing &amp;amp; production env are running on-premises due to data compliance policies.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;dc/os provides Cloudformation templates to create the setup in AWS.&lt;/em&gt; &lt;a href=&#34;https://downloads.dcos.io/dcos/stable/aws.html?_ga=1.118161932.488990590.1483648358&#34;&gt;Click here to see the cloudformation template&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;However we cannot use this Cloudformation template for our purpose because our production is running on-premises. So we created an Ansible playbook which can be used in AWS as well as on-premises.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;I am not sharing the original source code in here however I am open sourcing a simple ansible playbook which can be used for both in AWS as well as in Datacenter&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;In order to use this playbook for on-premises, you may need to change some env variables and few alternations which is pretty easy if you&amp;rsquo;re familiar with Ansible.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;you-can-see-the-ansible-repo-from-here-https-github-com-vishnudxb-ansible-dcos&#34;&gt;You can see the ansible repo from &lt;a href=&#34;https://github.com/vishnudxb/ansible-dcos&#34;&gt;here&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;FYI, from the below images, you may notice the ELB&amp;rsquo;s &amp;amp; ip&amp;rsquo;s, don&amp;rsquo;t worry 🙄🙄 it&amp;rsquo;s a temporary cluster created for testing this playbook 😛😜😜&lt;/p&gt;
+
+&lt;h3 id=&#34;once-you-installed-you-can-see-the-number-of-nodes-like-below&#34;&gt;Once you installed, you can see the number of nodes like below&lt;/h3&gt;
+
+&lt;p&gt;================================================================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/nodes.png&#34; alt=&#34;Number of nodes&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-installing-dcos-cli&#34;&gt;For installing dcos cli&lt;/h3&gt;
+
+&lt;p&gt;===========================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/install-cli.png&#34; alt=&#34;dcos cli&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-running-a-single-service&#34;&gt;For running a single service&lt;/h3&gt;
+
+&lt;p&gt;==================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/running-1-service.png&#34; alt=&#34;Single service&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-scaling-the-running-service&#34;&gt;For scaling the running service&lt;/h3&gt;
+
+&lt;p&gt;=======================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/scale-service.png&#34; alt=&#34;Scaling service&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;here-you-can-see-the-service-has-been-scaled-to-5&#34;&gt;Here you can see the service has been scaled to 5&lt;/h3&gt;
+
+&lt;p&gt;===============================================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/running-5-service.png&#34; alt=&#34;Scaling service&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

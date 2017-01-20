@@ -6,8 +6,124 @@
     <description>Recent content on My Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Dec 2016 13:22:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Jan 2017 17:52:41 -0500</lastBuildDate>
     <atom:link href="https://www.vishnu-tech.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>https://www.vishnu-tech.com/about/intro/</link>
+      <pubDate>Tue, 17 Jan 2017 17:52:41 -0500</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/about/intro/</guid>
+      <description>
+
+&lt;p&gt;Vishnu Nair is Head of Devops – R&amp;amp;D BigData in Vimpelcom. His Job responsibilities include in setting up a high available, scalable &amp;amp; reliable architecture for the DMP. He is responsible for finding the right &amp;amp; latest tools which can improve the performance &amp;amp; stability of the DMP components. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies.&lt;/p&gt;
+
+&lt;p&gt;Before joining Vimpelcom, he lead a DevOps team at Getsocial – A Game development company. He was responsible for designing, configuring, documenting, maintaining and optimizing the infrastructure that supports their products including API’s, Websites, BI and other internal services on multiple environments. His main task was migrating the architecture from non-structured environment to a structured one in AWS. During that period, he worked with variety of tools like Docker, Kubernetes, Ansible, Jenkins, Tableau and used many features in AWS like ECS, RDS, RedShift, Elasticache and so on.&lt;/p&gt;
+
+&lt;p&gt;He also lead many teams when he was working in Dubai &amp;amp; India. He was a Solution Architect for setting up an architecture with high availability, scalability &amp;amp; reliability for BigData Projects. He had worked with different Hadoop vendors like Cloudera, Hortonworks and MapR for providing best solutions for data handling &amp;amp; mining for business use cases.&lt;/p&gt;
+
+&lt;p&gt;He holds a Bachelor’s Degree in B.TECH from the Pondicherry University in India. When he is not working, you can find him attending and speaking at conference and meetups. He loves to write blogs &amp;amp; play with the latest tools. You can see some of his blogs &amp;amp; code from the below websites.&lt;/p&gt;
+
+&lt;h2 id=&#34;click-here-to-see-my-work-history-https-www-vishnudxb-me-my-work-history&#34;&gt;&lt;a href=&#34;https://www.vishnudxb.me&#34; title=&#34;My Work history&#34;&gt;Click here to see my work history&lt;/a&gt;.&lt;/h2&gt;
+
+&lt;h2 id=&#34;my-weapon-of-choice&#34;&gt;My Weapon of choice:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Big data technologies&lt;/strong&gt; :- &lt;em&gt;Hortonworks/Cloudera/MapR Hadoop, Apache Storm, Apache Kafka, Hive, HBase, Spark, Oozi, Samza, Zeppelin, Apache Airflow, Airbnb Superset and so on.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Configuration Management&lt;/strong&gt; :-  &lt;em&gt;Saltstack, Puppet, Chef &amp;amp; Ansible.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Deployment tools&lt;/strong&gt; :- &lt;em&gt;Capistrano and Fabric.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Caching Technologies&lt;/strong&gt; :- &lt;em&gt;Varnish, Redis, Memcached, Tarantool &amp;amp; Apache Ignite&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Database&lt;/strong&gt; :- &lt;em&gt;Mysql, Postgresql, Greenplum, HP Vertica, Oracle Exadata, Mongo db &amp;amp; Couchbase db.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Continuous Integration&lt;/strong&gt; :-  &lt;em&gt;Jenkins, Roger, Circle CI and Travis CI&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Version Control Systems&lt;/strong&gt; :-  &lt;em&gt;Git &amp;amp; SVN&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cloud Providers&lt;/strong&gt; :- &lt;em&gt;AWS, GCE, Azure, Digital Ocean &amp;amp; Rackspace.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CDN&lt;/strong&gt; :-  &lt;em&gt;Aws cloudfront, Rackspace Cloud files, Akamai &amp;amp; CDNetworks.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; :- &lt;em&gt;Prometheus, Sensu, Newrelic, Nagios, Graylog2, ELK &amp;amp; Icinga.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Other tools which I used are Docker, Kubernetes, Lxd, DC/OS, Mesos, Systemd, Deis, Sysdig, Serverspec, HAProxy, Supervisor, Virtualenv and so on.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ansible Playbook for dc/os</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-dcos/</link>
+      <pubDate>Tue, 17 Jan 2017 13:22:26 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-dcos/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-dc-os&#34;&gt;Why dc/os?&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;DC/OS is based on the production proven Apache Mesos distributed systems kernel, combining years of real-life experience with best practices for building and running modern applications in production.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Build modern apps using state of the art technologies such as containers and big data services, and confidently move from development to production.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can learn more about dc/os from &lt;a href=&#34;https://github.com/dcos&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;why-dc-os-in-vimpelcom&#34;&gt;Why dc/os in Vimpelcom?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;At VimpelCom we are embarking on the journey of transformation and intend to become one of the pioneers of digital disruption.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Most of our microservice applications are running on containers and container orchestration is pretty easy with dc/os. You can also use other tools like docker-swarm, Kubernetes etc for this purpose however there are some apps which are not running in containers &amp;amp; connected to some microservice container applications. So we need way to provide HA, reliability and scalability for those apps as well.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;We used AWS for our development/staging environments. Our testing &amp;amp; production env are running on-premises due to data compliance policies.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;dc/os provides Cloudformation templates to create the setup in AWS.&lt;/em&gt; &lt;a href=&#34;https://downloads.dcos.io/dcos/stable/aws.html?_ga=1.118161932.488990590.1483648358&#34;&gt;Click here to see the cloudformation template&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;However we cannot use this Cloudformation template for our purpose because our production is running on-premises. So we created an Ansible playbook which can be used in AWS as well as on-premises.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;I am not sharing the original source code in here however I am open sourcing a simple ansible playbook which can be used for both in AWS as well as in Datacenter&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;In order to use this playbook for on-premises, you may need to change some env variables and few alternations which is pretty easy if you&amp;rsquo;re familiar with Ansible.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;you-can-see-the-ansible-repo-from-here-https-github-com-vishnudxb-ansible-dcos&#34;&gt;You can see the ansible repo from &lt;a href=&#34;https://github.com/vishnudxb/ansible-dcos&#34;&gt;here&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;FYI, from the below images, you may notice the ELB&amp;rsquo;s &amp;amp; ip&amp;rsquo;s, don&amp;rsquo;t worry 🙄🙄 it&amp;rsquo;s a temporary cluster created for testing this playbook 😛😜😜&lt;/p&gt;
+
+&lt;h3 id=&#34;once-you-installed-you-can-see-the-number-of-nodes-like-below&#34;&gt;Once you installed, you can see the number of nodes like below&lt;/h3&gt;
+
+&lt;p&gt;================================================================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/nodes.png&#34; alt=&#34;Number of nodes&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-installing-dcos-cli&#34;&gt;For installing dcos cli&lt;/h3&gt;
+
+&lt;p&gt;===========================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/install-cli.png&#34; alt=&#34;dcos cli&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-running-a-single-service&#34;&gt;For running a single service&lt;/h3&gt;
+
+&lt;p&gt;==================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/running-1-service.png&#34; alt=&#34;Single service&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-scaling-the-running-service&#34;&gt;For scaling the running service&lt;/h3&gt;
+
+&lt;p&gt;=======================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/scale-service.png&#34; alt=&#34;Scaling service&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;here-you-can-see-the-service-has-been-scaled-to-5&#34;&gt;Here you can see the service has been scaled to 5&lt;/h3&gt;
+
+&lt;p&gt;===============================================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/running-5-service.png&#34; alt=&#34;Scaling service&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>TechNewsLetter Vol:17</title>
@@ -714,162 +830,6 @@
 &lt;p&gt;&lt;em&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/em&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;echo &amp;quot;UseRoaming no&amp;quot; &amp;gt;&amp;gt; ~/.ssh/config&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Docker container for de-registering Sensu clients from its master</title>
-      <link>https://www.vishnu-tech.com/blog/docker-container-for-de-registering-sensu-clients-from-its-master/</link>
-      <pubDate>Sat, 19 Dec 2015 12:42:27 +0000</pubDate>
-      
-      <guid>https://www.vishnu-tech.com/blog/docker-container-for-de-registering-sensu-clients-from-its-master/</guid>
-      <description>&lt;p&gt;A Docker container for de-registering Sensu clients from its master. You can find the Github repo from &lt;a href=&#34;https://github.com/vishnudxb/sensu-client-deregistration&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Database Migration From Postgresql to Mongodb</title>
-      <link>https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/</link>
-      <pubDate>Fri, 13 Nov 2015 15:38:14 +0000</pubDate>
-      
-      <guid>https://www.vishnu-tech.com/blog/database-migration-from-postgresql-to-mongodb/</guid>
-      <description>&lt;p&gt;Here I am migrating the Postgresql database to Mongodb with the help &lt;em&gt;&lt;strong&gt;&lt;a href=&#34;http://mongify.com/&#34;&gt;Mongify.&lt;/a&gt; &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;If you check my postgres db, you can see a table named &amp;ldquo;rep_test&amp;rdquo; and the data inside the table.&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;postgres=# \dt&lt;/p&gt;
-
-&lt;p&gt;List of relations&lt;/p&gt;
-
-&lt;p&gt;Schema |   Name   | Type  |  Owner   &lt;/p&gt;
-
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/p&gt;
-
-&lt;p&gt;public | rep_test | table | postgres&lt;/p&gt;
-
-&lt;p&gt;(1 row)&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;postgres=# select * from rep_test;&lt;/p&gt;
-
-&lt;p&gt;      test       &lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;data one&lt;/p&gt;
-
-&lt;p&gt;some more words&lt;/p&gt;
-
-&lt;p&gt;lalala&lt;/p&gt;
-
-&lt;p&gt;hello there&lt;/p&gt;
-
-&lt;p&gt;blahblah&lt;/p&gt;
-
-&lt;p&gt;(5 rows)&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Now for the db migration, you need to install the Mongify.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;gem install mongify&lt;/p&gt;
-
-&lt;p&gt;Then you need to create a file named &amp;ldquo;database.config&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;For eg:-&lt;/p&gt;
-
-&lt;p&gt;root@locahost:~# cat database.config&lt;/p&gt;
-
-&lt;p&gt;_sql&lt;em&gt;connection do&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;  adapter     &amp;rdquo;postgresql&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;  host           &amp;rdquo;localhost&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;  username  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;  password  &amp;ldquo;postgres123&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;  database  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;end&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;_mongodb&lt;em&gt;connection do&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;  host      &amp;ldquo;localhost&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;  database  &amp;ldquo;postgres&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;end&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Then, you need to check if the database.config file is correct and the connections are working fine. You can check this by the below command:&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;mongify check database.config&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-
-&lt;p&gt;If the adapter is missing, it will give an error and you need to install the adapter by running the below command:&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;gem install activerecord-postgresql-adapter&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Now, you need to run the translation command&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;mongify translation database.config &amp;gt; translation.rb&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Now, you can tell the mongify to move the data to mongodb. &lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;mongify process database.config translation.rb&lt;/p&gt;
-
-&lt;p&gt;[/color-box]&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Now, Verify everything is migrated to your Mongodb&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;blue&amp;rdquo;]&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;show collections&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;rep_test&lt;/p&gt;
-
-&lt;p&gt;system.indexes&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;db.rep_test.find()&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000001&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;data one&amp;rdquo; }&lt;/p&gt;
-
-&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000002&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;some more words&amp;rdquo; }&lt;/p&gt;
-
-&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000003&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;lalala&amp;rdquo; }&lt;/p&gt;
-
-&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000004&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;hello there&amp;rdquo; }&lt;/p&gt;
-
-&lt;p&gt;{ &amp;ldquo;_id&amp;rdquo; : ObjectId(&amp;ldquo;5645f3f000286643c4000005&amp;rdquo;), &amp;ldquo;test&amp;rdquo; : &amp;ldquo;blahblah&amp;rdquo; }&lt;/p&gt;
 
 &lt;p&gt;[/color-box]&lt;/p&gt;
 </description>

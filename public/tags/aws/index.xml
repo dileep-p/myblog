@@ -9,6 +9,76 @@
     <atom:link href="https://www.vishnu-tech.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Ansible Playbook for dc/os</title>
+      <link>https://www.vishnu-tech.com/blog/ansible-dcos/</link>
+      <pubDate>Tue, 17 Jan 2017 13:22:26 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/ansible-dcos/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-dc-os&#34;&gt;Why dc/os?&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;DC/OS is based on the production proven Apache Mesos distributed systems kernel, combining years of real-life experience with best practices for building and running modern applications in production.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Build modern apps using state of the art technologies such as containers and big data services, and confidently move from development to production.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can learn more about dc/os from &lt;a href=&#34;https://github.com/dcos&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;why-dc-os-in-vimpelcom&#34;&gt;Why dc/os in Vimpelcom?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;At VimpelCom we are embarking on the journey of transformation and intend to become one of the pioneers of digital disruption.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Most of our microservice applications are running on containers and container orchestration is pretty easy with dc/os. You can also use other tools like docker-swarm, Kubernetes etc for this purpose however there are some apps which are not running in containers &amp;amp; connected to some microservice container applications. So we need way to provide HA, reliability and scalability for those apps as well.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;We used AWS for our development/staging environments. Our testing &amp;amp; production env are running on-premises due to data compliance policies.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;dc/os provides Cloudformation templates to create the setup in AWS.&lt;/em&gt; &lt;a href=&#34;https://downloads.dcos.io/dcos/stable/aws.html?_ga=1.118161932.488990590.1483648358&#34;&gt;Click here to see the cloudformation template&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;However we cannot use this Cloudformation template for our purpose because our production is running on-premises. So we created an Ansible playbook which can be used in AWS as well as on-premises.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;I am not sharing the original source code in here however I am open sourcing a simple ansible playbook which can be used for both in AWS as well as in Datacenter&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;In order to use this playbook for on-premises, you may need to change some env variables and few alternations which is pretty easy if you&amp;rsquo;re familiar with Ansible.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;you-can-see-the-ansible-repo-from-here-https-github-com-vishnudxb-ansible-dcos&#34;&gt;You can see the ansible repo from &lt;a href=&#34;https://github.com/vishnudxb/ansible-dcos&#34;&gt;here&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;FYI, from the below images, you may notice the ELB&amp;rsquo;s &amp;amp; ip&amp;rsquo;s, don&amp;rsquo;t worry 🙄🙄 it&amp;rsquo;s a temporary cluster created for testing this playbook 😛😜😜&lt;/p&gt;
+
+&lt;h3 id=&#34;once-you-installed-you-can-see-the-number-of-nodes-like-below&#34;&gt;Once you installed, you can see the number of nodes like below&lt;/h3&gt;
+
+&lt;p&gt;================================================================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/nodes.png&#34; alt=&#34;Number of nodes&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-installing-dcos-cli&#34;&gt;For installing dcos cli&lt;/h3&gt;
+
+&lt;p&gt;===========================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/install-cli.png&#34; alt=&#34;dcos cli&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-running-a-single-service&#34;&gt;For running a single service&lt;/h3&gt;
+
+&lt;p&gt;==================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/running-1-service.png&#34; alt=&#34;Single service&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;for-scaling-the-running-service&#34;&gt;For scaling the running service&lt;/h3&gt;
+
+&lt;p&gt;=======================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/scale-service.png&#34; alt=&#34;Scaling service&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;here-you-can-see-the-service-has-been-scaled-to-5&#34;&gt;Here you can see the service has been scaled to 5&lt;/h3&gt;
+
+&lt;p&gt;===============================================================&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/running-5-service.png&#34; alt=&#34;Scaling service&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>TechNewsLetter Vol:17</title>
       <link>https://www.vishnu-tech.com/blog/technewsletter-vol17/</link>
       <pubDate>Thu, 08 Dec 2016 13:22:26 +0000</pubDate>
@@ -876,58 +946,6 @@ Once you execute the above command and you can see the output like the below:-&l
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;And finally you can see the Client IP address on your Nginx logs  when you use AWS ELB TCP traffic straight. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/05/log.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Recovering your AMAZON SES SMTP credentials!!</title>
-      <link>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</link>
-      <pubDate>Mon, 29 Dec 2014 07:55:50 +0000</pubDate>
-      
-      <guid>https://www.vishnu-tech.com/blog/recovering-your-amazon-ses-smtp-credentials/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;How to recover your Amazon SES smtp credentials:-&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important Note:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Your SMTP password is not the same as your AWS secret access key. Do not attempt to use your AWS credentials to authenticate yourself against the SMTP endpoint. &lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There are two ways to generate your SMTP credentials. You can either use the Amazon SES console or you can generate your SMTP credentials from your AWS credentials.&lt;/p&gt;
-
-&lt;p&gt;Use the Amazon SES console to generate your SMTP credentials if:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;You want to get your SMTP credentials using the simplest method.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You do not need to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Generate your SMTP credentials from your AWS credentials if:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;You have an existing  IAM  user and you want that user to be able to send emails using the Amazon SES SMTP interface.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You want to automate SMTP credential generation using code or a script.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt; A user&amp;rsquo;s SMTP username is the same as their AWS Access Key ID, so you just need to generate the SMTP password. &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Here I am doing a Java implementation  that converts an AWS SECRET ACCESS KEY to an Amazon SES SMTP password.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;For example:  I am creating a file called &amp;ldquo;smtp.java&amp;rdquo;  and in this file I create a class named &amp;ldquo;smtp&amp;rdquo; and inside you need to give your AWS SECRET ACCESS KEY &lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/smtp.png&#34; alt=&#34;smtp&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;You can download this file from &lt;a href=&#34;https://gist.github.com/vishnunamshi/c650aad1510c0123f8be&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;You  Need to execute this file as:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/ex.png&#34; alt=&#34;ex&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;This will create a file called &amp;ldquo;smtp&amp;rdquo; and you need to execute again as :&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2014/12/sm.png&#34; alt=&#34;sm&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;And this will prompt your AMAZON SES SMTP PASSWORD :)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

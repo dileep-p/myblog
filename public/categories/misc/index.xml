@@ -10,10 +10,10 @@
     
     <item>
       <title>About Me</title>
-      <link>https://www.vishnu-tech.com/about/about/</link>
-      <pubDate>Mon, 10 Dec 2012 17:52:41 -0500</pubDate>
+      <link>https://www.vishnu-tech.com/about/intro/</link>
+      <pubDate>Tue, 17 Jan 2017 17:52:41 -0500</pubDate>
       
-      <guid>https://www.vishnu-tech.com/about/about/</guid>
+      <guid>https://www.vishnu-tech.com/about/intro/</guid>
       <description>
 
 &lt;p&gt;Vishnu Nair is Head of Devops – R&amp;amp;D BigData in Vimpelcom. His Job responsibilities include in setting up a high available, scalable &amp;amp; reliable architecture for the DMP. He is responsible for finding the right &amp;amp; latest tools which can improve the performance &amp;amp; stability of the DMP components. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies.&lt;/p&gt;
@@ -49,7 +49,7 @@
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; :- &lt;em&gt;Prometheus, Sensu, Newrelic, Nagios, Graylog2, ELK &amp;amp; Icinga.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Other tools which I used are Docker, Kubernetes, Lxd, Systemd, Deis, Sysdig, Serverspec, HAProxy, Supervisor, Virtualenv and so on.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Other tools which I used are Docker, Kubernetes, Lxd, DC/OS, Mesos, Systemd, Deis, Sysdig, Serverspec, HAProxy, Supervisor, Virtualenv and so on.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
