@@ -9,6 +9,142 @@
     <atom:link href="https://www.vishnu-tech.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>TechNewsLetter Vol:18</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol18/</link>
+      <pubDate>Thu, 26 Jan 2017 14:50:26 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol18/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;Hi Guys,&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Here is your weekly quota of some interesting links&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;security&#34;&gt;&lt;em&gt;Security:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://betanews.com/2017/01/25/lloyds-ddos/&#34;&gt;Lloyds bank hit by DDoS attack&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.contextis.com/resources/blog/wap-just-happened-my-samsung-galaxy/&#34;&gt;SMS vulnerabilities in Samsung Galaxy phones&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.wearesegment.com/research/Microsoft-Remote-Desktop-Client-for-Mac-Remote-Code-Execution&#34;&gt;Microsoft Remote Desktop Client for Mac Remote Code Execution&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://labs.detectify.com/2017/01/18/stored-xss-ing-millions-of-sites-through-html-comment-box/&#34;&gt;Stored XSS-ing Millions Of Sites Through HTML Comment Box&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.logicista.com/2017/phpmelody-multiple-vulnerabilities&#34;&gt;PHP Melody 2.7 - Multiple Vulnerabilities&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://httpsonly.blogspot.nl/2017/01/0day-writeup-xxe-in-ubercom.html?m=1&#34;&gt;0 day writeup: XXE in uber.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.ioactive.com/2017/01/harmful-prefetch-on-intel.html&#34;&gt;Harmful prefetch on Intel&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.mozilla.org/security/2017/01/25/setting-a-baseline-for-web-security-controls/&#34;&gt;Setting a Baseline for Web Security Controls&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://www.openwall.com/lists/oss-security/2017/01/24/4&#34;&gt;Systemd v228 local root exploit&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.timac.org/?p=1570&#34;&gt;Deobfuscating libMobileGestalt keys&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;docker&#34;&gt;&lt;em&gt;Docker:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.alexellis.io/meet-minio/&#34;&gt;Meet Minio, an S3 server you can self-host&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.docker.com/2017/01/cpu-management-docker-1-13/&#34;&gt;CPU Management In Docker 1.13&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.arungupta.me/deploy-docker-compose-services-swarm/&#34;&gt;Deploy Docker Compose Services to Swarm&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://start.jcolemorrison.com/guide-to-fault-tolerant-and-load-balanced-aws-docker-deployment-on-ecs/&#34;&gt;Guide to Fault Tolerant and Load Balanced AWS Docker Deployment on ECS&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://dadario.com.br/docker-for-automating-honeypots-or-malware-sandboxes/&#34;&gt;Docker for Automating Honeypots or Malware Sandboxes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://ericchiang.github.io/post/containers-from-scratch/&#34;&gt;Containers from Scratch&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/@gajus/making-docker-in-docker-builds-x2-faster-using-docker-cache-from-option-c01febd8ef84#.r145hf7n2&#34;&gt;Making docker-in-docker builds x2 faster using Docker “cache-from” option&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.brianchristner.io/containerize-everything/&#34;&gt;Containerize Everything&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLkA60AVN3hh9p13ksndkgMe4cGiHKuoiO&#34;&gt;Docker Networking Demos&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.dominodatalab.com/data-science-docker/&#34;&gt;Enabling Data Science Agility with Docker&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://technologyconversations.com/2017/01/23/using-docker-stack-and-compose-yaml-files-to-deploy-swarm-services/&#34;&gt;Using Docker Stack And Compose YAML Files To Deploy Swarm Services&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kubernetes&#34;&gt;&lt;em&gt;Kubernetes:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://www.growthchamp.com/r/x19cv&#34;&gt;The Canonical Distribution Of Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.datadoghq.com/blog/how-to-collect-and-graph-kubernetes-metrics/&#34;&gt;How to collect and graph Kubernetes metrics&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/signal-sciences-labs/using-signal-sciences-with-kubernetes-3d385175a410#.c8ec43ycp&#34;&gt;Using Signal Sciences with Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.linkedin.com/pulse/what-we-learned-migrating-our-jenkins-based-delivery-pipeline-val&#34;&gt;What we learned migrating our Jenkins-based Continuous Delivery pipeline to Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/skippbox/kubeless&#34;&gt;Serverless Framework for Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/giantswarm/kubernetes-prometheus&#34;&gt;Kubernetes Setup for Prometheus and Grafana&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.cncf.io/blog/2017/01/17/container-management-trends-kubernetes-moves-testing-production&#34;&gt;Container Management Trends: Kubernetes moves out of testing and into production&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://techgenix.com/swarm-kubernetes-mesos/&#34;&gt;SWARM VS. KUBERNETES VS. MESOS: Which Container tools is best?&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=A8JonqXNfCk&#34;&gt;Hands on Kubernetes (Part 1)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;python&#34;&gt;&lt;em&gt;Python:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://engineering.instagram.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172#.3hqig8n6k&#34;&gt;Dismissing Python Garbage Collection at Instagram&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/techjacker/systemdlogger&#34;&gt;Exports systemd logs to an external service, eg cloudwatch, elasticsearch&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/Hironsan/BossSensor&#34;&gt;Hide screen when boss is approaching&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PL5-da3qGB5ICeMbQuqbbCOQWcS6OYBr5A&#34;&gt;Machine learning in Python with scikit-learn&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.yhat.com/posts/subway-math.html&#34;&gt;Awesome article breaking down wait time and various other stat for NYC Subways&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://benbernardblog.com/tracking-down-a-freaky-python-memory-leak-part-2/&#34;&gt;Tracking Down a Freaky Python Memory Leak&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://minimaxir.com/2017/01/amazon-spark/&#34;&gt;Playing with 80 Million Amazon Product Review Ratings Using Apache Spark&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc#.93elxtjm7&#34;&gt;Understanding the underscore( _ ) of Python&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/Zenohm/Friday/&#34;&gt;An open source virtual assistant&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;golang&#34;&gt;&lt;em&gt;Golang:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://movio.co/blog/migrate-Scala-to-Go/&#34;&gt;Making the move from Scala to Go, and why we’re not going back&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/@Rapchik/building-efficient-micro-services-in-go-61498e32b7f8#.5vyuy8tig&#34;&gt;Building efficient micro services in Go&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://thorstenball.com/blog/2017/01/04/a-virtual-brainfuck-machine-in-go/&#34;&gt;A Virtual Brainfuck Machine In Go&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/jakerockland/go-vs-swift/blob/master/go-vs-swift.pdf&#34;&gt;Go vs. Swift: The Languages of The Modern Tech Giants&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/cloudson/gitql&#34;&gt;gitql: An SQL-Based Git Repository Querying Tool&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;cool-projects&#34;&gt;&lt;em&gt;Cool projects:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://gravitational.com/blog/instant-ssh-github/&#34;&gt;Invite friends to SSH into your laptop using their Github handle&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/OmniDB/OmniDB&#34;&gt;Web tool for database management and conversion&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/zuck007/postimg&#34;&gt;Upload images on imgur&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/jamiemcg/remarkable&#34;&gt;Remarkable - The Markdown Editor for Linux&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;That&amp;rsquo;s all for now, Enjoy&lt;/em&gt;  😃 😃 😃&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>TechNewsLetter Vol:16</title>
       <link>https://www.vishnu-tech.com/blog/technewsletter-vol16/</link>
       <pubDate>Fri, 30 Sep 2016 12:20:10 +0000</pubDate>

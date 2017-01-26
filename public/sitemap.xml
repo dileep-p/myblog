@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.vishnu-tech.com/blog/technewsletter-vol18/</loc>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.vishnu-tech.com/about/intro/</loc>
     <lastmod>2017-01-17T17:52:41-05:00</lastmod>
   </url>
@@ -491,7 +496,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/aws/</loc>
-    <lastmod>2017-01-17T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -527,7 +532,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/bigdata/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -539,7 +544,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/blog/</loc>
-    <lastmod>2017-01-17T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -592,7 +597,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/containers/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -652,7 +657,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/docker/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -790,7 +795,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/golang/</loc>
-    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -808,7 +813,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/hadoop/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -862,7 +867,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/kubernetes/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1000,7 +1005,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/</loc>
-    <lastmod>2017-01-17T17:52:41-05:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1060,7 +1065,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/news-letter/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1072,7 +1077,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/categories/newsletter/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1216,7 +1221,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/python/</loc>
-    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1294,7 +1299,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/security/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1371,13 +1376,13 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/tech/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/tech-volume/</loc>
-    <lastmod>2016-12-08T13:22:26+00:00</lastmod>
+    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
