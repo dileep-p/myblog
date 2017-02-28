@@ -9,6 +9,115 @@
     <atom:link href="https://www.vishnu-tech.com/tags/ec2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Kubernetes with HA in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/Kubernetes-HA-in-AWS/</link>
+      <pubDate>Tue, 28 Feb 2017 21:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/Kubernetes-HA-in-AWS/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;In this blog, we are setting up a highly available Kubernetes cluster in AWS using Kops&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I am creating our Kubernetes cluster in a private VPC.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I hope everyone knows how to create a VPC architecture in AWS, so I will be mainly focusing on K8s.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/aws-k8s.png&#34; alt=&#34;K8s setup in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;AWS:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Cli&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;VPC&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Public Subnets&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Private Subnets&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Route Tables&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Internet Gateway&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;NAT Gateway&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Route53 domain&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Kops:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can easily download from &lt;a href=&#34;https://github.com/kubernetes/kops/releases&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Kubectl:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can easily install the package from &lt;a href=&#34;https://kubernetes.io/docs/user-guide/prereqs/&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;AWS S3 bucket:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You need to create a unique AWS S3 bucket to manage your clusters even after installation.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Kops keep track of the clusters that you have created, along with their configuration, the keys they are using etc. This information is stored in an S3 bucket.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;K8s HA setup:&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;
+kops create cluster \
+    --node-count 3 \
+    --zones us-east-1a,us-east-1b,us-east-1c \
+    --master-zones us-east-1a,us-east-1b,us-east-1c \
+    --dns-zone example.com \
+    --node-size m4.large \
+    --master-size m4.xlarge \
+    --topology private \
+    --networking weave \
+    --vpc vpc-idxxxxx \
+    --name k8s.example.com \
+    --state s3://kops-state-k8s \
+    --bastion
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--node-count:-&lt;/code&gt;  &lt;em&gt;Specify the number of nodes&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--zones:-&lt;/code&gt; &lt;em&gt;Run nodes in multiple zones&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--master-zones:-&lt;/code&gt; &lt;em&gt;Run with a HA master&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--dns-zone:-&lt;/code&gt; &lt;em&gt;Specify your AWS DNS zone&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--node-size:-&lt;/code&gt; &lt;em&gt;Specify our K8s nodes to a defined instance type&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--master-size:-&lt;/code&gt; &lt;em&gt;Specify our K8s masters to a defined instance type&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--topology:-&lt;/code&gt; &lt;em&gt;Specify our nodes to launch in private/public subnets in VPC&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--networking:-&lt;/code&gt; &lt;em&gt;Specify which overlay network to use&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--vpc:-&lt;/code&gt; &lt;em&gt;Specify your VPC&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--name:-&lt;/code&gt;  &lt;em&gt;Specify name of your cluster&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--state:-&lt;/code&gt; &lt;em&gt;Specify where to store the cluster state information&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--bastion:-&lt;/code&gt; &lt;em&gt;Jump host&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;you-can-edit-the-cluster-by-running-the-below-command&#34;&gt;You can edit the cluster by running the below command:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;
+root# kops edit cluster &amp;lt;put your cluster name&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;change-the-vpc-subnet-configuration-and-you-can-update-the-cluster-by-running-the-below-command&#34;&gt;Change the VPC, Subnet configuration and you can update the cluster by running the below command&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;
+root# kops update cluster &amp;lt;put your cluster name&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;once-you-are-finalized-the-aws-setup-you-can-execute-it-by-running-the-below-command&#34;&gt;Once you are finalized the AWS setup, you can execute it by running the below command&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;
+root# kops update cluster &amp;lt;put your cluster name&amp;gt; --yes
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once your cluster is up, you can play around with &lt;a href=&#34;https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/&#34;&gt;Kubectl&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Docker swarm production setup</title>
       <link>https://www.vishnu-tech.com/blog/docker-swarm-production-setup/</link>
       <pubDate>Wed, 30 Nov 2016 19:08:10 +0000</pubDate>
@@ -890,103 +999,6 @@ export AWS_RDS_HOME=/usr/local/aws/rds&lt;/p&gt;
 $ source .bashrc&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://domino.symetrikdesign.com/2011/04/28/installing-amazon-rds-command-line-toolkit-on-ubuntu-10-04/&#34;&gt;Reference Link 1&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RDS Sharding &amp; Quick Commands</title>
-      <link>https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/</link>
-      <pubDate>Mon, 10 Dec 2012 10:17:11 +0000</pubDate>
-      
-      <guid>https://www.vishnu-tech.com/blog/rds-sharding-quick-commands/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/articles/0040302286264415#virtualshards&#34;&gt;Source article on RDS sharding by Amazon.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://aws.amazon.com/articles/0040302286264415#virtualshards&#34;&gt;http://aws.amazon.com/articles/0040302286264415#virtualshards&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://searchcloudcomputing.techtarget.com/definition/sharding&#34;&gt;What is sharding?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here unlike ec2 instances there is no rds-db-instance-id instead we use the db-instance names (called as dbinstance_identifiers) in our rds commmands to identify among rds-db-instances.&lt;/p&gt;
-
-&lt;p&gt;Example-
-Database Name – news
-RDS DB Instances – shard1, shard2&lt;/p&gt;
-
-&lt;p&gt;Consider creating 2 db-shards ie we need 2 db-instance to map those db-shards to db-instances. To reduce the schema setup overhead we use the snapshot and restore capabilities of Amazon RDS to do the following:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Create a single “seed” DB Instance.&lt;/li&gt;
-&lt;li&gt;Set up the schema on that database.&lt;/li&gt;
-&lt;li&gt;Snapshot the database.&lt;/li&gt;
-&lt;li&gt;Create more databases from that snapshot using the RDS RestoreDBInstanceFromSnapshot API.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;1.Create SEED DATABASE INSTANCE&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;_#rds-create-db-instance shard1 –engine mysql5.1 –master-username unni –master-user-password 123 –allocated-storage 5 –db-instance-class db.t1.micro –db-name news –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;$$output$$
-DBINSTANCE  shard1  db.t1.micro  mysql  5  unni  creating  1  ****  n  5.1.63  general-public-license
-SECGROUP  default  active
-PARAMGRP  default.mysql5.1  in-sync
-OPTIONGROUP  default:mysql-5-1  in-sync&lt;/p&gt;
-
-&lt;p&gt;Add IP address to DB Security Group to gain access
-1.Find IP from www.whatismyipaddress.com – say its – 122.174.199.204
-2.Add the CIDR – 122.174.199.&lt;sup&gt;204&lt;/sup&gt;&amp;frasl;&lt;sub&gt;32&lt;/sub&gt; in the DB-Security Group
-3.Try gaining access to rds by – #mysql -h shard1.covaztmm6tup.eu-west-1.rds.amazonaws.com -u unni -p123&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.SETUP SCHEMA ON THE DB&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;mysql&amp;gt;show database;
-mysql&amp;gt;use news;
-mysql&amp;gt;CREATE TABLE articles (
-article_id numeric(64,0) NOT NULL PRIMARY KEY,
-category char(13),
-CHECK category IN (‘BUSINESS’, ‘ENTERTAINMENT’, ‘HEALTH’, ‘SCIENCE’, ‘SPORTS’, ‘TECHNOLOGY’, ‘WORLD’),
-title char(128),
-submit_time timestamp
-);&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.SNAPSHOT and CREATE OTHER DB INSTANCES&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;_#rds-create-db-snapshot shard1 –db-snapshot-identifier news-seed-database –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;$$output$$
-DBSNAPSHOT  news-seed-database  shard1  2012-09-04T12:02:30.129Z  mysql  5  creating  unni  5.1.63  general-public-license  manual&lt;/p&gt;
-
-&lt;p&gt;Once the snapshot is available it can be used to create any number of DB Instances. We’re only creating two DB Instances in this example, but it could easily be many more. Also, for our trivial setup, the only efficiency we gain is that we don’t need to create the schema on each. However, in a typical scenario there might be a lot more setup involved in creating the seed (e.g., application configuration data, user accounts, permissions, etc.).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.DB-INSTANCE FROM DB-SNAPSHOT&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The following command can be used to create new DB Instances from the seed snapshot:&lt;/p&gt;
-
-&lt;p&gt;_#rds-restore-db-instance-from-db-snapshot shard2 –db-snapshot-identifier news-seed-database –db-instance-class db.t1.micro –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;$$output$$
-DBINSTANCE  shard2  db.t1.micro  mysql  5  unni  creating  1  n  5.1.63  general-public-license
-SECGROUP  default  active
-PARAMGRP  default.mysql5.1  in-sync
-OPTIONGROUP  default:mysql-5-1  pending&lt;/p&gt;
-
-&lt;p&gt;—————–&lt;/p&gt;
-
-&lt;p&gt;To LIST RDS-INSTANCES
-_#rds-describe-db-instances –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;TO DELETE RDS-INSTANCE with FINAL SNAPSHOT
-_#rds-delete-db-instance shard1 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem –final-db-snapshot-identifier shard-final-snapshot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;TO DELETE RDS-INSTANCE without FINAL SNAPSHOT
-_#rds-delete-db-instance shard2 –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem –skip-final-snapshot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;TO LIST RDS-DB-SNAPSHOTS
-_#rds-describe-db-snapshots –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;TO DELETE RDS-DB-SNAPSHOTS
-_#rds-delete-db-snapshot shard-final-snapshot –region eu-west-1 -K ec2_certs/pk-K4.pem -C ec2&lt;em&gt;certs/cert-K4.pem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;NOTE
-Creating a final snapshot (before dbinstance termination) incurs additional storage fees.&lt;/p&gt;
 </description>
     </item>
     

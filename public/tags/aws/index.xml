@@ -9,6 +9,115 @@
     <atom:link href="https://www.vishnu-tech.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Kubernetes with HA in AWS</title>
+      <link>https://www.vishnu-tech.com/blog/Kubernetes-HA-in-AWS/</link>
+      <pubDate>Tue, 28 Feb 2017 21:23:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/Kubernetes-HA-in-AWS/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;In this blog, we are setting up a highly available Kubernetes cluster in AWS using Kops&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I am creating our Kubernetes cluster in a private VPC.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I hope everyone knows how to create a VPC architecture in AWS, so I will be mainly focusing on K8s.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/aws-k8s.png&#34; alt=&#34;K8s setup in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;AWS:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Cli&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;VPC&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Public Subnets&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Private Subnets&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Route Tables&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Internet Gateway&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;NAT Gateway&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Route53 domain&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Kops:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can easily download from &lt;a href=&#34;https://github.com/kubernetes/kops/releases&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Kubectl:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can easily install the package from &lt;a href=&#34;https://kubernetes.io/docs/user-guide/prereqs/&#34;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;AWS S3 bucket:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You need to create a unique AWS S3 bucket to manage your clusters even after installation.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Kops keep track of the clusters that you have created, along with their configuration, the keys they are using etc. This information is stored in an S3 bucket.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;K8s HA setup:&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;
+kops create cluster \
+    --node-count 3 \
+    --zones us-east-1a,us-east-1b,us-east-1c \
+    --master-zones us-east-1a,us-east-1b,us-east-1c \
+    --dns-zone example.com \
+    --node-size m4.large \
+    --master-size m4.xlarge \
+    --topology private \
+    --networking weave \
+    --vpc vpc-idxxxxx \
+    --name k8s.example.com \
+    --state s3://kops-state-k8s \
+    --bastion
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--node-count:-&lt;/code&gt;  &lt;em&gt;Specify the number of nodes&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--zones:-&lt;/code&gt; &lt;em&gt;Run nodes in multiple zones&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--master-zones:-&lt;/code&gt; &lt;em&gt;Run with a HA master&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--dns-zone:-&lt;/code&gt; &lt;em&gt;Specify your AWS DNS zone&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--node-size:-&lt;/code&gt; &lt;em&gt;Specify our K8s nodes to a defined instance type&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--master-size:-&lt;/code&gt; &lt;em&gt;Specify our K8s masters to a defined instance type&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--topology:-&lt;/code&gt; &lt;em&gt;Specify our nodes to launch in private/public subnets in VPC&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--networking:-&lt;/code&gt; &lt;em&gt;Specify which overlay network to use&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--vpc:-&lt;/code&gt; &lt;em&gt;Specify your VPC&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--name:-&lt;/code&gt;  &lt;em&gt;Specify name of your cluster&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--state:-&lt;/code&gt; &lt;em&gt;Specify where to store the cluster state information&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--bastion:-&lt;/code&gt; &lt;em&gt;Jump host&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;you-can-edit-the-cluster-by-running-the-below-command&#34;&gt;You can edit the cluster by running the below command:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;
+root# kops edit cluster &amp;lt;put your cluster name&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;change-the-vpc-subnet-configuration-and-you-can-update-the-cluster-by-running-the-below-command&#34;&gt;Change the VPC, Subnet configuration and you can update the cluster by running the below command&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;
+root# kops update cluster &amp;lt;put your cluster name&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;once-you-are-finalized-the-aws-setup-you-can-execute-it-by-running-the-below-command&#34;&gt;Once you are finalized the AWS setup, you can execute it by running the below command&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;
+root# kops update cluster &amp;lt;put your cluster name&amp;gt; --yes
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once your cluster is up, you can play around with &lt;a href=&#34;https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/&#34;&gt;Kubectl&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>TechNewsLetter Vol:18</title>
       <link>https://www.vishnu-tech.com/blog/technewsletter-vol18/</link>
       <pubDate>Thu, 26 Jan 2017 14:50:26 +0000</pubDate>
@@ -951,63 +1060,6 @@
 &lt;p&gt;&lt;a href=&#34;https://github.com/github/scripts-to-rule-them-all&#34;&gt;Scripts to Rule Them All.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://carlosbecker.com/posts/cross-compile-go/&#34;&gt;Cross-compiling Go.&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to copy redis dump from AWS Elasticache to AWS S3</title>
-      <link>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</link>
-      <pubDate>Tue, 09 Jun 2015 15:22:13 +0000</pubDate>
-      
-      <guid>https://www.vishnu-tech.com/blog/how-to-copy-redis-dump-from-aws-elasticache-to-aws-s3/</guid>
-      <description>&lt;p&gt;For Amazon Elasticache, we can&amp;rsquo;t copy the snapshot to AWS S3.  So inorder to do that you need to do the below steps:-&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Spin up new EC2 instance.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt; Install Redis on that Instance.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt; Setup the instance as a read replica of the AWS Elasticache Primary (redis)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt; Wait for the Master Slave data sync&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt; Issue a redis &lt;strong&gt;SAVE &lt;/strong&gt;command to generate a local dump&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt; Copy local dump.rdb on AWS S3&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can do the whole setup by simply checkout this _&lt;strong&gt;&lt;a href=&#34;https://github.com/vishnudxb/redisbackup-to-s3&#34;&gt;REPO&lt;/a&gt;&lt;/strong&gt;_  and run the below command&lt;/p&gt;
-
-&lt;p&gt;[color-box color=&amp;ldquo;green&amp;rdquo;]&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;vishnudxb@server:~# ./terraform apply -var &amp;lsquo;access_key=PUTMYACCESSKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;secret_key=PUTMYSECRETKEY&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_file=/home/redis.pem&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;key_name=redis&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;*&lt;em&gt;                                                              -var &amp;lsquo;region=us-east-1&amp;rsquo; *&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;instance_type=m3.large&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_**                                                              -var &amp;lsquo;availability&lt;em&gt;zone=us-east-1a&amp;rsquo; \ **&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;subnet_id=subnet-e94xxxx&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;security_id=sg-7xxxx1d&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                             -var &amp;lsquo;redis_endpoint=aws redis endpoint&amp;rsquo;  *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_*&lt;em&gt;                                                              -var &amp;lsquo;redis_port=6379&amp;rsquo; *&lt;/em&gt;_&lt;/p&gt;
-
-&lt;p&gt;_&lt;strong&gt;                                                              -var &amp;lsquo;aws_bucket=redis-db-backup&amp;rsquo;&lt;/strong&gt;_&lt;/p&gt;
-
-&lt;p&gt;[/color-box]
-Once you execute the above command and you can see the output like the below:-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34;&gt;&lt;img src=&#34;https://www.vishnu-tech.com/wp-content/uploads/2015/06/redis.png&#34; alt=&#34;vu&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

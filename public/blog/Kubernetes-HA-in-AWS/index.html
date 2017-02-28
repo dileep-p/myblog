@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Kubernetes with HA in AWS &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/Kubernetes-HA-in-AWS/">Kubernetes with HA in AWS</a></h1>
+            <span class="post-date">Feb 28, 2017 </span>
+            <div class="post-content">
+                
+
+<p><em>In this blog, we are setting up a highly available Kubernetes cluster in AWS using Kops</em></p>
+
+<p><em>I am creating our Kubernetes cluster in a private VPC.</em></p>
+
+<p><em>I hope everyone knows how to create a VPC architecture in AWS, so I will be mainly focusing on K8s.</em></p>
+
+<p><img src="/images/aws-k8s.png" alt="K8s setup in AWS" /></p>
+
+<h3 id="prerequisites">Prerequisites:</h3>
+
+<ul>
+<li><p><em>AWS:</em></p>
+
+<ul>
+<li><em>Cli</em></li>
+<li><em>VPC</em></li>
+<li><em>Public Subnets</em></li>
+<li><em>Private Subnets</em></li>
+<li><em>Route Tables</em></li>
+<li><em>Internet Gateway</em></li>
+<li><em>NAT Gateway</em></li>
+<li><em>Route53 domain</em></li>
+</ul></li>
+
+<li><p><em>Kops:</em></p>
+
+<p><em>You can easily download from <a href="https://github.com/kubernetes/kops/releases">here</a></em></p></li>
+
+<li><p><em>Kubectl:</em></p>
+
+<p><em>You can easily install the package from <a href="https://kubernetes.io/docs/user-guide/prereqs/">here</a></em></p></li>
+
+<li><p><em>AWS S3 bucket:</em></p>
+
+<ul>
+<li><em>You need to create a unique AWS S3 bucket to manage your clusters even after installation.</em></li>
+<li><em>Kops keep track of the clusters that you have created, along with their configuration, the keys they are using etc. This information is stored in an S3 bucket.</em></li>
+</ul></li>
+
+<li><p><em>K8s HA setup:</em></p></li>
+</ul>
+
+<pre><code>
+kops create cluster \
+    --node-count 3 \
+    --zones us-east-1a,us-east-1b,us-east-1c \
+    --master-zones us-east-1a,us-east-1b,us-east-1c \
+    --dns-zone example.com \
+    --node-size m4.large \
+    --master-size m4.xlarge \
+    --topology private \
+    --networking weave \
+    --vpc vpc-idxxxxx \
+    --name k8s.example.com \
+    --state s3://kops-state-k8s \
+    --bastion
+
+</code></pre>
+
+<ul>
+<li><code>--node-count:-</code>  <em>Specify the number of nodes</em></li>
+<li><code>--zones:-</code> <em>Run nodes in multiple zones</em></li>
+<li><code>--master-zones:-</code> <em>Run with a HA master</em></li>
+<li><code>--dns-zone:-</code> <em>Specify your AWS DNS zone</em></li>
+<li><code>--node-size:-</code> <em>Specify our K8s nodes to a defined instance type</em></li>
+<li><code>--master-size:-</code> <em>Specify our K8s masters to a defined instance type</em></li>
+<li><code>--topology:-</code> <em>Specify our nodes to launch in private/public subnets in VPC</em></li>
+<li><code>--networking:-</code> <em>Specify which overlay network to use</em></li>
+<li><code>--vpc:-</code> <em>Specify your VPC</em></li>
+<li><code>--name:-</code>  <em>Specify name of your cluster</em></li>
+<li><code>--state:-</code> <em>Specify where to store the cluster state information</em></li>
+<li><code>--bastion:-</code> <em>Jump host</em></li>
+</ul>
+
+<h4 id="you-can-edit-the-cluster-by-running-the-below-command">You can edit the cluster by running the below command:</h4>
+
+<pre><code>
+root# kops edit cluster &lt;put your cluster name&gt;
+
+</code></pre>
+
+<h4 id="change-the-vpc-subnet-configuration-and-you-can-update-the-cluster-by-running-the-below-command">Change the VPC, Subnet configuration and you can update the cluster by running the below command</h4>
+
+<pre><code>
+root# kops update cluster &lt;put your cluster name&gt;
+
+</code></pre>
+
+<h4 id="once-you-are-finalized-the-aws-setup-you-can-execute-it-by-running-the-below-command">Once you are finalized the AWS setup, you can execute it by running the below command</h4>
+
+<pre><code>
+root# kops update cluster &lt;put your cluster name&gt; --yes
+
+</code></pre>
+
+<ul>
+<li><em>Once your cluster is up, you can play around with <a href="https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/">Kubectl</a></em></li>
+</ul>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = '//www-vishnu-tech-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>

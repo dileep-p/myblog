@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.vishnu-tech.com/blog/Kubernetes-HA-in-AWS/</loc>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.vishnu-tech.com/blog/technewsletter-vol18/</loc>
     <lastmod>2017-01-26T14:50:26+00:00</lastmod>
   </url>
@@ -424,25 +429,25 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/amazon/</loc>
-    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.vishnu-tech.com/categories/amazon-aws/</loc>
-    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.vishnu-tech.com/categories/amazon-ec2/</loc>
-    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/amazon-s3/</loc>
-    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -496,13 +501,13 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/aws/</loc>
-    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/aws-ec2/</loc>
-    <lastmod>2016-08-19T09:23:25+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -544,7 +549,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/blog/</loc>
-    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -591,7 +596,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/container/</loc>
-    <lastmod>2016-09-30T12:20:10+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -657,13 +662,13 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/docker/</loc>
-    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.vishnu-tech.com/categories/docker/</loc>
-    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -693,7 +698,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/ec2/</loc>
-    <lastmod>2016-11-30T19:08:10+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -867,7 +872,13 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/kubernetes/</loc>
-    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vishnu-tech.com/categories/kubernetes/</loc>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -879,7 +890,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/tags/linux/</loc>
-    <lastmod>2016-08-19T09:23:25+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1005,7 +1016,7 @@
   
   <url>
     <loc>https://www.vishnu-tech.com/</loc>
-    <lastmod>2017-01-26T14:50:26+00:00</lastmod>
+    <lastmod>2017-02-28T21:23:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
