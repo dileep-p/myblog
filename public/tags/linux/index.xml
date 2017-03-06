@@ -9,6 +9,175 @@
     <atom:link href="https://www.vishnu-tech.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Setup Ranger with HA &amp; running Kubernetes on top of it.</title>
+      <link>https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/</link>
+      <pubDate>Mon, 06 Mar 2017 19:43:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;In this blog, we are setting up a highly available Ranger cluster in AWS and running Kubernetes on top of it&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;why-rancher&#34;&gt;Why Rancher?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Rancher is a complete, open source platform for deploying and managing containers in production. It includes commercially-supported distributions of Kubernetes, Mesos, and Docker Swarm, making it easy to run containerized applications on any infrastructure.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Here I will be creating the AWS setup as below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/img/ranger-aws-setup.png&#34; alt=&#34;Ranger setup in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create 3 instance for Ranger Server&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-server.png&#34; alt=&#34;Ranger Server in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create 3 instance for Ranger Host&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-host.png&#34; alt=&#34;Ranger Host in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create ELB for Ranger Server&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb.png&#34; alt=&#34;ELB for Ranger Server in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Put ELB Listeners as below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb-listeners.png&#34; alt=&#34;ELB Listeners for Rancher Server&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Put ELB Healthcheck as below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb-healthcheck.png&#34; alt=&#34;ELB Healthcheck for Rancher Server&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once you setup the ELB, you need to enable the proxy protocol mode&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ aws elb create-load-balancer-policy \
+     --load-balancer-name rancher-elb \  
+     --policy-name rancher-elb-policy \
+     --policy-type-name ProxyProtocolPolicyType \
+     --policy-attributes AttributeName=ProxyProtocol,AttributeValue=true \
+     --region eu-west-1
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+$ aws elb set-load-balancer-policies-for-backend-server \
+      --load-balancer-name rancher-elb \
+      --instance-port 80 \
+      --policy-names rancher-elb-policy  \
+      --region eu-west-1
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+$ aws elb set-load-balancer-policies-for-backend-server \
+      --load-balancer-name rancher-elb \
+      --instance-port 8080 \
+      --policy-names rancher-elb-policy \
+      --region eu-west-1
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create a MySql RDS instance&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-mysql.png&#34; alt=&#34;Mysql RDS instance&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once the Ranger Server is UP, Login to those servers and run the below command:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;
+docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
+       rancher/server:latest \
+       --db-host &amp;lt;your rds endpoint&amp;gt; \
+       --db-port 3306 --db-user &amp;lt;your db user&amp;gt; \
+       --db-pass &amp;lt;your db password&amp;gt; --db-name &amp;lt;your db name&amp;gt; \
+       --advertise-address &amp;lt;put your rancher private server ip&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once the cluster is UP, you can authorize it with Github&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-access.png&#34; alt=&#34;Rancher access&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-oauth-github.png&#34; alt=&#34;Rancher github&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once you authorized, you can add host like below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/add-custom-host.png&#34; alt=&#34;Rancher custom host&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can also add host by running the command on east host nodes like below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo docker run -e CATTLE_AGENT_IP=&amp;quot;172.31.42.207&amp;quot;  \
+    -d --privileged \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /var/lib/rancher:/var/lib/rancher \
+    rancher/agent:v1.2.1 http://rancher-elb-1978581874.eu-west-1.elb.amazonaws.com/v1/scripts/79081F08916A15D4F9F8:1483142400000:k2tRsgImqrdonHsdFYEtpI2ss
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can also bootup AWS instance if you want&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/add-aws-host.png&#34; alt=&#34;Rancher aws host&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can see once the host is UP&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/active-host.png&#34; alt=&#34;Rancher active host&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can choose different type of applications to install&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/catalog1.png&#34; alt=&#34;Rancher catalog1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/catalog2.png&#34; alt=&#34;Rancher catalog2&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can easily install Kubernetes from the catalog&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/k8s-template.png&#34; alt=&#34;Rancher Kubernetes&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can verify the installation by selecting the stack&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/starting-k8s.png&#34; alt=&#34;Rancher Kubernetes stack&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can also list the containers to get more info&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/container-info.png&#34; alt=&#34;Rancher Kubernetes containers&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Kubernetes with HA in AWS</title>
       <link>https://www.vishnu-tech.com/blog/Kubernetes-HA-in-AWS/</link>
       <pubDate>Tue, 28 Feb 2017 21:23:25 +0000</pubDate>
@@ -1198,95 +1367,6 @@ Codename: precise&lt;/p&gt;
 &lt;p&gt;Make a note of the ebs-id attached&lt;/p&gt;
 
 &lt;p&gt;Terminate the Instance from the AWS Console and then Delete the EBS, same could be done through command line&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Quick MySQL Commands</title>
-      <link>https://www.vishnu-tech.com/blog/quick-mysql-commands/</link>
-      <pubDate>Mon, 10 Dec 2012 10:33:27 +0000</pubDate>
-      
-      <guid>https://www.vishnu-tech.com/blog/quick-mysql-commands/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;To Login into the MySQL&lt;/strong&gt;
-#mysql -u username -ppaswword
-&lt;strong&gt;and if its RDS :&lt;/strong&gt;
-#mysql -h rds.indexpoint/dnsname/ip -u username -ppassword&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To List Databases&lt;/strong&gt;
-mysql&amp;gt;show databases;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To View tables&lt;/strong&gt;
-mysql&amp;gt;use databasename;
-mysql&amp;gt;show tables;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To View Contents Inside the Table&lt;/strong&gt;
-mysql&amp;gt;select * from tablename;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To Delete Database&lt;/strong&gt;
-mysql&amp;gt;drop database dbname;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To create Database user (we also need to grant permission to a db to gain access for the new user.)&lt;/strong&gt;
-mysql&amp;gt;create user ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘passwd3@1′;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To Grant Permission to a Database for a User and Create the User at the same Time&lt;/strong&gt;
-mysql&amp;gt;grant all on databasename.* to ‘UNNI’@&amp;lsquo;ipaddress/%/localhost’ identified by ‘password’;&lt;/p&gt;
-
-&lt;p&gt;[NOTE&amp;ndash; To provide access from all IP Address use ‘%’ instead of ipaddress.]&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To List out all Database Users&lt;/strong&gt;
-mysql&amp;gt;SELECT user,host FROM mysql.user;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To Create a Database&lt;/strong&gt;
-mysql&amp;gt;create database UNNI;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To restore a specific Database in Mysql (database UNNI has to be created already)&lt;/strong&gt;
-#mysql -u username -ppassword UNNI &amp;lt; UNNI.sql&lt;/p&gt;
-
-&lt;p&gt;[NOTE: Database UNNI had to be created before restore]&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To dump/backup a specific Database in Mysql&lt;/strong&gt;
-#mysqldump -u username -ppassword UNNI &amp;gt; UNNI.sql&lt;/p&gt;
-
-&lt;p&gt;[NOTE: Database UNNI is backed up into UNNI.sql]&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To know the permission of Mysql User&lt;/strong&gt;
-#show grants for ‘unni’@&amp;lsquo;localhost’;&lt;/p&gt;
-
-&lt;h2 id=&#34;need-to-know-create-delete-user&#34;&gt;[NEED TO KNOW]- Create/Delete User :::&lt;/h2&gt;
-
-&lt;p&gt;It must be noted that CREATE USER command was added in the MySQL version 5.0.2. In earlier versions, users could be created automatically when assigning permissions using the GRANT command or by manually inserting records in the mysql database.&lt;/p&gt;
-
-&lt;p&gt;The mysql database contains three tables – &lt;strong&gt;user, host and db. &lt;/strong&gt;These tables contains the database permissions.&lt;/p&gt;
-
-&lt;p&gt;The user table contains the usernames and password combination of anyone who has access to any part of the MYSQL database. The password part is the encrypted string, which can be generated using the PASSWORD() function.&lt;/p&gt;
-
-&lt;p&gt;As an administrator, you can even directly insert the values into the user table of mysql database and get the desired results.
-&lt;strong&gt;&lt;code&gt;mysql&amp;gt;INSERT INTO user(Host,User,Password) VALUES(&#39;localhost&#39;, &#39;UNNI&#39;, PASSWORD(&#39;passwd1@3&#39;));
-&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;mysql&amp;gt;FLUSH PRIVILEGES;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The FLUSH PRIVILEGES command is required to inform MySQL to reload the privilege data after the change is made.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Deleting Users&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;To delete users from the MySQL database use the DROP command.
-&lt;code&gt;**mysql&amp;gt;DROP USER user@host;**&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The command in turn removes the user record from the mysql.user table.&lt;/p&gt;
-
-&lt;p&gt;As the CREATE USER command, even the DROP USER command has been added since MySQL 5.0.2. In previous versions of MySQL you must revoke the user’s privileges first, delete the records from user manually and then issue the FLUSH PRIVILEGES command.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;**mysql&amp;gt;DELETE FROM user WHERE User= &#39;technofriends&#39; AND Host= &#39;localhost&#39;;
-FLUSH PRIVILEGES;**&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;General Notes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;There is no concept in MySQL of “Owner” of database or its objects, as there is in MS Access and MS SQL Server. I surmise this from the lack of “owner” field anywhere in mysql system tables.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

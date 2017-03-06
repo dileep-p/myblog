@@ -13,7 +13,7 @@ disqusShortname = "www-vishnu-tech-com.disqus.com"
   HeaderUsername = "vishnu"
   HeaderHostname = "Vimpelcom"
   Email = "me@vishnudxb.me"
-  About = "Vishnu Nair is Head of Devops – R&D BigData in Vimpelcom. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies."
+  About = "Vishnu Nair is Head of DevOps – R&D BigData in VEON. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies."
   ProfilePicture = "https://media.licdn.com/media/p/8/000/1aa/375/187e4a3.jpg"
 
 
@@ -31,4 +31,3 @@ disqusShortname = "www-vishnu-tech-com.disqus.com"
 
 [Permalinks]
     post = "/:year/:month/:day/:filename/"
-

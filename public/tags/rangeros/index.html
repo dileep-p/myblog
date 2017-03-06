@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title> Rangeros &middot; My Tech Blog </title>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+	</head>
+
+	<body>
+		<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+		<div class="container wrapper">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>Rangeros</h1>
+				</div>
+			</div>
+			<ul id="post-list">
+				
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/">Setup Ranger with HA &amp; running Kubernetes on top of it.</a></h4>
+							<h4 class="post-date">Mar 6, 2017</h4>
+						</div>
+						<div class="post-summary"><p>In this blog, we are setting up a highly available Ranger cluster in AWS and running Kubernetes on top of it
+Why Rancher? Rancher is a complete, open source platform for deploying and managing containers in production. It includes commercially-supported distributions of Kubernetes, Mesos, and Docker Swarm, making it easy to run containerized applications on any infrastructure.
+Prerequisites:  Here I will be creating the AWS setup as below:   Create 3 instance for Ranger Server   Create 3 instance for Ranger Host   Create ELB for Ranger Server   Put ELB Listeners as below:   Put ELB Healthcheck as below:   Once you setup the ELB, you need to enable the proxy protocol mode  $ aws elb create-load-balancer-policy \ --load-balancer-name rancher-elb \ --policy-name rancher-elb-policy \ --policy-type-name ProxyProtocolPolicyType \ --policy-attributes AttributeName=ProxyProtocol,AttributeValue=true \ --region eu-west-1   $ aws elb set-load-balancer-policies-for-backend-server \ --load-balancer-name rancher-elb \ --instance-port 80 \ --policy-names rancher-elb-policy \ --region eu-west-1   $ aws elb set-load-balancer-policies-for-backend-server \ --load-balancer-name rancher-elb \ --instance-port 8080 \ --policy-names rancher-elb-policy \ --region eu-west-1   Create a MySql RDS instance   Once the Ranger Server is UP, Login to those servers and run the below command:   docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \ rancher/server:latest \ --db-host &lt;your rds endpoint&gt; \ --db-port 3306 --db-user &lt;your db user&gt; \ --db-pass &lt;your db password&gt; --db-name &lt;your db name&gt; \ --advertise-address &lt;put your rancher private server ip&gt;   Once the cluster is UP, you can authorize it with Github   Once you authorized, you can add host like below:   You can also add host by running the command on east host nodes like below:  sudo docker run -e CATTLE_AGENT_IP=&quot;172....</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/">Read More</a>
+						</div>
+					</div>
+				</li>
+				
+
+			</ul>
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+	</body>
+</html>
