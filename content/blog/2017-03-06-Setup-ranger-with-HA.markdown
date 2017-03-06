@@ -31,7 +31,9 @@ tags:
 
 *Rancher is a complete, open source platform for deploying and managing containers in production. It includes commercially-supported distributions of Kubernetes, Mesos, and Docker Swarm, making it easy to run containerized applications on any infrastructure.*
 
-### Prerequisites:
+### Follow the below steps:
+
+* *FYI, from the below images, you may notice the ELB's & ip's, don't worry 🙄🙄 it's a temporary cluster created for testing 😛😜*
 
 * *Here I will be creating the AWS setup as below:*
 
@@ -118,7 +120,7 @@ docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
 
 ![Rancher custom host](/images/add-custom-host.png)
 
-* *You can also add host by running the command on east host nodes like below:*
+* *You can also add host by running the command on each host nodes like below:*
 
 ```
 sudo docker run -e CATTLE_AGENT_IP="172.31.42.207"  \
@@ -154,3 +156,5 @@ sudo docker run -e CATTLE_AGENT_IP="172.31.42.207"  \
 * *You can also list the containers to get more info*
 
 ![Rancher Kubernetes containers](/images/container-info.png)
+
+### You can get more info from [here](http://rancher.com/)

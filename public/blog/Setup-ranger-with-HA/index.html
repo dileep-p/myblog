@@ -41,7 +41,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@Vimpelcom ~ $</a>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@VEON ~ $</a>
 		</div>
 
 		
@@ -80,10 +80,12 @@
 
 <p><em>Rancher is a complete, open source platform for deploying and managing containers in production. It includes commercially-supported distributions of Kubernetes, Mesos, and Docker Swarm, making it easy to run containerized applications on any infrastructure.</em></p>
 
-<h3 id="prerequisites">Prerequisites:</h3>
+<h3 id="follow-the-below-steps">Follow the below steps:</h3>
 
 <ul>
-<li><em>Here I will be creating the AWS setup as below:</em></li>
+<li><p><em>FYI, from the below images, you may notice the ELB&rsquo;s &amp; ip&rsquo;s, don&rsquo;t worry 🙄🙄 it&rsquo;s a temporary cluster created for testing 😛😜</em></p></li>
+
+<li><p><em>Here I will be creating the AWS setup as below:</em></p></li>
 </ul>
 
 <p><img src="/images/ranger-aws-setup.png" alt="Ranger setup in AWS" /></p>
@@ -184,7 +186,7 @@ docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
 <p><img src="/images/add-custom-host.png" alt="Rancher custom host" /></p>
 
 <ul>
-<li><em>You can also add host by running the command on east host nodes like below:</em></li>
+<li><em>You can also add host by running the command on each host nodes like below:</em></li>
 </ul>
 
 <pre><code>sudo docker run -e CATTLE_AGENT_IP=&quot;172.31.42.207&quot;  \
@@ -232,6 +234,8 @@ docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
 </ul>
 
 <p><img src="/images/container-info.png" alt="Rancher Kubernetes containers" /></p>
+
+<h3 id="you-can-get-more-info-from-here-http-rancher-com">You can get more info from <a href="http://rancher.com/">here</a></h3>
 
             </div>
             

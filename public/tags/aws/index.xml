@@ -22,10 +22,12 @@
 
 &lt;p&gt;&lt;em&gt;Rancher is a complete, open source platform for deploying and managing containers in production. It includes commercially-supported distributions of Kubernetes, Mesos, and Docker Swarm, making it easy to run containerized applications on any infrastructure.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h3&gt;
+&lt;h3 id=&#34;follow-the-below-steps&#34;&gt;Follow the below steps:&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Here I will be creating the AWS setup as below:&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;FYI, from the below images, you may notice the ELB&amp;rsquo;s &amp;amp; ip&amp;rsquo;s, don&amp;rsquo;t worry 🙄🙄 it&amp;rsquo;s a temporary cluster created for testing 😛😜&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Here I will be creating the AWS setup as below:&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/ranger-aws-setup.png&#34; alt=&#34;Ranger setup in AWS&#34; /&gt;&lt;/p&gt;
@@ -126,7 +128,7 @@ docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
 &lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/add-custom-host.png&#34; alt=&#34;Rancher custom host&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;You can also add host by running the command on east host nodes like below:&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;You can also add host by running the command on each host nodes like below:&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo docker run -e CATTLE_AGENT_IP=&amp;quot;172.31.42.207&amp;quot;  \
@@ -174,6 +176,8 @@ docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/container-info.png&#34; alt=&#34;Rancher Kubernetes containers&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;you-can-get-more-info-from-here-http-rancher-com&#34;&gt;You can get more info from &lt;a href=&#34;http://rancher.com/&#34;&gt;here&lt;/a&gt;&lt;/h3&gt;
 </description>
     </item>
     
