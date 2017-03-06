@@ -35,7 +35,7 @@ tags:
 
 * *Here I will be creating the AWS setup as below:*
 
-![Ranger setup in AWS](/img/ranger-aws-setup.png)
+![Ranger setup in AWS](/images/ranger-aws-setup.png)
 
 * *Create 3 instance for Ranger Server*
 
