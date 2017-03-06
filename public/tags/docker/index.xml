@@ -28,7 +28,7 @@
 &lt;li&gt;&lt;em&gt;Here I will be creating the AWS setup as below:&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/img/ranger-aws-setup.png&#34; alt=&#34;Ranger setup in AWS&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/ranger-aws-setup.png&#34; alt=&#34;Ranger setup in AWS&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Create 3 instance for Ranger Server&lt;/em&gt;&lt;/li&gt;
