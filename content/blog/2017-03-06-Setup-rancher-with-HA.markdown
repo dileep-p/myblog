@@ -37,7 +37,7 @@ tags:
 
 * *Here I will be creating the AWS setup as below:*
 
-![Rancher setup in AWS](/images/Rancher-aws-setup.png)
+![Rancher setup in AWS](/images/rancher-aws-setup.png)
 
 * *Create 3 instance for Rancher Server*
 
