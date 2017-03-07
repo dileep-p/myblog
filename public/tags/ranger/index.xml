@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ranger on My Tech Blog</title>
+    <link>https://www.vishnu-tech.com/tags/ranger/index.xml</link>
+    <description>Recent content in Ranger on My Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.vishnu-tech.com/tags/ranger/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setup Ranger with HA &amp; running Kubernetes on top of it.</title>
+      <link>https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/</link>
+      <pubDate>Mon, 06 Mar 2017 19:43:25 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;In this blog, we are setting up a highly available Ranger cluster in AWS and running Kubernetes on top of it&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;why-rancher&#34;&gt;Why Rancher?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Rancher is a complete, open source platform for deploying and managing containers in production. It includes commercially-supported distributions of Kubernetes, Mesos, and Docker Swarm, making it easy to run containerized applications on any infrastructure.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;follow-the-below-steps&#34;&gt;Follow the below steps:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;FYI, from the below images, you may notice the ELB&amp;rsquo;s &amp;amp; ip&amp;rsquo;s, don&amp;rsquo;t worry 🙄🙄 it&amp;rsquo;s a temporary cluster created for testing 😛😜&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Here I will be creating the AWS setup as below:&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/ranger-aws-setup.png&#34; alt=&#34;Ranger setup in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create 3 instance for Ranger Server&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-server.png&#34; alt=&#34;Ranger Server in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create 3 instance for Ranger Host&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-host.png&#34; alt=&#34;Ranger Host in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create ELB for Ranger Server&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb.png&#34; alt=&#34;ELB for Ranger Server in AWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Put ELB Listeners as below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb-listeners.png&#34; alt=&#34;ELB Listeners for Rancher Server&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Put ELB Healthcheck as below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb-healthcheck.png&#34; alt=&#34;ELB Healthcheck for Rancher Server&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once you setup the ELB, you need to enable the proxy protocol mode&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ aws elb create-load-balancer-policy \
+     --load-balancer-name rancher-elb \  
+     --policy-name rancher-elb-policy \
+     --policy-type-name ProxyProtocolPolicyType \
+     --policy-attributes AttributeName=ProxyProtocol,AttributeValue=true \
+     --region eu-west-1
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+$ aws elb set-load-balancer-policies-for-backend-server \
+      --load-balancer-name rancher-elb \
+      --instance-port 80 \
+      --policy-names rancher-elb-policy  \
+      --region eu-west-1
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+$ aws elb set-load-balancer-policies-for-backend-server \
+      --load-balancer-name rancher-elb \
+      --instance-port 8080 \
+      --policy-names rancher-elb-policy \
+      --region eu-west-1
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Create a MySql RDS instance&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-mysql.png&#34; alt=&#34;Mysql RDS instance&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once the Ranger Server is UP, Login to those servers and run the below command:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;
+docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
+       rancher/server:latest \
+       --db-host &amp;lt;your rds endpoint&amp;gt; \
+       --db-port 3306 --db-user &amp;lt;your db user&amp;gt; \
+       --db-pass &amp;lt;your db password&amp;gt; --db-name &amp;lt;your db name&amp;gt; \
+       --advertise-address &amp;lt;put your rancher private server ip&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once the cluster is UP, you can authorize it with Github&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-access.png&#34; alt=&#34;Rancher access&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-oauth-github.png&#34; alt=&#34;Rancher github&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Once you authorized, you can add host like below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/add-custom-host.png&#34; alt=&#34;Rancher custom host&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can also add host by running the command on each host nodes like below:&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo docker run -e CATTLE_AGENT_IP=&amp;quot;172.31.42.207&amp;quot;  \
+    -d --privileged \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /var/lib/rancher:/var/lib/rancher \
+    rancher/agent:v1.2.1 http://rancher-elb-1978581874.eu-west-1.elb.amazonaws.com/v1/scripts/79081F08916A15D4F9F8:1483142400000:k2tRsgImqrdonHsdFYEtpI2ss
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can also bootup AWS instance if you want&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/add-aws-host.png&#34; alt=&#34;Rancher aws host&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can see once the host is UP&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/active-host.png&#34; alt=&#34;Rancher active host&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can choose different type of applications to install&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/catalog1.png&#34; alt=&#34;Rancher catalog1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/catalog2.png&#34; alt=&#34;Rancher catalog2&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can easily install Kubernetes from the catalog&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/k8s-template.png&#34; alt=&#34;Rancher Kubernetes&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can verify the installation by selecting the stack&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/starting-k8s.png&#34; alt=&#34;Rancher Kubernetes stack&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;You can also list the containers to get more info&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/container-info.png&#34; alt=&#34;Rancher Kubernetes containers&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;you-can-get-more-info-from-here-http-rancher-com&#34;&gt;You can get more info from &lt;a href=&#34;http://rancher.com/&#34;&gt;here&lt;/a&gt;&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

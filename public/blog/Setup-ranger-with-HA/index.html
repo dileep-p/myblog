@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Setup Ranger with HA &amp; running Kubernetes on top of it. &middot; My Tech Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.13" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.vishnu-tech.com/css/nix.css">
+
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://www.vishnu-tech.com/>vishnu@VEON ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://www.vishnu-tech.com/">/home/vishnu</a>
+				</li>
+				
+				
+				<li >
+					<a href="/blog">~/blogs</a>
+				</li>
+				
+				
+				<li >
+					<a href="/about">~/about me</a>
+				</li>
+				
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/">Setup Ranger with HA &amp; running Kubernetes on top of it.</a></h1>
+            <span class="post-date">Mar 6, 2017 </span>
+            <div class="post-content">
+                
+
+<p><em>In this blog, we are setting up a highly available Ranger cluster in AWS and running Kubernetes on top of it</em></p>
+
+<h3 id="why-rancher">Why Rancher?</h3>
+
+<p><em>Rancher is a complete, open source platform for deploying and managing containers in production. It includes commercially-supported distributions of Kubernetes, Mesos, and Docker Swarm, making it easy to run containerized applications on any infrastructure.</em></p>
+
+<h3 id="follow-the-below-steps">Follow the below steps:</h3>
+
+<ul>
+<li><p><em>FYI, from the below images, you may notice the ELB&rsquo;s &amp; ip&rsquo;s, don&rsquo;t worry 🙄🙄 it&rsquo;s a temporary cluster created for testing 😛😜</em></p></li>
+
+<li><p><em>Here I will be creating the AWS setup as below:</em></p></li>
+</ul>
+
+<p><img src="/images/ranger-aws-setup.png" alt="Ranger setup in AWS" /></p>
+
+<ul>
+<li><em>Create 3 instance for Ranger Server</em></li>
+</ul>
+
+<p><img src="/images/rancher-server.png" alt="Ranger Server in AWS" /></p>
+
+<ul>
+<li><em>Create 3 instance for Ranger Host</em></li>
+</ul>
+
+<p><img src="/images/rancher-host.png" alt="Ranger Host in AWS" /></p>
+
+<ul>
+<li><em>Create ELB for Ranger Server</em></li>
+</ul>
+
+<p><img src="/images/rancher-elb.png" alt="ELB for Ranger Server in AWS" /></p>
+
+<ul>
+<li><em>Put ELB Listeners as below:</em></li>
+</ul>
+
+<p><img src="/images/rancher-elb-listeners.png" alt="ELB Listeners for Rancher Server" /></p>
+
+<ul>
+<li><em>Put ELB Healthcheck as below:</em></li>
+</ul>
+
+<p><img src="/images/rancher-elb-healthcheck.png" alt="ELB Healthcheck for Rancher Server" /></p>
+
+<ul>
+<li><em>Once you setup the ELB, you need to enable the proxy protocol mode</em></li>
+</ul>
+
+<pre><code>$ aws elb create-load-balancer-policy \
+     --load-balancer-name rancher-elb \  
+     --policy-name rancher-elb-policy \
+     --policy-type-name ProxyProtocolPolicyType \
+     --policy-attributes AttributeName=ProxyProtocol,AttributeValue=true \
+     --region eu-west-1
+
+</code></pre>
+
+<pre><code>
+$ aws elb set-load-balancer-policies-for-backend-server \
+      --load-balancer-name rancher-elb \
+      --instance-port 80 \
+      --policy-names rancher-elb-policy  \
+      --region eu-west-1
+
+</code></pre>
+
+<pre><code>
+$ aws elb set-load-balancer-policies-for-backend-server \
+      --load-balancer-name rancher-elb \
+      --instance-port 8080 \
+      --policy-names rancher-elb-policy \
+      --region eu-west-1
+
+</code></pre>
+
+<ul>
+<li><em>Create a MySql RDS instance</em></li>
+</ul>
+
+<p><img src="/images/rancher-mysql.png" alt="Mysql RDS instance" /></p>
+
+<ul>
+<li><em>Once the Ranger Server is UP, Login to those servers and run the below command:</em></li>
+</ul>
+
+<pre><code>
+docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
+       rancher/server:latest \
+       --db-host &lt;your rds endpoint&gt; \
+       --db-port 3306 --db-user &lt;your db user&gt; \
+       --db-pass &lt;your db password&gt; --db-name &lt;your db name&gt; \
+       --advertise-address &lt;put your rancher private server ip&gt;
+
+</code></pre>
+
+<ul>
+<li><em>Once the cluster is UP, you can authorize it with Github</em></li>
+</ul>
+
+<p><img src="/images/rancher-access.png" alt="Rancher access" /></p>
+
+<p><img src="/images/rancher-oauth-github.png" alt="Rancher github" /></p>
+
+<ul>
+<li><em>Once you authorized, you can add host like below:</em></li>
+</ul>
+
+<p><img src="/images/add-custom-host.png" alt="Rancher custom host" /></p>
+
+<ul>
+<li><em>You can also add host by running the command on each host nodes like below:</em></li>
+</ul>
+
+<pre><code>sudo docker run -e CATTLE_AGENT_IP=&quot;172.31.42.207&quot;  \
+    -d --privileged \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /var/lib/rancher:/var/lib/rancher \
+    rancher/agent:v1.2.1 http://rancher-elb-1978581874.eu-west-1.elb.amazonaws.com/v1/scripts/79081F08916A15D4F9F8:1483142400000:k2tRsgImqrdonHsdFYEtpI2ss
+
+</code></pre>
+
+<ul>
+<li><em>You can also bootup AWS instance if you want</em></li>
+</ul>
+
+<p><img src="/images/add-aws-host.png" alt="Rancher aws host" /></p>
+
+<ul>
+<li><em>You can see once the host is UP</em></li>
+</ul>
+
+<p><img src="/images/active-host.png" alt="Rancher active host" /></p>
+
+<ul>
+<li><em>You can choose different type of applications to install</em></li>
+</ul>
+
+<p><img src="/images/catalog1.png" alt="Rancher catalog1" /></p>
+
+<p><img src="/images/catalog2.png" alt="Rancher catalog2" /></p>
+
+<ul>
+<li><em>You can easily install Kubernetes from the catalog</em></li>
+</ul>
+
+<p><img src="/images/k8s-template.png" alt="Rancher Kubernetes" /></p>
+
+<ul>
+<li><em>You can verify the installation by selecting the stack</em></li>
+</ul>
+
+<p><img src="/images/starting-k8s.png" alt="Rancher Kubernetes stack" /></p>
+
+<ul>
+<li><em>You can also list the containers to get more info</em></li>
+</ul>
+
+<p><img src="/images/container-info.png" alt="Rancher Kubernetes containers" /></p>
+
+<h3 id="you-can-get-more-info-from-here-http-rancher-com">You can get more info from <a href="http://rancher.com/">here</a></h3>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = '//www-vishnu-tech-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2017 -
+<span class="credit">
+	Powered by 
+	<a target="_blank" href="https://www.vishnudxb.me">Vishnu Nair</a>
+</span>
+</p>
+</footer>
+
+    </body>
