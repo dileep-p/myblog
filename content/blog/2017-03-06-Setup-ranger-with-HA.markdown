@@ -3,14 +3,14 @@ author: Vishnu Nair
 comments: true
 date: 2017-03-06 19:43:25+00:00
 layout: post
-slug: Setup-ranger-with-HA
-title: Setup Ranger with HA & running Kubernetes on top of it.
+slug: Setup-Rancher-with-HA
+title: Setup Rancher with HA & running Kubernetes on top of it.
 categories:
 - Amazon AWS
 - Amazon EC2
 - Kubernetes
 - Docker
-- Ranger
+- Rancher
 tags:
 - amazon
 - AWS
@@ -18,13 +18,13 @@ tags:
 - container
 - docker
 - kubernetes
-- ranger
-- rangeros
+- Rancher
+- Rancheros
 - ec2
 - linux
 ---
 
-*In this blog, we are setting up a highly available Ranger cluster in AWS and running Kubernetes on top of it*
+*In this blog, we are setting up a highly available Rancher cluster in AWS and running Kubernetes on top of it*
 
 
 ### Why Rancher?
@@ -37,19 +37,19 @@ tags:
 
 * *Here I will be creating the AWS setup as below:*
 
-![Ranger setup in AWS](/images/ranger-aws-setup.png)
+![Rancher setup in AWS](/images/Rancher-aws-setup.png)
 
-* *Create 3 instance for Ranger Server*
+* *Create 3 instance for Rancher Server*
 
-![Ranger Server in AWS](/images/rancher-server.png)
+![Rancher Server in AWS](/images/rancher-server.png)
 
-* *Create 3 instance for Ranger Host*
+* *Create 3 instance for Rancher Host*
 
-![Ranger Host in AWS](/images/rancher-host.png)
+![Rancher Host in AWS](/images/rancher-host.png)
 
-* *Create ELB for Ranger Server*
+* *Create ELB for Rancher Server*
 
-![ELB for Ranger Server in AWS](/images/rancher-elb.png)
+![ELB for Rancher Server in AWS](/images/rancher-elb.png)
 
 * *Put ELB Listeners as below:*
 
@@ -58,6 +58,11 @@ tags:
 * *Put ELB Healthcheck as below:*
 
 ![ELB Healthcheck for Rancher Server](/images/rancher-elb-healthcheck.png)
+
+* *Created 4 security groups:*
+  You can view more details from [here](https://docs.rancher.com/rancher/v1.5/en/installing-rancher/installing-server/)
+
+![Security for Rancher Server](/images/aws-rancher-sg.png)
 
 * *Once you setup the ELB, you need to enable the proxy protocol mode*
 
@@ -96,7 +101,7 @@ $ aws elb set-load-balancer-policies-for-backend-server \
 
 ![Mysql RDS instance](/images/rancher-mysql.png)
 
-* *Once the Ranger Server is UP, Login to those servers and run the below command:*
+* *Once the Rancher Server is UP, Login to those servers and run the below command:*
 
 ```
 
@@ -158,3 +163,5 @@ sudo docker run -e CATTLE_AGENT_IP="172.31.42.207"  \
 ![Rancher Kubernetes containers](/images/container-info.png)
 
 ### You can get more info from [here](http://rancher.com/)
+
+### For automation, you check this Ansible [playbook](https://github.com/galal-hussein/Rancher-Ansible)

@@ -10,14 +10,14 @@
     <atom:link href="https://www.vishnu-tech.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Setup Ranger with HA &amp; running Kubernetes on top of it.</title>
-      <link>https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/</link>
+      <title>Setup Rancher with HA &amp; running Kubernetes on top of it.</title>
+      <link>https://www.vishnu-tech.com/blog/Setup-Rancher-with-HA/</link>
       <pubDate>Mon, 06 Mar 2017 19:43:25 +0000</pubDate>
       
-      <guid>https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/</guid>
+      <guid>https://www.vishnu-tech.com/blog/Setup-Rancher-with-HA/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;In this blog, we are setting up a highly available Ranger cluster in AWS and running Kubernetes on top of it&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In this blog, we are setting up a highly available Rancher cluster in AWS and running Kubernetes on top of it&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;why-rancher&#34;&gt;Why Rancher?&lt;/h3&gt;
 
@@ -31,25 +31,25 @@
 &lt;li&gt;&lt;p&gt;&lt;em&gt;Here I will be creating the AWS setup as below:&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/ranger-aws-setup.png&#34; alt=&#34;Ranger setup in AWS&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/Rancher-aws-setup.png&#34; alt=&#34;Rancher setup in AWS&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Create 3 instance for Ranger Server&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Create 3 instance for Rancher Server&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-server.png&#34; alt=&#34;Ranger Server in AWS&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-server.png&#34; alt=&#34;Rancher Server in AWS&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Create 3 instance for Ranger Host&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Create 3 instance for Rancher Host&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-host.png&#34; alt=&#34;Ranger Host in AWS&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-host.png&#34; alt=&#34;Rancher Host in AWS&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Create ELB for Ranger Server&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Create ELB for Rancher Server&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb.png&#34; alt=&#34;ELB for Ranger Server in AWS&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb.png&#34; alt=&#34;ELB for Rancher Server in AWS&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Put ELB Listeners as below:&lt;/em&gt;&lt;/li&gt;
@@ -62,6 +62,13 @@
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-elb-healthcheck.png&#34; alt=&#34;ELB Healthcheck for Rancher Server&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Created 4 security groups:&lt;/em&gt;
+You can view more details from &lt;a href=&#34;https://docs.rancher.com/rancher/v1.5/en/installing-rancher/installing-server/&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/aws-rancher-sg.png&#34; alt=&#34;Security for Rancher Server&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Once you setup the ELB, you need to enable the proxy protocol mode&lt;/em&gt;&lt;/li&gt;
@@ -101,7 +108,7 @@ $ aws elb set-load-balancer-policies-for-backend-server \
 &lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/rancher-mysql.png&#34; alt=&#34;Mysql RDS instance&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Once the Ranger Server is UP, Login to those servers and run the below command:&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Once the Rancher Server is UP, Login to those servers and run the below command:&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;
@@ -179,6 +186,8 @@ docker run -d --restart=unless-stopped -p 8080:8080 -p 9345:9345 \
 &lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/container-info.png&#34; alt=&#34;Rancher Kubernetes containers&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;you-can-get-more-info-from-here-http-rancher-com&#34;&gt;You can get more info from &lt;a href=&#34;http://rancher.com/&#34;&gt;here&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&#34;for-automation-you-check-this-ansible-playbook-https-github-com-galal-hussein-rancher-ansible&#34;&gt;For automation, you check this Ansible &lt;a href=&#34;https://github.com/galal-hussein/Rancher-Ansible&#34;&gt;playbook&lt;/a&gt;&lt;/h3&gt;
 </description>
     </item>
     

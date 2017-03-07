@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.vishnu-tech.com/blog/Setup-ranger-with-HA/</loc>
+    <loc>https://www.vishnu-tech.com/blog/Setup-Rancher-with-HA/</loc>
     <lastmod>2017-03-06T19:43:25+00:00</lastmod>
   </url>
   
@@ -1242,19 +1242,19 @@
   </url>
   
   <url>
-    <loc>https://www.vishnu-tech.com/tags/ranger/</loc>
+    <loc>https://www.vishnu-tech.com/tags/rancher/</loc>
     <lastmod>2017-03-06T19:43:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.vishnu-tech.com/categories/ranger/</loc>
+    <loc>https://www.vishnu-tech.com/categories/rancher/</loc>
     <lastmod>2017-03-06T19:43:25+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.vishnu-tech.com/tags/rangeros/</loc>
+    <loc>https://www.vishnu-tech.com/tags/rancheros/</loc>
     <lastmod>2017-03-06T19:43:25+00:00</lastmod>
     <priority>0</priority>
   </url>
