@@ -39,11 +39,11 @@ tags:
 
 ![Rancher setup in AWS](/images/rancher-aws-setup.png)
 
-* *Create 3 instance for Rancher Server*
+* *Create 3 instance for Rancher Server using the Community AMI*
 
 ![Rancher Server in AWS](/images/rancher-server.png)
 
-* *Create 3 instance for Rancher Host*
+* *Create 3 instance for Rancher Host using the Community AMI*
 
 ![Rancher Host in AWS](/images/rancher-host.png)
 
