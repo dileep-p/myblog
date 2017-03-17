@@ -33,7 +33,7 @@ He holds a Bachelor’s Degree in B.TECH from the Pondicherry University in Indi
 
 * **Version Control Systems** :-  *Git & SVN*
 
-* **Cloud Providers** :- *AWS, GCE, Azure, Digital Ocean & Rackspace.*
+* **Cloud Providers** :- *AWS, GCE, Azure, Oracle Cloud, Digital Ocean & Rackspace.*
 
 * **CDN** :-  *Aws cloudfront, Rackspace Cloud files, Akamai & CDNetworks.*
 
