@@ -9,6 +9,158 @@
     <atom:link href="https://www.vishnu-tech.com/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>TechNewsLetter Vol:19</title>
+      <link>https://www.vishnu-tech.com/blog/technewsletter-vol19/</link>
+      <pubDate>Fri, 17 Mar 2017 11:50:26 +0000</pubDate>
+      
+      <guid>https://www.vishnu-tech.com/blog/technewsletter-vol19/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;T-shirt clash with my colleague and thought of sharing it.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.vishnu-tech.com/images/t-shirt-clash.jpeg&#34; alt=&#34;T-shirt-clash&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Here is the list with awesome links to keep you busy during the weekend&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;security&#34;&gt;&lt;em&gt;Security:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://thehackernews.com/2017/03/twitter-account-hack.html&#34;&gt;Hundreds of High-Profile Twitter Accounts Hacked through 3rd-Party App&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://sangaline.com/post/advanced-web-scraping-tutorial/&#34;&gt;Advanced Web Scraping: Bypassing &amp;ldquo;403 Forbidden,&amp;rdquo; captchas, and more&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://buer.haus/2017/03/13/airbnb-ruby-on-rails-string-interpolation-led-to-remote-code-execution/&#34;&gt;Airbnb – Ruby on Rails String Interpolation led to Remote Code Execution&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://exablue.de/blog/2017-03-15-github-enterprise-remote-code-execution.html&#34;&gt;GitHub Enterprise Remote Code Execution&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.us-cert.gov/ncas/alerts/TA17-075A&#34;&gt;HTTPS Interception Weakens TLS Security&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://www.bbc.com/news/technology-39281063&#34;&gt;US charges Russian spies over Yahoo breach&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;docker&#34;&gt;&lt;em&gt;Docker:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/bcicen/ctop&#34;&gt;Top-like interface for container metrics&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.arungupta.me/start-couchbase-using-docker-compose-2/&#34;&gt;Start Couchbase Using Docker Compose&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.leandot.com/elasticsearch/2017/03/04/create-elastic-search-snapshot-docker.html&#34;&gt;Creating a snapshot of a dockerized Elasticsearch&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.codeship.com/docker-secrets-management/&#34;&gt;Docker Secrets Management&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://integratedcode.us/2017/02/24/user-namespaces-2017-status-update-and-additional-resources/&#34;&gt;User Namespaces: 2017 Status Update and Additional Resources&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://eng.lyft.com/scoping-aws-iam-roles-to-docker-containers-c9c5f8f2f75#.qqho7wbpg&#34;&gt;Scoping AWS IAM roles to Docker containers&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.georgejose.com/moving-my-http-website-to-https-using-letsencrypt-haproxy-and-docker-deb56ff6be9b&#34;&gt;Moving my HTTP website to HTTPS using LetsEncrypt, HAProxy and Docker&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kubernetes&#34;&gt;&lt;em&gt;Kubernetes:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://nats.io/blog/how-clarifai-uses-nats-and-kubernetes-for-machine-learning/&#34;&gt;How Clarifai uses NATS and Kubernetes for their Machine Learning Platform&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://blog.frankgrecojr.com/k8s-local-dev/&#34;&gt;Effective Local Development with Minikube&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/rook/rook&#34;&gt;Open, Cloud Native, and Universal Distributed Storage&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/@jimfleming/running-tensorflow-on-kubernetes-ca00d0e67539#.esqhvfeg5&#34;&gt;Running TensorFlow (with GPU) on Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://leebriggs.co.uk/blog/2017/03/12/kubernetes-flexvolumes.html&#34;&gt;An Introduction to Kubernetes FlexVolumes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://blog.couchbase.com/service-discovery-java-database-kubernetes/&#34;&gt;Service Discovery with Java and Database application in Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/google-cloud/clustering-akka-in-kubernetes-with-statefulset-and-deployment-459c0e05f2ea#.1gvxmr64x&#34;&gt;Clustering Akka in Kubernetes with Statefulset and Deployment&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.weave.works/log-aggregation-kubernetes-loggly/&#34;&gt;Log Aggregation for Kubernetes with Loggly&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/kubernetes-incubator/kompose&#34;&gt;Tool to move from &lt;code&gt;docker-compose&lt;/code&gt; to Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/@chakrar27/get-your-hands-dirty-with-kubernetes-36b917836532#.dk5xk2dr4&#34;&gt;Get your hands dirty with Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.slideshare.net/DanielFenton2/deploying-apps-with-docker-and-kubernetes&#34;&gt;Deploying apps with Docker and Kubernetes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;python&#34;&gt;&lt;em&gt;Python:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/ageitgey/face_recognition&#34;&gt;The world&amp;rsquo;s simplest facial recognition api for Python and the command line&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/sukeesh/Jarvis&#34;&gt;Personal Assistant for Linux&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/lbryio/lbry&#34;&gt;A fully decentralized network for distributing data&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.dataquest.io/blog/data-pipelines-tutorial/&#34;&gt;Building An Analytics Data Pipeline In Python&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.caktusgroup.com/blog/2017/03/14/production-ready-dockerfile-your-python-django-app/&#34;&gt;A Production-ready Dockerfile for Your Python/Django App&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/topper-123/Articles/blob/master/New-interesting-data-types-in-Python3.rst&#34;&gt;New interesting data structures in Python 3&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://gist.github.com/simonw/8aa492e59265c1a021f5c5618f9e6b12&#34;&gt;How to recover lost Python source code if it&amp;rsquo;s still resident in-memory&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/zingle/customer-data-driven-light-shows-7800883182bc#.9dmz62d7b&#34;&gt;Customer Data Driven Light Shows&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/abhishekkrthakur/clickbaits_revisited&#34;&gt;Deep learning models to identify clickbaits taking content into consideration&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;golang&#34;&gt;&lt;em&gt;Golang:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/lk-geimfari/awesomo/blob/master/languages/GOLANG.md&#34;&gt;An awesome list of awesome open source golang projects&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/TimTosi/fishfinger&#34;&gt;FishFinger is a Docker-Compose lightweight programmatic library written in Go.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://pdoviet.wordpress.com/2017/03/13/go-redisproto-a-lightweight-library-for-redis-protocol-in-golang&#34;&gt;go-redisproto a lightweight library for Redis protocol in GoLang&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/sfi2k7/picosql&#34;&gt;picosql : a wrapper around database/sql&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/iamduo/workq&#34;&gt;Job server in Go&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://artem.krylysov.com/blog/2017/03/13/profiling-and-optimizing-go-web-applications/&#34;&gt;Profiling and optimizing Go web applications&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://bouk.co/blog/code-generating-code/&#34;&gt;Doubling Go&amp;rsquo;s template performance by generating code&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://appliedgo.net/flow2go/&#34;&gt;Flow To Go&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://walac.github.io/golang-patch/&#34;&gt;A tale of my first go patch&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://www.tapirgames.com/blog/golang-block-and-scope&#34;&gt;Blocks and Scopes in Golang&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://youtu.be/5f_HMXParW8&#34;&gt;Go with MySQL&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/VerizonDigital/vflow&#34;&gt;Enterprise Network Flow Collector (IPFIX + sFlow)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.vividcortex.com/resources/webinars/developing-mysql-applications-with-go&#34;&gt;Developing MySQL Applications with Go&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/nbari/violetear&#34;&gt;Go HTTP router&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;general&#34;&gt;&lt;em&gt;General:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://medium.com/airbnb-engineering/tracking-the-money-scaling-financial-reporting-at-airbnb-6d742b80f040#.l91lakfym&#34;&gt;Tracking the Money — Scaling Financial Reporting at Airbnb&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://livesql.oracle.com/apex/livesql/file/index.html&#34;&gt;Learn and share SQL, for free&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/jarun/googler&#34;&gt;Google Search, Google Site Search, Google News from the terminal&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;http://www.citypages.com/news/edina-police-ask-for-whole-citys-google-searches-and-a-judge-says-yes/416319633&#34;&gt;Edina police ask for whole city&amp;rsquo;s Google searches, and a judge says yes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.bna.com/companies-protect-privacy-n57982085209/&#34;&gt;Companies Must Protect Privacy in Big Data: EU Lawmakers&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/DiSiqueira/TinderOnline&#34;&gt;Find out which of your friends are online on Tinder&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/danielehrlich/OracleCloudCompareMatrix&#34;&gt;Comparison of Oracle Cloud products with similar services in other platforms&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.bleepingcomputer.com/news/google/google-launches-invisible-recaptcha-with-no-user-interaction-required/&#34;&gt;Google Launches Invisible reCAPTCHA with No User Interaction Required&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;That&amp;rsquo;s all for now, Enjoy your weekend&lt;/em&gt;  😃 😃 😃&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>TechNewsLetter Vol:18</title>
       <link>https://www.vishnu-tech.com/blog/technewsletter-vol18/</link>
       <pubDate>Thu, 26 Jan 2017 14:50:26 +0000</pubDate>
