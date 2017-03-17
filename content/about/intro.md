@@ -4,7 +4,9 @@ title = "About Me"
 date = "2017-01-17T17:52:41-05:00"
 +++
 
-Vishnu Nair is Head of DevOps – R&D BigData in VEON. His Job responsibilities include in setting up a high available, scalable & reliable architecture for the DMP. He is responsible for finding the right & latest tools which can improve the performance & stability of the DMP components. He is also responsible for running different microservices to support the DMP & Engagement Platform. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies.
+Vishnu Nair is as an External Board Advisor for Facilitracks and Native Sparrow.
+
+He is also working as Global Head of DevOps – R&D BigData in VEON. His Job responsibilities include in setting up a high available, scalable & reliable architecture for the DMP. He is responsible for finding the right & latest tools which can improve the performance & stability of the DMP components. He is also responsible for running different microservices to support the DMP & Engagement Platform. He has around over 9+ years of experience in Linux, DevOps, BigData and Cloud Computing Technologies.
 
 Before joining VEON, he lead a DevOps team at Getsocial – A Game development company. He was responsible for designing, configuring, documenting, maintaining and optimizing the infrastructure that supports their products including API’s, Websites, BI and other internal services on multiple environments. His main task was migrating the architecture from non-structured environment to a structured one in AWS. During that period, he worked with variety of tools like Docker, Kubernetes, Ansible, Jenkins, Tableau and used many features in AWS like ECS, RDS, RedShift, Elasticache and so on.
 
